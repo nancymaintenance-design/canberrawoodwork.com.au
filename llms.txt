@@ -1,0 +1,50 @@
+# Ellis Services Group
+
+Canberra carpentry and timber repair services.
+Phone: 0405 878 406
+Email: brian@elliservices.com.au
+Service area: Canberra, ACT.
+Business registration: https://abr.business.gov.au/ABN/View?id=645821745
+Google Maps: https://maps.app.goo.gl/cvWgzfMPhPrDPZnE7
+
+## Core pages
+- http://127.0.0.1:4174/
+- http://127.0.0.1:4174/services/
+- http://127.0.0.1:4174/services/small-carpentry-jobs/
+- http://127.0.0.1:4174/services/door-and-frame-repairs/
+- http://127.0.0.1:4174/services/timber-window-repairs/
+- http://127.0.0.1:4174/services/rotten-timber-repairs/
+- http://127.0.0.1:4174/services/fascia-and-eaves-repairs/
+- http://127.0.0.1:4174/services/deck-repairs/
+- http://127.0.0.1:4174/services/timber-fence-repairs/
+- http://127.0.0.1:4174/services/timber-gate-repairs/
+- http://127.0.0.1:4174/services/skirting-and-architraves/
+- http://127.0.0.1:4174/services/cabinet-door-and-drawer-repairs/
+- http://127.0.0.1:4174/services/interior-carpentry/
+- http://127.0.0.1:4174/services/timber-weatherboard-repairs/
+- http://127.0.0.1:4174/services/timber-stair-and-handrail-repairs/
+- http://127.0.0.1:4174/services/pergola-timber-repairs/
+- http://127.0.0.1:4174/services/custom-joinery/
+- http://127.0.0.1:4174/services/structural-timber-repairs/
+- http://127.0.0.1:4174/services/deck-building/
+- http://127.0.0.1:4174/about/
+- http://127.0.0.1:4174/faq/
+- http://127.0.0.1:4174/news/
+- http://127.0.0.1:4174/service-areas/
+- http://127.0.0.1:4174/contact/
+
+## Articles
+- Why a timber door sticks after wet weather: http://127.0.0.1:4174/news/timber-door-sticks-after-rain/
+- Deck boards or deck framing: what needs repair?: http://127.0.0.1:4174/news/deck-boards-or-frame/
+- Can a rotten timber window sill be repaired?: http://127.0.0.1:4174/news/rotten-window-sill/
+- Fascia, bargeboard and eaves lining explained: http://127.0.0.1:4174/news/fascia-bargeboard-eaves/
+- What to check when a paling fence leans: http://127.0.0.1:4174/news/leaning-paling-fence/
+- Replacing skirting boards after new flooring: http://127.0.0.1:4174/news/skirting-after-new-flooring/
+- Why timber side gates sag or stop latching: http://127.0.0.1:4174/news/why-timber-gates-sag/
+- Why rotten timber can return after a repair: http://127.0.0.1:4174/news/why-timber-rot-returns/
+- When one cupboard door or drawer stops working: http://127.0.0.1:4174/news/cabinet-hinges-and-drawer-runners/
+- When a few timber weatherboards are damaged: http://127.0.0.1:4174/news/timber-weatherboard-damage/
+- What to do when a timber stair tread feels loose: http://127.0.0.1:4174/news/loose-timber-stairs/
+- A soft pergola post: repair or broader assessment?: http://127.0.0.1:4174/news/pergola-post-rot/
+- Repair an existing deck or plan a new one?: http://127.0.0.1:4174/news/repair-or-rebuild-a-deck/
+- Planning small carpentry repairs before a home sale: http://127.0.0.1:4174/news/carpentry-jobs-before-selling/
