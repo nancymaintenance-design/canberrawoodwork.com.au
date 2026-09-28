@@ -1,0 +1,2356 @@
+{
+  "sourceFile": "Canberra_Carpentry_Keyword_Map_2026-09-28.xlsx",
+  "sourceSha256": "2e65fc61400f5bfe8a7adce7fd9fb657346d4ca545e163f4988b5718a2d3ce63",
+  "categories": {
+    "core": [
+      {
+        "id": "CBR-C-001",
+        "term": "carpenter canberra",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-002",
+        "term": "carpenters canberra",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-003",
+        "term": "carpentry canberra",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-004",
+        "term": "carpentry services canberra",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-005",
+        "term": "carpentry repairs canberra",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-006",
+        "term": "small carpentry jobs canberra",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-007",
+        "term": "carpenter near me",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-008",
+        "term": "carpentry repairs near me",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-009",
+        "term": "local carpenter canberra",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-010",
+        "term": "residential carpentry canberra",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-011",
+        "term": "maintenance carpenter canberra",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-012",
+        "term": "carpenter cost canberra",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-013",
+        "term": "carpenter hourly rate canberra",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-014",
+        "term": "small job carpenter near me",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-015",
+        "term": "door repairs canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-016",
+        "term": "timber door repairs canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-017",
+        "term": "door frame repairs canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-018",
+        "term": "door jamb repairs canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-019",
+        "term": "internal door installation canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-020",
+        "term": "door installation canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-021",
+        "term": "door hanging canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-022",
+        "term": "door rehanging canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-023",
+        "term": "sticking door repair canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-024",
+        "term": "door planing canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-025",
+        "term": "external timber door replacement canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-026",
+        "term": "cavity sliding door repairs canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-027",
+        "term": "timber door threshold repair canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-028",
+        "term": "timber window repairs canberra",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-029",
+        "term": "wooden window repairs canberra",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-030",
+        "term": "window frame repairs canberra",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-031",
+        "term": "timber window frame replacement canberra",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-032",
+        "term": "rotten window sill repair canberra",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-033",
+        "term": "timber sash window repairs canberra",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-034",
+        "term": "sash cord replacement canberra",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-035",
+        "term": "timber casement window repairs canberra",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-036",
+        "term": "heritage timber window restoration canberra",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-037",
+        "term": "rotten timber repairs canberra",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-038",
+        "term": "wood rot repair canberra",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-039",
+        "term": "rotting timber replacement canberra",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-040",
+        "term": "external timber repairs canberra",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-041",
+        "term": "timber splice repair canberra",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-042",
+        "term": "water damaged timber repair canberra",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-043",
+        "term": "rotten door frame repair canberra",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-044",
+        "term": "fascia repairs canberra",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-045",
+        "term": "timber fascia replacement canberra",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-046",
+        "term": "bargeboard repairs canberra",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-047",
+        "term": "barge board replacement canberra",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-048",
+        "term": "eaves repairs canberra",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-049",
+        "term": "eaves lining replacement canberra",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-050",
+        "term": "soffit repairs canberra",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-051",
+        "term": "rotten fascia board repair canberra",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-052",
+        "term": "deck repairs canberra",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-053",
+        "term": "timber deck repairs canberra",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-054",
+        "term": "deck board replacement canberra",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-055",
+        "term": "deck restoration canberra",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-056",
+        "term": "deck replacement canberra",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-057",
+        "term": "decking repairs canberra",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-058",
+        "term": "merbau deck repairs canberra",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-059",
+        "term": "deck sanding and oiling canberra",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-060",
+        "term": "rotten decking replacement canberra",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-061",
+        "term": "deck repair near me",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-062",
+        "term": "fence repairs canberra",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-063",
+        "term": "timber fence repairs canberra",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-064",
+        "term": "timber fencing canberra",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-065",
+        "term": "timber fence replacement canberra",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-066",
+        "term": "paling fence repairs canberra",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-067",
+        "term": "picket fence repairs canberra",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-068",
+        "term": "fence post replacement canberra",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-069",
+        "term": "fence paling replacement canberra",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-070",
+        "term": "leaning timber fence repair canberra",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-071",
+        "term": "timber fence installation canberra",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-072",
+        "term": "gate repairs canberra",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-073",
+        "term": "timber gate repairs canberra",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-074",
+        "term": "wooden gate repairs canberra",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-075",
+        "term": "sagging gate repair canberra",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-076",
+        "term": "garden gate replacement canberra",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-077",
+        "term": "side gate installation canberra",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-078",
+        "term": "timber gate hinge repair canberra",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-079",
+        "term": "gate post replacement canberra",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-080",
+        "term": "skirting boards canberra",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-081",
+        "term": "skirting board installation canberra",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-082",
+        "term": "skirting board replacement canberra",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-083",
+        "term": "skirting board repairs canberra",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-084",
+        "term": "architraves canberra",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-085",
+        "term": "architrave installation canberra",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-086",
+        "term": "architrave repairs canberra",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-087",
+        "term": "timber trim repairs canberra",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-088",
+        "term": "fix out carpentry canberra",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-089",
+        "term": "finish carpentry canberra",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-090",
+        "term": "cabinet repairs canberra",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-091",
+        "term": "cupboard door repairs canberra",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-092",
+        "term": "kitchen cabinet repairs canberra",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-093",
+        "term": "drawer repairs canberra",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-094",
+        "term": "drawer runner replacement canberra",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-095",
+        "term": "cupboard hinge repairs canberra",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-096",
+        "term": "cabinet door replacement canberra",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-097",
+        "term": "wardrobe repairs canberra",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-098",
+        "term": "wardrobe sliding door repairs canberra",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-099",
+        "term": "kitchen kickboard replacement canberra",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-100",
+        "term": "soft close hinge replacement canberra",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-101",
+        "term": "interior carpentry canberra",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-102",
+        "term": "renovation carpentry canberra",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-103",
+        "term": "shelving installation canberra",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-104",
+        "term": "timber wall panelling installation canberra",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-105",
+        "term": "bulkhead carpentry canberra",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-106",
+        "term": "under stairs storage canberra",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-107",
+        "term": "carpentry finishing work canberra",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-108",
+        "term": "weatherboard repairs canberra",
+        "owner": "/services/timber-weatherboard-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-109",
+        "term": "timber weatherboard replacement canberra",
+        "owner": "/services/timber-weatherboard-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-110",
+        "term": "timber cladding canberra",
+        "owner": "/services/timber-weatherboard-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-111",
+        "term": "external timber cladding repairs canberra",
+        "owner": "/services/timber-weatherboard-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-112",
+        "term": "stair repairs canberra",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-113",
+        "term": "timber stair repairs canberra",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-114",
+        "term": "stair tread replacement canberra",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-115",
+        "term": "handrail repairs canberra",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-116",
+        "term": "timber balustrade repairs canberra",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-117",
+        "term": "external timber steps replacement canberra",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-118",
+        "term": "pergola repairs canberra",
+        "owner": "/services/pergola-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-119",
+        "term": "pergola post replacement canberra",
+        "owner": "/services/pergola-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-120",
+        "term": "verandah timber repairs canberra",
+        "owner": "/services/pergola-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-121",
+        "term": "pergola builders canberra",
+        "owner": "/services/pergola-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-122",
+        "term": "timber privacy screen installation canberra",
+        "owner": "/services/pergola-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-123",
+        "term": "carport timber repairs canberra",
+        "owner": "/services/pergola-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-124",
+        "term": "joinery canberra",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-125",
+        "term": "cabinet makers canberra",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-126",
+        "term": "custom joinery canberra",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-127",
+        "term": "built in wardrobes canberra",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-128",
+        "term": "custom shelving canberra",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-129",
+        "term": "laundry cabinetry canberra",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-130",
+        "term": "flat pack kitchen installation canberra",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-131",
+        "term": "structural carpentry canberra",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-132",
+        "term": "termite damage repairs canberra",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-133",
+        "term": "timber framing repairs canberra",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-134",
+        "term": "floor joist replacement canberra",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-135",
+        "term": "timber bearer replacement canberra",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-136",
+        "term": "roof carpentry repairs canberra",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-137",
+        "term": "decking canberra",
+        "owner": "/services/deck-building",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-138",
+        "term": "deck builders canberra",
+        "owner": "/services/deck-building",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-139",
+        "term": "composite decking installation canberra",
+        "owner": "/services/deck-building",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-140",
+        "term": "timber deck installation canberra",
+        "owner": "/services/deck-building",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-141",
+        "term": "carpenter belconnen",
+        "owner": "/service-areas",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-142",
+        "term": "carpenter gungahlin",
+        "owner": "/service-areas",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-143",
+        "term": "carpenter tuggeranong",
+        "owner": "/service-areas",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-144",
+        "term": "carpenter woden",
+        "owner": "/service-areas",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-145",
+        "term": "carpenter weston creek",
+        "owner": "/service-areas",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-146",
+        "term": "carpenter kambah",
+        "owner": "/service-areas",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-147",
+        "term": "carpenter inner north canberra",
+        "owner": "/service-areas",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-148",
+        "term": "carpenter inner south canberra",
+        "owner": "/service-areas",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-149",
+        "term": "carpenter molonglo valley",
+        "owner": "/service-areas",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-150",
+        "term": "carpenter fyshwick",
+        "owner": "/service-areas",
+        "priority": "B"
+      }
+    ],
+    "intent": [
+      {
+        "id": "CBR-C-151",
+        "term": "Who takes on small carpentry jobs in Canberra?",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-152",
+        "term": "Can a carpenter quote for several small repairs in one visit?",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-153",
+        "term": "How much does a carpenter charge for a small job in Canberra?",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-154",
+        "term": "Do carpenters charge a call-out fee or a minimum booking fee?",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-155",
+        "term": "Can I send photos before booking a carpenter?",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-156",
+        "term": "Can you provide an itemised carpentry quote including materials and rubbish removal?",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-157",
+        "term": "Can you work around tenants and provide before-and-after photos?",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-158",
+        "term": "Is anyone available for carpentry repairs this week in Canberra?",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-159",
+        "term": "Who can fix a timber door that will not close properly?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-160",
+        "term": "Can you replace the door frame without replacing the door?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-161",
+        "term": "Can a carpenter fit internal doors I have already bought?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-162",
+        "term": "How much does it cost to hang an internal door in Canberra?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-163",
+        "term": "Can you trim a door after new flooring has been installed?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-164",
+        "term": "Can you repair a cavity sliding door without opening the whole wall?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-165",
+        "term": "Do I need a carpenter or a locksmith for a door that will not latch?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-166",
+        "term": "Can a rotten timber window sill be repaired instead of replacing the window?",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-167",
+        "term": "Who repairs timber sash windows in Canberra?",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-168",
+        "term": "Can you match the profile of my existing timber window frame?",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-169",
+        "term": "Can you repair the timber frame while keeping the existing glass?",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-170",
+        "term": "Can you replace only the rotten section of timber?",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-171",
+        "term": "Who checks why timber keeps rotting before repairing it?",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-172",
+        "term": "Does your quote include priming and painting the repaired timber?",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-173",
+        "term": "Who replaces rotten fascia boards in Canberra?",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-174",
+        "term": "Can fascia boards be replaced without replacing all the gutters?",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-175",
+        "term": "Can you check the old eaves lining before quoting for replacement?",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-176",
+        "term": "Can you replace a few rotten deck boards rather than the whole deck?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-177",
+        "term": "How much does deck board replacement cost in Canberra?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-178",
+        "term": "Can you inspect the frame before quoting to replace the decking?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-179",
+        "term": "Do I need deck repairs or just sanding and oiling?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-180",
+        "term": "Can you match the existing timber on my deck?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-181",
+        "term": "Can a leaning timber fence be repaired without replacing it all?",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-182",
+        "term": "How much does it cost to replace timber fence posts in Canberra?",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-183",
+        "term": "Can you quote separately for fence repairs and full replacement?",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-184",
+        "term": "Can I get a written fence quote to discuss with my neighbour?",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-185",
+        "term": "Who can fix a sagging wooden side gate in Canberra?",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-186",
+        "term": "Can you keep the existing gate and replace its posts or hinges?",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-187",
+        "term": "Can you install a timber gate to match my existing fence?",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-188",
+        "term": "Can you supply and install skirting boards to match the existing ones?",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-189",
+        "term": "Can I supply the skirting boards and pay for installation only?",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-190",
+        "term": "How much does architrave installation cost in Canberra?",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-191",
+        "term": "Can the skirting be removed and refitted after new flooring?",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-192",
+        "term": "Who can repair cupboard hinges without replacing the whole kitchen?",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-193",
+        "term": "Can a broken drawer runner be replaced on an older cabinet?",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-194",
+        "term": "Can you replace just one damaged kitchen cupboard door?",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-195",
+        "term": "Can you repair a wardrobe sliding door that keeps coming off its track?",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-196",
+        "term": "Can a carpenter finish the trims after our kitchen renovation?",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-197",
+        "term": "Can you install shelves in an alcove with uneven walls?",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-198",
+        "term": "Can you quote for timber wall panelling in one room only?",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-199",
+        "term": "Can you replace a few damaged weatherboards and match the existing profile?",
+        "owner": "/services/timber-weatherboard-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-200",
+        "term": "Who can inspect loose timber stairs and quote for safe repairs?",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-201",
+        "term": "Can you replace a damaged timber handrail without rebuilding the stairs?",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-202",
+        "term": "Can a rotten pergola post be replaced without rebuilding the whole structure?",
+        "owner": "/services/pergola-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-203",
+        "term": "Who can check whether my pergola repair needs approvals in the ACT?",
+        "owner": "/services/pergola-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-204",
+        "term": "Do I need a joiner or a carpenter for custom built-in wardrobes?",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-205",
+        "term": "Can you make new cabinet doors to fit my existing kitchen cabinets?",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-206",
+        "term": "Can you design built-in storage for the space under my stairs?",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-207",
+        "term": "Can you quote for timber repairs after the termites have been treated?",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-208",
+        "term": "Who should assess damaged floor joists before a carpenter replaces them?",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-209",
+        "term": "Can you compare repairing my deck with rebuilding it?",
+        "owner": "/services/deck-building",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-210",
+        "term": "What approvals should be checked before building a deck in Canberra?",
+        "owner": "/services/deck-building",
+        "priority": "C"
+      }
+    ],
+    "distilled": [
+      {
+        "id": "CBR-C-211",
+        "term": "small carpentry repair bundle",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-212",
+        "term": "carpentry repairs before selling a house",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-213",
+        "term": "carpentry maintenance for a rental property",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-214",
+        "term": "door frame repair with door retained",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-215",
+        "term": "door clearance adjustment after new flooring",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-216",
+        "term": "door latch alignment repair",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-217",
+        "term": "customer-supplied internal door fitting",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-218",
+        "term": "localised timber window sill rot repair",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-219",
+        "term": "original timber sash window restoration",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-220",
+        "term": "window frame repair with glass retained",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-221",
+        "term": "timber splice repair with profile matching",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-222",
+        "term": "recurring timber rot source assessment",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-223",
+        "term": "water damaged door jamb replacement",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-224",
+        "term": "fascia replacement with gutter coordination",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-225",
+        "term": "eaves lining repair after roof leak",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-226",
+        "term": "partial deck board replacement",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-227",
+        "term": "deck frame assessment before reboarding",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-228",
+        "term": "deck surface restoration versus structural repair",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-229",
+        "term": "leaning timber fence post repair",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-230",
+        "term": "like-for-like fence paling replacement",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-231",
+        "term": "boundary fence repair quote for discussion",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-232",
+        "term": "timber gate sag and latch alignment",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-233",
+        "term": "wooden side gate post replacement",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-234",
+        "term": "skirting profile matching for partial replacement",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-235",
+        "term": "architrave replacement after door work",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-236",
+        "term": "skirting refit after flooring installation",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-237",
+        "term": "cupboard hinge repair with doors retained",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-238",
+        "term": "older cabinet drawer runner replacement",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-239",
+        "term": "kitchen kickboard replacement after leak repair",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-240",
+        "term": "renovation carpentry finishing list",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-241",
+        "term": "alcove shelving made to fit uneven walls",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-242",
+        "term": "localised weatherboard replacement",
+        "owner": "/services/timber-weatherboard-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-243",
+        "term": "loose timber stair tread assessment",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-244",
+        "term": "timber handrail connection repair",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-245",
+        "term": "pergola post base rot assessment",
+        "owner": "/services/pergola-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-246",
+        "term": "built-in wardrobe design and installation",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-247",
+        "term": "custom cabinet front replacement",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-248",
+        "term": "post-treatment termite damage repair",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-249",
+        "term": "floor bearer and joist condition assessment",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-250",
+        "term": "deck rebuild with existing footprint retained",
+        "owner": "/services/deck-building",
+        "priority": "C"
+      }
+    ],
+    "scenario": [
+      {
+        "id": "CBR-C-251",
+        "term": "door rubbing on floor after new flooring",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-252",
+        "term": "We had new flooring installed and the bedroom door now scrapes the floor. Can a Canberra carpenter adjust it?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-253",
+        "term": "timber door will not latch",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-254",
+        "term": "My timber door closes but the latch misses the strike plate. Should I call a carpenter or a locksmith?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-255",
+        "term": "swollen timber door after rain",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-256",
+        "term": "Our back timber door gets stuck after rain. Can it be checked before the edges are trimmed?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-257",
+        "term": "split door frame around hinge",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-258",
+        "term": "The timber has split around the door hinge and the screws will not hold. Can the frame be repaired?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-259",
+        "term": "door jamb rotten at bottom",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-260",
+        "term": "The bottom of our laundry door jamb is soft and crumbling. Can that section be replaced?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-261",
+        "term": "cavity sliding door stuck inside wall",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-262",
+        "term": "Our cavity sliding door is stuck inside the wall. Who can inspect the rollers and access points in Canberra?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-263",
+        "term": "soft timber window sill",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-264",
+        "term": "The corner of my timber window sill feels soft. Can it be repaired without replacing the whole window?",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-265",
+        "term": "timber sash window will not stay open",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-266",
+        "term": "My old timber sash window will not stay open. Who repairs the cords or balances in Canberra?",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-267",
+        "term": "timber window painted shut",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-268",
+        "term": "Our original timber window seems to have been painted shut. Can someone restore its operation without damaging it?",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-269",
+        "term": "rainwater around timber window frame",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-270",
+        "term": "Water appears around a timber window when it rains. Should the leak be fixed before the damaged wood is repaired?",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-271",
+        "term": "timber trim crumbling under paint",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-272",
+        "term": "The paint looks intact but the timber underneath crumbles when touched. Who can assess the damaged section?",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-273",
+        "term": "wood rot returning after repair",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-274",
+        "term": "A repaired timber corner has started rotting again. Can the cause be investigated before it is patched?",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-275",
+        "term": "wood behind gutter rotting",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-276",
+        "term": "The board behind our gutter is rotting. Do I need a carpenter, a roofer or both?",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-277",
+        "term": "damaged eaves lining after roof leak",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-278",
+        "term": "The roof leak has been repaired but the eaves lining is damaged. Who can check the material and arrange the right repair?",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-279",
+        "term": "bargeboard peeling and splitting",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-280",
+        "term": "The timber along the sloping edge of our roof is splitting. Can it be repaired or replaced?",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-281",
+        "term": "deck boards soft underfoot",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-282",
+        "term": "A few deck boards feel soft underfoot. Can the boards and the supporting frame be checked before repairs?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-283",
+        "term": "deck nails sticking up",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-284",
+        "term": "Several fixings are sticking up from our timber deck. Who can inspect and repair the affected boards?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-285",
+        "term": "deck boards splitting near screws",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-286",
+        "term": "Some deck boards have split around the screws. Can those boards be replaced to match the rest?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-287",
+        "term": "deck bouncing when walked on",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-288",
+        "term": "Our deck moves when we walk on it. Who should assess it before we book sanding or oiling?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-289",
+        "term": "damaged deck boards on rental property",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-290",
+        "term": "I manage a rental in Tuggeranong with damaged deck boards. Can I get an inspection and written repair scope?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-291",
+        "term": "timber fence leaning after storm",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-292",
+        "term": "Part of our timber fence is leaning after a storm. Can someone assess whether the posts or the whole section need replacing?",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-293",
+        "term": "fence post rotten at ground level",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-294",
+        "term": "A timber fence post has rotted at ground level but the palings look sound. Is partial repair possible?",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-295",
+        "term": "broken fence palings need replacing",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-296",
+        "term": "We have several broken fence palings in Belconnen. Who can replace them without rebuilding the entire fence?",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-297",
+        "term": "side gate dragging on ground",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-298",
+        "term": "Our wooden side gate drags on the ground and no longer latches. Can the frame, posts and hinges be checked?",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-299",
+        "term": "gate hinge screws pulling out",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-300",
+        "term": "The hinge screws are pulling out of our timber gate post. Can the post be repaired or does it need replacement?",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-301",
+        "term": "wooden gate will not close after rain",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-302",
+        "term": "Our timber gate is hard to close after rain. Who can assess the cause rather than just shaving off the edge?",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-303",
+        "term": "skirting boards damaged by water",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-304",
+        "term": "The leak is fixed but the skirting boards have swollen. Can a carpenter replace only the damaged lengths?",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-305",
+        "term": "missing architraves after door replacement",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-306",
+        "term": "We had a door replaced and still need architraves fitted. Can someone match the existing trim in the other rooms?",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-307",
+        "term": "gap under skirting after new floor",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-308",
+        "term": "Our new floor has left gaps below the old skirting. What carpentry options can finish it neatly?",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-309",
+        "term": "dog chewed skirting board repair",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-310",
+        "term": "Our dog chewed a section of skirting. Can it be repaired or matched without replacing the whole room?",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-311",
+        "term": "cupboard door hinge pulled out",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-312",
+        "term": "A kitchen cupboard hinge has pulled out of the panel. Can it be repaired without replacing the entire cabinet?",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-313",
+        "term": "drawer drops off runners",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-314",
+        "term": "One kitchen drawer keeps dropping off its runners. Who can identify and replace the hardware?",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-315",
+        "term": "wardrobe sliding door off track",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-316",
+        "term": "Our wardrobe door keeps coming off its track in Gungahlin. Can the rollers and track be repaired?",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-317",
+        "term": "kitchen kickboard swollen after leak",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-318",
+        "term": "The plumbing leak is fixed and the kitchen kickboard is swollen. Can new kickboards be fitted to match?",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-319",
+        "term": "carpentry touch ups before house sale",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-320",
+        "term": "We are preparing a Canberra home for sale and need doors, skirting and cupboard repairs. Can these be quoted together?",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-321",
+        "term": "shelves needed in narrow alcove",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-322",
+        "term": "We have a narrow alcove with uneven walls. Can a carpenter fit shelves that use the space properly?",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-323",
+        "term": "weatherboards cracked at ends",
+        "owner": "/services/timber-weatherboard-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-324",
+        "term": "A few timber weatherboards are cracked at the ends. Can matching boards be fitted and the joints checked?",
+        "owner": "/services/timber-weatherboard-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-325",
+        "term": "timber stair tread loose",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-326",
+        "term": "One timber stair tread moves underfoot. Who can inspect the support and quote for repairs?",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-327",
+        "term": "pergola post soft at base",
+        "owner": "/services/pergola-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-328",
+        "term": "The base of a pergola post is soft and splitting. Who should assess it before any timber is removed?",
+        "owner": "/services/pergola-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-329",
+        "term": "timber damage after termite treatment",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-330",
+        "term": "Our pest controller has treated the termites. Who can assess the remaining timber damage before repairs?",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      }
+    ],
+    "question": [
+      {
+        "id": "CBR-C-331",
+        "term": "What is the difference between a carpenter, a joiner and a cabinetmaker?",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-332",
+        "term": "Should I hire a carpenter or a handyman for a small timber repair?",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-333",
+        "term": "What should be included in a carpentry repair quote?",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-334",
+        "term": "What qualifications, insurance and licences should I check for my carpentry project?",
+        "owner": "/",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-335",
+        "term": "Why does a timber door stick after wet weather?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-336",
+        "term": "Can a damaged door frame be repaired without replacing the whole frame?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-337",
+        "term": "Why will a door close but not latch?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-338",
+        "term": "Can every internal door be trimmed at the bottom?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-339",
+        "term": "What is the difference between a door jamb and an architrave?",
+        "owner": "/services/door-and-frame-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-340",
+        "term": "How can I tell whether a timber window sill is rotten?",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-341",
+        "term": "When can a timber window be repaired rather than replaced?",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-342",
+        "term": "Why will a sash window not stay open?",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-343",
+        "term": "Should a window leak be fixed before timber repairs are carried out?",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-344",
+        "term": "What should be checked before repairing windows on a heritage-listed property?",
+        "owner": "/services/timber-window-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-345",
+        "term": "What is the difference between surface weathering and timber rot?",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-346",
+        "term": "Can wood filler fix all types of rotten timber?",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-347",
+        "term": "Why does repaired timber keep rotting?",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-348",
+        "term": "How is suspected termite damage different from timber decay?",
+        "owner": "/services/rotten-timber-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-349",
+        "term": "What is the difference between fascia, bargeboards and eaves lining?",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-350",
+        "term": "Why does timber behind a gutter rot?",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-351",
+        "term": "Should gutters be checked when replacing fascia boards?",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-352",
+        "term": "What should be checked before disturbing old eaves lining in the ACT?",
+        "owner": "/services/fascia-and-eaves-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-353",
+        "term": "When can deck boards be replaced without rebuilding the frame?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-354",
+        "term": "What signs suggest a deck needs more than sanding and oiling?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-355",
+        "term": "Can new deck boards match the appearance of old timber?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-356",
+        "term": "Why do deck fixings work loose?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-357",
+        "term": "What information helps a carpenter quote for deck repairs?",
+        "owner": "/services/deck-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-358",
+        "term": "Is it better to repair a leaning fence or replace it?",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-359",
+        "term": "Can rotten fence posts be replaced while keeping the palings?",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-360",
+        "term": "Why do timber fence posts rot at ground level?",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-361",
+        "term": "What should a written timber fence repair quote include?",
+        "owner": "/services/timber-fence-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-362",
+        "term": "Why does a timber gate sag?",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-363",
+        "term": "Can hinge adjustment solve every gate alignment problem?",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-364",
+        "term": "Should the gate post be checked before replacing the gate?",
+        "owner": "/services/timber-gate-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-365",
+        "term": "What is the difference between skirting boards and architraves?",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-366",
+        "term": "How can replacement skirting match an existing profile?",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-367",
+        "term": "Should skirting boards be fitted before or after new flooring?",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-368",
+        "term": "Can water-damaged MDF skirting be repaired or does it need replacement?",
+        "owner": "/services/skirting-and-architraves",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-369",
+        "term": "Can loose cupboard hinges be repaired if the screw holes are damaged?",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-370",
+        "term": "How do I know whether drawer runners can be replaced?",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-371",
+        "term": "What is the difference between cabinet repairs and custom cabinetry?",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-372",
+        "term": "Should a plumbing leak be fixed before replacing water-damaged cabinet panels?",
+        "owner": "/services/cabinet-door-and-drawer-repairs",
+        "priority": "A"
+      },
+      {
+        "id": "CBR-C-373",
+        "term": "What does fix-out carpentry include?",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-374",
+        "term": "How are shelves fixed safely to different wall types?",
+        "owner": "/services/interior-carpentry",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-375",
+        "term": "Can damaged weatherboards be replaced individually?",
+        "owner": "/services/timber-weatherboard-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-376",
+        "term": "What should be checked behind damaged timber cladding?",
+        "owner": "/services/timber-weatherboard-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-377",
+        "term": "What should be checked when a timber stair tread is loose?",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-378",
+        "term": "Is a loose handrail a cosmetic repair or a safety issue?",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-379",
+        "term": "Can stair repairs affect structural or safety requirements?",
+        "owner": "/services/timber-stair-and-handrail-repairs",
+        "priority": "B"
+      },
+      {
+        "id": "CBR-C-380",
+        "term": "Can a pergola post be replaced without checking the beams and connections?",
+        "owner": "/services/pergola-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-381",
+        "term": "How do I check whether pergola works need building or development approval in the ACT?",
+        "owner": "/services/pergola-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-382",
+        "term": "When do I need custom joinery instead of general carpentry?",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-383",
+        "term": "What is the difference between built-in storage and freestanding furniture?",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-384",
+        "term": "What information is needed to quote for built-in wardrobes?",
+        "owner": "/services/custom-joinery",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-385",
+        "term": "Who should assess timber damage after termite treatment?",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-386",
+        "term": "Can a carpenter replace a load-bearing timber member without a structural assessment?",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-387",
+        "term": "How can I check the approval requirements for structural timber repairs in the ACT?",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-388",
+        "term": "Do development approval and building approval mean the same thing for a deck?",
+        "owner": "/services/deck-building",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-389",
+        "term": "What should be checked before extending an existing deck?",
+        "owner": "/services/deck-building",
+        "priority": "C"
+      },
+      {
+        "id": "CBR-C-390",
+        "term": "Who should repair a leaking roof before damaged roof timbers are replaced?",
+        "owner": "/services/structural-timber-repairs",
+        "priority": "C"
+      }
+    ]
+  }
+}
