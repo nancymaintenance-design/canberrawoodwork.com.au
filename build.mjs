@@ -5,7 +5,7 @@ import { serviceDeepContent } from './src/service-deep-content.mjs';
 const keywordMap=JSON.parse(readFileSync(new URL('./src/keyword-map.json',import.meta.url),'utf8'));
 
 const out = join(process.cwd(), 'dist');
-const origin = (process.env.SITE_ORIGIN || 'http://127.0.0.1:4174').replace(/\/$/, '');
+const origin = (process.env.SITE_ORIGIN || 'https://www.canberrawoodwork.com.au').replace(/\/$/, '');
 const esc = (v='') => String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const slug = s => s.toLowerCase().replaceAll('&','and').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const serviceUrl = s => `/services/${s.slug}/`;
