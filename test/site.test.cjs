@@ -151,7 +151,8 @@ import('../src/content.mjs').then(async ({services})=>{
   const {serviceCaseMedia,homeCaseMedia}=await import('../src/service-case-media.mjs');
   assert.equal(homeCaseMedia.hero.src,'/assets/carpenter-at-work-canberra.webp','homepage hero uses the supplied Canberra work image');
   assert.equal(homeCaseMedia.deck.src,'/assets/completed-timber-deck-canberra.webp','homepage deck feature uses the supplied completed-deck image');
-  assert.equal(Object.keys(serviceCaseMedia).length,6,'six supplied-image service placements are configured');
+  assert.equal(Object.keys(serviceCaseMedia).length,13,'thirteen supplied-image service placements are configured');
+  assert.match(about,/measuring-timber-work-canberra\.webp/,'about page uses the supplied measurement work image');
   for(const [slug,media] of Object.entries(serviceCaseMedia)){
     const service=services.find(item=>item.slug===slug);
     assert.ok(service,`${slug}: configured media belongs to a real service`);
