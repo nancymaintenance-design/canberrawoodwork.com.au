@@ -168,7 +168,7 @@ import('../src/content.mjs').then(async ({services})=>{
   assert.equal(Object.keys(serviceCaseMedia).length,13,'thirteen supplied-image service placements are configured');
   assert.match(about,/measuring-timber-work-canberra\.webp/,'about page uses the supplied measurement work image');
   const themeCss=fs.readFileSync(path.join(dist,'assets','wood-theme.css'),'utf8');
-  assert.match(themeCss,/\.about-visual img\{[^}]*aspect-ratio:4\/3[^}]*object-fit:cover/,'about work image uses a compact landscape crop');
+  assert.match(themeCss,/\.about-visual img\{[^}]*height:clamp\(300px,30vw,460px\)[^}]*object-fit:cover/,'about work image has a bounded half-height desktop layout');
   for(const [slug,media] of Object.entries(serviceCaseMedia)){
     const service=services.find(item=>item.slug===slug);
     assert.ok(service,`${slug}: configured media belongs to a real service`);
