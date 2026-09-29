@@ -41,3 +41,38 @@ document.querySelectorAll('.enquiry-form').forEach(form=>{
     }
   });
 });
+
+document.querySelectorAll('[data-carousel]').forEach(carousel=>{
+  const slides=[...carousel.querySelectorAll('[data-carousel-slide]')];
+  const dots=[...carousel.querySelectorAll('[data-carousel-dot]')];
+  const previous=carousel.querySelector('[data-carousel-prev]');
+  const next=carousel.querySelector('[data-carousel-next]');
+  const status=carousel.querySelector('[data-carousel-status]');
+  if(slides.length<2)return;
+  let current=0;
+  let timer;
+  const show=index=>{
+    current=(index+slides.length)%slides.length;
+    slides.forEach((slide,item)=>{
+      const active=item===current;
+      slide.classList.toggle('is-active',active);
+      slide.setAttribute('aria-hidden',String(!active));
+    });
+    dots.forEach((dot,item)=>{
+      const active=item===current;
+      dot.setAttribute('aria-selected',String(active));
+      if(active)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current');
+    });
+    if(status)status.textContent=`Showing ${current+1} of ${slides.length} work photos`;
+  };
+  const stop=()=>{if(timer){window.clearInterval(timer);timer=undefined;}};
+  const start=()=>{stop();if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches)timer=window.setInterval(()=>show(current+1),6500);};
+  previous?.addEventListener('click',()=>{show(current-1);start();});
+  next?.addEventListener('click',()=>{show(current+1);start();});
+  dots.forEach((dot,index)=>dot.addEventListener('click',()=>{show(index);start();}));
+  carousel.addEventListener('mouseenter',stop);
+  carousel.addEventListener('mouseleave',start);
+  carousel.addEventListener('focusin',stop);
+  carousel.addEventListener('focusout',event=>{if(!carousel.contains(event.relatedTarget))start();});
+  start();
+});

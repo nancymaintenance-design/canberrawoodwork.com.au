@@ -3,9 +3,9 @@
 Canberra carpentry and timber repair services.
 Phone: 0405 878 406
 Email: brian@elliservices.com.au
+Office address: 121 Marcus Clarke St, Canberra, ACT 2600
 Service area: Canberra, ACT.
 Business registration: https://abr.business.gov.au/ABN/View?id=645821745
-Google Maps: https://maps.app.goo.gl/cvWgzfMPhPrDPZnE7
 
 ## Core pages
 - http://127.0.0.1:4174/

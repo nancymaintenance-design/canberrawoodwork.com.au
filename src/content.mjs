@@ -9,6 +9,7 @@ export const business = {
   phone: '0405 878 406',
   phoneHref: 'tel:+61405878406',
   email: 'brian@elliservices.com.au',
+  address: '121 Marcus Clarke St, Canberra, ACT 2600',
   map: 'https://maps.app.goo.gl/cvWgzfMPhPrDPZnE7',
   register: 'https://abr.business.gov.au/ABN/View?id=645821745',
   actRegister: 'https://www.accesscanberra.act.gov.au/business-and-work/public-registers',

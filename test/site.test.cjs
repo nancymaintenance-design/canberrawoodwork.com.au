@@ -60,7 +60,21 @@ const news=fs.readFileSync(path.join(dist,'news','timber-door-sticks-after-rain'
 const newsIndex=fs.readFileSync(path.join(dist,'news','index.html'),'utf8');
 const servicesIndex=fs.readFileSync(path.join(dist,'services','index.html'),'utf8');
 const about=fs.readFileSync(path.join(dist,'about','index.html'),'utf8');
+const areaPage=fs.readFileSync(path.join(dist,'service-areas','index.html'),'utf8');
+const contactPage=fs.readFileSync(path.join(dist,'contact','index.html'),'utf8');
 assert.match(home,/class="google-map"/);assert.match(home,/www\.google\.com\/maps\?q=/);assert.match(home,/maps\.app\.goo\.gl\/cvWgzfMPhPrDPZnE7/);
+assert.match(home,/121 Marcus Clarke St, Canberra, ACT 2600/,'home map section publishes the office address');
+assert.match(home,/class="work-carousel"/,'home page publishes a work-photo carousel');
+assert.equal([...home.matchAll(/class="work-carousel-slide/g)].length,5,'home work carousel presents five supplied work photos');
+assert.match(home,/data-carousel-next/,'home work carousel has a next control');
+assert.match(home,/data-carousel-prev/,'home work carousel has a previous control');
+for(const [name,html] of [['about',about],['contact',contactPage],['areas',areaPage],['services',servicesIndex],['news',newsIndex]]){
+  assert.doesNotMatch(html,/maps\.app\.goo\.gl|www\.google\.com\/maps/,
+    `${name}: Google Maps links stay exclusive to the home map section`);
+}
+assert.match(contactPage,/121 Marcus Clarke St, Canberra, ACT 2600/,'contact page displays the office address');
+assert.doesNotMatch(contactPage,/View on Google Maps/,'contact page does not use a Google Maps location link');
+assert.match(about,/121 Marcus Clarke St, Canberra, ACT 2600/,'footer address is present on supporting pages');
 assert.match(about,/96 645 821 745/);assert.match(about,/645 821 745/);assert.match(about,/accesscanberra\.act\.gov\.au\/business-and-work\/public-registers/);
 assert.match(home,/wood-theme\.css/);assert.match(home,/View all 17 services/);
 for(const item of keywordMap.categories.intent)assert.ok(faq.includes(escapeHtml(item.term)),`missing intent ${item.id}`);
