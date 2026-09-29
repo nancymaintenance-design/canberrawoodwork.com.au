@@ -27,6 +27,14 @@ const jobs = [
   ['梁柱连接、檐板或屋檐修补细节.png', 'fascia-pergola-detail-canberra.webp', 960, 720],
   ['围栏立柱、横梁、铰链或门闩细节.png', 'fence-gate-hardware-detail-canberra.webp', 960, 720],
   ['现场量尺、检查木构或工具作业照.png', 'measuring-timber-work-canberra.webp', 1440, 960],
+  ['窗框、窗台腐烂或进水修复前状态.png', 'water-damaged-window-sill-before.webp', 960, 720],
+  ['地板下露台下的梁、搁栅或承重木构检查照.png', 'under-deck-timber-assessment.webp', 1440, 960],
+  ['木门门框维修前的损坏状态.png', 'deteriorated-timber-frame-before.webp', 960, 720],
+  ['施工人员与客户住宅外观的自然远景.png', 'carpenter-arrival-canberra.webp', 1440, 810],
+  ['室内搁板、墙板或翻新木工完成面.png', 'interior-joinery-canberra.webp', 1440, 810],
+  ['小型木工维修前后对比.png', 'small-carpentry-gate-before-after.webp', 1440, 810],
+  ['新露台施工中的框架、搁栅或结构过程.png', 'new-deck-framing-canberra.webp', 1440, 960],
+  ['新露台完成整体照（与现有露台不同角度）.png', 'new-deck-completed-canberra.webp', 1440, 810],
 ];
 
 async function main() {

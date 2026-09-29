@@ -3,9 +3,15 @@ const image = (src, alt, width, height) => ({ src, alt, width, height });
 export const homeCaseMedia = {
   hero: image('/assets/carpenter-at-work-canberra.webp', 'Carpenter preparing timber on a Canberra residential work site', 1440, 810),
   deck: image('/assets/completed-timber-deck-canberra.webp', 'Completed timber deck at a Canberra home', 1440, 810),
+  arrival: image('/assets/carpenter-arrival-canberra.webp', 'Carpenter arriving at a Canberra residential work site', 1440, 810),
 };
 
 export const serviceCaseMedia = {
+  'small-carpentry-jobs': {
+    images: [
+      image('/assets/small-carpentry-gate-before-after.webp', 'Timber side gate showing weathered and renewed sections', 1440, 810),
+    ],
+  },
   'door-and-frame-repairs': {
     images: [
       image('/assets/timber-door-frame-repair-canberra.webp', 'Timber entry door and frame at a Canberra home', 1440, 810),
@@ -16,12 +22,14 @@ export const serviceCaseMedia = {
     images: [
       image('/assets/timber-window-repair-canberra.webp', 'Painted timber window and sill at a Canberra home', 1440, 810),
       image('/assets/timber-window-sill-detail-canberra.webp', 'Close view of a painted timber window sill in wet weather', 960, 720),
+      image('/assets/water-damaged-window-sill-before.webp', 'Water-damaged painted timber sill and frame before repair assessment', 960, 720),
     ],
   },
   'rotten-timber-repairs': {
     images: [
       image('/assets/timber-rot-removal-canberra.webp', 'Carpenter removing damaged timber from exterior cladding', 1440, 960),
       image('/assets/repaired-timber-detail-canberra.webp', 'Close view of a finished painted timber window detail', 960, 720),
+      image('/assets/deteriorated-timber-frame-before.webp', 'Deteriorated painted timber frame and sill before repair assessment', 960, 720),
     ],
   },
   'deck-repairs': {
@@ -46,6 +54,11 @@ export const serviceCaseMedia = {
     images: [
       image('/assets/cabinet-storage-canberra.webp', 'Built-in storage and cabinetry at a Canberra home', 1440, 810),
       image('/assets/cabinet-hardware-detail-canberra.webp', 'Close view of a cabinet door hinge and shelf fitting', 960, 720),
+    ],
+  },
+  'interior-carpentry': {
+    images: [
+      image('/assets/interior-joinery-canberra.webp', 'Finished built-in shelving, wall panelling and interior joinery at a Canberra home', 1440, 810),
     ],
   },
   'custom-joinery': {
@@ -82,6 +95,17 @@ export const serviceCaseMedia = {
     images: [
       image('/assets/weatherboard-exterior-canberra.webp', 'Painted exterior timber, fascia and eaves at a Canberra home', 1440, 810),
       image('/assets/fascia-pergola-detail-canberra.webp', 'Close view of a timber beam connection and roof-edge repair area', 960, 720),
+    ],
+  },
+  'structural-timber-repairs': {
+    images: [
+      image('/assets/under-deck-timber-assessment.webp', 'Timber bearers and joists inspected below an existing deck', 1440, 960),
+    ],
+  },
+  'deck-building': {
+    images: [
+      image('/assets/new-deck-framing-canberra.webp', 'New timber deck framing and joists during construction', 1440, 960),
+      image('/assets/new-deck-completed-canberra.webp', 'Completed new timber deck at a Canberra home', 1440, 810),
     ],
   },
 };

@@ -65,7 +65,7 @@ const contactPage=fs.readFileSync(path.join(dist,'contact','index.html'),'utf8')
 assert.match(home,/class="google-map"/);assert.match(home,/www\.google\.com\/maps\?q=/);assert.match(home,/maps\.app\.goo\.gl\/cvWgzfMPhPrDPZnE7/);
 assert.match(home,/121 Marcus Clarke St, Canberra, ACT 2600/,'home map section publishes the office address');
 assert.match(home,/class="work-carousel"/,'home page publishes a work-photo carousel');
-assert.equal([...home.matchAll(/class="work-carousel-slide/g)].length,5,'home work carousel presents five supplied work photos');
+assert.equal([...home.matchAll(/class="work-carousel-slide/g)].length,6,'home work carousel presents six supplied work photos');
 assert.match(home,/data-carousel-next/,'home work carousel has a next control');
 assert.match(home,/data-carousel-prev/,'home work carousel has a previous control');
 for(const [name,html] of [['about',about],['contact',contactPage],['areas',areaPage],['services',servicesIndex],['news',newsIndex]]){
@@ -165,7 +165,8 @@ import('../src/content.mjs').then(async ({services})=>{
   const {serviceCaseMedia,homeCaseMedia}=await import('../src/service-case-media.mjs');
   assert.equal(homeCaseMedia.hero.src,'/assets/carpenter-at-work-canberra.webp','homepage hero uses the supplied Canberra work image');
   assert.equal(homeCaseMedia.deck.src,'/assets/completed-timber-deck-canberra.webp','homepage deck feature uses the supplied completed-deck image');
-  assert.equal(Object.keys(serviceCaseMedia).length,13,'thirteen supplied-image service placements are configured');
+  assert.equal(homeCaseMedia.arrival.src,'/assets/carpenter-arrival-canberra.webp','homepage carousel includes the supplied on-site arrival image');
+  assert.equal(Object.keys(serviceCaseMedia).length,17,'all seventeen service routes have supplied-image placements');
   assert.match(about,/measuring-timber-work-canberra\.webp/,'about page uses the supplied measurement work image');
   const themeCss=fs.readFileSync(path.join(dist,'assets','wood-theme.css'),'utf8');
   assert.match(themeCss,/\.about-visual img\{[^}]*height:clamp\(300px,30vw,460px\)[^}]*object-fit:cover/,'about work image has a bounded half-height desktop layout');
@@ -179,6 +180,20 @@ import('../src/content.mjs').then(async ({services})=>{
       assert.ok(fs.existsSync(path.join(dist,image.src)),`${slug}: publishes ${image.src}`);
     }
   }
+  const suppliedMediaExpectations={
+    'timber-window-repairs':'/assets/water-damaged-window-sill-before.webp',
+    'rotten-timber-repairs':'/assets/deteriorated-timber-frame-before.webp',
+    'small-carpentry-jobs':'/assets/small-carpentry-gate-before-after.webp',
+    'interior-carpentry':'/assets/interior-joinery-canberra.webp',
+    'structural-timber-repairs':'/assets/under-deck-timber-assessment.webp',
+    'deck-building':'/assets/new-deck-framing-canberra.webp',
+  };
+  for(const [slug,src] of Object.entries(suppliedMediaExpectations)){
+    const html=fs.readFileSync(path.join(dist,'services',slug,'index.html'),'utf8');
+    assert.ok(html.includes(`src="${src}"`),`${slug}: renders its new supplied work image`);
+  }
+  const deckBuildHtml=fs.readFileSync(path.join(dist,'services','deck-building','index.html'),'utf8');
+  assert.ok(deckBuildHtml.includes('src="/assets/new-deck-completed-canberra.webp"'),'deck building: renders the supplied completed deck image');
   for(const image of Object.values(homeCaseMedia)){
     assert.ok(fs.existsSync(path.join(dist,image.src)),`home: publishes ${image.src}`);
   }
