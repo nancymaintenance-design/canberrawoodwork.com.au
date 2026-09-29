@@ -47,6 +47,7 @@ function homeMap(){const mapEmbed='https://www.google.com/maps?q=121%20Marcus%20
 function homeWorkCarousel(){const slides=[
   {image:homeCaseMedia.hero,label:'On-site carpentry',copy:'Practical timber work at a Canberra home.'},
   {image:homeCaseMedia.arrival,label:'Arriving on site',copy:'A carpentry visit begins by looking at the home and the affected timber.'},
+  {image:homeCaseMedia.preparation,label:'Preparing timber',copy:'Measuring and preparing timber before the next work step.'},
   {image:homeCaseMedia.deck,label:'Completed deck',copy:'Outdoor timber boards, edges and a finished deck setting.'},
   {image:serviceCaseMedia['door-and-frame-repairs'].images[0],label:'Timber entry detail',copy:'A timber door and frame in a Canberra residential setting.'},
   {image:serviceCaseMedia['timber-window-repairs'].images[0],label:'Window and sill',copy:'Painted timber window repairs and weathered sill details.'},

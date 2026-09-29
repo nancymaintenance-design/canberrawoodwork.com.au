@@ -65,7 +65,7 @@ const contactPage=fs.readFileSync(path.join(dist,'contact','index.html'),'utf8')
 assert.match(home,/class="google-map"/);assert.match(home,/www\.google\.com\/maps\?q=/);assert.match(home,/maps\.app\.goo\.gl\/cvWgzfMPhPrDPZnE7/);
 assert.match(home,/121 Marcus Clarke St, Canberra, ACT 2600/,'home map section publishes the office address');
 assert.match(home,/class="work-carousel"/,'home page publishes a work-photo carousel');
-assert.equal([...home.matchAll(/class="work-carousel-slide/g)].length,6,'home work carousel presents six supplied work photos');
+assert.equal([...home.matchAll(/class="work-carousel-slide/g)].length,7,'home work carousel presents seven supplied work photos');
 assert.match(home,/data-carousel-next/,'home work carousel has a next control');
 assert.match(home,/data-carousel-prev/,'home work carousel has a previous control');
 for(const [name,html] of [['about',about],['contact',contactPage],['areas',areaPage],['services',servicesIndex],['news',newsIndex]]){
@@ -166,6 +166,7 @@ import('../src/content.mjs').then(async ({services})=>{
   assert.equal(homeCaseMedia.hero.src,'/assets/carpenter-at-work-canberra.webp','homepage hero uses the supplied Canberra work image');
   assert.equal(homeCaseMedia.deck.src,'/assets/completed-timber-deck-canberra.webp','homepage deck feature uses the supplied completed-deck image');
   assert.equal(homeCaseMedia.arrival.src,'/assets/carpenter-arrival-canberra.webp','homepage carousel includes the supplied on-site arrival image');
+  assert.equal(homeCaseMedia.preparation.src,'/assets/carpenter-timber-preparation-canberra.webp','homepage carousel includes the supplied timber preparation image');
   assert.equal(Object.keys(serviceCaseMedia).length,17,'all seventeen service routes have supplied-image placements');
   assert.match(about,/measuring-timber-work-canberra\.webp/,'about page uses the supplied measurement work image');
   const themeCss=fs.readFileSync(path.join(dist,'assets','wood-theme.css'),'utf8');
@@ -187,6 +188,12 @@ import('../src/content.mjs').then(async ({services})=>{
     'interior-carpentry':'/assets/interior-joinery-canberra.webp',
     'structural-timber-repairs':'/assets/under-deck-timber-assessment.webp',
     'deck-building':'/assets/new-deck-framing-canberra.webp',
+    'timber-window-repairs':'/assets/timber-window-frame-repair-process.webp',
+    'door-and-frame-repairs':'/assets/completed-timber-door-frame-detail.webp',
+    'timber-fence-repairs':'/assets/timber-fence-installation-canberra.webp',
+    'timber-gate-repairs':'/assets/timber-fence-installation-canberra.webp',
+    'pergola-timber-repairs':'/assets/pergola-post-base-repair.webp',
+    'fascia-and-eaves-repairs':'/assets/fascia-eaves-repair-process.webp',
   };
   for(const [slug,src] of Object.entries(suppliedMediaExpectations)){
     const html=fs.readFileSync(path.join(dist,'services',slug,'index.html'),'utf8');

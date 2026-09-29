@@ -35,17 +35,25 @@ const jobs = [
   ['小型木工维修前后对比.png', 'small-carpentry-gate-before-after.webp', 1440, 810],
   ['新露台施工中的框架、搁栅或结构过程.png', 'new-deck-framing-canberra.webp', 1440, 960],
   ['新露台完成整体照（与现有露台不同角度）.png', 'new-deck-completed-canberra.webp', 1440, 810],
+  ['Fascia、eaves 或 weatherboard 的高空近景施工照.png', 'fascia-eaves-repair-process.webp', 1440, 960],
+  ['Pergola 或 verandah 木柱底部维修前后对比.png', 'pergola-post-base-repair.webp', 960, 720],
+  ['工具、测量、木料准备的自然工作照.png', 'carpenter-timber-preparation-canberra.webp', 1440, 810],
+  ['木窗台门框施工中的切除、补木、固定过程.png', 'timber-window-frame-repair-process.webp', 960, 720, { extract: { left: 0, top: 50, width: 1150, height: 900 }, position: 'left' }],
+  ['木门或窗框“维修完成后”的同角度对比图.png', 'completed-timber-door-frame-detail.webp', 960, 720],
+  ['围栏或大门施工过程照.png', 'timber-fence-installation-canberra.webp', 1440, 960],
 ];
 
 async function main() {
   fs.mkdirSync(destination, { recursive: true });
-  for (const [sourceName, outputName, width, height] of jobs) {
+  for (const [sourceName, outputName, width, height, options = {}] of jobs) {
     const source = path.join(sourceRoot, sourceName);
     const target = path.join(destination, outputName);
     if (fs.existsSync(target)) continue;
     if (!fs.existsSync(source)) throw new Error(`Missing supplied image: ${source}`);
-    await sharp(source)
-      .resize({ width, height, fit: 'cover', position: 'attention', withoutEnlargement: true })
+    let transform = sharp(source);
+    if (options.extract) transform = transform.extract(options.extract);
+    await transform
+      .resize({ width, height, fit: 'cover', position: options.position || 'attention', withoutEnlargement: true })
       .webp({ quality: 78, effort: 5 })
       .toFile(target);
   }

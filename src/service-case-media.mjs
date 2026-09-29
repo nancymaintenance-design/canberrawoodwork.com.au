@@ -4,6 +4,7 @@ export const homeCaseMedia = {
   hero: image('/assets/carpenter-at-work-canberra.webp', 'Carpenter preparing timber on a Canberra residential work site', 1440, 810),
   deck: image('/assets/completed-timber-deck-canberra.webp', 'Completed timber deck at a Canberra home', 1440, 810),
   arrival: image('/assets/carpenter-arrival-canberra.webp', 'Carpenter arriving at a Canberra residential work site', 1440, 810),
+  preparation: image('/assets/carpenter-timber-preparation-canberra.webp', 'Carpenter measuring and preparing timber at a Canberra work site', 1440, 810),
 };
 
 export const serviceCaseMedia = {
@@ -16,6 +17,7 @@ export const serviceCaseMedia = {
     images: [
       image('/assets/timber-door-frame-repair-canberra.webp', 'Timber entry door and frame at a Canberra home', 1440, 810),
       image('/assets/door-hinge-frame-detail-canberra.webp', 'Close view of a timber door hinge and frame', 960, 720),
+      image('/assets/completed-timber-door-frame-detail.webp', 'Completed painted timber door frame repair detail', 960, 720),
     ],
   },
   'timber-window-repairs': {
@@ -23,6 +25,7 @@ export const serviceCaseMedia = {
       image('/assets/timber-window-repair-canberra.webp', 'Painted timber window and sill at a Canberra home', 1440, 810),
       image('/assets/timber-window-sill-detail-canberra.webp', 'Close view of a painted timber window sill in wet weather', 960, 720),
       image('/assets/water-damaged-window-sill-before.webp', 'Water-damaged painted timber sill and frame before repair assessment', 960, 720),
+      image('/assets/timber-window-frame-repair-process.webp', 'Carpenter repairing a timber window sill and frame', 960, 720),
     ],
   },
   'rotten-timber-repairs': {
@@ -42,12 +45,14 @@ export const serviceCaseMedia = {
     images: [
       image('/assets/timber-fence-gate-canberra.webp', 'Timber boundary fence and gate at a Canberra home', 1440, 810),
       image('/assets/fence-gate-hardware-detail-canberra.webp', 'Close view of timber gate hinge, latch and fence post', 960, 720),
+      image('/assets/timber-fence-installation-canberra.webp', 'Carpenters building a timber fence and gate', 1440, 960),
     ],
   },
   'timber-gate-repairs': {
     images: [
       image('/assets/timber-fence-gate-canberra.webp', 'Timber boundary gate and fence at a Canberra home', 1440, 810),
       image('/assets/fence-gate-hardware-detail-canberra.webp', 'Close view of timber gate hinge, latch and fence post', 960, 720),
+      image('/assets/timber-fence-installation-canberra.webp', 'Carpenters building a timber gate and fence', 1440, 960),
     ],
   },
   'cabinet-door-and-drawer-repairs': {
@@ -89,12 +94,14 @@ export const serviceCaseMedia = {
     images: [
       image('/assets/pergola-verandah-canberra.webp', 'Timber pergola and verandah at a Canberra home', 1440, 810),
       image('/assets/fascia-pergola-detail-canberra.webp', 'Close view of a timber beam connection and roof-edge repair area', 960, 720),
+      image('/assets/pergola-post-base-repair.webp', 'Repaired timber post base at a pergola or verandah', 960, 720),
     ],
   },
   'fascia-and-eaves-repairs': {
     images: [
       image('/assets/weatherboard-exterior-canberra.webp', 'Painted exterior timber, fascia and eaves at a Canberra home', 1440, 810),
       image('/assets/fascia-pergola-detail-canberra.webp', 'Close view of a timber beam connection and roof-edge repair area', 960, 720),
+      image('/assets/fascia-eaves-repair-process.webp', 'Carpenter repairing deteriorated fascia and eaves timber', 1440, 960),
     ],
   },
   'structural-timber-repairs': {
