@@ -87,7 +87,7 @@ const browserScript=fs.readFileSync(path.join(dist,'assets','site.js'),'utf8');
 assert.match(browserScript,/fetch\('\/api\/contact'/,'Resend contact API request');
 assert.doesNotMatch(browserScript,/location\.href=.*mailto/,'no mail-client redirect');
 assert.match(fs.readFileSync(path.join(dist,'llms.txt'),'utf8'),/Ellis Services Group/);
-assert.match(fs.readFileSync(path.join(dist,'robots.txt'),'utf8'),/Disallow: \/|Allow: \/ /);
+assert.match(fs.readFileSync(path.join(dist,'robots.txt'),'utf8'),/(?:Disallow|Allow): \//,'robots permits either a local-preview block or a production crawl allowance');
 import('../src/content.mjs').then(async ({services})=>{
   assert.equal(services.length,17,'all 17 service routes remain present');
   const buildingFabricPhrases={
@@ -148,6 +148,23 @@ import('../src/content.mjs').then(async ({services})=>{
     assert.ok(words.length>=650,`${service.slug}: ${words.length} visible page words (minimum 650)`);
   }
   const {serviceDeepContent}=await import('../src/service-deep-content.mjs');
+  const {serviceCaseMedia,homeCaseMedia}=await import('../src/service-case-media.mjs');
+  assert.equal(homeCaseMedia.hero.src,'/assets/carpenter-at-work-canberra.webp','homepage hero uses the supplied Canberra work image');
+  assert.equal(homeCaseMedia.deck.src,'/assets/completed-timber-deck-canberra.webp','homepage deck feature uses the supplied completed-deck image');
+  assert.equal(Object.keys(serviceCaseMedia).length,6,'six supplied-image service placements are configured');
+  for(const [slug,media] of Object.entries(serviceCaseMedia)){
+    const service=services.find(item=>item.slug===slug);
+    assert.ok(service,`${slug}: configured media belongs to a real service`);
+    const html=fs.readFileSync(path.join(dist,'services',slug,'index.html'),'utf8');
+    assert.match(html,/class="[^"]*\bservice-case-study\b[^"]*"/,`${slug}: renders a visible case-image section`);
+    for(const image of media.images){
+      assert.ok(html.includes(`src="${image.src}"`),`${slug}: renders ${image.src}`);
+      assert.ok(fs.existsSync(path.join(dist,image.src)),`${slug}: publishes ${image.src}`);
+    }
+  }
+  for(const image of Object.values(homeCaseMedia)){
+    assert.ok(fs.existsSync(path.join(dist,image.src)),`home: publishes ${image.src}`);
+  }
   for(const service of services){
     const entry=serviceDeepContent[service.slug];
     assert.ok(entry,`${service.slug}: deep-content data entry`);
