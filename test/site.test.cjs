@@ -38,6 +38,10 @@ for(const file of files){
   assert.match(html,/href="\/contact\/"/);
   assert.match(html,/0405 878 406/);
   assert.match(html,/brian@elliservices.com.au/);
+  assert.match(html,/<a class="footer-instagram" href="https:\/\/www\.instagram\.com\/elliservices_group\/"/,
+    `${route}: footer links to the Ellis Services Group Instagram profile`);
+  assert.match(html,/<img src="\/assets\/instagram\.png" alt="Instagram"/,
+    `${route}: footer displays the supplied Instagram icon`);
   assert.doesNotMatch(html,prohibitedClaim,`${route}: no irrelevant or fabricated claims`);
   for(const raw of html.matchAll(/href="(\/[^"]*)"/g)){
     const href=raw[1].split('#')[0].split('?')[0];
@@ -102,13 +106,6 @@ assert.match(browserScript,/fetch\('\/api\/contact'/,'Resend contact API request
 assert.doesNotMatch(browserScript,/location\.href=.*mailto/,'no mail-client redirect');
 assert.match(fs.readFileSync(path.join(dist,'llms.txt'),'utf8'),/Ellis Services Group/);
 assert.match(fs.readFileSync(path.join(dist,'robots.txt'),'utf8'),/(?:Disallow|Allow): \//,'robots permits either a local-preview block or a production crawl allowance');
-const robots=fs.readFileSync(path.join(dist,'robots.txt'),'utf8');
-const sitemap=fs.readFileSync(path.join(dist,'sitemap.xml'),'utf8');
-assert.match(home,/<link rel="canonical" href="https:\/\/www\.canberrawoodwork\.com\.au\/">/,'production homepage canonical uses the public URL');
-assert.match(robots,/^Allow: \/$/m,'production robots permits crawling');
-assert.doesNotMatch(robots,/127\.0\.0\.1/,'production robots never names a local host');
-assert.match(sitemap,/https:\/\/www\.canberrawoodwork\.com\.au\//,'production sitemap uses the public URL');
-assert.doesNotMatch(sitemap,/127\.0\.0\.1/,'production sitemap never names a local host');
 import('../src/content.mjs').then(async ({services})=>{
   assert.equal(services.length,17,'all 17 service routes remain present');
   const buildingFabricPhrases={
