@@ -17,7 +17,7 @@ execFileSync(process.execPath,['build.mjs'],{cwd:root});
 const files=[];
 function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,entry.name);if(entry.isDirectory())walk(p);else if(entry.name==='index.html')files.push(p)}}
 walk(dist);
-assert.equal(files.length,39,'38 public routes plus 404');
+assert.equal(files.length,40,'39 public routes plus 404');
 const titles=new Set();
 const descriptions=new Set();
 const pageSchemas=new Map();
@@ -66,6 +66,7 @@ const servicesIndex=fs.readFileSync(path.join(dist,'services','index.html'),'utf
 const about=fs.readFileSync(path.join(dist,'about','index.html'),'utf8');
 const areaPage=fs.readFileSync(path.join(dist,'service-areas','index.html'),'utf8');
 const contactPage=fs.readFileSync(path.join(dist,'contact','index.html'),'utf8');
+const privacyPage=fs.readFileSync(path.join(dist,'privacy','index.html'),'utf8');
 assert.match(home,/class="google-map"/);assert.match(home,/www\.google\.com\/maps\?q=/);assert.match(home,/maps\.app\.goo\.gl\/cvWgzfMPhPrDPZnE7/);
 assert.match(home,/121 Marcus Clarke St, Canberra, ACT 2600/,'home map section publishes the office address');
 assert.match(home,/class="work-carousel"/,'home page publishes a work-photo carousel');
@@ -79,7 +80,10 @@ for(const [name,html] of [['about',about],['contact',contactPage],['areas',areaP
 assert.match(contactPage,/121 Marcus Clarke St, Canberra, ACT 2600/,'contact page displays the office address');
 assert.doesNotMatch(contactPage,/View on Google Maps/,'contact page does not use a Google Maps location link');
 assert.match(about,/121 Marcus Clarke St, Canberra, ACT 2600/,'footer address is present on supporting pages');
-assert.match(about,/96 645 821 745/);assert.match(about,/645 821 745/);assert.match(about,/accesscanberra\.act\.gov\.au\/business-and-work\/public-registers/);
+assert.match(about,/Canberra office and carpentry team/,'about page establishes the local Canberra operation');
+assert.doesNotMatch(about,/VIC 3030|construction occupation licence/i,'about page does not undermine Canberra location or service trust');
+assert.match(privacyPage,/Privacy Policy/,'privacy policy page is published');
+assert.match(privacyPage,/121 Marcus Clarke St, Canberra, ACT 2600/,'privacy policy identifies the business contact address');
 assert.match(home,/wood-theme\.css/);assert.match(home,/View all 17 services/);
 for(const item of keywordMap.categories.intent)assert.ok(faq.includes(escapeHtml(item.term)),`missing intent ${item.id}`);
 for(const item of keywordMap.categories.distilled)assert.ok(servicesIndex.includes(escapeHtml(item.term)),`missing internal-link anchor ${item.id}`);
@@ -99,6 +103,7 @@ for(const [name,html] of [['contact',contact],['service areas',areas]]){
   assert.match(html,/Service of interest/,`${name}: service selector`);
   assert.match(html,/type="file"/,`${name}: optional photo field`);
   assert.match(html,/name="consent" type="checkbox" required/,`${name}: required consent`);
+  assert.match(html,/href="\/privacy\/"/,`${name}: consent links to the privacy policy`);
   assert.match(html,/Send enquiry/,`${name}: enquiry action`);
 }
 const browserScript=fs.readFileSync(path.join(dist,'assets','site.js'),'utf8');
@@ -136,7 +141,7 @@ import('../src/content.mjs').then(async ({services})=>{
     'cabinet-door-and-drawer-repairs':['hinge and runner compatibility','part availability'],
     'interior-carpentry':['on-site fitting and finishing','structural or wet-area work'],
     'custom-joinery':['measure at several points','material, edge treatment and finish'],
-    'structural-timber-repairs':['practitioner and approval checks','does not establish an act construction occupation licence'],
+    'structural-timber-repairs':['practitioner and approval checks','structural repairs may need engineering'],
   };
   for(const service of services){
     const file=path.join(dist,'services',service.slug,'index.html');
@@ -172,6 +177,12 @@ import('../src/content.mjs').then(async ({services})=>{
     const words=main.replace(/<[^>]*>/g,' ').replace(/&[^;]+;/g,' ').trim().split(/\s+/).filter(Boolean);
     assert.ok(words.length>=650,`${service.slug}: ${words.length} visible page words (minimum 650)`);
   }
+  const structural=fs.readFileSync(path.join(dist,'services','structural-timber-repairs','index.html'),'utf8');
+  const deckBuilding=fs.readFileSync(path.join(dist,'services','deck-building','index.html'),'utf8');
+  assert.doesNotMatch(structural,/does not define a repair design|does not claim a specific act construction licence|an ABN or general carpentry description does not establish/i,'structural page avoids discouraging licence disclaimers');
+  assert.match(structural,/We confirm the required assessment, approvals and practitioner pathway before a quote or schedule is agreed\./,'structural page explains the next step positively');
+  assert.doesNotMatch(deckBuilding,/does not state that a particular deck is exempt from approval|does not claim those permissions or a specific licence/i,'deck-building page avoids discouraging licence disclaimers');
+  assert.match(deckBuilding,/New decks and extensions are planned around the site, intended use and any required ACT checks\./,'deck-building page states the service clearly');
   const {serviceDeepContent}=await import('../src/service-deep-content.mjs');
   const {serviceCaseMedia,homeCaseMedia}=await import('../src/service-case-media.mjs');
   assert.equal(homeCaseMedia.hero.src,'/assets/carpenter-at-work-canberra.webp','homepage hero uses the supplied Canberra work image');
