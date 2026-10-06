@@ -83,6 +83,7 @@ assert.match(about,/121 Marcus Clarke St, Canberra, ACT 2600/,'footer address is
 assert.match(about,/Canberra office and carpentry team/,'about page establishes the local Canberra operation');
 assert.doesNotMatch(about,/VIC 3030|construction occupation licence/i,'about page does not undermine Canberra location or service trust');
 assert.match(about,/class="business-registration-section"/,'about page publishes the business and registration section');
+assert.match(about,/Ellis Services Group company details\./,'about page gives the registration panel a direct company-details heading');
 assert.match(about,/ELLIS SERVICES GROUP PTY LTD/,'about page identifies the legal entity');
 assert.match(about,/96 645 821 745/,'about page publishes the ABN');
 assert.match(about,/https:\/\/abr\.business\.gov\.au\/ABN\/View\?id=645821745/,'about page links to the official ABN record');
@@ -198,6 +199,7 @@ import('../src/content.mjs').then(async ({services})=>{
   assert.match(about,/measuring-timber-work-canberra\.webp/,'about page uses the supplied measurement work image');
   const themeCss=fs.readFileSync(path.join(dist,'assets','wood-theme.css'),'utf8');
   assert.match(themeCss,/\.about-visual img\{[^}]*height:clamp\(300px,30vw,460px\)[^}]*object-fit:cover/,'about work image has a bounded half-height desktop layout');
+assert.match(themeCss,/\.business-registration-section\{[^}]*background:#fffdf9[^}]*border-top:3px solid #b56837/,'about registration panel uses the site warm-white and timber colour treatment');
   for(const [slug,media] of Object.entries(serviceCaseMedia)){
     const service=services.find(item=>item.slug===slug);
     assert.ok(service,`${slug}: configured media belongs to a real service`);
