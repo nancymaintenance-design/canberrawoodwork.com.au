@@ -58,8 +58,8 @@ for(const file of files){
   assert.ok(schemas.length,`${route}: JSON-LD present`);
   pageSchemas.set(route,schemas);
 }
-const home=fs.readFileSync(path.join(dist,'index.html'),'utf8');assert.match(home,/home work better/);assert.match(home,/Small Carpentry Jobs/);
-const faq=fs.readFileSync(path.join(dist,'faq','index.html'),'utf8');assert.match(faq,/FAQPage/);
+const home=fs.readFileSync(path.join(dist,'index.html'),'utf8');assert.match(home,/<h1>Canberra Carpentry & Timber Repairs<\/h1>/,'home page H1 states the core Canberra service theme directly');assert.match(home,/Small Carpentry Jobs/);
+const faq=fs.readFileSync(path.join(dist,'faq','index.html'),'utf8');assert.match(faq,/<h1>Canberra Carpentry Questions & Answers<\/h1>/,'FAQ H1 states the Canberra carpentry question intent directly');assert.match(faq,/FAQPage/);
 const news=fs.readFileSync(path.join(dist,'news','timber-door-sticks-after-rain','index.html'),'utf8');assert.match(news,/"@type":"Article"/);
 const newsIndex=fs.readFileSync(path.join(dist,'news','index.html'),'utf8');
 const servicesIndex=fs.readFileSync(path.join(dist,'services','index.html'),'utf8');
@@ -67,6 +67,11 @@ const about=fs.readFileSync(path.join(dist,'about','index.html'),'utf8');
 const areaPage=fs.readFileSync(path.join(dist,'service-areas','index.html'),'utf8');
 const contactPage=fs.readFileSync(path.join(dist,'contact','index.html'),'utf8');
 const privacyPage=fs.readFileSync(path.join(dist,'privacy','index.html'),'utf8');
+assert.match(about,/<h1>About Our Canberra Carpentry Team<\/h1>/,'about H1 states the local team theme directly');
+assert.match(servicesIndex,/<h1>Canberra Carpentry & Timber Repair Services<\/h1>/,'services H1 states the service cluster directly');
+assert.match(areaPage,/<h1>Canberra Carpentry Service Areas<\/h1>/,'service-area H1 states the local service-area theme directly');
+assert.match(contactPage,/<h1>Request a Canberra Carpentry Quote<\/h1>/,'contact H1 states the quote intent directly');
+assert.match(newsIndex,/<h1>Canberra Carpentry Advice & Repair Guides<\/h1>/,'news H1 states the advice and repair-guide theme directly');
 assert.match(home,/class="google-map"/);assert.match(home,/www\.google\.com\/maps\?q=/);assert.match(home,/maps\.app\.goo\.gl\/cvWgzfMPhPrDPZnE7/);
 assert.match(home,/121 Marcus Clarke St, Canberra, ACT 2600/,'home map section publishes the office address');
 assert.match(home,/class="work-carousel"/,'home page publishes a work-photo carousel');
