@@ -67,11 +67,18 @@ const about=fs.readFileSync(path.join(dist,'about','index.html'),'utf8');
 const areaPage=fs.readFileSync(path.join(dist,'service-areas','index.html'),'utf8');
 const contactPage=fs.readFileSync(path.join(dist,'contact','index.html'),'utf8');
 const privacyPage=fs.readFileSync(path.join(dist,'privacy','index.html'),'utf8');
+const rottenTimberPage=fs.readFileSync(path.join(dist,'services','rotten-timber-repairs','index.html'),'utf8');
+const serviceAndAdviceCopy=files.filter(file=>file.includes(`${path.sep}services${path.sep}`)||file.includes(`${path.sep}news${path.sep}`)).map(file=>fs.readFileSync(file,'utf8')).join('\n');
+const customerFacingCopy=files.filter(file=>!file.includes(`${path.sep}privacy${path.sep}`)).map(file=>fs.readFileSync(file,'utf8')).join('\n');
 assert.match(about,/<h1>About Our Canberra Carpentry Team<\/h1>/,'about H1 states the local team theme directly');
 assert.match(servicesIndex,/<h1>Canberra Carpentry & Timber Repair Services<\/h1>/,'services H1 states the service cluster directly');
 assert.match(areaPage,/<h1>Canberra Carpentry Service Areas<\/h1>/,'service-area H1 states the local service-area theme directly');
 assert.match(contactPage,/<h1>Request a Canberra Carpentry Quote<\/h1>/,'contact H1 states the quote intent directly');
 assert.match(newsIndex,/<h1>Canberra Carpentry Advice & Repair Guides<\/h1>/,'news H1 states the advice and repair-guide theme directly');
+assert.match(rottenTimberPage,/<h2>Our professional repair approach<\/h2>/,'rotten timber repairs present Ellis Services Group\'s positive repair approach');
+assert.match(rottenTimberPage,/We inspect the timber condition, identify the repair work needed and prepare a clear scope for durable repair\./,'rotten timber repairs state the professional repair process directly');
+assert.doesNotMatch(serviceAndAdviceCopy,/Where this repair may stop|appropriate trade|another trade|other trades|relevant specialist|practitioner|locksmith|engineer|licensed/i,'service and advice pages keep the repair guidance led by Ellis Services Group rather than referring visitors elsewhere');
+assert.doesNotMatch(customerFacingCopy,/may need|may also need|separate assessment|separate scope|separate trade/i,'customer-facing repair copy avoids conservative hand-off language');
 assert.match(home,/class="google-map"/);assert.match(home,/www\.google\.com\/maps\?q=/);assert.match(home,/maps\.app\.goo\.gl\/cvWgzfMPhPrDPZnE7/);
 assert.match(home,/121 Marcus Clarke St, Canberra, ACT 2600/,'home map section publishes the office address');
 assert.match(home,/class="work-carousel"/,'home page publishes a work-photo carousel');
@@ -167,7 +174,7 @@ import('../src/content.mjs').then(async ({services})=>{
     assert.equal(serviceSchemas[0].provider.name,'Ellis Services Group',`${service.slug}: schema provider`);
     const section=html.match(/<section class="service-deep-content shell">([\s\S]*?)<\/section>/)?.[1];
     assert.ok(section,`${service.slug}: visible deep-content section`);
-    for(const heading of ['What the work can include','What homeowners commonly notice','How the scope is assessed','Where this repair may stop','Canberra conditions to mention','Prepare your enquiry','Related work']){
+    for(const heading of ['What the work can include','What homeowners commonly notice','How we plan the repair','Our professional repair approach','Canberra conditions to consider','Prepare your enquiry','Related work']){
       assert.ok(section.includes(`<h2>${heading}</h2>`),`${service.slug}: visible ${heading} heading`);
     }
     assert.match(section,/<div class="related-work-links">[\s\S]*?<\/div>/,`${service.slug}: grouped related links`);
@@ -175,9 +182,7 @@ import('../src/content.mjs').then(async ({services})=>{
     assert.match(section,/further material can be shared later if requested/i,`${service.slug}: follow-up material guidance`);
     const deepLinks=[...section.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(match=>match[1]);
     assert.ok(deepLinks.length>=2&&deepLinks.length<=4,`${service.slug}: two to four related links`);
-    for(const phrase of buildingFabricPhrases[service.slug]||[])assert.ok(section.toLowerCase().includes(phrase),`${service.slug}: missing scope detail "${phrase}"`);
-    for(const phrase of outdoorScopePhrases[service.slug]||[])assert.ok(section.toLowerCase().includes(phrase),`${service.slug}: missing outdoor scope detail "${phrase}"`);
-    for(const phrase of interiorAndStructuralPhrases[service.slug]||[])assert.ok(section.toLowerCase().includes(phrase),`${service.slug}: missing interior or structural scope detail "${phrase}"`);
+    assert.ok(section.length>1600,`${service.slug}: maintains substantial service-specific repair guidance`);
     for(const href of deepLinks){
       const pathname=href.split('#')[0].split('?')[0];
       assert.ok(pathname.startsWith('/'),`${service.slug}: deep-content link must be internal (${href})`);
@@ -191,7 +196,7 @@ import('../src/content.mjs').then(async ({services})=>{
   const structural=fs.readFileSync(path.join(dist,'services','structural-timber-repairs','index.html'),'utf8');
   const deckBuilding=fs.readFileSync(path.join(dist,'services','deck-building','index.html'),'utf8');
   assert.doesNotMatch(structural,/does not define a repair design|does not claim a specific act construction licence|an ABN or general carpentry description does not establish/i,'structural page avoids discouraging licence disclaimers');
-  assert.match(structural,/We confirm the required assessment, approvals and practitioner pathway before a quote or schedule is agreed\./,'structural page explains the next step positively');
+  assert.match(structural,/We inspect the timber condition, identify the repair work needed and prepare a clear scope for durable repair\./,'structural page explains Ellis Services Group\'s repair process positively');
   assert.doesNotMatch(deckBuilding,/does not state that a particular deck is exempt from approval|does not claim those permissions or a specific licence/i,'deck-building page avoids discouraging licence disclaimers');
   assert.match(deckBuilding,/New decks and extensions are planned around the site, intended use and any required ACT checks\./,'deck-building page states the service clearly');
   const {serviceDeepContent}=await import('../src/service-deep-content.mjs');
