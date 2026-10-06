@@ -82,6 +82,11 @@ assert.doesNotMatch(contactPage,/View on Google Maps/,'contact page does not use
 assert.match(about,/121 Marcus Clarke St, Canberra, ACT 2600/,'footer address is present on supporting pages');
 assert.match(about,/Canberra office and carpentry team/,'about page establishes the local Canberra operation');
 assert.doesNotMatch(about,/VIC 3030|construction occupation licence/i,'about page does not undermine Canberra location or service trust');
+assert.match(about,/class="business-registration-section"/,'about page publishes the business and registration section');
+assert.match(about,/ELLIS SERVICES GROUP PTY LTD/,'about page identifies the legal entity');
+assert.match(about,/96 645 821 745/,'about page publishes the ABN');
+assert.match(about,/https:\/\/abr\.business\.gov\.au\/ABN\/View\?id=645821745/,'about page links to the official ABN record');
+assert.match(about,/https:\/\/share\.google\/9J93sm3qIx44KCDtj/,'about page links to the Google Business Profile reviews');
 assert.match(privacyPage,/Privacy Policy/,'privacy policy page is published');
 assert.match(privacyPage,/121 Marcus Clarke St, Canberra, ACT 2600/,'privacy policy identifies the business contact address');
 assert.match(home,/wood-theme\.css/);assert.match(home,/View all 17 services/);

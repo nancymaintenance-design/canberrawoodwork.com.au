@@ -12,6 +12,7 @@ export const business = {
   address: '121 Marcus Clarke St, Canberra, ACT 2600',
   map: 'https://maps.app.goo.gl/cvWgzfMPhPrDPZnE7',
   register: 'https://abr.business.gov.au/ABN/View?id=645821745',
+  googleReviews: 'https://share.google/9J93sm3qIx44KCDtj',
   actRegister: 'https://www.accesscanberra.act.gov.au/business-and-work/public-registers',
 };
 
