@@ -119,7 +119,8 @@ const contact=fs.readFileSync(path.join(dist,'contact','index.html'),'utf8');
 for(const [name,html] of [['contact',contact],['service areas',areas]]){
   assert.match(html,/Canberra district or area/,`${name}: area selector`);
   assert.match(html,/Service of interest/,`${name}: service selector`);
-  assert.match(html,/type="file"/,`${name}: optional photo field`);
+  assert.doesNotMatch(html,/type="file"/,`${name}: no non-functional photo picker`);
+  assert.match(html,/Photos are optional[\s\S]*mailto:brian@elliservices\.com\.au/,`${name}: optional photos use the existing email channel`);
   assert.match(html,/name="consent" type="checkbox" required/,`${name}: required consent`);
   assert.match(html,/href="\/privacy\/"/,`${name}: consent links to the privacy policy`);
   assert.match(html,/Send enquiry/,`${name}: enquiry action`);
@@ -174,12 +175,13 @@ import('../src/content.mjs').then(async ({services})=>{
     assert.equal(serviceSchemas[0].provider.name,'Ellis Services Group',`${service.slug}: schema provider`);
     const section=html.match(/<section class="service-deep-content shell">([\s\S]*?)<\/section>/)?.[1];
     assert.ok(section,`${service.slug}: visible deep-content section`);
-    for(const heading of ['What the work can include','What homeowners commonly notice','How we plan the repair','Our professional repair approach','Canberra conditions to consider','Prepare your enquiry','Related work']){
+    const installing=['deck-building','custom-joinery','interior-carpentry','skirting-and-architraves'].includes(service.slug);
+    for(const heading of ['What the work can include','What homeowners commonly notice',installing?'How we plan the installation':'How we plan the repair',installing?'Project checks and installation scope':'Our professional repair approach','Canberra conditions to consider','Arrange your assessment','Related work']){
       assert.ok(section.includes(`<h2>${heading}</h2>`),`${service.slug}: visible ${heading} heading`);
     }
     assert.match(section,/<div class="related-work-links">[\s\S]*?<\/div>/,`${service.slug}: grouped related links`);
-    assert.match(section,/attach photos to the enquiry/i,`${service.slug}: optional photo attachment guidance`);
-    assert.match(section,/further material can be shared later if requested/i,`${service.slug}: follow-up material guidance`);
+    assert.match(section,/optional[\s\S]*brian@elliservices\.com\.au/i,`${service.slug}: optional photos use the functioning email channel`);
+    assert.doesNotMatch(section,/attach photos to the enquiry/i,`${service.slug}: no unsupported form attachment promise`);
     const deepLinks=[...section.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(match=>match[1]);
     assert.ok(deepLinks.length>=2&&deepLinks.length<=4,`${service.slug}: two to four related links`);
     assert.ok(section.length>1600,`${service.slug}: maintains substantial service-specific repair guidance`);
