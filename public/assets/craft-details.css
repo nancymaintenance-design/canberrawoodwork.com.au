@@ -1,0 +1,73 @@
+/* Timber-work details: shared design for service content, outside the existing carousel. */
+:root{--craft-paper:#fffdf9;--craft-timber:#9b6236;--craft-line:#e3d7c6;--craft-ink:#30251d;--craft-font:"Segoe UI",Arial,sans-serif}
+body{scrollbar-color:var(--craft-timber) var(--craft-paper)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--craft-timber);outline-offset:5px}
+/* Original hero geometry and circular linework are inherited, not replaced. */
+.team-signature{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 26px;margin-top:38px;padding-top:19px;border-top:1px solid var(--craft-line);color:var(--muted);font-size:12px}
+.team-signature span:first-child{font-weight:800;color:var(--craft-ink)}
+.team-signature a{color:var(--craft-timber);font-weight:800;text-decoration:underline;text-underline-offset:4px}
+.intro-section{padding-block:78px;gap:60px}
+.intro-section h2{font-family:var(--craft-font);font-size:clamp(32px,3.6vw,54px);line-height:1.12}
+.intro-section>div:first-child,.case-study-heading,.registration-intro{position:relative;padding-top:20px}
+.intro-section>div:first-child:before,.case-study-heading:before,.registration-intro:before{content:"";position:absolute;top:0;left:0;width:124px;height:8px;border-top:1px solid var(--craft-timber);background:repeating-linear-gradient(90deg,var(--craft-timber) 0 1px,transparent 1px 12px)}
+.feature-card{padding:0 0 26px;overflow:hidden;border-radius:8px;min-height:0}
+.feature-card .feature-no{order:1;margin:25px 26px 15px;letter-spacing:.08em}
+.feature-photo{order:0;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.feature-card h3{order:2;margin:0 26px 12px;font-size:27px}
+.feature-card p{order:3;margin:0 26px 20px;font-size:15px}
+.feature-card .card-arrow{order:4;margin:0 26px;padding-top:15px;border-top:1px solid var(--craft-line)}
+.feature-card:hover{transform:translateY(-4px)}
+.service-card-photo{width:calc(100% + 60px);max-width:none;margin:-30px -30px 25px;aspect-ratio:16/8;height:auto;object-fit:cover}
+.index-card{overflow:hidden;border-radius:8px;background:var(--craft-paper)}
+.index-card h2{font-family:var(--craft-font)}
+.detail-content{padding-block:48px 60px;gap:60px}
+.detail-main .sign-list{display:grid;gap:0 24px;grid-template-columns:1fr 1fr}
+.detail-main .sign-list li{font-size:15px}
+.detail-main>.detail-block{margin-top:30px;padding-top:25px;border-top:1px solid var(--craft-line)}
+.detail-main>.detail-block h2{font-size:clamp(27px,2.5vw,36px);margin-bottom:16px}
+.detail-main>.detail-block p:last-child{margin-bottom:0}
+.detail-main>.detail-block.boundary{border-left:3px solid var(--craft-timber);padding-left:22px}
+.detail-aside{align-self:start}
+.service-reading-block{max-width:78ch}
+.service-reading-block p{font-size:16px;line-height:1.8;margin-bottom:20px}
+.service-reading-block h2{font-size:clamp(28px,2.7vw,38px);margin-bottom:22px}
+.service-narrative .service-reading-block+.service-reading-block{margin-top:32px;padding-top:28px;border-top:1px solid var(--craft-line)}
+.service-local-notes{padding-block:30px 54px;border-top:1px solid var(--craft-line)}
+.service-local-notes .related-work-links{margin-top:24px;flex-wrap:wrap;gap:12px 24px}
+.aside-links a{padding-block:12px}
+.index-card,.case-study-image{border-color:var(--craft-line)}
+.index-card:hover,.index-card:focus-visible{border-color:var(--craft-timber)}
+.faq-item[open]{border-left:3px solid var(--craft-timber);padding-left:18px}
+.service-deep-content{display:grid;grid-template-columns:1fr 1fr;gap:32px 54px;padding-block:20px 76px;border-top:1px solid var(--craft-line)}
+.service-deep-content>.detail-block{margin:0;max-width:none;padding-top:25px;border-top:1px solid var(--craft-line)}
+.service-deep-content>.detail-block h2{font-family:var(--craft-font);font-size:27px;line-height:1.18;margin-bottom:15px}
+.service-deep-content>.detail-block p{font-size:16px;line-height:1.75;margin-bottom:0}
+.service-deep-content>.detail-block:last-child{grid-column:1/-1}
+.case-study-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.case-study-image{background:var(--craft-paper);border:1px solid var(--craft-line)}
+.case-study-image img,.case-study-image-2 img{height:auto;aspect-ratio:16/10;object-fit:cover}
+.case-study-image figcaption{padding:20px 24px 23px;border-top:3px solid var(--craft-timber)}
+.case-study-image figcaption span{font-size:11px;color:var(--craft-timber);font-weight:850;text-transform:uppercase;letter-spacing:.13em}
+.case-study-image figcaption p{font-size:15px;line-height:1.55;margin:7px 0 0}
+.case-study-heading{max-width:780px}
+.case-study-heading h2{font-family:var(--craft-font);font-size:clamp(30px,3vw,43px)}
+.service-questions,.general-questions{padding-block:0 76px;max-width:900px}
+.general-questions{padding-top:15px}
+.service-questions h2,.general-questions h2,.faq-service-directory h2{font-family:var(--craft-font);font-size:clamp(30px,3vw,42px)}
+.faq-service-directory{padding-block:20px 80px;border-top:1px solid var(--craft-line)}
+.faq-service-links{display:grid;grid-template-columns:1fr 1fr;gap:0 36px;margin-top:26px}
+.faq-service-links a{display:flex;justify-content:space-between;gap:15px;padding:17px 0;border-bottom:1px solid var(--craft-line);font-weight:750}
+.faq-service-links a:hover{color:var(--craft-timber)}
+.business-registration-section{background:var(--pale)}
+.footer-social{margin-top:24px}
+.footer-social-title{margin:0 0 12px!important;font-size:12px;font-weight:800;color:#f4e7d6!important}
+.footer-social-links{display:grid;grid-template-columns:max-content max-content;gap:12px 20px}
+.footer-main>div .footer-social-links>a.footer-social-link{display:inline-flex;align-items:center;gap:8px;margin:0;min-height:28px;font-size:14px;font-weight:750;line-height:1.35;color:#f4e7d6;white-space:nowrap}
+.footer-social-link .social-icon{display:block;flex:none;width:1em;height:1em;object-fit:contain}
+.social-icon-facebook{filter:invert(39%) sepia(99%) saturate(3244%) hue-rotate(202deg) brightness(96%) contrast(97%)}
+.social-icon-linkedin{filter:invert(32%) sepia(96%) saturate(1836%) hue-rotate(173deg) brightness(95%) contrast(99%)}
+.footer-main .footer-social-link:hover,.footer-main .footer-social-link:focus-visible{color:#fff;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:360px){.footer-social-links{column-gap:14px}.footer-main .footer-social-link{font-size:13px}}
+@media(max-width:700px){.home-hero .shell{padding:48px 0 36px}.home-hero h1{font-size:clamp(40px,10vw,60px)}.home-hero .hero-lead{font-size:17px}.team-signature{flex-direction:column;gap:9px;margin-top:28px}.intro-section{padding-block:55px}.detail-content{padding-block:38px 48px}.detail-main .sign-list,.service-deep-content,.case-study-grid,.faq-service-links{grid-template-columns:1fr}.service-deep-content{gap:20px;padding-bottom:55px}.case-study-grid{gap:20px}.service-questions,.general-questions{padding-bottom:55px}.service-questions h2{font-size:30px}.service-card-photo{aspect-ratio:16/9}.intro-large{font-size:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.feature-card,.article-card{transition:none}.btn:hover,.feature-card:hover,.article-card:hover{transform:none}}
+@media(forced-colors:active){body{scrollbar-color:auto}a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:Highlight}}

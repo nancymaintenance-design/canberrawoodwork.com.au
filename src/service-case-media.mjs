@@ -43,9 +43,10 @@ export const serviceCaseMedia = {
   },
   'timber-fence-repairs': {
     images: [
-      image('/assets/timber-fence-gate-canberra.webp', 'Timber boundary fence and gate at a Canberra home', 1440, 810),
-      image('/assets/fence-gate-hardware-detail-canberra.webp', 'Close view of timber gate hinge, latch and fence post', 960, 720),
-      image('/assets/timber-fence-installation-canberra.webp', 'Carpenters building a timber fence and gate', 1440, 960),
+      image('/assets/timber-fence-completed.webp', 'Completed timber fence with renewed posts and rails', 1000, 563),
+      image('/assets/timber-fence-before-repair.webp', 'Leaning timber fence with weathered rails and damaged lower palings before repair', 1000, 667),
+      image('/assets/timber-fence-repair-process.webp', 'Ellis Services carpenter fixing renewed timber rails to fence posts', 1000, 667),
+      image('/assets/timber-fence-connection-detail.webp', 'Close view of renewed timber fence rails and bolted post connections', 1000, 750),
     ],
   },
   'timber-gate-repairs': {
