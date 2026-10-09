@@ -1,3 +1,5 @@
+import { articleSearchTitles } from './search-content.mjs';
+
 export const business = {
   name: 'Ellis Services Group',
   legalName: 'ELLIS SERVICES GROUP PTY LTD',
@@ -103,6 +105,14 @@ export const articles = [
   },
   { slug:'carpentry-jobs-before-selling', title:'Planning small carpentry repairs before a home sale', category:'Interior carpentry', owner:'interior-carpentry', lead:'A grouped list of doors, skirting and cupboard repairs can make the quote discussion clearer.', sections:[['Make one list','Identify each item, location and desired finish. Photos of the whole item and the defect are useful.'],['Separate trades','Our team reviews your repair list on site and confirms the carpentry work and associated qualified service arrangements in the quote.'],['Confirm inclusions','Ellis states materials, removal and finishing inclusions in your quote before the work is booked.']] },
 ];
+
+// Update the source model so cards, breadcrumbs and Article schema agree.
+for (const article of articles) {
+  if (articleSearchTitles[article.slug]) {
+    article.title = articleSearchTitles[article.slug];
+    article.updated = '2026-10-09';
+  }
+}
 
 export const areas = [
   ['Belconnen',['Belconnen','Kaleen','Florey','Aranda']],

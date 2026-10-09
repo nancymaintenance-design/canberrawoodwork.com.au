@@ -1,4 +1,5 @@
-import { business, services, faqs } from './content.mjs';
+import { business, services, faqs, articles, areas } from './content.mjs';
+import { enhanceSearchContent } from './search-content.mjs';
 import { serviceCaseMedia } from './service-case-media.mjs';
 import { footerSocial } from './footer-social.mjs';
 import { serviceDeepContent } from './service-deep-content.mjs';
@@ -118,5 +119,5 @@ export function enhanceSite(route, html) {
       return `<script type="application/ld+json">${JSON.stringify(schema).replaceAll('<','\\u003c')}</script>`;
     });
   }
-  return output;
+  return enhanceSearchContent(route, output, { services, articles, areas });
 }

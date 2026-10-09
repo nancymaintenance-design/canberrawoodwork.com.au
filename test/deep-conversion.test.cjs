@@ -30,7 +30,10 @@ test('rendered enquiry channels and FAQ answers match the service customers requ
     const escaped = item.acceptedAnswer.text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
     assert.ok(faq.includes(`<p>${escaped}</p>`), `visible answer agrees with schema: ${item.name}`);
   }
-  const answer = term => schema.mainEntity.find(item => item.name === term)?.acceptedAnswer.text || '';
+  // Service-specific answers now live on their service page, not general FAQ.
+  const allAnswers = [...schema.mainEntity, ...['door-and-frame-repairs','deck-building','small-carpentry-jobs'].flatMap(slug=>
+    [...read('services/'+slug).matchAll(/<details class="faq-item"><summary>(.*?)<\/summary><p>(.*?)<\/p>/g)].map(m=>({name:m[1],acceptedAnswer:{text:m[2]}})))];
+  const answer = term => allAnswers.find(item => item.name === term)?.acceptedAnswer.text || '';
   assert.match(answer('Do carpenters charge a call-out fee or a minimum booking fee?'), /confirm.*(?:fee|charge).*before/i);
   assert.match(answer('Can every internal door be trimmed at the bottom?'), /^No\./);
   assert.match(answer('Do development approval and building approval mean the same thing for a deck?'), /^No\./);
@@ -43,8 +46,8 @@ test('rendered enquiry channels and FAQ answers match the service customers requ
     assert.ok(core, slug);
     assert.doesNotMatch(core, /identify the cause|repair you need/i, slug);
     assert.match(core, /installation plan and quote/, slug);
-    assert.match(html, /How we plan the installation/);
-    assert.match(html, /Project checks and installation scope/);
+    assert.match(html, /: installation method<\/h2>/);
+    assert.match(html, /Booking .* in Canberra<\/h2>/);
     assert.doesNotMatch(html, /Discuss made-to-fit shelves|confirm your repair plan and quote/);
   }
   const installationGuide = read('news/skirting-after-new-flooring');

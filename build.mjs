@@ -5,6 +5,7 @@ import { serviceDeepContent } from './src/service-deep-content.mjs';
 import { faqAnswers } from './src/faq-answers.mjs';
 import { serviceCaseMedia, homeCaseMedia } from './src/service-case-media.mjs';
 import { enhanceSite } from './src/site-enhancements.mjs';
+import { guideAnswers } from './src/search-content.mjs';
 import { consolidateFaqs } from './src/faq-consolidation.mjs';
 const keywordMap=JSON.parse(readFileSync(new URL('./src/keyword-map.json',import.meta.url),'utf8'));
 
@@ -34,6 +35,17 @@ const existingQuestions=new Set(faqs.map(f=>f.q.toLowerCase()));
 const knowledgeInFaq=keywordMap.categories.question.filter(k=>!/^(why|how|what causes|what is the difference|when)/i.test(k.term));
 for(const entry of [...keywordMap.categories.intent,...knowledgeInFaq]){if(existingQuestions.has(entry.term.toLowerCase()))continue;existingQuestions.add(entry.term.toLowerCase());const s=ownerService(entry.owner);faqs.push({q:entry.term,a:answerFor(entry),owner:s.slug,group:entry.owner==='/'?'Booking & quotes':s.group});}
 const knowledgeInNews=keywordMap.categories.question.filter(k=>!knowledgeInFaq.includes(k));
+// Retain unique informational questions with their answers on the relevant
+// guide, rather than leaving unanswered search phrases on the news index.
+for(const entry of knowledgeInNews){
+  const guide=articles.find(article=>`/services/${article.owner}`===entry.owner) || articles.find(article=>article.slug===({'/':'carpentry-jobs-before-selling','/services/custom-joinery':'carpentry-jobs-before-selling','/services/structural-timber-repairs':'why-timber-rot-returns'}[entry.owner]));
+  if(!guide)continue;
+  guide.faqs ||= [];
+  if(!guide.faqs.some(item=>item.q===entry.term)){
+    if(!guideAnswers[entry.id])throw Error(`Missing guide answer: ${entry.id}`);
+    guide.faqs.push({q:entry.term,a:guideAnswers[entry.id]});
+  }
+}
 faqs.splice(0,faqs.length,...consolidateFaqs(faqs));
 function coreSection(route){const terms=keywordMap.categories.core.filter(k=>ownerRoute(k.owner)===route&&!/near me|cost|hourly rate/i.test(k.term));if(!terms.length)return '';return `<section class="keyword-scope shell"><p class="eyebrow">RELATED WORK</p><h2>Related carpentry requests</h2><p>${isInstallation(ownerService(route))?'Contact Ellis Services Group for your carpentry installation. We measure the site, confirm your requirements and project checks and provide the installation plan and quote.':'Contact Ellis Services Group about the repair you need. We inspect the timber on site, identify the cause and confirm the work and quote.'}</p><ul>${terms.map(k=>`<li>${esc(k.term.replace(/ canberra$/i,''))}</li>`).join('')}</ul></section>`;}
 function serviceDeepSection(service){
@@ -62,7 +74,7 @@ function homeWorkCarousel(){const slides=[
 function articleDecisionExtras(article) {
   if (!article) return '';
   const options = article.options?.length ? `<section><h2>Compare the three deck scopes</h2><table><caption>Ellis assessment and the work to define</caption><thead><tr><th scope="col">Option</th><th scope="col">Assessment</th><th scope="col">Written scope</th></tr></thead><tbody>${article.options.map(item => `<tr><th scope="row">${esc(item.option)}</th><td>${esc(item.assessment)}</td><td>${esc(item.scope)}</td></tr>`).join('')}</tbody></table></section>` : '';
-  const questions = article.faqs?.length ? `<section><h2>Deck repair and rebuild questions</h2>${article.faqs.map(item => `<details class="faq-item"><summary>${esc(item.q)}</summary><p>${esc(item.a)}</p></details>`).join('')}</section>` : '';
+  const questions = article.faqs?.length ? `<section><h2>${article.slug==='repair-or-rebuild-a-deck'?'Deck repair and rebuild questions':esc(article.title)+': questions'}</h2>${article.faqs.map(item => `<details class="faq-item"><summary>${esc(item.q)}</summary><p>${esc(item.a)}</p></details>`).join('')}</section>` : '';
   const links = article.relatedLinks?.length ? `<section><h2>Plan your deck work</h2><ul>${article.relatedLinks.map(item => `<li><a href="${esc(item.url)}">${esc(item.label)}</a></li>`).join('')}</ul></section>` : '';
   return options + questions + links;
 }

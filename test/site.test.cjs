@@ -76,10 +76,10 @@ const serviceAndAdviceCopy=files.filter(file=>file.includes(`${path.sep}services
 const customerFacingCopy=files.filter(file=>!file.includes(`${path.sep}privacy${path.sep}`)).map(file=>fs.readFileSync(file,'utf8')).join('\n');
 assert.match(about,/<h1>About Our Canberra Carpentry Team<\/h1>/,'about H1 states the local team theme directly');
 assert.match(servicesIndex,/<h1>Canberra Carpentry & Timber Repair Services<\/h1>/,'services H1 states the service cluster directly');
-assert.match(areaPage,/<h1>Canberra Carpentry Service Areas<\/h1>/,'service-area H1 states the local service-area theme directly');
+assert.match(areaPage,/<h1>Carpentry Services Across Canberra ACT<\/h1>/,'service-area H1 states the local service-area theme directly');
 assert.match(contactPage,/<h1>Request a Canberra Carpentry Quote<\/h1>/,'contact H1 states the quote intent directly');
 assert.match(newsIndex,/<h1>Canberra Carpentry Advice & Repair Guides<\/h1>/,'news H1 states the advice and repair-guide theme directly');
-assert.match(rottenTimberPage,/<h2>Our repair plan<\/h2>/,'rotten timber repairs present Ellis Services Group\'s positive repair approach');
+assert.match(rottenTimberPage,/<h2>Rotten Timber Repairs: repair method<\/h2>/,'rotten timber repairs present Ellis Services Group\'s positive repair approach');
 assert.match(rottenTimberPage,/on-site assessment[\s\S]*identify the cause[\s\S]*repair plan and quote/i,'rotten timber repairs explain the assessment, cause and quoted repair path');
 assert.doesNotMatch(serviceAndAdviceCopy,/Where this repair may stop|(?:contact|consult|speak with|seek) (?:an? |the )?(?:external specialist|another trade|locksmith|another company)/i,'repair pages do not send visitors to another company; qualified project checks remain accurate');
 assert.doesNotMatch(customerFacingCopy,/may need a separate trade|needs a separate assessment|not an automatic quote|does not confirm a booking/i,'customer-facing repair copy avoids hand-off and booking-deflection language without banning material-matching facts');
@@ -109,7 +109,9 @@ assert.match(privacyPage,/121 Marcus Clarke St, Canberra, ACT 2600/,'privacy pol
 assert.match(home,/wood-theme\.css/);assert.match(home,/View all 17 services/);
 const serviceQuestionPages=files.filter(file=>file.includes(`${path.sep}services${path.sep}`)).map(file=>fs.readFileSync(file,'utf8')).join('\n');
 for(const item of keywordMap.categories.distilled)assert.ok(servicesIndex.includes(escapeHtml(item.term)),`missing internal-link anchor ${item.id}`);
-for(const item of keywordMap.categories.scenario)assert.ok(newsIndex.includes(escapeHtml(item.term)),`missing news scenario ${item.id}`);
+// Scenarios remain in the editorial map; the public hub links every guide
+// rather than exposing an exhaustive keyword/question spreadsheet.
+for(const entry of fs.readdirSync(path.join(dist,'news'),{withFileTypes:true}).filter(item=>item.isDirectory()))assert.ok(newsIndex.includes(`/news/${entry.name}/`),`missing news guide ${entry.name}`);
 for(const item of keywordMap.categories.core){
   if(item.owner==='/service-areas'||/near me|cost|hourly rate/i.test(item.term))continue;
   const owner=item.owner==='/'?'small-carpentry-jobs':item.owner.split('/').filter(Boolean).at(-1);
@@ -148,7 +150,7 @@ import('../src/content.mjs').then(async ({services})=>{
   }
   for(const item of keywordMap.categories.question){
     const question=escapeHtml(canonicalFaqQuestion(item.term));
-    assert.ok(faq.includes(question)||serviceQuestionPages.includes(question)||newsIndex.includes(escapeHtml(item.term)),`missing knowledge question or consolidated topic ${item.id}`);
+    assert.ok(faq.includes(question)||serviceQuestionPages.includes(question)||serviceAndAdviceCopy.includes(escapeHtml(item.term)),`missing knowledge question or consolidated topic ${item.id}`);
   }
   assert.equal(services.length,17,'all 17 service routes remain present');
   const buildingFabricPhrases={
@@ -178,10 +180,10 @@ import('../src/content.mjs').then(async ({services})=>{
     const file=path.join(dist,'services',service.slug,'index.html');
     const html=fs.readFileSync(file,'utf8');
     const route=`/services/${service.slug}/`;
-    assert.ok(html.includes(`<h1>${escapeHtml(service.title)}</h1>`),`${service.slug}: service-specific H1`);
+    assert.ok(html.includes(`<h1>${escapeHtml(service.title)} in Canberra</h1>`),`${service.slug}: service-specific H1`);
     const serviceSchemas=pageSchemas.get(route)?.filter(schema=>schema['@type']==='Service')||[];
     assert.equal(serviceSchemas.length,1,`${service.slug}: one Service JSON-LD object`);
-    assert.equal(serviceSchemas[0].name,service.title,`${service.slug}: schema name matches visible heading`);
+    assert.equal(serviceSchemas[0].name,`${service.title} in Canberra`,`${service.slug}: schema name matches visible heading`);
     assert.equal(serviceSchemas[0].description,service.intro,`${service.slug}: schema description matches visible intro`);
     assert.equal(new URL(serviceSchemas[0].url).pathname,route,`${service.slug}: schema URL matches route`);
     assert.equal(serviceSchemas[0].provider.name,'Ellis Services Group',`${service.slug}: schema provider`);
@@ -190,7 +192,7 @@ import('../src/content.mjs').then(async ({services})=>{
     const section=narrative+localNotes;
     assert.ok(section,`${service.slug}: visible deep-content section`);
     const installing=['deck-building','custom-joinery','interior-carpentry','skirting-and-architraves'].includes(service.slug);
-    for(const heading of [`${escapeHtml(service.title)} in Canberra`,installing?'Our installation plan':'Our repair plan','Planning your work in Canberra']){
+    for(const heading of [`${escapeHtml(service.title)} in Canberra`,`${escapeHtml(service.title)}: ${installing?'installation':'repair'} method`,`Booking ${escapeHtml(service.title.toLowerCase())} in Canberra`]){
       assert.ok(section.includes(`<h2>${heading}</h2>`),`${service.slug}: visible ${heading} heading`);
     }
     assert.equal((section.match(/<h2>/g)||[]).length,3,`${service.slug}: three coherent narrative headings, not fragmented micro-sections`);
