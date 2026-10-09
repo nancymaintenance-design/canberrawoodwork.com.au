@@ -200,7 +200,10 @@ import('../src/content.mjs').then(async ({services})=>{
     assert.match(section,/optional[\s\S]*brian@elliservices\.com\.au/i,`${service.slug}: optional photos use the functioning email channel`);
     assert.doesNotMatch(section,/attach photos to the enquiry/i,`${service.slug}: no unsupported form attachment promise`);
     const deepLinks=[...section.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map(match=>match[1]);
-    assert.ok(deepLinks.length>=2&&deepLinks.length<=4,`${service.slug}: two to four related links`);
+    const relatedGroup=section.match(/<div class="related-work-links">([\s\S]*?)<\/div>/)?.[1]||'';
+    const relatedServiceLinks=[...relatedGroup.matchAll(/<a\b[^>]*href="([^"]+)"/g)];
+    assert.ok(relatedServiceLinks.length>=2&&relatedServiceLinks.length<=4,`${service.slug}: two to four related service links`);
+    assert.ok(deepLinks.length>=2&&deepLinks.length<=7,`${service.slug}: bounded service, guide and area links`);
     assert.ok(section.length>1600,`${service.slug}: maintains substantial service-specific repair guidance`);
     for(const href of deepLinks){
       const pathname=href.split('#')[0].split('?')[0];

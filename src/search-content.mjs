@@ -1,4 +1,5 @@
 // Editorial content for existing URLs only: no district doorway pages.
+import { enrichPriorityService, enrichPriorityGuide } from './priority-service-content.mjs';
 export const articleSearchTitles = {
   'timber-door-sticks-after-rain':'Timber Door Repairs After Wet Weather',
   'deck-boards-or-frame':'Deck Board and Timber Frame Repairs',
@@ -148,5 +149,5 @@ export function enhanceSearchContent(route, html, { services, articles, areas })
     const additions = repairGuideDetails[article.slug].map(([heading,copy])=>`<section><h2>${esc(heading)}</h2><p>${esc(copy)}</p></section>`).join('');
     output = output.replace('<section><h2>What to send with your enquiry</h2>',`${additions}<section><h2>What to send with your enquiry</h2>`);
   }
-  return output;
+  return enrichPriorityGuide(route, enrichPriorityService(route, output));
 }
