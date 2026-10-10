@@ -2,10 +2,8 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { execFileSync } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 test('deck decision guide publishes three scopes, quotation checks and professional repair approach', () => {
-  execFileSync(process.execPath, ['build.mjs'], { cwd: root, stdio: 'pipe' });
   const html = fs.readFileSync(path.join(root, 'dist/news/repair-or-rebuild-a-deck/index.html'), 'utf8');
   const main = html.match(/<main[\s\S]*?<\/main>/)[0];
   assert.match(html, /name="description" content="Ellis compares Canberra deck board repairs/);

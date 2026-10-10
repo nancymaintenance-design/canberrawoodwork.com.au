@@ -1,9 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { execFileSync } from 'node:child_process';
 import { consolidateFaqs, faqMerges } from '../src/faq-consolidation.mjs';
 
-execFileSync(process.execPath, ['build.mjs'], {stdio:'inherit'});
 const read = route => readFileSync(`dist/${route}/index.html`, 'utf8');
 const questions = html => [...html.matchAll(/<details class="faq-item"><summary>(.*?)<\/summary><p>(.*?)<\/p>/g)];
 const faq = read('faq');

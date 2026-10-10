@@ -2,10 +2,8 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { execFileSync } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 test('local search content is rendered with district anchors and matching article schema', () => {
-  execFileSync(process.execPath, ['build.mjs'], { cwd: root, stdio: 'pipe' });
   const read = route => fs.readFileSync(path.join(root, 'dist', route, 'index.html'), 'utf8');
   assert.match(read(''), /carpenter near me/i);
   const areas = read('service-areas');

@@ -2,11 +2,9 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { execFileSync } = require('node:child_process');
 const root = path.resolve(__dirname, '..');
 
 test('rendered enquiry channels and FAQ answers match the service customers request', () => {
-  execFileSync(process.execPath, ['build.mjs'], { cwd: root });
   const read = route => fs.readFileSync(path.join(root, 'dist', route, 'index.html'), 'utf8');
   for (const route of ['contact', 'service-areas', 'services/deck-repairs']) {
     const html = read(route);

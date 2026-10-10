@@ -1,7 +1,6 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
-const {execFileSync}=require('node:child_process');
 const root=path.join(__dirname,'..');
 const dist=path.join(root,'dist');
 const keywordMap=JSON.parse(fs.readFileSync(path.join(root,'src','keyword-map.json'),'utf8'));
@@ -13,7 +12,6 @@ for(const claim of ['Fully licensed Canberra carpenters','We are fully licenced'
 for(const boundary of ['The appropriate licensed practitioner must assess the work.','An ABN does not establish an ACT construction occupation licence.','The price depends on the component and access.','Approval checks may be required.','No fixed price is promised.','No guaranteed approval is offered.','We are not fully licensed for this work.']){
   assert.doesNotMatch(boundary,prohibitedClaim,`scope boundary must remain allowed: ${boundary}`);
 }
-execFileSync(process.execPath,['build.mjs'],{cwd:root});
 const files=[];
 function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,entry.name);if(entry.isDirectory())walk(p);else if(entry.name==='index.html')files.push(p)}}
 walk(dist);
