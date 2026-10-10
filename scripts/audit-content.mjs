@@ -18,7 +18,7 @@ export function auditHtml(route, html){
   return {route,title:html.match(/<title>(.*?)<\/title>/s)?.[1]||'',description:html.match(/<meta name="description" content="([^"]*)"/)?.[1]||'',h1:headings.filter(h=>h.level===1).map(h=>h.text),headings,words:text.split(' ').length,duplicateH1H2:top.filter((h,i)=>top.indexOf(h)!==i),headingJumps:jumps,mainLinks:links.map(l=>l.href),contextualLinks:links,faqCount:(main.match(/<details class="faq-item">/g)||[]).length,faqs:[...main.matchAll(/<details class="faq-item"><summary>(.*?)<\/summary><p>(.*?)<\/p>/gs)].map(m=>({question:readable(m[1]),answer:readable(m[2])})),visibleDates:[...main.matchAll(/<time datetime="([^"]+)"[^>]*>(.*?)<\/time>/gs)].map(m=>({date:m[1],label:readable(m[2])})),articleDates:article?{published:article.datePublished,modified:article.dateModified}:null,schemaTypes:schemas.map(s=>s['@type']),linkedCompanyByline:main.includes('class="article-byline">By <a href="/about/">Ellis Services Group</a>')};
 }
 
-export function auditSite(dist='dist',baselineFile){
+export function auditSite(dist='dist',baselineFile,{now=new Date()}={}){
   const sitemap=readFileSync(resolve(dist,'sitemap.xml'),'utf8');
   const routes=[...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname);
   const pages=routes.map(route=>auditHtml(route,readFileSync(resolve(dist,`.${route}`,'index.html'),'utf8')));
@@ -32,9 +32,9 @@ export function auditSite(dist='dist',baselineFile){
   }
   const duplicatePages=pages.filter(p=>p.duplicateH1H2.length);
   const metrics={routes:pages.length,words:pages.reduce((sum,p)=>sum+p.words,0),pagesWithDuplicateH1H2:duplicatePages.length,pagesWithHeadingJumps:pages.filter(p=>p.headingJumps.length).length,invalidMainLinks:invalidLinks.length,uniqueTitles:new Set(pages.map(p=>p.title)).size,uniqueDescriptions:new Set(pages.map(p=>p.description)).size,guidesWithVisibleDates:pages.filter(p=>p.articleDates&&p.visibleDates.length===2).length,guidesWithLinkedCompanyByline:pages.filter(p=>p.articleDates&&p.linkedCompanyByline).length,faqPageSchemas:pages.filter(p=>p.schemaTypes.includes('FAQPage')).length};
-  return {analyzedAt:'2026-10-10',source:'local rendered dist; no live ranking or business verification',wordCountMethod:'main tag, strip tags, collapse whitespace, split spaces; retain entities/breadcrumb/closed details',metrics,baseline:baseline?{commit:baseline.commit,routes:baseline.pages.length,words:baseline.pages.reduce((sum,p)=>sum+p.words,0)}:null,invalidLinks,pages:pages.map(p=>({...p,...(baseline?{baselineWords:baseline.pages.find(b=>b.route===p.route)?.words??null}:{} )}))};
+  return {analyzedAt:now.toISOString().slice(0,10),source:'local rendered dist; no live ranking or business verification',wordCountMethod:'main tag, strip tags, collapse whitespace, split spaces; retain entities/breadcrumb/closed details',metrics,baseline:baseline?{commit:baseline.commit,routes:baseline.pages.length,words:baseline.pages.reduce((sum,p)=>sum+p.words,0)}:null,invalidLinks,pages:pages.map(p=>({...p,...(baseline?{baselineWords:baseline.pages.find(b=>b.route===p.route)?.words??null}:{} )}))};
 }
-if(import.meta.url===pathToFileURL(process.argv[1]).href){
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
   const args=process.argv.slice(2),value=flag=>args.includes(flag)?args[args.indexOf(flag)+1]:undefined;
   const result=auditSite(value('--dist')||'dist',value('--baseline'));
   const output=JSON.stringify(result,null,2)+'\n',destination=value('--output');

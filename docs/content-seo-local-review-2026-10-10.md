@@ -86,7 +86,7 @@ G满分100：问题直接回答25、可独立理解的构件/判断信息25、�
 
 ## QA证据与可重复审计
 
-新增scripts/audit-content.mjs，不依赖第三方库；从sitemap读取39条路由并输出每页title、description、H1/各级标题、原算法词数、正文链接与锚文本、FAQ、可见日期及Article日期。普通检查只需构建后执行：
+新增scripts/audit-content.mjs，不依赖第三方库；从sitemap读取39条路由并输出每页title、description、H1/各级标题、原算法词数、正文链接与锚文本、FAQ、可见日期及Article日期。analyzedAt自动记录本次运行的UTC日期，重复审计不会沿用本报告日期；模块调用可用auditSite(dist, baselineFile, {now: new Date(...)})注入确定日期用于复核，不改动文章历史发布/更新日期。指南可见日期由文章字段按en-AU、UTC格式化，避免字段变化后标签未同步。普通检查只需构建后执行：
 
 ```powershell
 node scripts/test.mjs
@@ -99,7 +99,7 @@ node scripts/audit-content.mjs
 node scripts/audit-content.mjs --baseline .superpowers/sdd/content-seo-2026-10-10/baseline.json --output .seo-cache/content-audit-2026-10-10.json
 ```
 
-RED：新增测试先确认新闻列表H1→H3和指南缺少链接署名/日期确实失败；编辑前内部链接/片段检查已通过。GREEN：最终完整node scripts/test.mjs通过33项测试，覆盖既有安全/SEO/联系表单回归及新增39页输出检查。旧有“打印每个研究同义词”“某段文案必须逐字存在”等检查改为保留主题范围和实际服务目的地；未放宽资质、安全、联系方式或schema约束。审计词数还以实体和关闭details的小样本固定算法语义，测试不依赖被忽略的本地基线文件。
+RED：新增测试先确认新闻列表H1→H3和指南缺少链接署名/日期确实失败；编辑前内部链接/片段检查已通过。最终复核另补3项回归并观察到失败：node eval导入、重复审计运行日期、不同日期与时区的指南可见标签。GREEN：最终完整node scripts/test.mjs通过36项测试，覆盖既有安全/SEO/联系表单回归及新增39页输出检查。旧有“打印每个研究同义词”“某段文案必须逐字存在”等检查改为保留主题范围和实际服务目的地；未放宽资质、安全、联系方式或schema约束。审计词数还以实体和关闭details的小样本固定算法语义，测试不依赖被忽略的本地基线文件。
 
 控制端已记录：首页本地GET为200，预览仅回环地址监听；门维修页面实际渲染和一个FAQ展开已检查，保留样式。另已抽查新闻目录H1/H2/H3顺序、沿链接进入木门指南、公司署名及发布日期/更新日期，并展开“Should I sand...”安全回答，页面布局与阅读表现保留。这是局部浏览器抽查，不是39页逐页视觉验收。控制端随后逐条请求39个公开URL，39/39均返回HTTP 200。最初并发突发请求超过Python预览服务器监听队列，顺序重查通过，未发现应用代码问题。未提交真实联系表单，未测试真实邮件投递；现有API/表单回归通过不能等同真实邮件送达。未测排名、收录、真实CWV、询盘增长、生产重定向链或第三方引用。
 
