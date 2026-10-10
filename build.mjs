@@ -153,5 +153,5 @@ const discoveryPages = [
   ['Privacy policy','/privacy/','How enquiry information is handled.'],
 ];
 const discoveryLink = (label,route,description) => `- [${label}](${PRODUCTION_ORIGIN+route}): ${description}`;
-writeFileSync(join(out,'llms.txt'),`# ${business.name}\n\n> Canberra carpentry and timber repair services.\n\nLast updated: ${new Date().toISOString().slice(0,10)}\n\n## Core pages\n${discoveryPages.map(item=>discoveryLink(...item)).join('\n')}\n\n## Services\n${services.map(s=>discoveryLink(s.title,serviceUrl(s),'Service information and enquiry guidance.')).join('\n')}\n\n## Articles\n${articles.map(a=>discoveryLink(a.title,`/news/${a.slug}/`,'Carpentry advice and related service information.')).join('\n')}\n`);
+writeFileSync(join(out,'llms.txt'),`# ${business.name}\n\n> Canberra carpentry and timber repair services.\n\nPhone: ${business.phone}\nEmail: ${business.email}\n\nLast updated: ${new Date().toISOString().slice(0,10)}\n\n## Core pages\n${discoveryPages.map(item=>discoveryLink(...item)).join('\n')}\n\n## Services\n${services.map(s=>discoveryLink(s.title,serviceUrl(s),'Service information and enquiry guidance.')).join('\n')}\n\n## Articles\n${articles.map(a=>discoveryLink(a.title,`/news/${a.slug}/`,'Carpentry advice and related service information.')).join('\n')}\n`);
 console.log(`Built ${routes.length} public routes at ${origin}`);

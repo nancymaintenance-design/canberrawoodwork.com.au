@@ -70,6 +70,8 @@ test('AI discovery document provides dated canonical Markdown links', () => {
   const text = readFileSync(new URL('llms.txt', dist), 'utf8');
   assert.doesNotMatch(text, /127\.0\.0\.1/);
   assert.match(text, /^Last updated: \d{4}-\d{2}-\d{2}$/m);
+  assert.ok(text.includes('0405 878 406'), 'published business phone is retained');
+  assert.ok(text.includes('brian@elliservices.com.au'), 'published business email is retained');
   const links = [...text.matchAll(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g)];
   const urls = new Set(links.map(match => match[2]));
   for (const route of ['/', '/services/', '/about/', '/contact/']) {
