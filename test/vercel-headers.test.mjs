@@ -15,7 +15,7 @@ test('security policy preserves the canonical redirect and contact function sett
 });
 
 test('all static paths receive MIME, referrer, permissions and frame protection', () => {
-  const rule = config.headers?.find(item => item.source === '/:path*');
+  const rule = config.headers?.find(item => item.source === '/(.*)');
   assert.ok(rule, 'a catch-all security header rule must cover static HTML and assets');
   const headers = new Map(rule.headers.map(({ key, value }) => [key.toLowerCase(), value]));
   assert.equal(headers.get('x-content-type-options'), 'nosniff');
