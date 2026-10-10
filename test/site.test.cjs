@@ -107,7 +107,8 @@ assert.match(privacyPage,/Privacy Policy/,'privacy policy page is published');
 assert.match(privacyPage,/121 Marcus Clarke St, Canberra, ACT 2600/,'privacy policy identifies the business contact address');
 assert.match(home,/wood-theme\.css/);assert.match(home,/View all 17 services/);
 const serviceQuestionPages=files.filter(file=>file.includes(`${path.sep}services${path.sep}`)).map(file=>fs.readFileSync(file,'utf8')).join('\n');
-for(const item of keywordMap.categories.distilled)assert.ok(servicesIndex.includes(escapeHtml(item.term)),`missing internal-link anchor ${item.id}`);
+// Research variants stay in the map; the directory routes actual service topics.
+for(const entry of fs.readdirSync(path.join(dist,'services'),{withFileTypes:true}).filter(item=>item.isDirectory()))assert.ok(servicesIndex.includes(`href="/services/${entry.name}/"`),`missing service route ${entry.name}`);
 // Scenarios remain in the editorial map; the public hub links every guide
 // rather than exposing an exhaustive keyword/question spreadsheet.
 for(const entry of fs.readdirSync(path.join(dist,'news'),{withFileTypes:true}).filter(item=>item.isDirectory()))assert.ok(newsIndex.includes(`/news/${entry.name}/`),`missing news guide ${entry.name}`);

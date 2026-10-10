@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { priorityServices, priorityGuideDetails } from '../src/priority-service-content.mjs';
+import { priorityServices } from '../src/priority-service-content.mjs';
 
 const read = route => readFileSync(new URL(`../dist/${route}/index.html`, import.meta.url), 'utf8');
 test('five priority services retain photo commentary and relevant guide links without duplicate narratives', () => {
@@ -28,9 +28,15 @@ test('informational guides retain their service conversion path and add distinct
     'skirting-after-new-flooring': 'skirting-and-architraves',
     'deck-boards-or-frame': 'deck-repairs',
   };
-  for (const [slug, copy] of Object.entries(priorityGuideDetails)) {
+  const topics = {
+    'fascia-bargeboard-eaves': [/gutter/i, /gable/i, /asbestos/i, /ground level/i],
+    'loose-timber-stairs': [/tread/i, /fixing substrate/i, /extra weight/i],
+    'skirting-after-new-flooring': [/thickness/i, /profile/i, /door clearance/i, /painting/i],
+    'deck-boards-or-frame': [/joists/i, /bearers/i, /supports/i, /coating/i]
+  };
+  for (const [slug, checks] of Object.entries(topics)) {
     const html = read(`news/${slug}`);
-    assert.ok(html.includes(copy));
+    for (const check of checks) assert.match(html, check, `${slug}: retains distinct practical guidance`);
     assert.ok(html.includes(`/services/${owners[slug]}/`));
   }
 });

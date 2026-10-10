@@ -1,14 +1,11 @@
 import { business, services, faqs, articles, areas } from './content.mjs';
+import { enhanceHubEditorial } from './hub-editorial.mjs';
 import { enhanceSearchContent } from './search-content.mjs';
 import { serviceCaseMedia } from './service-case-media.mjs';
 import { footerSocial } from './footer-social.mjs';
 import { serviceDeepContent } from './service-deep-content.mjs';
 
 const escape = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
-const articleDescriptions = {
-  'rotten-window-sill':'Learn how Ellis assesses rotten window sills, traces moisture entry and repairs damaged timber. Arrange a timber window repair assessment in Canberra.',
-  'leaning-paling-fence':'Understand why a timber fence leans and how posts, rails and palings are repaired. Contact Ellis Services Group for a Canberra fence assessment.'
-};
 const captions = {
   'timber-fence-completed.webp':['Completed fence','The finished fence run with renewed posts, rails and timber palings.'],
   'timber-fence-before-repair.webp':['Before repair','Leaning fence sections and damaged lower palings before the repair work.'],
@@ -38,7 +35,7 @@ export function enhanceSite(route, html) {
   output = output.replace('<a href="/contact/">Request a quote</a></div></div><div class="shell footer-bottom">', `<a href="/contact/">Request a quote</a>${footerSocial()}</div></div><div class="shell footer-bottom">`);
   output = output.replaceAll('Canberra%20ACT%202601','Canberra%20ACT%202600');
   const id = route.split('/').filter(Boolean).at(-1);
-  const description = route.startsWith('/services/') ? serviceDeepContent[id]?.meta : articleDescriptions[id];
+  const description = route.startsWith('/services/') ? serviceDeepContent[id]?.meta : articles.find(item=>item.slug===id)?.metaDescription;
   if (description) output = output.replace(/<meta name="description" content="[^"]*">/,`<meta name="description" content="${escape(description)}">`);
 
   if (route === '/') {
@@ -116,5 +113,5 @@ export function enhanceSite(route, html) {
       return `<script type="application/ld+json">${JSON.stringify(schema).replaceAll('<','\\u003c')}</script>`;
     });
   }
-  return enhanceSearchContent(route, output, { services, articles, areas });
+  return enhanceHubEditorial(route, enhanceSearchContent(route, output, { services, articles, areas }));
 }

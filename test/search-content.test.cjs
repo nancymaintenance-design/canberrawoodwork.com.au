@@ -5,7 +5,8 @@ const path = require('node:path');
 const root = path.resolve(__dirname, '..');
 test('local search content is rendered with district anchors and matching article schema', () => {
   const read = route => fs.readFileSync(path.join(root, 'dist', route, 'index.html'), 'utf8');
-  assert.match(read(''), /carpenter near me/i);
+  assert.match(read(''), /Carpentry and timber repairs for Canberra homes/i);
+  assert.ok(read('').includes('href="/service-areas/#belconnen"'), 'home routes local enquiries by district');
   const areas = read('service-areas');
   for (const district of ['Belconnen','Gungahlin','Inner North &amp; City','Inner South','Woden Valley','Weston Creek','Tuggeranong','Molonglo Valley','East Canberra']) {
     assert.ok(areas.includes(`Carpentry Services in ${district}`), district);

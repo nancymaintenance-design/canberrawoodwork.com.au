@@ -1,21 +1,5 @@
 // Editorial content for existing URLs only: no district doorway pages.
-import { enrichPriorityService, enrichPriorityGuide } from './priority-service-content.mjs';
-export const articleSearchTitles = {
-  'timber-door-sticks-after-rain':'Timber Door Repairs After Wet Weather',
-  'deck-boards-or-frame':'Deck Board and Timber Frame Repairs',
-  'rotten-window-sill':'Rotten Timber Window Sill Repairs',
-  'fascia-bargeboard-eaves':'Fascia, Bargeboard and Eaves Repairs',
-  'leaning-paling-fence':'Leaning Timber Fence and Post Repairs',
-  'skirting-after-new-flooring':'Skirting Board Installation After New Flooring',
-  'why-timber-gates-sag':'Sagging Timber Gate and Hinge Repairs',
-  'why-timber-rot-returns':'Rotten Timber Repairs and Moisture Protection',
-  'cabinet-hinges-and-drawer-runners':'Cabinet Hinge and Drawer Runner Repairs',
-  'timber-weatherboard-damage':'Damaged Timber Weatherboard Replacement',
-  'loose-timber-stairs':'Loose Timber Stair and Handrail Repairs',
-  'pergola-post-rot':'Rotten Pergola and Verandah Post Repairs',
-  'repair-or-rebuild-a-deck':'Deck Repair, Replacement and Rebuilding',
-  'carpentry-jobs-before-selling':'Small Carpentry Repairs Before Selling a Home'
-};
+import { enrichPriorityService } from './priority-service-content.mjs';
 
 export const guideAnswers = {
   'CBR-C-331':'Carpentry includes on-site timber repair and installation; joinery focuses on fitted timber components, while cabinetmaking focuses on cabinets and storage units. Ellis confirms the measured design, supply and fitting arrangements for the work you request.',
@@ -45,34 +29,16 @@ export const guideAnswers = {
   'CBR-C-387':'The proposed work, supporting structure and site conditions determine the relevant ACT checks. Our assessment and work plan identify those requirements before structural timber is disturbed; unsafe affected areas should not be used while awaiting assessment.'
 };
 
-export const repairGuideDetails = {
-  'rotten-window-sill': [
-    ['Window sill inspection and repair scope', 'Our timber window sill repair starts with the complete opening, not just the visible soft spot. We inspect the sill ends, frame junctions, exposed edges and adjoining coating, and establish which timber is sound enough to retain. The existing profile, projection and drainage detail guide the replacement shape. We record any further deterioration revealed through agreed inspection access and explain the revised work before extending the repair.'],
-    ['Timber splice repair or sill replacement', 'For a defined damaged section with suitable surrounding timber, we cut back the deteriorated material and fit a replacement section to the retained profile. The repair plan identifies the joint, compatible materials, fixings and finish. Where deterioration extends across the sill or into connected frame sections, we specify a larger replacement rather than conceal the problem with surface filler. The condition of the supporting timber determines the repair extent.'],
-    ['Window drainage, finishing and maintenance', 'We trace recurring wetting at the opening and plan the timber work around the water-entry cause. The finished sill must retain its drainage function; the selected protective coating and joint treatment are stated in the quote. At completion, we review the repaired junctions and any affected window operation against the agreed scope. Keep the sill clear of debris and arrange a check if paint breakdown, persistent dampness or movement returns.']
-  ],
-  'why-timber-rot-returns': [
-    ['Assessing timber rot and the moisture source', 'Ellis inspects the damaged component and its adjoining timber to establish the repair boundary. We look at exposed end grain, deteriorated coatings, water-trapping joints and repeated wetting around the opening or outdoor structure. Inspection access is agreed before finishes are opened. This separates timber that can be retained from sections requiring replacement and gives the quote a defined repair scope rather than a cosmetic patch.'],
-    ['Removing damaged timber and fitting replacement sections', 'We select the repair method according to the extent of deterioration and the function of the component. A localised defect can be addressed with a fitted replacement section where the retained timber and connection are suitable. More extensive decay calls for replacement of the affected member or connected sections. Timber profiles, exterior exposure, fixing conditions and finishing requirements are considered together. Supporting members receive the project-specific structural checks before disturbance.'],
-    ['Protecting the repaired timber from repeat damage', 'The repair plan addresses the identified water path as well as the timber damage. We define the required moisture-source work, replacement timber, exposed-edge treatment and protective finish in the agreed scope. Clear drainage paths, suitable junction details and maintenance of the selected coating help protect the completed repair. We explain what was repaired and what maintenance remains; new softness or movement needs inspection rather than another coat of paint.']
-  ],
-  'pergola-post-rot': [
-    ['Pergola post inspection and support planning', 'Our pergola and verandah timber repair assessment covers the post base, connected beams, roof attachments where present, and the fixing or footing detail. Before removing a deteriorated post, we establish how the connected structure will be supported and sequence the work accordingly. Ground-level photographs can help describe the issue, but the repair method follows the on-site condition. Do not cut away a support post or test a damaged structure by adding weight.'],
-    ['Post base repair and replacement post selection', 'The damaged length and condition of the retained member determine whether a defined base repair or post replacement is appropriate. We specify the replacement timber, connection detail and fixing arrangement for the agreed work. Where decay extends into adjoining members or connections, the repair scope includes those affected components. Existing roof attachments, footing condition and applicable project requirements are reviewed before the replacement post is fitted.'],
-    ['Drainage and finishing around the post base', 'We inspect how water reaches or collects around the post and consider adjacent ground level, drainage and the existing protective coating. The repaired base detail and finish are selected for the exposure and connected structure, rather than simply covering soft timber. At handover, the agreed work and care requirements are explained. Keep the base clear of trapped debris and arrange inspection if the post or its connections show renewed movement or deterioration.']
-  ]
-};
-
 export const districtCopy = {
-  'Belconnen':'Our Belconnen carpentry services cover timber doors, window frames, decks and fence repairs, including enquiries from Kaleen, Florey and Aranda. For a repair list across several parts of your property, describe each item so we can assess the work together. We check the damaged timber and its connections, then specify retained sections, replacement materials and finishing in your quote.',
-  'Gungahlin':'Contact our Canberra team for carpentry services in Gungahlin, Amaroo, Casey and Ngunnawal. We repair gates and fences, replace damaged deck boards and fit interior timber trim. When a gate drags or a door will not latch, our assessment checks the supporting post or frame as well as the moving component, so the repair addresses the cause of the misalignment.',
-  'Inner North & City':'Our carpentry services in Canberra’s Inner North and City include enquiries from Braddon, Ainslie and Dickson. Timber window repairs, door adjustments and matching skirting or architraves are assessed against the existing opening and profile. Tell us about parking, building access and the rooms involved so the measured repair or installation scope covers the site arrangements.',
-  'Inner South':'For carpentry services in the Inner South, contact Ellis about work in Kingston, Griffith, Red Hill and Narrabundah. We assess timber windows, exterior doors, verandah timber and interior finishing. If retaining an existing timber profile matters, we measure the adjoining components and confirm the proposed replacement and finish before ordering materials.',
-  'Woden Valley':'Our Woden Valley carpentry services cover Woden, Curtin, Chifley and Phillip. We repair cupboard hinges and drawer runners, fit shelving and complete skirting and architraves after renovation work. A hardware repair starts with compatible fittings and sound fixing points; a new installation starts with measured dimensions, the intended use and suitable wall fixings.',
-  'Weston Creek':'Contact Ellis for carpentry services in Weston Creek, including Weston, Duffy, Fisher and Holder. Deck repairs, pergola timber repairs and fence post or rail replacement are assessed as connected assemblies. We check the condition of the supporting timber and the required access before defining the replacement sections and finishing work.',
-  'Tuggeranong':'Our Tuggeranong carpentry services include enquiries from Kambah, Wanniassa and Gowrie. We repair timber stairs, handrails, decks, gates and exterior timber. For loose steps or rails, avoid using the affected component and tell us where movement occurs. We assess the supporting material and connections before specifying the repair and project checks.',
-  'Molonglo Valley':'Ellis provides carpentry services in Molonglo Valley, including Denman Prospect, Whitlam and Wright. Contact us about deck construction or extensions, shelving, built-in storage and renovation finishing. We measure the available space and confirm the intended layout, materials, fixing details and project requirements in an installation plan and quote.',
-  'East Canberra':'Our East Canberra carpentry services include enquiries from Fyshwick and Pialligo. We assess timber weatherboards, external trim, fences and smaller property repairs. Describe the affected component, approximate length and site access; our assessment checks the material, adjoining timber and moisture exposure before confirming replacement and finishing work.'
+  "Belconnen": "Belconnen, Kaleen, Florey and Aranda are suburb examples in this district. Include your actual suburb and identify the door, window, deck or other timber item. For several repairs, list each location and any restrictions on access so the visit can be planned around the full request.",
+  "Gungahlin": "Use Gungahlin, Amaroo, Casey or Ngunnawal to help locate the property, then describe the task itself. For a gate or fence enquiry, note which boundary is accessible and whether the gate affects entry. Confirm the property contact and access before a visit is arranged.",
+  "Inner North & City": "For City, Braddon, Ainslie and Dickson enquiries, include parking and building-entry arrangements where relevant. If matching existing trim or an opening profile matters, mention the retained material and rooms involved. The suburb identifies the location; the assessment establishes the repair condition.",
+  "Inner South": "Kingston, Griffith, Red Hill and Narrabundah are examples for Inner South enquiries. State the timber component, whether the work is indoors or outside and any access restrictions. If the property has documents affecting proposed alterations, mention them when discussing the project scope.",
+  "Woden Valley": "For Woden, Curtin, Chifley or Phillip, describe the affected fitting or the installation you want. A cupboard hinge repair and new shelving involve different measurements and fixing checks. Include the room and any authorised occupant contact needed for access.",
+  "Weston Creek": "Weston, Duffy, Fisher and Holder are examples in Weston Creek. For outdoor timber work, note whether the affected area can be viewed safely from ground level and whether access crosses another property. Do not enter an unsafe space to obtain photos.",
+  "Tuggeranong": "Include your actual suburb, such as Kambah, Wanniassa or Gowrie, and the affected item. If a stair, handrail or deck is loose, avoid the unsafe area while assessment is arranged. Describe where movement was noticed without testing the component again.",
+  "Molonglo Valley": "Denman Prospect, Whitlam and Wright are suburb examples for Molonglo Valley. Distinguish a repair to an existing component from a new installation or extension. Mention available plans, intended use and access; material and project checks follow the actual proposal.",
+  "East Canberra": "For Fyshwick or Pialligo, identify the property contact, requested timber work and access arrangements. Include any relevant restrictions on entry or working areas. Confirm the proposed task and visit details with the team rather than assuming the suburb alone establishes the scope."
 };
 
 const esc = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
@@ -145,9 +111,5 @@ export function enhanceSearchContent(route, html, { services, articles, areas })
     const hub = `<section class="scenario-hub shell"><p class="eyebrow">CARPENTRY REPAIR GUIDES</p><h2>Canberra carpentry advice by service</h2><p>Explore timber repair methods, replacement options and installation preparation. Each guide explains the affected components and links to the Ellis service for your work.</p><div class="scenario-grid">${groups.map(([heading,...owners])=>`<details open><summary>${heading}</summary><ul>${articles.filter(a=>owners.includes(a.owner)).map(a=>`<li><a href="/news/${a.slug}/">${esc(a.title)} ↗</a></li>`).join('')}</ul></details>`).join('')}</div></section>`;
     output = output.replace(/<section class="scenario-hub shell">[\s\S]*?<\/section>/,hub);
   }
-  if (article && repairGuideDetails[article.slug]) {
-    const additions = repairGuideDetails[article.slug].map(([heading,copy])=>`<section><h2>${esc(heading)}</h2><p>${esc(copy)}</p></section>`).join('');
-    output = output.replace('<section><h2>What to send with your enquiry</h2>',`${additions}<section><h2>What to send with your enquiry</h2>`);
-  }
-  return enrichPriorityGuide(route, enrichPriorityService(route, output));
+  return enrichPriorityService(route, output);
 }
