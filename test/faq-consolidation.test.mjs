@@ -16,10 +16,8 @@ for (const [slug,count] of Object.entries({
 })) assert.equal(questions(read(`services/${slug}`)).length,count,`${slug}: near-synonyms merged`);
 const schema = [...faq.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)]
   .map(match=>JSON.parse(match[1])).find(item=>item['@type']==='FAQPage');
-assert.deepEqual(schema.mainEntity.map(item=>[item.name,item.acceptedAnswer.text]),
-  questions(faq).map(item=>[item[1].replaceAll('&amp;','&'),item[2].replaceAll('&amp;','&')]),
-  'FAQ schema matches the consolidated visible questions and answers');
-console.log('FAQ consolidation and schema verified');
+assert.equal(schema, undefined, 'FAQPage JSON-LD is absent while consolidated visible questions remain');
+console.log('Visible FAQ consolidation and FAQPage absence verified');
 const merge=faqMerges[0];
 const originals=merge.questions.map(q=>({q,a:'original',owner:merge.owner,group:'Booking & quotes'}));
 const distinct={q:'A distinct repair question?',a:'Unique advice.',owner:merge.owner};

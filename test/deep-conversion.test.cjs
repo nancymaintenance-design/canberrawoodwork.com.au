@@ -21,15 +21,14 @@ test('rendered enquiry channels and FAQ answers match the service customers requ
   const faq = read('faq');
   const schema = [...faq.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)]
     .map(match => JSON.parse(match[1])).find(item => item['@type'] === 'FAQPage');
-  assert.ok(schema);
-  const answers = schema.mainEntity.map(item => item.acceptedAnswer.text);
+  assert.equal(schema, undefined, 'FAQPage JSON-LD is absent');
+  const visibleFaqs = [...faq.matchAll(/<details class="faq-item"><summary>(.*?)<\/summary><p>(.*?)<\/p>/g)]
+    .map(match => ({ name: match[1], acceptedAnswer: { text: match[2] } }));
+  assert.equal(visibleFaqs.length, 9, 'consolidated general questions and answers remain visible');
+  const answers = visibleFaqs.map(item => item.acceptedAnswer.text);
   assert.equal(new Set(answers).size, answers.length, 'FAQ questions receive individual answers, not one generic service paragraph');
-  for (const item of schema.mainEntity) {
-    const escaped = item.acceptedAnswer.text.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
-    assert.ok(faq.includes(`<p>${escaped}</p>`), `visible answer agrees with schema: ${item.name}`);
-  }
   // Service-specific answers now live on their service page, not general FAQ.
-  const allAnswers = [...schema.mainEntity, ...['door-and-frame-repairs','deck-building','small-carpentry-jobs'].flatMap(slug=>
+  const allAnswers = [...visibleFaqs, ...['door-and-frame-repairs','deck-building','small-carpentry-jobs'].flatMap(slug=>
     [...read('services/'+slug).matchAll(/<details class="faq-item"><summary>(.*?)<\/summary><p>(.*?)<\/p>/g)].map(m=>({name:m[1],acceptedAnswer:{text:m[2]}})))];
   const answer = term => allAnswers.find(item => item.name === term)?.acceptedAnswer.text || '';
   assert.match(answer('Do carpenters charge a call-out fee or a minimum booking fee?'), /confirm.*(?:fee|charge).*before/i);

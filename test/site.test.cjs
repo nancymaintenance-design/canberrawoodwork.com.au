@@ -58,10 +58,11 @@ for(const file of files){
     schemas.push(schema);
   }
   assert.ok(schemas.length,`${route}: JSON-LD present`);
+  assert.ok(schemas.every(schema=>schema['@type']!=='FAQPage'),`${route}: no FAQPage JSON-LD`);
   pageSchemas.set(route,schemas);
 }
 const home=fs.readFileSync(path.join(dist,'index.html'),'utf8');assert.match(home,/<h1>Canberra Carpentry & Timber Repairs<\/h1>/,'home page H1 states the core Canberra service theme directly');assert.match(home,/Small Carpentry Jobs/);
-const faq=fs.readFileSync(path.join(dist,'faq','index.html'),'utf8');assert.match(faq,/<h1>Canberra Carpentry Questions & Answers<\/h1>/,'FAQ H1 states the Canberra carpentry question intent directly');assert.match(faq,/FAQPage/);
+const faq=fs.readFileSync(path.join(dist,'faq','index.html'),'utf8');assert.match(faq,/<h1>Canberra Carpentry Questions & Answers<\/h1>/,'FAQ H1 states the Canberra carpentry question intent directly');assert.doesNotMatch(faq,/"@type":"FAQPage"/);
 const news=fs.readFileSync(path.join(dist,'news','timber-door-sticks-after-rain','index.html'),'utf8');assert.match(news,/"@type":"Article"/);
 const newsIndex=fs.readFileSync(path.join(dist,'news','index.html'),'utf8');
 const servicesIndex=fs.readFileSync(path.join(dist,'services','index.html'),'utf8');
@@ -131,7 +132,10 @@ for(const [name,html] of [['contact',contact],['service areas',areas]]){
 const browserScript=fs.readFileSync(path.join(dist,'assets','site.js'),'utf8');
 assert.match(browserScript,/fetch\('\/api\/contact'/,'Resend contact API request');
 assert.doesNotMatch(browserScript,/location\.href=.*mailto/,'no mail-client redirect');
-assert.match(fs.readFileSync(path.join(dist,'llms.txt'),'utf8'),/Ellis Services Group/);
+const discovery=fs.readFileSync(path.join(dist,'llms.txt'),'utf8');
+assert.match(discovery,/Ellis Services Group/);
+assert.doesNotMatch(discovery,/127\.0\.0\.1/);
+assert.match(discovery,/\[Contact\]\(https:\/\/www\.canberrawoodwork\.com\.au\/contact\/\)/);
 assert.match(fs.readFileSync(path.join(dist,'robots.txt'),'utf8'),/(?:Disallow|Allow): \//,'robots permits either a local-preview block or a production crawl allowance');
 const robots=fs.readFileSync(path.join(dist,'robots.txt'),'utf8');
 const sitemap=fs.readFileSync(path.join(dist,'sitemap.xml'),'utf8');
@@ -184,7 +188,7 @@ import('../src/content.mjs').then(async ({services})=>{
     assert.equal(serviceSchemas[0].name,`${service.title} in Canberra`,`${service.slug}: schema name matches visible heading`);
     assert.equal(serviceSchemas[0].description,service.intro,`${service.slug}: schema description matches visible intro`);
     assert.equal(new URL(serviceSchemas[0].url).pathname,route,`${service.slug}: schema URL matches route`);
-    assert.equal(serviceSchemas[0].provider.name,'Ellis Services Group',`${service.slug}: schema provider`);
+    assert.deepEqual(serviceSchemas[0].provider,{'@id':'https://www.canberrawoodwork.com.au/#business'},`${service.slug}: schema provider references the canonical business`);
     const narrative=html.match(/<div class="detail-main service-narrative">([\s\S]*?)<aside class="detail-aside">/)?.[1]||'';
     const localNotes=html.match(/<section class="service-local-notes shell">([\s\S]*?)<\/section>/)?.[1]||'';
     const section=narrative+localNotes;
