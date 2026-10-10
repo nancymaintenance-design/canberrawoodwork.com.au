@@ -2,33 +2,23 @@
 // no invented project location, dates, customer testimonial or performance claim.
 export const priorityServices = {
   'fascia-and-eaves-repairs': {
-    scope: 'Fascia repair addresses the timber along the lower roof edge; bargeboard repair addresses the sloping gable edge. Eaves lining closes the underside and needs its own material check. Ellis repairs these components according to their condition, rather than treating every roof-edge defect as the same job. We inspect the damaged section and adjoining fixings before choosing a fitted timber repair or fascia replacement.',
-    method: 'For fascia replacement, we record the existing profile and junctions, remove deteriorated timber and fit the agreed replacement sections to suitable fixing points. We check exposed ends and joints and define the protective finish. The assessment also identifies repeated wetting, so the work plan addresses the cause alongside the timber repair. Eaves repair begins with material identification before any lining is disturbed.',
-    photos: 'The work photos show roof-edge timber and a close view of deteriorated material being prepared for repair. Paint breakdown, damaged edges and adjoining connections are assessed together to define the timber replacement and finishing work.',
+    photos: 'Roof-edge boards, deteriorated edges and adjoining connections illustrate the component differences discussed above. A close view complements the overall roof-edge position when describing a repair.',
     guides: [['fascia-bargeboard-eaves', 'Fascia, bargeboard and eaves: component differences and repair planning']],
   },
   'pergola-timber-repairs': {
-    scope: 'Pergola and verandah repairs cover timber posts, beams and their connections. A soft post base needs more than a new surface finish: we check the remaining member, footing and connected structure to select the repair extent. Ellis plans the support sequence before removing damaged timber and confirms the replacement and finishing details in the quote.',
-    method: 'A defined post-base repair retains suitable timber above the affected section and uses an agreed connection detail. Where the damage extends further, we specify post replacement and inspect the adjoining beam connection. Ground level, trapped debris and repeated wetting inform the base detail and finish. Our completion checks cover the repaired connections and the work agreed for the structure.',
-    photos: 'The post-base detail shows renewed timber below an existing outdoor post. The repair junction, base and connected framing are key parts of our assessment. We select the repair extent and connection detail for the condition of the structure.',
+    photos: 'The post-base detail draws attention to the junction between retained and replacement timber. Its suitability for a particular structure follows assessment of the post, connections and footing.',
     guides: [['pergola-post-rot', 'Pergola post rot: base repair, replacement and moisture protection']],
   },
   'timber-stair-and-handrail-repairs': {
-    scope: 'Our timber stair repair service addresses loose treads, damaged step edges and the timber or fixings supporting them. Handrail repairs include rail joints, brackets and fixing points. We assess the moving component and its support together, then define the repair required to restore the agreed use. This page concerns repairs to existing stairs and handrails, not a new staircase design service.',
-    method: 'We check tread movement, supporting timber and connection condition before replacing a damaged section or renewing fixings. A handrail repair includes the fixing substrate, not only the visible bracket. We confirm matching profiles, access, finishing and relevant project checks before work, then review the repaired components against the agreed scope. Avoid using a loose step or rail while awaiting assessment.',
-    photos: 'The overall stair view and handrail close-up illustrate the parts inspected together: step edges, rails and wall connections. Our assessment checks the affected support and fixing points so the repair addresses the source of movement.',
+    photos: 'The stair view and handrail close-up illustrate different support points: tread edges, rail joints and wall connections. A surface view does not establish the condition of concealed anchorage.',
     guides: [['loose-timber-stairs', 'Loose timber stairs and handrails: supports and repair scope']],
   },
   'skirting-and-architraves': {
-    scope: 'Ellis installs and replaces timber skirting boards and architraves in Canberra. Skirting finishes the wall-to-floor junction; architraves finish around doors and windows. We measure the existing profile, height and thickness to select a suitable match, and check the new floor level where flooring has changed.',
-    method: 'The measured trim plan sets out lengths, corners, joins and transitions to adjoining profiles. We prepare suitable fixing points and fit the selected trim around the existing openings and floor junction. Removal, supply, caulking and painting are identified in the quote. We check door clearance separately where a changed floor level affects opening and closing.',
-    photos: 'The trim photos show skirting, door surrounds and a floor transition. These are useful references when discussing profile matching and the junction between old and new work. Bring a safe close-up of your existing trim if available; we take the installation measurements on site.',
+    photos: 'Skirting, door surrounds and floor transitions illustrate why profile height, thickness and adjoining levels matter together. A safe close-up of existing trim can help discuss the match before the on-site measure.',
     guides: [['skirting-after-new-flooring', 'Skirting after new flooring: profile matching and installation planning']],
   },
   'deck-repairs': {
-    scope: 'Deck repairs and timber deck maintenance start with the boards and their supporting assembly. We check loose fixings, worn edges, deteriorated boards, joists, bearers and posts to identify the work required. Board replacement retains supports suitable for continued use; supporting timber repairs are defined before replacement boards are installed. Our service focuses on the timber repair scope, rather than presenting cleaning or coating alone as a structural repair.',
-    method: 'We specify board dimensions, replacement sections and compatible fixings for the assessed deck. The repair plan considers drainage gaps, exposed ends, edges and transitions to steps. Surface preparation and protective coating are stated as inclusions where agreed, not assumed to be included in every repair. After the timber work, we check the repaired boards and connections and explain the agreed finish and care requirements.',
-    photos: 'The overall deck and board close-up illustrate the walking surface, perimeter trim and fixing details. Our on-site assessment checks these exposed components together with the supports to specify board replacement and any supporting timber repairs.',
+    photos: 'The overall deck and close board view illustrate the walking surface, perimeter and fixing positions. Those surface details do not establish the condition of the framing beneath.',
     guides: [['deck-boards-or-frame', 'Deck boards or supporting frame: identifying the repair scope'], ['repair-or-rebuild-a-deck', 'Deck repair, replacement and rebuilding: compare the options']],
   },
 };
@@ -52,11 +42,9 @@ export function enrichPriorityGuide(route, html) {
 export function enrichPriorityService(route, html) {
   const entry = priorityServices[route.split('/').filter(Boolean).at(-1)];
   if (!entry || !route.startsWith('/services/')) return html;
-  let output = html.replace('<ul class="sign-list">', `<p>${escape(entry.scope)}</p><ul class="sign-list">`);
-  // Append to the existing narrative, without adding another small heading.
-  output = output.replace('</div></div><aside class="detail-aside">', `<p>${escape(entry.method)}</p></div></div><aside class="detail-aside">`);
+  // The complete service narrative and contextual guide links now live in
+  // service-editorial.mjs. Keep only component commentary beside the photos.
+  let output = html;
   output = output.replace('<div class="case-study-grid">', `<p>${escape(entry.photos)}</p><div class="case-study-grid">`);
-  const links = entry.guides.map(([slug, label]) => `<a class="text-link" href="/news/${slug}/">${escape(label)} ↗</a>`).join(' · ');
-  output = output.replace('<nav aria-label="Related carpentry services">', `<p>${links}</p><p>See our <a class="text-link" href="/service-areas/">Canberra carpentry service areas</a> and tell us your suburb when requesting a quote.</p><nav aria-label="Related carpentry services">`);
   return output;
 }

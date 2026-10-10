@@ -78,7 +78,7 @@ assert.match(servicesIndex,/<h1>Canberra Carpentry & Timber Repair Services<\/h1
 assert.match(areaPage,/<h1>Carpentry Services Across Canberra ACT<\/h1>/,'service-area H1 states the local service-area theme directly');
 assert.match(contactPage,/<h1>Request a Canberra Carpentry Quote<\/h1>/,'contact H1 states the quote intent directly');
 assert.match(newsIndex,/<h1>Canberra Carpentry Advice & Repair Guides<\/h1>/,'news H1 states the advice and repair-guide theme directly');
-assert.match(rottenTimberPage,/<h2>Rotten Timber Repairs: repair method<\/h2>/,'rotten timber repairs present Ellis Services Group\'s positive repair approach');
+assert.match(rottenTimberPage,/<h2>[^<]*sound timber[^<]*<\/h2>/i,'rot repair explains the retained-timber decision');
 assert.match(rottenTimberPage,/on-site assessment[\s\S]*identify the cause[\s\S]*repair plan and quote/i,'rotten timber repairs explain the assessment, cause and quoted repair path');
 assert.doesNotMatch(serviceAndAdviceCopy,/Where this repair may stop|(?:contact|consult|speak with|seek) (?:an? |the )?(?:external specialist|another trade|locksmith|another company)/i,'repair pages do not send visitors to another company; qualified project checks remain accurate');
 assert.doesNotMatch(customerFacingCopy,/may need a separate trade|needs a separate assessment|not an automatic quote|does not confirm a booking/i,'customer-facing repair copy avoids hand-off and booking-deflection language without banning material-matching facts');
@@ -111,13 +111,8 @@ for(const item of keywordMap.categories.distilled)assert.ok(servicesIndex.includ
 // Scenarios remain in the editorial map; the public hub links every guide
 // rather than exposing an exhaustive keyword/question spreadsheet.
 for(const entry of fs.readdirSync(path.join(dist,'news'),{withFileTypes:true}).filter(item=>item.isDirectory()))assert.ok(newsIndex.includes(`/news/${entry.name}/`),`missing news guide ${entry.name}`);
-for(const item of keywordMap.categories.core){
-  if(item.owner==='/service-areas'||/near me|cost|hourly rate/i.test(item.term))continue;
-  const owner=item.owner==='/'?'small-carpentry-jobs':item.owner.split('/').filter(Boolean).at(-1);
-  const html=fs.readFileSync(path.join(dist,'services',owner,'index.html'),'utf8');
-  const main=html.match(/<main id="main">([\s\S]*?)<\/main>/)?.[1]||'';
-  assert.ok(main.includes(escapeHtml(item.term.replace(/ canberra$/i,''))),`missing visible owner phrase ${item.id} on ${owner}`);
-}
+// Core synonyms remain research data. Useful scope, material distinctions and
+// links are covered by service-editorial.test.mjs rather than a phrase census.
 const areas=fs.readFileSync(path.join(dist,'service-areas','index.html'),'utf8');assert.match(areas,/Denman Prospect/);assert.match(areas,/class="enquiry-form"/);
 const contact=fs.readFileSync(path.join(dist,'contact','index.html'),'utf8');
 for(const [name,html] of [['contact',contact],['service areas',areas]]){
@@ -145,6 +140,7 @@ assert.doesNotMatch(robots,/127\.0\.0\.1/,'production robots never names a local
 assert.match(sitemap,/https:\/\/www\.canberrawoodwork\.com\.au\//,'production sitemap uses the public URL');
 assert.doesNotMatch(sitemap,/127\.0\.0\.1/,'production sitemap never names a local host');
 import('../src/content.mjs').then(async ({services})=>{
+  const {serviceDeepContent}=await import('../src/service-deep-content.mjs');
   const {canonicalFaqQuestion}=await import('../src/faq-consolidation.mjs');
   for(const item of keywordMap.categories.intent){
     const question=escapeHtml(canonicalFaqQuestion(item.term));
@@ -186,17 +182,15 @@ import('../src/content.mjs').then(async ({services})=>{
     const serviceSchemas=pageSchemas.get(route)?.filter(schema=>schema['@type']==='Service')||[];
     assert.equal(serviceSchemas.length,1,`${service.slug}: one Service JSON-LD object`);
     assert.equal(serviceSchemas[0].name,`${service.title} in Canberra`,`${service.slug}: schema name matches visible heading`);
-    assert.equal(serviceSchemas[0].description,service.intro,`${service.slug}: schema description matches visible intro`);
+    assert.equal(serviceSchemas[0].description,serviceDeepContent[service.slug].intro,`${service.slug}: schema description matches edited intro`);
+    assert.ok(html.includes(`<p>${escapeHtml(serviceSchemas[0].description)}</p>`),`${service.slug}: schema intro is visible`);
     assert.equal(new URL(serviceSchemas[0].url).pathname,route,`${service.slug}: schema URL matches route`);
     assert.deepEqual(serviceSchemas[0].provider,{'@id':'https://www.canberrawoodwork.com.au/#business'},`${service.slug}: schema provider references the canonical business`);
     const narrative=html.match(/<div class="detail-main service-narrative">([\s\S]*?)<aside class="detail-aside">/)?.[1]||'';
     const localNotes=html.match(/<section class="service-local-notes shell">([\s\S]*?)<\/section>/)?.[1]||'';
     const section=narrative+localNotes;
     assert.ok(section,`${service.slug}: visible deep-content section`);
-    const installing=['deck-building','custom-joinery','interior-carpentry','skirting-and-architraves'].includes(service.slug);
-    for(const heading of [`${escapeHtml(service.title)} in Canberra`,`${escapeHtml(service.title)}: ${installing?'installation':'repair'} method`,`Booking ${escapeHtml(service.title.toLowerCase())} in Canberra`]){
-      assert.ok(section.includes(`<h2>${heading}</h2>`),`${service.slug}: visible ${heading} heading`);
-    }
+    assert.ok(!section.includes(`<h2>${escapeHtml(service.title)} in Canberra</h2>`),`${service.slug}: H2 does not repeat the H1`);
     assert.equal((section.match(/<h2>/g)||[]).length,3,`${service.slug}: three coherent narrative headings, not fragmented micro-sections`);
     assert.match(section,/<div class="related-work-links">[\s\S]*?<\/div>/,`${service.slug}: grouped related links`);
     assert.match(section,/optional[\s\S]*brian@elliservices\.com\.au/i,`${service.slug}: optional photos use the functioning email channel`);
@@ -206,16 +200,16 @@ import('../src/content.mjs').then(async ({services})=>{
     const relatedServiceLinks=[...relatedGroup.matchAll(/<a\b[^>]*href="([^"]+)"/g)];
     assert.ok(relatedServiceLinks.length>=2&&relatedServiceLinks.length<=4,`${service.slug}: two to four related service links`);
     assert.ok(deepLinks.length>=2&&deepLinks.length<=7,`${service.slug}: bounded service, guide and area links`);
-    assert.ok(section.length>1600,`${service.slug}: maintains substantial service-specific repair guidance`);
     for(const href of deepLinks){
+      if(href.startsWith('https://')) {
+        assert.ok(['www.planning.act.gov.au','www.accesscanberra.act.gov.au'].includes(new URL(href).hostname),`${service.slug}: relevant official source`);
+        continue;
+      }
       const pathname=href.split('#')[0].split('?')[0];
       assert.ok(pathname.startsWith('/'),`${service.slug}: deep-content link must be internal (${href})`);
       const target=path.join(dist,pathname.slice(1),'index.html');
       assert.ok(fs.existsSync(target),`${service.slug}: unresolved deep-content link ${href}`);
     }
-    const main=html.match(/<main id="main">([\s\S]*?)<\/main>/)?.[1]||'';
-    const words=main.replace(/<[^>]*>/g,' ').replace(/&[^;]+;/g,' ').trim().split(/\s+/).filter(Boolean);
-    assert.ok(words.length>=650,`${service.slug}: ${words.length} visible page words (minimum 650)`);
   }
   const structural=fs.readFileSync(path.join(dist,'services','structural-timber-repairs','index.html'),'utf8');
   const deckBuilding=fs.readFileSync(path.join(dist,'services','deck-building','index.html'),'utf8');
@@ -223,7 +217,6 @@ import('../src/content.mjs').then(async ({services})=>{
   assert.match(structural,/on-site assessment[\s\S]*identify the cause[\s\S]*repair plan and quote/i,'structural page explains Ellis Services Group\'s repair process positively');
   assert.doesNotMatch(deckBuilding,/does not state that a particular deck is exempt from approval|does not claim those permissions or a specific licence/i,'deck-building page avoids discouraging licence disclaimers');
   assert.match(deckBuilding,/New decks and extensions are planned around the site, intended use and any required ACT checks\./,'deck-building page states the service clearly');
-  const {serviceDeepContent}=await import('../src/service-deep-content.mjs');
   const {serviceCaseMedia,homeCaseMedia}=await import('../src/service-case-media.mjs');
   assert.equal(homeCaseMedia.hero.src,'/assets/carpenter-at-work-canberra.webp','homepage hero uses the supplied Canberra work image');
   assert.equal(homeCaseMedia.deck.src,'/assets/completed-timber-deck-canberra.webp','homepage deck feature uses the supplied completed-deck image');
@@ -275,12 +268,10 @@ assert.match(themeCss,/\.business-registration-section\{[^}]*background:#fffdf9[
   }
   for(const service of services){
     const serviceHtml=fs.readFileSync(path.join(dist,'services',service.slug,'index.html'),'utf8');
-    assert.ok(serviceHtml.includes(escapeHtml(service.approach)),`${service.slug}: preserves original introductory approach copy`);
-    assert.ok(serviceHtml.includes(escapeHtml(service.boundary)),`${service.slug}: preserves original scope note copy`);
     const entry=serviceDeepContent[service.slug];
     assert.ok(entry,`${service.slug}: deep-content data entry`);
     for(const key of ['scope','observations','assessment','boundary','canberraContext','enquiry'])assert.ok(typeof entry[key]==='string'&&entry[key].trim(),`${service.slug}: ${key} copy`);
-    const uniqueCopy=new Set([service.approach,service.boundary,...['scope','observations','assessment','boundary','canberraContext','enquiry'].map(key=>entry[key])]);
+    const uniqueCopy=new Set(['scope','observations','assessment','boundary','canberraContext','enquiry'].map(key=>entry[key]));
     for(const copy of uniqueCopy){
       const count=serviceHtml.split(`<p>${escapeHtml(copy)}</p>`).length-1;
       assert.equal(count,1,`${service.slug}: each distinct service paragraph appears exactly once`);

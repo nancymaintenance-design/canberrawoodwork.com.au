@@ -5,25 +5,6 @@ import { footerSocial } from './footer-social.mjs';
 import { serviceDeepContent } from './service-deep-content.mjs';
 
 const escape = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
-const serviceDescriptions = {
-  'small-carpentry-jobs':'Small carpentry repairs in Canberra, from loose fittings to damaged trim. Ellis Services Group assesses your repair list and provides an itemised quote.',
-  'door-and-frame-repairs':'Timber door and frame repairs in Canberra. We repair damaged jambs, align hinges and latches, and restore smooth operation. Contact the Ellis team.',
-  'timber-window-repairs':'Timber window repairs in Canberra, including rotten sills, damaged frames and sticking sashes. Ellis assesses the timber and provides your repair quote.',
-  'rotten-timber-repairs':'Rotten timber repairs in Canberra. Ellis identifies moisture damage, replaces deteriorated sections and finishes the repaired timber. Request a quote.',
-  'fascia-and-eaves-repairs':'Fascia, bargeboard and eaves timber repairs in Canberra. Ellis assesses damaged roof-edge timber and specifies replacement and finishing work.',
-  'deck-repairs':'Deck repairs in Canberra, including damaged boards, fixings and supporting timber. Ellis checks the deck and quotes the repair work your home needs.',
-  'timber-fence-repairs':'Timber fence repairs in Canberra for leaning posts, damaged rails and weathered palings. Ellis assesses your fence and provides a clear repair quote.',
-  'timber-gate-repairs':'Timber gate repairs in Canberra. Ellis repairs hinges, latches, posts and damaged timber to restore alignment and operation. Request an assessment.',
-  'skirting-and-architraves':'Skirting board and architrave installation in Canberra. Ellis measures, matches profiles and fits timber trim for renovation and finishing projects.',
-  'cabinet-door-and-drawer-repairs':'Cabinet door and drawer repairs in Canberra. Ellis repairs hinges, runners and fixing points for cupboards that close and operate properly.',
-  'interior-carpentry':'Interior carpentry in Canberra, including shelving, wall panelling and renovation finishing. Ellis measures your space and provides an installation quote.',
-  'timber-weatherboard-repairs':'Timber weatherboard repairs in Canberra. Ellis replaces damaged boards and restores exterior timber junctions, fixings and finishes. Contact our team.',
-  'timber-stair-and-handrail-repairs':'Timber stair and handrail repairs in Canberra. Ellis checks treads, rails and fixings and plans secure repairs for the affected components.',
-  'pergola-timber-repairs':'Pergola and verandah timber repairs in Canberra. Ellis assesses posts, beams and connections and quotes replacement and finishing work.',
-  'custom-joinery':'Custom shelving and built-in storage for Canberra homes. Ellis measures your space and confirms materials, fittings and installation in your quote.',
-  'structural-timber-repairs':'Structural timber repairs in Canberra. Ellis assesses damaged framing, joists and bearers and confirms the repair work and project requirements.',
-  'deck-building':'New timber decks and deck extensions in Canberra. Ellis plans your layout, framing, boards and finish and provides an installation quote.'
-};
 const articleDescriptions = {
   'rotten-window-sill':'Learn how Ellis assesses rotten window sills, traces moisture entry and repairs damaged timber. Arrange a timber window repair assessment in Canberra.',
   'leaning-paling-fence':'Understand why a timber fence leans and how posts, rails and palings are repaired. Contact Ellis Services Group for a Canberra fence assessment.'
@@ -57,7 +38,7 @@ export function enhanceSite(route, html) {
   output = output.replace('<a href="/contact/">Request a quote</a></div></div><div class="shell footer-bottom">', `<a href="/contact/">Request a quote</a>${footerSocial()}</div></div><div class="shell footer-bottom">`);
   output = output.replaceAll('Canberra%20ACT%202601','Canberra%20ACT%202600');
   const id = route.split('/').filter(Boolean).at(-1);
-  const description = route.startsWith('/services/') ? serviceDescriptions[id] : articleDescriptions[id];
+  const description = route.startsWith('/services/') ? serviceDeepContent[id]?.meta : articleDescriptions[id];
   if (description) output = output.replace(/<meta name="description" content="[^"]*">/,`<meta name="description" content="${escape(description)}">`);
 
   if (route === '/') {
@@ -87,19 +68,35 @@ export function enhanceSite(route, html) {
       return true;
     }).map(value=>`<p>${escape(value)}</p>`).join('');
     const scope = paragraphs([content.scope,content.observations]);
-    const plan = paragraphs([content.assessment,service.boundary,service.approach]);
-    const local = paragraphs([content.canberraContext,content.boundary,content.enquiry]);
-    const main = `<div class="detail-main service-narrative"><div class="service-reading-block"><p class="eyebrow">SERVICE SCOPE</p><h2>${escape(service.title)} in Canberra</h2>${scope}<ul class="sign-list">${service.symptoms.map(value=>`<li>${escape(value)}</li>`).join('')}</ul></div><div class="service-reading-block"><h2>${['deck-building','custom-joinery','interior-carpentry','skirting-and-architraves'].includes(service.slug)?'Our installation plan':'Our repair plan'}</h2>${plan}</div></div>`;
+    const plan = paragraphs([content.assessment,content.boundary]);
+    const local = paragraphs([content.canberraContext,content.enquiry]);
+    const main = `<div class="detail-main service-narrative"><div class="service-reading-block"><p class="eyebrow">SERVICE SCOPE</p><h2>${escape(content.headings[0])}</h2>${scope}<ul class="sign-list">${service.symptoms.map(value=>`<li>${escape(value)}</li>`).join('')}</ul></div><div class="service-reading-block"><h2>${escape(content.headings[1])}</h2>${plan}</div></div>`;
     output = output.replace(/<div class="detail-main">[\s\S]*?<\/div><aside class="detail-aside">/,`${main}<aside class="detail-aside">`);
-    const questions = faqs.filter(item=>item.owner===service.slug);
+    // Consolidation still chooses the visible questions; service edits can refine
+    // the resulting merged answer without changing the shared FAQ hub.
+    const questions = faqs.filter(item=>item.owner===service.slug).map(item=>({...item,a:content.faqAnswers?.[item.q] || item.a}));
     output = output.replace(/<div class="detail-block"><p class="eyebrow">COMMON QUESTIONS<\/p>[\s\S]*?<\/div>/,'');
-    const faqSection = `<section class="service-questions shell" id="service-questions"><p class="eyebrow">YOUR QUESTIONS ANSWERED</p><h2>Questions about ${escape(service.title.toLowerCase())}</h2>${questions.map(questionMarkup).join('')}</section>`;
+    const installing = ['deck-building','custom-joinery','interior-carpentry','skirting-and-architraves'].includes(service.slug);
+    const faqSection = `<section class="service-questions shell" id="service-questions"><p class="eyebrow">YOUR QUESTIONS ANSWERED</p><h2>${installing?'Installation':'Repair'} and quote questions</h2>${questions.map(questionMarkup).join('')}</section>`;
     const caseSection = output.match(/<section class="service-case-study shell"[\s\S]*?<\/section>/)?.[0] || '';
     const deepSection = output.match(/<section class="service-deep-content shell">[\s\S]*?<\/section>/)?.[0] || '';
     const relatedLinks = deepSection.match(/<div class="related-work-links">[\s\S]*?<\/div>/)?.[0] || '';
-    const consolidated = `<section class="service-local-notes shell"><div class="service-reading-block"><h2>Planning your work in Canberra</h2>${local}</div><nav aria-label="Related carpentry services">${relatedLinks}</nav></section>`;
+    const guides = content.guides.map(([slug,label])=>`<a class="text-link" href="/news/${slug}/">${escape(label)} ↗</a>`).join(' · ');
+    const sources = (content.sources || []).map(([url,label])=>`<a href="${escape(url)}">${escape(label)}</a>`).join(' · ');
+    const consolidated = `<section class="service-local-notes shell"><div class="service-reading-block"><h2>${escape(content.headings[2])}</h2>${local}</div><p>${guides}</p>${sources?`<p>${sources}</p>`:''}<nav aria-label="Related carpentry services">${relatedLinks}</nav></section>`;
     if (caseSection && deepSection) output = output.replace(caseSection+deepSection,consolidated+caseSection+faqSection);
-    output = output.replace('<h2>Relevant timber details</h2>',`<h2>${escape(service.title)}: work details</h2>`);
+    output = output.replace('<h2>Relevant timber details</h2>','<h2>Timber and connection details</h2>');
+    if(installing) output = output.replace('<h2>Arrange your on-site assessment.</h2>','<h2>Arrange your on-site measure.</h2>');
+    output = output.replace(`<p>${escape(service.intro)}</p>`,`<p>${escape(content.intro)}</p>`);
+    output = output.replace(/<meta name="description" content="[^"]*">/,`<meta name="description" content="${escape(content.meta)}">`);
+    output = output.replace(/<script type="application\/ld\+json">(.*?)<\/script>/gs,(match,json)=>{
+      const schema=JSON.parse(json);
+      if(!['Service','WebPage'].includes(schema['@type'])) return match;
+      schema.description=schema['@type']==='Service'?content.intro:content.meta;
+      return `<script type="application/ld+json">${JSON.stringify(schema).replaceAll('<','\\u003c')}</script>`;
+    });
+    // Research synonyms remain in the map, not an exhaustive public keyword list.
+    output = output.replace(/<section class="keyword-scope shell">[\s\S]*?<\/section>/,'');
     output = output.replace(/<figure class="case-study-image ([^"]+)">(<img[^>]+>)<\/figure>/g,(match,cls,img)=>{
       const filename = img.match(/src="[^"/]+(?:\/[^"/]+)*\/([^"/]+)"/)?.[1] || img.match(/src=".*\/([^"/]+)"/)?.[1];
       const item = serviceCaseMedia[service.slug].images.find(image=>image.src.endsWith(filename));

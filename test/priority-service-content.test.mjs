@@ -4,16 +4,14 @@ import { readFileSync } from 'node:fs';
 import { priorityServices, priorityGuideDetails } from '../src/priority-service-content.mjs';
 
 const read = route => readFileSync(new URL(`../dist/${route}/index.html`, import.meta.url), 'utf8');
-test('five priority services preserve headings, add unique detail and relevant guide links', () => {
+test('five priority services retain photo commentary and relevant guide links without duplicate narratives', () => {
   for (const [slug, entry] of Object.entries(priorityServices)) {
     const html = read(`services/${slug}`);
-    assert.ok(html.includes(entry.scope.replaceAll('&', '&amp;')));
-    assert.ok(html.includes(entry.method.replaceAll('&', '&amp;')));
     assert.ok(html.includes(entry.photos.replaceAll('&', '&amp;')));
     assert.equal((html.match(/<h1>/g) || []).length, 1);
     assert.ok(html.includes('id="service-questions"'));
     for (const [guide] of entry.guides) assert.ok(html.includes(`/news/${guide}/`));
-    assert.ok(html.includes('href="/service-areas/"'));
+    assert.equal(html.split(`<p>${entry.photos.replaceAll('&', '&amp;')}</p>`).length-1,1);
     assert.ok(html.includes(`href="https://www.canberrawoodwork.com.au/services/${slug}/"`));
   }
 });

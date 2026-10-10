@@ -39,12 +39,12 @@ test('rendered enquiry channels and FAQ answers match the service customers requ
   assert.doesNotMatch(read('news/repair-or-rebuild-a-deck'), /It should also state what still needs confirmation/);
   for (const slug of ['deck-building','custom-joinery','interior-carpentry','skirting-and-architraves']) {
     const html = read('services/' + slug);
-    const core = html.match(/<section class="keyword-scope shell">([\s\S]*?)<\/section>/)?.[1];
-    assert.ok(core, slug);
-    assert.doesNotMatch(core, /identify the cause|repair you need/i, slug);
-    assert.match(core, /installation plan and quote/, slug);
-    assert.match(html, /: installation method<\/h2>/);
-    assert.match(html, /Booking .* in Canberra<\/h2>/);
+    const narrative = html.match(/<div class="detail-main service-narrative">([\s\S]*?)<aside/)?.[1];
+    assert.ok(narrative, slug);
+    assert.doesNotMatch(narrative, /identify the cause|repair you need/i, slug);
+    assert.match(html, /installation plan and quote/, slug);
+    assert.doesNotMatch(html, /class="keyword-scope shell"/);
+    assert.ok((narrative.match(/<h2>/g)||[]).length === 2, `${slug}: scope and installation decisions`);
     assert.doesNotMatch(html, /Discuss made-to-fit shelves|confirm your repair plan and quote/);
   }
   const installationGuide = read('news/skirting-after-new-flooring');
