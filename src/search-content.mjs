@@ -104,6 +104,7 @@ export function enhanceSearchContent(route, html, { services, articles, areas })
   }
   if (route === '/news/') {
     const groups = [
+      ['Quotes and Carpentry Planning','small-carpentry-jobs','custom-joinery'],
       ['Timber Repair Advice','door-and-frame-repairs','timber-window-repairs','rotten-timber-repairs','fascia-and-eaves-repairs','timber-weatherboard-repairs'],
       ['Deck, Fence and Pergola Repair Guides','deck-repairs','deck-building','timber-fence-repairs','timber-gate-repairs','pergola-timber-repairs','timber-stair-and-handrail-repairs'],
       ['Interior Carpentry and Cabinet Repair Guides','skirting-and-architraves','cabinet-door-and-drawer-repairs','interior-carpentry']

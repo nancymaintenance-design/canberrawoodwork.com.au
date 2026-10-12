@@ -13,7 +13,13 @@ for (const [slug,count] of Object.entries({
   'timber-window-repairs':6, 'timber-weatherboard-repairs':2,
   'structural-timber-repairs':4, 'fascia-and-eaves-repairs':4,
   'pergola-timber-repairs':2, 'timber-gate-repairs':5, 'rotten-timber-repairs':4
-})) assert.equal(questions(read(`services/${slug}`)).length,count,`${slug}: near-synonyms merged`);
+})) {
+  const consolidated=read(`services/${slug}`).match(/<section class="service-questions shell"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(consolidated,`${slug}: original consolidated question section remains`);
+  assert.equal(questions(consolidated).length,count,`${slug}: near-synonyms merged`);
+  const all=questions(read(`services/${slug}`)).map(m=>m[1].toLowerCase());
+  assert.equal(new Set(all).size,all.length,`${slug}: supplemental questions must remain distinct`);
+}
 const schema = [...faq.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)]
   .map(match=>JSON.parse(match[1])).find(item=>item['@type']==='FAQPage');
 assert.equal(schema, undefined, 'FAQPage JSON-LD is absent while consolidated visible questions remain');

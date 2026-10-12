@@ -46,11 +46,11 @@ test('repeatable audit retains baseline entity and closed-details word-count sem
   assert.equal(auditHtml('/',fixture).words,7);
   const result=auditSite('dist');
   assert.equal(result.baseline,null,'audit does not depend on a local scratch baseline');
-  assert.equal(result.metrics.routes,39);
+  assert.equal(result.metrics.routes,51);
   assert.equal(result.metrics.invalidMainLinks,0);
 });
-test('all 39 canonical routes have unique metadata and accessible heading order',()=>{
-  assert.equal(routes.length,39);
+test('all 51 canonical routes have unique metadata and accessible heading order',()=>{
+  assert.equal(routes.length,51);
   const titles=new Set(), descriptions=new Set();
   for(const [route,html] of pages){
     const title=html.match(/<title>(.*?)<\/title>/s)?.[1];

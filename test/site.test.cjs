@@ -15,7 +15,7 @@ for(const boundary of ['The appropriate licensed practitioner must assess the wo
 const files=[];
 function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,entry.name);if(entry.isDirectory())walk(p);else if(entry.name==='index.html')files.push(p)}}
 walk(dist);
-assert.equal(files.length,40,'39 public routes plus 404');
+assert.equal(files.length,52,'51 public routes plus 404');
 const titles=new Set();
 const descriptions=new Set();
 const pageSchemas=new Map();

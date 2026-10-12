@@ -7,6 +7,7 @@ import { serviceCaseMedia, homeCaseMedia } from './src/service-case-media.mjs';
 import { enhanceSite } from './src/site-enhancements.mjs';
 import { guideAnswers } from './src/search-content.mjs';
 import { consolidateFaqs } from './src/faq-consolidation.mjs';
+import { verifiedPages } from './src/verified-projects.mjs';
 const keywordMap=JSON.parse(readFileSync(new URL('./src/keyword-map.json',import.meta.url),'utf8'));
 
 const out = join(process.cwd(), 'dist');
@@ -142,7 +143,15 @@ const contact=pageHero('GET IN TOUCH','Tell us what<br>needs attention.','Contac
 const privacy=pageHero('PRIVACY POLICY','Your enquiry<br>details, handled carefully.','How Ellis Services Group uses the information provided through this Canberra carpentry website.',[['Home','/'],['Privacy policy']])+`<section class="shell service-deep-content"><div class="detail-block"><h2>Information we collect</h2><p>When you send an enquiry, we may collect your name, email address, phone number, property address, Canberra area, service request and the details you provide about the work.</p></div><div class="detail-block"><h2>How we use it</h2><p>We use this information to respond to your enquiry, discuss the requested carpentry work, prepare a quote where appropriate and keep relevant records about the enquiry. We do not sell your personal information.</p></div><div class="detail-block"><h2>Photos and other material</h2><p>The enquiry form collects text details. Photos are optional and can be emailed separately to our team; we use supplied photos and other material to assess and scope the requested work.</p></div><div class="detail-block"><h2>Contact and access</h2><p>To ask about the information we hold about you, or to request an update or deletion where appropriate, contact Ellis Services Group at <a href="mailto:${business.email}">${business.email}</a>, call ${business.phone}, or write to ${business.address}.</p></div></section>`;write('/privacy/',page('/privacy/','Privacy Policy','How Ellis Services Group handles information submitted through its Canberra carpentry enquiry form.',privacy));
 
 const notFound=`<section class="page-hero shell error-page"><p class="eyebrow">404 / PAGE NOT FOUND</p><h1>That page has moved<br>out of view.</h1><p>Try the services or return to the homepage.</p><div class="hero-actions"><a class="btn btn-primary" href="/">Back to home ↗</a><a class="text-link" href="/services/">Browse services ↗</a></div></section>`;write('/404/',page('/404/','Page Not Found','The page could not be found. Browse Ellis Services Group Canberra carpentry services.',notFound));
-const routes=['/','/services/',...services.map(serviceUrl),'/about/','/faq/','/news/',...articles.map(a=>`/news/${a.slug}/`),'/service-areas/','/contact/','/privacy/'];
+const projectPages=verifiedPages();
+for(const item of projectPages){
+  const parent=item.route.startsWith('/services/')?['Services','/services/']:['Projects','/projects/'];
+  const schema=[crumbSchema(item.route,[['Home','/'],...(item.route==='/projects/'?[]:[parent]),[item.name]])];
+  if(item.type==='Service')schema.unshift({'@context':'https://schema.org','@type':'Service',name:item.name,url:origin+item.route,description:item.meta,provider:{'@id':BUSINESS_ID},areaServed:'Canberra, ACT'});
+  if(item.type==='CollectionPage')schema.unshift({'@context':'https://schema.org','@type':'CollectionPage',name:item.name,url:origin+item.route,isPartOf:{'@id':WEBSITE_ID}});
+  write(item.route,page(item.route,item.title,item.meta,item.body,{schema,active:item.type==='Service'?'/services/':''}));
+}
+const routes=['/','/services/',...services.map(serviceUrl),'/about/','/faq/','/news/',...articles.map(a=>`/news/${a.slug}/`),'/service-areas/','/contact/','/privacy/',...projectPages.map(p=>p.route)];
 writeFileSync(join(out,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${routes.map(r=>`<url><loc>${origin+r}</loc></url>`).join('')}</urlset>`);
 writeFileSync(join(out,'robots.txt'),`User-agent: *\n${origin.startsWith('http://127.0.0.1')?'Disallow: /':'Allow: /'}\nSitemap: ${origin}/sitemap.xml\n`);
 const discoveryPages = [
@@ -154,6 +163,7 @@ const discoveryPages = [
   ['News and advice','/news/','Carpentry advice and repair guides.'],
   ['Service areas','/service-areas/','Browse the service-area information.'],
   ['Privacy policy','/privacy/','How enquiry information is handled.'],
+  ...projectPages.map(p=>[p.name,p.route,p.meta]),
 ];
 const discoveryLink = (label,route,description) => `- [${label}](${PRODUCTION_ORIGIN+route}): ${description}`;
 writeFileSync(join(out,'llms.txt'),`# ${business.name}\n\n> Canberra carpentry and timber repair services.\n\nPhone: ${business.phone}\nEmail: ${business.email}\n\nLast updated: ${new Date().toISOString().slice(0,10)}\n\n## Core pages\n${discoveryPages.map(item=>discoveryLink(...item)).join('\n')}\n\n## Services\n${services.map(s=>discoveryLink(s.title,serviceUrl(s),'Service information and enquiry guidance.')).join('\n')}\n\n## Articles\n${articles.map(a=>discoveryLink(a.title,`/news/${a.slug}/`,'Carpentry advice and related service information.')).join('\n')}\n`);

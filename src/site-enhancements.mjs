@@ -4,6 +4,8 @@ import { enhanceSearchContent } from './search-content.mjs';
 import { serviceCaseMedia } from './service-case-media.mjs';
 import { footerSocial } from './footer-social.mjs';
 import { serviceDeepContent } from './service-deep-content.mjs';
+import { enhanceContentGaps } from './content-gap-enhancements.mjs';
+import { enhanceVerifiedProjects } from './verified-projects.mjs';
 
 const escape = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const captions = {
@@ -113,5 +115,5 @@ export function enhanceSite(route, html) {
       return `<script type="application/ld+json">${JSON.stringify(schema).replaceAll('<','\\u003c')}</script>`;
     });
   }
-  return enhanceHubEditorial(route, enhanceSearchContent(route, output, { services, articles, areas }));
+  return enhanceVerifiedProjects(route,enhanceContentGaps(route, enhanceHubEditorial(route, enhanceSearchContent(route, output, { services, articles, areas }))));
 }

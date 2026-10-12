@@ -1,4 +1,5 @@
-// Final informational copy for the fourteen existing guide URLs.
+import { gapGuides } from './gap-guides.mjs';
+// Informational copy for existing guides and approved decision-led additions.
 // Publication dates retain the existing record; modified dates reflect this edit.
 const approval = ['https://www.planning.act.gov.au/applications-and-assessments/building-approvals/check-if-you-need-a-ba','ACT guidance: check if you need building approval'];
 const asbestos = ['https://www.accesscanberra.act.gov.au/business-and-work/building-and-construction/asbestos-assessor-and-removal-licensing','Access Canberra: asbestos assessor and removal licensing'];
@@ -18,6 +19,7 @@ export const guideEditorial = {
     reading:['rotten-window-sill','skirting-after-new-flooring']
   },
   'deck-boards-or-frame': {
+    updated:'2026-10-12',
     title:'Deck boards or framing: what needs repair?',category:'Deck care',owner:'deck-repairs',
     metaDescription:'Separate worn deck boards from support problems. Learn what joists, bearers, posts and connections mean for a board-only repair or wider deck scope.',
     lead:'Deck boards form the walking surface; joists, bearers, posts and connections support it. A damaged board can be a local repair only when the retained supports are suitable. A fresh surface does not establish that the frame is sound.',
@@ -161,6 +163,7 @@ export const guideEditorial = {
     reading:['why-timber-rot-returns','loose-timber-stairs'],sources:[approval]
   },
   'repair-or-rebuild-a-deck': {
+    updated:'2026-10-12',
     title:'Should you repair an existing deck or rebuild it?',category:'Deck planning',owner:'deck-building',
     metaDescription:'Compare Canberra deck board repairs, frame repairs and rebuilding. Condition, retained supports and proposed layout guide the scope, quote and ACT checks.',
     lead:'Repair suits an existing deck when the affected components can be defined and suitable boards, supports and connections retained. Widespread connected damage or a changed layout can lead to rebuilding. The proportion of worn boards alone cannot decide between them.',
@@ -190,7 +193,8 @@ export const guideEditorial = {
     faqs:[{q:'Can several repairs be assessed together?',a:'Provide one list with each item and location. The team can assess the requested tasks together and confirm the grouped scope, access and quote.'},{q:'Should every cupboard be replaced before a sale?',a:'A local hinge, runner or panel fault should be assessed before assuming full replacement. New cabinetry is a separate measured scope and decision.'}],
     reading:['cabinet-hinges-and-drawer-runners','skirting-after-new-flooring'],
     relatedLinks:[{url:'/services/small-carpentry-jobs/',label:'Group several small carpentry jobs'},{url:'/services/custom-joinery/',label:'Understand custom joinery and built-in storage'}]
-  }
+  },
+  ...gapGuides
 };
 
-export const editorialArticles = Object.entries(guideEditorial).map(([slug,item])=>({slug,...item,published:'2026-09-28',updated:'2026-10-10'}));
+export const editorialArticles = Object.entries(guideEditorial).map(([slug,item])=>({slug,...item,published:item.published||'2026-09-28',updated:item.updated||'2026-10-10'}));
