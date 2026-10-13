@@ -53,6 +53,14 @@ document.querySelectorAll('[data-carousel]').forEach(carousel=>{
   let timer;
   const show=index=>{
     current=(index+slides.length)%slides.length;
+    // Hydrate only the selected slide. Set srcset before src so responsive
+    // selection happens before a full-size fallback request can start.
+    slides[current].querySelectorAll('img[data-src]').forEach(image=>{
+      image.loading='eager';
+      if(image.dataset.srcset){image.srcset=image.dataset.srcset;delete image.dataset.srcset;}
+      image.src=image.dataset.src;
+      delete image.dataset.src;
+    });
     slides.forEach((slide,item)=>{
       const active=item===current;
       slide.classList.toggle('is-active',active);
