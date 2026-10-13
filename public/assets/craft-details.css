@@ -71,6 +71,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @media(max-width:700px){.home-hero .shell{padding:48px 0 36px}.home-hero h1{font-size:clamp(40px,10vw,60px)}.home-hero .hero-lead{font-size:17px}.team-signature{flex-direction:column;gap:9px;margin-top:28px}.intro-section{padding-block:55px}.detail-content{padding-block:38px 48px}.detail-main .sign-list,.service-deep-content,.case-study-grid,.faq-service-links{grid-template-columns:1fr}.service-deep-content{gap:20px;padding-bottom:55px}.case-study-grid{gap:20px}.service-questions,.general-questions{padding-bottom:55px}.service-questions h2{font-size:30px}.service-card-photo{aspect-ratio:16/9}.intro-large{font-size:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.feature-card,.article-card{transition:none}.btn:hover,.feature-card:hover,.article-card:hover{transform:none}}
 @media(forced-colors:active){body{scrollbar-color:auto}a:focus-visible,button:focus-visible,summary:focus-visible{outline-color:Highlight}}
+/* Keep mobile dots compact after the shared 38px arrow-button rule, and give
+   the live status its own line below the controls rather than a pointer layer. */
+@media(max-width:720px){.work-carousel-dots button{width:9px;height:9px}.work-carousel-status{bottom:0}}
 .content-gap-notes{padding-block:28px 48px;max-width:900px}
 .content-gap-notes p{max-width:75ch;line-height:1.75}
 .decision-contents{padding:18px 22px;margin-bottom:30px;background:var(--pale);border-left:3px solid var(--craft-timber)}
