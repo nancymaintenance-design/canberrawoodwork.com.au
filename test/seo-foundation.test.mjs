@@ -17,9 +17,13 @@ const pages = new Map(routes.map(route => {
 
 for (const [route, { schemas }] of pages) {
   test(`${route}: identifies the canonical business once`, () => {
-    const businesses = schemas.filter(schema => schema['@type'] === 'ProfessionalService');
+    const businesses = schemas.filter(schema => schema['@type'] === 'HomeAndConstructionBusiness');
     assert.equal(businesses.length, 1);
     assert.equal(businesses[0]['@id'], businessId);
+    assert.equal(businesses[0].legalName, 'ELLIS SERVICES GROUP PTY LTD');
+    assert.equal(businesses[0].taxID, '96 645 821 745');
+    assert.equal(businesses[0].telephone, '+61405878406');
+    assert.equal(businesses[0].address.streetAddress, '121 Marcus Clarke St');
   });
 }
 
