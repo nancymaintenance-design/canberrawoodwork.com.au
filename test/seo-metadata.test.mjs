@@ -109,7 +109,8 @@ test('all 17 articles use the shared editorial image while preserving headline, 
     const fresh=['carpentry-quote-cost-factors','timber-vs-composite-decking-canberra','timber-deck-maintenance-canberra'].some(slug=>route===`/news/${slug}/`);
     assert.equal(article.datePublished,fresh?'2026-10-12':'2026-09-28');
     const later=fresh||['/news/deck-boards-or-frame/','/news/repair-or-rebuild-a-deck/'].includes(route);
-    assert.equal(article.dateModified,later?'2026-10-12':'2026-10-10');
+    const projectEvidence=['/news/timber-vs-composite-decking-canberra/','/news/timber-deck-maintenance-canberra/'].includes(route);
+    assert.equal(article.dateModified,projectEvidence?'2026-10-13':later?'2026-10-12':'2026-10-10');
     if(media.projectHref)assert.ok(existsSync(`dist${media.projectHref}index.html`));
     else assert.match(media.caption,/illustrat/i,'legacy media is labelled illustration');
   }

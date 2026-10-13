@@ -15,7 +15,7 @@ test('three decision guides are discoverable canonical pages with independent ar
     assert.ok(news.includes(`href="${route}"`),`${route}: article directory`);
     assert.ok(discovery.includes(`https://www.canberrawoodwork.com.au${route}`),`${route}: AI discovery document`);
     const html=read(route),article=schemas(html).find(s=>s['@type']==='Article');
-    assert.equal(article.datePublished,'2026-10-12');assert.equal(article.dateModified,'2026-10-12');
+    assert.equal(article.datePublished,'2026-10-12');assert.equal(article.dateModified,route==='/news/carpentry-quote-cost-factors/'?'2026-10-12':'2026-10-13');
     assert.ok(html.includes('datetime="2026-10-12">12 October 2026</time>'));
     assert.ok(html.includes('class="article-byline">By <a href="/about/">Ellis Services Group</a>'));
     assert.ok(html.includes(`<link rel="canonical" href="https://www.canberrawoodwork.com.au${route}">`));

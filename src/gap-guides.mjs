@@ -31,7 +31,7 @@ export const gapGuides={
   },
   'timber-vs-composite-decking-canberra':{
     title:'Timber vs Composite Decking in Canberra: What to Compare',category:'Deck materials',owner:'deck-building',
-    published:'2026-10-12',updated:'2026-10-12',
+    published:'2026-10-12',updated:'2026-10-13',
     metaDescription:'Compare timber and composite decking for a Canberra project: care, surface heat, product instructions and quote inclusions, without assuming one material suits every site.',
     lead:'Timber and composite decking should be compared as specified products, not just two labels. For a Canberra project, consider the proposed finish, care requirements, sun exposure, installation system and complete construction scope. Material choice does not establish whether an existing deck frame can be retained.',
     sections:[
@@ -57,7 +57,7 @@ export const gapGuides={
   },
   'timber-deck-maintenance-canberra':{
     title:'Timber Deck Maintenance in Canberra: Care or Repair?',category:'Deck care',owner:'deck-repairs',
-    published:'2026-10-12',updated:'2026-10-12',
+    published:'2026-10-12',updated:'2026-10-13',
     metaDescription:'Plan timber deck maintenance in Canberra. Separate cleaning and coating care from loose boards, damaged supports and repair decisions before booking work.',
     lead:'Timber deck maintenance and deck repair are different decisions. Cleaning and renewing a finish concern the surface; loose boards, movement or deteriorated supports need assessment. For a Canberra home, start with safe observations and the care information for the timber and coating already in place.',
     sections:[

@@ -98,3 +98,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .verified-narrative{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin-bottom:32px}.verified-project-links{padding-block:20px}
 @media(max-width:800px){.verified-layout{grid-template-columns:1fr;gap:24px}.verified-evidence{grid-row:1}.verified-facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.verified-cards,.verified-gallery,.verified-narrative{grid-template-columns:1fr;gap:24px}.verified-project{padding-block:32px 48px}.verified-layout{padding-block:16px 48px}.verified-evidence{padding:16px}.verified-facts{padding:18px;gap:20px 16px}}
+
+/* Guide evidence and the contact jump use the existing reading widths. */
+.article-prose .guide-editorial-figure{margin:0 0 32px;min-width:0}
+.guide-editorial-figure img{width:100%;height:auto}
+.guide-editorial-figure figcaption{padding:16px 0;border-top:3px solid var(--craft-timber);font-size:14px;line-height:1.65;color:var(--muted)}
+.guide-editorial-figure figcaption a{text-decoration:underline;text-underline-offset:3px;color:var(--craft-ink)}
+.enquiry-jump{margin-bottom:20px}
+#enquiry-form{scroll-margin-top:24px}
+#enquiry-form:focus{outline:3px solid var(--craft-timber);outline-offset:5px}
+#enquiry-form-heading{font-size:28px;margin-bottom:22px}
+@media(forced-colors:active){#enquiry-form:focus{outline-color:Highlight}}
