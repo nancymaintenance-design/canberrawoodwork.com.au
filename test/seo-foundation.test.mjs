@@ -64,7 +64,7 @@ test('FAQ schema is absent while visible FAQ details remain', () => {
   for (const [route, { schemas }] of pages) {
     assert.ok(schemas.every(schema => schema['@type'] !== 'FAQPage'), `${route}: no FAQPage JSON-LD`);
   }
-  assert.equal([...pages.get('/faq/').html.matchAll(/<details class="faq-item">/g)].length, 9, 'all consolidated general FAQs remain visible');
+  assert.ok(pages.get('/faq/').html.includes('id="booking-and-quotes"'), 'general FAQs remain in the complete grouped hub');
   for (const route of ['/services/deck-repairs/', '/news/repair-or-rebuild-a-deck/']) {
     assert.match(pages.get(route).html, /<details class="faq-item"><summary>[^<]+<\/summary><p>[^<]+<\/p>/, `${route}: questions and answers remain visible`);
   }

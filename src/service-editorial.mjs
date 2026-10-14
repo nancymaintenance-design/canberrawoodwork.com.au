@@ -26,7 +26,7 @@ export const serviceDeepContent = {
     enquiry: 'Tell Ellis which door is affected and your Canberra suburb for an on-site assessment. Optional safe photos can be emailed to brian@elliservices.com.au. We confirm retained parts, the repair plan and quote.',
     relatedSlugs: ['rotten-timber-repairs', 'skirting-and-architraves', 'timber-window-repairs'],
     guides: [['timber-door-sticks-after-rain', 'Why a timber door sticks after rain']],
-    faqAnswers: {'Can Ellis Services Group repair a door that will not latch?': 'A timber alignment fault can often be repaired. Ellis checks the leaf, hinges, jamb and strike to distinguish dropped hinges or frame damage from a faulty lock mechanism. The quote defines the timber work; lock and security mechanism repairs need the appropriate locksmith service.'},
+    faqAnswers: {'Do I need a carpenter or a locksmith for a door that will not latch?': 'A timber alignment fault can often be repaired. Ellis checks the leaf, hinges, jamb and strike to distinguish dropped hinges or frame damage from a faulty lock mechanism. The quote defines the timber work; lock and security mechanism repairs need the appropriate locksmith service.'},
   },
   'timber-window-repairs': {
     intro: 'Timber window repairs in Canberra for damaged sills, lower rails and frame sections. Compare local replacement with wider repairs while considering glass retention and water entry.',

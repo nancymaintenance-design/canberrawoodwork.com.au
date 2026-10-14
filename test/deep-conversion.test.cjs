@@ -22,12 +22,12 @@ test('rendered enquiry channels and FAQ answers match the service customers requ
   const schema = [...faq.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)]
     .map(match => JSON.parse(match[1])).find(item => item['@type'] === 'FAQPage');
   assert.equal(schema, undefined, 'FAQPage JSON-LD is absent');
-  const visibleFaqs = [...faq.matchAll(/<details class="faq-item"><summary>(.*?)<\/summary><p>(.*?)<\/p>/g)]
+  const visibleFaqs = [...faq.matchAll(/<details class="faq-item"[^>]*><summary>(.*?)<\/summary><p>(.*?)<\/p>/g)]
     .map(match => ({ name: match[1], acceptedAnswer: { text: match[2] } }));
-  assert.equal(visibleFaqs.length, 9, 'consolidated general questions and answers remain visible');
+  assert.ok(visibleFaqs.length > 60 && faq.includes('id="booking-and-quotes"'), 'general and component answers remain in the complete hub');
   const answers = visibleFaqs.map(item => item.acceptedAnswer.text);
   assert.equal(new Set(answers).size, answers.length, 'FAQ questions receive individual answers, not one generic service paragraph');
-  // Service-specific answers now live on their service page, not general FAQ.
+  // Service pages also retain their useful component-specific answers.
   const allAnswers = [...visibleFaqs, ...['door-and-frame-repairs','deck-building','small-carpentry-jobs'].flatMap(slug=>
     [...read('services/'+slug).matchAll(/<details class="faq-item"><summary>(.*?)<\/summary><p>(.*?)<\/p>/g)].map(m=>({name:m[1],acceptedAnswer:{text:m[2]}})))];
   const answer = term => allAnswers.find(item => item.name === term)?.acceptedAnswer.text || '';

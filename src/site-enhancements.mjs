@@ -106,15 +106,9 @@ export function enhanceSite(route, html) {
   }
 
   if (route === '/faq/') {
-    const general = faqs.filter(item=>item.group==='Booking & quotes');
-    const directory = `<section class="faq-service-directory shell"><p class="eyebrow">SERVICE QUESTIONS</p><h2>Answers for the work you need</h2><p>Find detailed repair and installation answers on the relevant service page.</p><div class="faq-service-links">${services.map(item=>`<a href="/services/${item.slug}/#service-questions">${escape(item.title)} <span aria-hidden="true">↗</span></a>`).join('')}</div></section>`;
-    output = output.replace(/<section class="faq-layout shell">[\s\S]*?<\/section><section class="cta-panel">/,`<section class="general-questions shell"><p class="eyebrow">BOOKING &amp; QUOTES</p><h2>Working with Ellis Services Group</h2>${general.map(questionMarkup).join('')}</section>${directory}<section class="cta-panel">`);
-    output = output.replace(/<script type="application\/ld\+json">(.*?)<\/script>/g,(match,json)=>{
-      const schema = JSON.parse(json);
-      if(schema['@type']!=='FAQPage') return match;
-      schema.mainEntity = general.map(item=>({'@type':'Question',name:item.q,acceptedAnswer:{'@type':'Answer',text:item.a}}));
-      return `<script type="application/ld+json">${JSON.stringify(schema).replaceAll('<','\\u003c')}</script>`;
-    });
+    // The build owns the complete answered hub; do not replace it with a directory.
+    output = output.replace('<body>','<body class="faq-page">');
+    output = output.replace('</head>','<link rel="stylesheet" href="/assets/faq-hub.css"><script defer src="/assets/faq-hub.js"></script></head>');
   }
   return enhanceEvidence(route,enhanceVerifiedProjects(route,enhanceContentGaps(route, enhanceHubEditorial(route, enhanceSearchContent(route, output, { services, articles, areas })))));
 }

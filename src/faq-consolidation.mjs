@@ -28,9 +28,9 @@ export const faqMerges = [
   },
   {
     owner:'door-and-frame-repairs',
-    questions:['Should I call a carpenter or locksmith if a door will not latch?','Can Ellis Services Group repair a door that will not latch?'],
-    title:'Can Ellis Services Group repair a door that will not latch?',
-    answer:'Yes. Contact Ellis for an on-site assessment. We check door movement, hinge support, the timber frame, strike and latch, identify the fault and confirm the timber repair and any qualified hardware service arrangements in your work plan and quote.'
+    questions:['Should I call a carpenter or locksmith if a door will not latch?','Do I need a carpenter or a locksmith for a door that will not latch?'],
+    title:'Do I need a carpenter or a locksmith for a door that will not latch?',
+    answer:'A carpenter can assess a dropped timber door, loose hinge support or a damaged frame when the latch misses the strike. A locksmith handles faulty lock mechanisms, rekeying and lockouts; some jobs need both trades. Contact Ellis for a timber-door assessment and confirm any specialist hardware work in the scope before booking.'
   },
   {
     owner:'deck-repairs',

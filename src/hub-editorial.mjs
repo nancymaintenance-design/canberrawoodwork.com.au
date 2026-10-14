@@ -1,7 +1,7 @@
 const introductions = {
   '/services/':'Choose the timber component or installation below to find its scope, assessment questions and related advice. If several items need attention, start with small carpentry jobs and describe the full list for an on-site assessment.',
   '/about/':'Ellis Services Group provides carpentry and timber repair services for Canberra homes. Find our company identity, contact channels and the process for agreeing work below.',
-  '/faq/':'Find answers about enquiries, assessment, quote inclusions and appointments, then follow the relevant service for component-specific repair and installation questions.',
+  '/faq/':'Browse answers about booking, quotes, doors, windows, decks, fences and interior or exterior timber. Choose a topic, then open a question for practical repair choices and specialist boundaries.',
   '/news/':'Understand a timber problem before deciding on work. These guides explain likely causes, safe observations and repair choices; an on-site assessment establishes the condition and scope for your property.',
   '/service-areas/':'Use the district list to locate your Canberra suburb, then describe the timber item, requested work and access. Confirm the location and visit arrangements with the team when arranging an on-site assessment.',
   '/contact/':'Tell us the timber item, what needs attention and your Canberra suburb. Our team will discuss the request, arrange an on-site assessment or measure and confirm the proposed work and quote.',
@@ -11,7 +11,7 @@ const metas = {
   '/':'Canberra carpentry and timber repairs from Ellis Services Group. Explore doors, windows, outdoor timber and interior work, then arrange an on-site assessment.',
   '/services/':'Find the Ellis carpentry service for your timber item: doors, windows, decks, fences, trim and storage. Compare scopes and prepare your Canberra enquiry.',
   '/about/':'Identify Ellis Services Group, view company and Canberra contact details, and understand how assessment, repair scope and written quote are agreed.',
-  '/faq/':'Answers about Canberra carpentry enquiries, photos, materials, quote inclusions and appointments, with links to detailed timber repair and installation questions.',
+  '/faq/':'Canberra carpentry FAQ: booking, quotes, doors, windows, decks, fences, trim, storage and timber repairs. Compare options and specialist requirements.',
   '/news/':'Practical timber repair guides: understand door movement, deck supports, sill decay, fences, gates and interior finishes before planning the work.',
   '/service-areas/':'Find Canberra districts and suburb examples for your carpentry enquiry. Confirm the timber task, property access and visit arrangements with Ellis.',
   '/contact/':'Contact Ellis Services Group about Canberra carpentry. Describe the work, send optional photos by email and arrange assessment before a written quote.',
@@ -36,10 +36,6 @@ export function enhanceHubEditorial(route,html){
     output=output.replace('Our company details and Canberra office are shown here so you can identify who you are dealing with before a scope is agreed.','Use these details to identify the company handling your enquiry. The official ABN record is linked below; registration information alone does not establish qualifications for every type of building work.');
     output=output.replace('Every project receives a clear written scope that sets out the repair work, materials, access and next steps before booking.','Confirm the qualifications, applicable licence requirements and insurance for the people carrying out the agreed work. These project checks sit alongside the written scope and company identity.');
     output=output.replace('<div class="about-links"><a href="/contact/">','<div class="about-links"><a href="/services/">Find the service scope ↗</a> · <a href="/faq/">Read booking and quote answers ↗</a> · <a href="/contact/">');
-  }
-  if(route==='/faq/'){
-    const choice='<section class="service-local-notes shell"><h2>Materials and repair choices</h2><h3>Can existing material or supplied items be used?</h3><p>The condition, dimensions, fixing points and available matching material determine what can be retained. Confirm supplied-item compatibility before ordering; see <a href="/services/skirting-and-architraves/">trim profile and finishing choices</a> and <a href="/services/cabinet-door-and-drawer-repairs/">cabinet hardware compatibility</a>.</p><h3>How do repair and replacement compare?</h3><p>A local repair retains suitable surrounding material. Connected damage or a changed layout can lead to a wider scope. Compare the retained parts, replacement extent, finish and access rather than a headline price alone. Read <a href="/news/repair-or-rebuild-a-deck/">how deck repair and rebuilding differ</a> or <a href="/services/timber-window-repairs/">what determines a timber window repair</a>.</p></section>';
-    output=output.replace('<section class="faq-service-directory shell">',choice+'<section class="faq-service-directory shell">');
   }
   if(route==='/news/'){
     output=output.replace('<section class="news-index shell">','<section class="news-index shell"><h2>Choose a repair question</h2>');

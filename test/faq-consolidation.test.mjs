@@ -5,7 +5,7 @@ import { consolidateFaqs, faqMerges } from '../src/faq-consolidation.mjs';
 const read = route => readFileSync(`dist/${route}/index.html`, 'utf8');
 const questions = html => [...html.matchAll(/<details class="faq-item"><summary>(.*?)<\/summary><p>(.*?)<\/p>/g)];
 const faq = read('faq');
-assert.equal(questions(faq).length, 9, '15 general questions consolidate into nine distinct topics');
+assert.ok((faq.match(/<details class="faq-item" id=/g)||[]).length > 60, 'complete grouped hub includes existing and scenario answers');
 assert.ok(!faq.includes('<summary>Who takes on small carpentry jobs in Canberra?</summary>'));
 assert.ok(faq.includes('waste disposal') && faq.includes('Additional findings') && faq.includes('before-and-after'));
 for (const [slug,count] of Object.entries({
