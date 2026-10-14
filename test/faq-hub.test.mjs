@@ -5,6 +5,28 @@ import test from 'node:test';
 const html = readFileSync('dist/faq/index.html', 'utf8');
 const map = JSON.parse(readFileSync('src/keyword-map.json', 'utf8'));
 
+test('merged deck finishing answer explains both sound surfaces and repair-first movement', () => {
+  const disclosure=html.match(/<details[^>]*id="faq-cbr-c-179"[^>]*>([\s\S]*?)<\/details>/)?.[1]||'';
+  assert.match(disclosure,/<summary>Do I need deck repairs or just sanding and oiling\?<\/summary>/);
+  assert.match(disclosure,/sound boards and supports/i,'surface care has a suitability boundary');
+  assert.match(disclosure,/sanding and oiling[^.]*surface/i,'finishing addresses surface condition');
+  assert.match(disclosure,/damage[^.]*repair|repair[^.]*damage/i,'damage requires repair first');
+  assert.match(disclosure,/Movement underfoot[^.]*qualified assessment/);
+  assert.match(disclosure,/Avoid using the moving area/);
+  assert.match(html, /id="faq-cbr-c-179" data-keyword-ids="CBR-C-179 CBR-C-287 CBR-C-288"/);
+});
+
+test('merged small-job answer includes scope-based provider selection', () => {
+  const disclosure=html.match(/<details[^>]*id="faq-cbr-c-151"[^>]*>([\s\S]*?)<\/details>/)?.[1]||'';
+  assert.match(disclosure,/Ellis Services Group handles small Canberra carpentry jobs/);
+  assert.match(disclosure,/repair plan and quote/);
+  assert.match(disclosure,/carpenter or handyman/i);
+  assert.match(disclosure,/relevant timber repair experience/i);
+  assert.match(disclosure,/suitable skills/i);
+  assert.match(disclosure,/qualifications[^.]*licences[^.]*work requires/i);
+  assert.match(disclosure,/written scope/i);
+});
+
 test('FAQ hub renders an answer and unique address for every intent and scenario row', () => {
   // Losing a row during editorial merging must fail, even if the hub still looks populated.
   const disclosures = [...html.matchAll(/<details class="faq-item" id="([^"]+)" data-keyword-ids="([^"]*)">([\s\S]*?)<\/details>/g)];

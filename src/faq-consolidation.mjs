@@ -3,7 +3,7 @@ export const faqMerges = [
   {
     owner:'small-carpentry-jobs',
     questions:['Do you take on small carpentry jobs in Canberra?','Who takes on small carpentry jobs in Canberra?','Should I hire a carpenter or a handyman for a small timber repair?'],
-    answer:'Yes. Ellis Services Group handles small Canberra carpentry jobs, including timber doors, trim, cupboard fittings and local timber repairs. Contact us with your task list and suburb; optional photos help us prepare. We assess the components and access, confirm the carpentry and qualified work needed, and provide one clear repair plan and quote.'
+    answer:'Yes. Ellis Services Group handles small Canberra carpentry jobs, including timber doors, trim, cupboard fittings and local timber repairs. When choosing a carpenter or handyman, look for relevant timber repair experience and suitable skills for the task. Check qualifications and licences where the work requires them, and agree a written scope that identifies any specialist or qualified work arrangements. Contact us with your task list and suburb; optional photos help us prepare. We assess the components and access, confirm the carpentry and qualified work needed, and provide one clear repair plan and quote.'
   },
   {
     owner:'small-carpentry-jobs',

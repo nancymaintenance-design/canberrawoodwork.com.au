@@ -15,7 +15,15 @@ export function auditHtml(route, html){
   const top=headings.filter(h=>h.level<=2).map(h=>h.text.toLowerCase());
   const jumps=headings.filter((h,i)=>h.level>(headings[i-1]?.level||0)+1);
   const links=[...main.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>(.*?)<\/a>/gs)].map(m=>({href:m[1],anchor:readable(m[2])}));
-  return {route,title:html.match(/<title>(.*?)<\/title>/s)?.[1]||'',description:html.match(/<meta name="description" content="([^"]*)"/)?.[1]||'',h1:headings.filter(h=>h.level===1).map(h=>h.text),headings,words:text.split(' ').length,duplicateH1H2:top.filter((h,i)=>top.indexOf(h)!==i),headingJumps:jumps,mainLinks:links.map(l=>l.href),contextualLinks:links,faqCount:(main.match(/<details class="faq-item">/g)||[]).length,faqs:[...main.matchAll(/<details class="faq-item"><summary>(.*?)<\/summary><p>(.*?)<\/p>/gs)].map(m=>({question:readable(m[1]),answer:readable(m[2])})),visibleDates:[...main.matchAll(/<time datetime="([^"]+)"[^>]*>(.*?)<\/time>/gs)].map(m=>({date:m[1],label:readable(m[2])})),articleDates:article?{published:article.datePublished,modified:article.dateModified}:null,schemaTypes:schemas.map(s=>s['@type']),linkedCompanyByline:main.includes('class="article-byline">By <a href="/about/">Ellis Services Group</a>')};
+  const disclosures=[...main.matchAll(/<details\b([^>]*)>([\s\S]*?)<\/details>/gi)].filter(m=>{
+    const classes=m[1].match(/(?:^|\s)class\s*=\s*(["'])(.*?)\1/i)?.[2]||'';
+    return classes.split(/\s+/).includes('faq-item');
+  });
+  const answers=disclosures.flatMap(m=>{
+    const answer=m[2].match(/<summary\b[^>]*>(.*?)<\/summary>\s*<p\b[^>]*>(.*?)<\/p>/is);
+    return answer?[{question:readable(answer[1]),answer:readable(answer[2])}]:[];
+  });
+  return {route,title:html.match(/<title>(.*?)<\/title>/s)?.[1]||'',description:html.match(/<meta name="description" content="([^"]*)"/)?.[1]||'',h1:headings.filter(h=>h.level===1).map(h=>h.text),headings,words:text.split(' ').length,duplicateH1H2:top.filter((h,i)=>top.indexOf(h)!==i),headingJumps:jumps,mainLinks:links.map(l=>l.href),contextualLinks:links,faqCount:disclosures.length,faqs:answers,visibleDates:[...main.matchAll(/<time datetime="([^"]+)"[^>]*>(.*?)<\/time>/gs)].map(m=>({date:m[1],label:readable(m[2])})),articleDates:article?{published:article.datePublished,modified:article.dateModified}:null,schemaTypes:schemas.map(s=>s['@type']),linkedCompanyByline:main.includes('class="article-byline">By <a href="/about/">Ellis Services Group</a>')};
 }
 
 export function auditSite(dist='dist',baselineFile,{now=new Date()}={}){

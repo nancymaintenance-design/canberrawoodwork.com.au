@@ -11,6 +11,27 @@ const routes = [...readFileSync('dist/sitemap.xml','utf8').matchAll(/<loc>https?
 const pages = new Map(routes.map(route=>[route,readFileSync(`dist${route}index.html`,'utf8')]));
 const main = html=>html.match(/<main[^>]*>([\s\S]*?)<\/main>/)?.[1] || '';
 const plain = html=>html.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
+test('audit retains FAQ answers when disclosure attributes and class order vary',()=>{
+  const fixture=`<main><h1>Questions</h1>
+    <details class="faq-item"><summary>Original?</summary><p>Original answer.</p></details>
+    <details id="second" data-keyword-ids="CBR-C-151" class="highlight faq-item extra"><summary>Attributed?</summary><p>Timber &amp; trim.</p></details>
+    <details class='extra faq-item' id='third'><summary class="question">Third?</summary><p class="answer">Third answer.</p></details>
+    <details class="faq-item-other"><summary>Unrelated?</summary><p>Excluded.</p></details>
+    <details data-class="faq-item"><summary>Data only?</summary><p>Excluded.</p></details></main>`;
+  const result=auditHtml('/fixture/',fixture);
+  assert.equal(result.faqCount,3);
+  assert.deepEqual(result.faqs,[
+    {question:'Original?',answer:'Original answer.'},
+    {question:'Attributed?',answer:'Timber & trim.'},
+    {question:'Third?',answer:'Third answer.'}
+  ]);
+});
+test('audit sees all hub disclosures and their answer text',()=>{
+  const result=auditHtml('/faq/',pages.get('/faq/'));
+  assert.equal(result.faqCount,104);
+  assert.equal(result.faqs.length,104);
+  assert.ok(result.faqs.every(faq=>faq.question&&faq.answer));
+});
 test('audit module can be imported from node eval without a script argument',()=>{
   const result=spawnSync(process.execPath,['--input-type=module','-e',"const audit=await import('./scripts/audit-content.mjs'); console.log(typeof audit.auditSite);"],{encoding:'utf8'});
   assert.equal(result.status,0,result.stderr);
