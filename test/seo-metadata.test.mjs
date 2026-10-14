@@ -116,7 +116,7 @@ test('all 17 articles use the shared editorial image while preserving headline, 
 
 test('verbose question titles are shortened without rewriting the visible question',()=>{
   const html=read('/news/timber-door-sticks-after-rain/');
-  assert.equal(decode(html.match(/<title>(.*?)<\/title>/s)[1]),'Sticking Timber Doors Canberra | Ellis Services Group');
+  assert.equal(decode(html.match(/<title>(.*?)<\/title>/s)[1]),'Sticking Timber Doors After Rain | Ellis Services Group');
   assert.equal(decode(html.match(/<h1>(.*?)<\/h1>/s)[1]),'Why does a timber door stick after rain?');
 });
 

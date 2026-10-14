@@ -3,7 +3,8 @@ export const faqMerges = [
   {
     owner:'small-carpentry-jobs',
     questions:['Do you take on small carpentry jobs in Canberra?','Who takes on small carpentry jobs in Canberra?','Should I hire a carpenter or a handyman for a small timber repair?'],
-    answer:'Yes. Ellis Services Group handles small Canberra carpentry jobs, including timber doors, trim, cupboard fittings and local timber repairs. When choosing a carpenter or handyman, look for relevant timber repair experience and suitable skills for the task. Check qualifications and licences where the work requires them, and agree a written scope that identifies any specialist or qualified work arrangements. Contact us with your task list and suburb; optional photos help us prepare. We assess the components and access, confirm the carpentry and qualified work needed, and provide one clear repair plan and quote.'
+    title:'How can I find a carpenter near me for small timber repairs?',
+    answer:'Look for relevant timber repair experience and suitable skills for the task when choosing a carpenter or handyman. Check qualifications and licences where the work requires them, and agree a written scope that identifies any specialist or qualified work arrangements. Ellis Services Group handles small carpentry jobs, including timber doors, trim, cupboard fittings and local timber repairs. Contact us with your task list and suburb so we can confirm availability and visit arrangements; optional photos help us prepare. We assess the components and access, confirm the carpentry and qualified work needed, and provide one clear repair plan and quote.'
   },
   {
     owner:'small-carpentry-jobs',
@@ -55,7 +56,7 @@ export const faqMerges = [
   {
     owner:'timber-window-repairs',
     questions:['Can a rotten timber window sill be repaired locally?','Can a rotten timber window sill be repaired instead of replacing the window?'],
-    answer:'We inspect the sill, adjoining frame and surrounding timber, trace the moisture source and define the damaged area. Your quote identifies local timber replacement and any wider window repairs needed to reach sound material. Contact Ellis for your Canberra assessment and repair quote.'
+    answer:'We inspect the sill, adjoining frame and surrounding timber, trace the moisture source and define the damaged area. Your quote identifies local timber replacement and any wider window repairs needed to reach sound material. Contact Ellis for your on-site assessment and repair quote.'
   },
   {
     owner:'timber-weatherboard-repairs',
@@ -92,16 +93,30 @@ export const faqMerges = [
   }
 ];
 
+// Public wording is independent of the retained research terms. Keyword IDs
+// remain the hub addresses, so these editorial questions do not move deep links.
+const publicQuestions = {
+  'How much does a carpenter charge for a small job in Canberra?':'How much does a carpenter charge for a small job?',
+  'Is anyone available for carpentry repairs this week in Canberra?':'Are appointments available for carpentry repairs this week?',
+  'How much does it cost to hang an internal door in Canberra?':'How much does it cost to hang an internal door?',
+  'Who repairs timber sash windows in Canberra?':'Who repairs timber sash windows?',
+  'How much does deck board replacement cost in Canberra?':'How much does deck board replacement cost?',
+  'What approvals should be checked before building a deck in Canberra?':'What ACT approvals should be checked before building a deck?',
+  'How much does it cost to replace timber fence posts in Canberra?':'How much does it cost to replace timber fence posts?',
+  'Who can fix a sagging wooden side gate in Canberra?':'Who can fix a sagging wooden side gate?',
+  'How much does architrave installation cost in Canberra?':'How much does architrave installation cost?',
+  'Who replaces rotten fascia boards in Canberra?':'Who replaces rotten fascia boards?'
+};
 export const canonicalFaqQuestion = question => {
   const merge = faqMerges.find(item=>item.questions.includes(question));
-  return merge ? merge.title || merge.questions[0] : question;
+  return merge ? merge.title || merge.questions[0] : publicQuestions[question] || question;
 };
 
 export function consolidateFaqs(items) {
   const used = new Set();
   return items.flatMap(item=>{
     const merge = faqMerges.find(group=>group.owner===item.owner && group.questions.includes(item.q));
-    if (!merge) return [{...item}];
+    if (!merge) return [{...item,q:canonicalFaqQuestion(item.q)}];
     if (used.has(merge)) return [];
     // Fail loudly if a source question is renamed: never silently discard advice.
     for (const question of merge.questions) {

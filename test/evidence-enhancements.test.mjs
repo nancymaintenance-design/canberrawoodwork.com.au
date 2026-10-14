@@ -123,7 +123,7 @@ test('contact first-screen jump focuses the actual form and preserves all enquir
   assert.deepEqual([...form.matchAll(/<(?:input|select|textarea)\b[^>]*name="([^"]+)"/g)].map(m=>m[1]),['name','email','phone','address','district','service','message','consent']);
   for(const field of ['name','email','message','consent'])assert.match(form,new RegExp(`<(?:input|textarea)[^>]*name="${field}"[^>]*required`));
   const labels=[...form.matchAll(/<label\b[^>]*>([\s\S]*?)<\/label>/g)].map(m=>m[1]);
-  for(const [field,label] of [['name','Your name'],['email','Email address'],['phone','Phone number'],['address','Property address'],['district','Canberra district or area'],['service','Service of interest'],['message','Tell us about the work'],['consent','I agree that Ellis Services Group']]){
+  for(const [field,label] of [['name','Your name'],['email','Email address'],['phone','Phone number'],['address','Property address'],['district','District or area'],['service','Service of interest'],['message','Tell us about the work'],['consent','I agree that Ellis Services Group']]){
     const wrapped=labels.find(item=>item.includes(`name="${field}"`));
     assert.ok(wrapped,`${field}: control remains inside its label`);
     assert.ok(text(wrapped).startsWith(label),`${field}: visible label is preserved`);

@@ -94,12 +94,12 @@ export const guideEditorial = {
   'repair-or-rebuild-a-deck': {
     updated:'2026-10-12',
     title:'Should you repair an existing deck or rebuild it?',category:'Deck planning',owner:'deck-building',
-    metaDescription:'Compare Canberra deck board repairs, frame repairs and rebuilding. Condition, retained supports and proposed layout guide the scope, quote and ACT checks.',
+    metaDescription:'Compare deck board repairs, frame repairs and rebuilding. Condition, retained supports and proposed layout guide the scope, quote and ACT checks.',
     lead:'Repair suits an existing deck when the affected components can be defined and suitable boards, supports and connections retained. Widespread connected damage or a changed layout can lead to rebuilding. The proportion of worn boards alone cannot decide between them.',
     options:[{option:'Local board repair',assessment:'Defined board damage with supports assessed as suitable for retention.',scope:'Specified boards, fixings, adjoining details and finish.'},{option:'Frame and connection repairs',assessment:'Defined supporting-member or connection damage with a suitable repair option.',scope:'Support components, safe sequence, inspection access and moisture source.'},{option:'Rebuild',assessment:'Connected defects or a changed layout requiring a new construction scope.',scope:'Removal, new deck system, materials, access and applicable ACT checks.'}],
     faqs:[{q:'Can new boards solve a damaged frame?',a:'No. Supporting timber and connections need assessment and repair where affected before board replacement is agreed.'},{q:'Can I decide from the percentage of damaged boards?',a:'No. Board count does not establish the condition of the supports, connections or retained timber. Compare the assessed repair options.'},{q:'What happens if more damage is found?',a:'The finding should be documented and explained. A written variation confirms added work, the pricing basis and scheduling effect before that work proceeds.'},{q:'Does a low deck automatically avoid approval checks?',a:'No. The actual repair, new construction or extension needs the applicable ACT building and planning checks.'}],
     reading:['deck-boards-or-frame','why-timber-rot-returns'],sources:[approval],
-    relatedLinks:[{url:'/services/deck-repairs/',label:'Deck repair and board replacement'},{url:'/services/deck-building/',label:'New deck construction and extensions'},{url:'/contact/',label:'Ask Ellis about your Canberra deck'}]
+    relatedLinks:[{url:'/services/deck-repairs/',label:'Deck repair and board replacement'},{url:'/services/deck-building/',label:'New deck construction and extensions'},{url:'/contact/',label:'Ask Ellis about your deck'}]
   },
   'carpentry-jobs-before-selling': {
     title:'How should you prioritise carpentry repairs before selling?',category:'Interior carpentry',owner:'interior-carpentry',

@@ -3,8 +3,8 @@ const introductions = {
   '/about/':'Ellis Services Group provides carpentry and timber repair services for Canberra homes. Find our company identity, contact channels and the process for agreeing work below.',
   '/faq/':'Browse answers about booking, quotes, doors, windows, decks, fences and interior or exterior timber. Choose a topic, then open a question for practical repair choices and specialist boundaries.',
   '/news/':'Understand a timber problem before deciding on work. These guides explain likely causes, safe observations and repair choices; an on-site assessment establishes the condition and scope for your property.',
-  '/service-areas/':'Use the district list to locate your Canberra suburb, then describe the timber item, requested work and access. Confirm the location and visit arrangements with the team when arranging an on-site assessment.',
-  '/contact/':'Tell us the timber item, what needs attention and your Canberra suburb. Our team will discuss the request, arrange an on-site assessment or measure and confirm the proposed work and quote.',
+  '/service-areas/':'Use the district list to locate your suburb, then describe the timber item, requested work and access. Confirm the location and visit arrangements with the team when arranging an on-site assessment.',
+  '/contact/':'Tell us the timber item, what needs attention and your suburb. Our team will discuss the request, arrange an on-site assessment or measure and confirm the proposed work and quote.',
   '/privacy/':'This policy explains the enquiry details Ellis Services Group receives, how those details are used and how to contact the company about them.'
 };
 const metas = {
@@ -42,9 +42,9 @@ export function enhanceHubEditorial(route,html){
     output=output.replace('Explore timber repair methods, replacement options and installation preparation. Each guide explains the affected components and links to the Ellis service for your work.','Use the topic groups to compare related questions. For assessment and quotation, follow the owner-service link in each guide or browse the <a href="/services/">carpentry service directory</a>.');
   }
   if(route==='/service-areas/'){
-    output=output.replace('Find local carpentry services near you','Find your Canberra district');
-    output=output.replace(/<h2>Book a carpenter in your Canberra suburb<\/h2><p>[\s\S]*?<\/p>/,'<h2>Confirm the suburb, task and access</h2><p>Include the suburb even if it is not one of the examples above. Describe the item, access restrictions, parking and any authorised property contact so the team can confirm the location and visit arrangements.</p>');
-    output=output.replace('Send the job details and your Canberra suburb to arrange your assessment. Our Canberra office is at 121 Marcus Clarke St, Canberra, ACT 2600.','Use the form below or <a href="/contact/">contact Ellis directly</a>. If you are deciding which service fits, start with the <a href="/services/">component-based service directory</a>. The district list groups suburb examples; it does not list separate offices.');
+    output=output.replace('Find local carpentry services near you','Find your district');
+    output=output.replace(/<h2>Book a carpenter in your suburb<\/h2><p>[\s\S]*?<\/p>/,'<h2>Confirm the suburb, task and access</h2><p>Include the suburb even if it is not one of the examples above. Describe the item, access restrictions, parking and any authorised property contact so the team can confirm the location and visit arrangements.</p>');
+    output=output.replace('Send the job details and your suburb to arrange your assessment. Our Canberra office is at 121 Marcus Clarke St, Canberra, ACT 2600.','Use the form below or <a href="/contact/">contact Ellis directly</a>. If you are deciding which service fits, start with the <a href="/services/">component-based service directory</a>. The district list groups suburb examples; it does not list separate offices.');
   }
   if(route==='/contact/'){
     output=output.replace('<h2>Let’s make a start.</h2>','<h2>What happens after you enquire?</h2>');

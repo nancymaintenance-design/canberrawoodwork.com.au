@@ -46,10 +46,10 @@ const pageTitles = {
   '/':'Canberra Carpentry & Timber Repairs',
   '/services/':'Carpentry Services Canberra ACT',
   '/service-areas/':'Carpentry Services Across Canberra ACT',
-  '/about/':'About Our Canberra Carpentry Team',
-  '/contact/':'Contact Our Canberra Carpentry Team',
-  '/faq/':'Canberra Carpentry FAQs & Repair Quotes',
-  '/news/':'Canberra Carpentry & Timber Repair Advice'
+  '/about/':'About Our Carpentry Team',
+  '/contact/':'Contact Our Carpentry Team',
+  '/faq/':'Carpentry FAQs & Repair Quotes',
+  '/news/':'Carpentry & Timber Repair Advice'
 };
 const serviceTitles = {
   'deck-repairs':'Deck Repairs Canberra',
@@ -68,11 +68,11 @@ export function enhanceSearchContent(route, html, { services, articles, areas })
   const title = pageTitles[route] || (service && (serviceTitles[service.slug] || `${service.title} Canberra`)) || (article && article.title);
   if (title) output = output.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(title)} | Ellis Services Group</title>`);
   if (service) {
-    output = output.replace(/<h1>[\s\S]*?<\/h1>/, `<h1>${esc(service.title)} in Canberra</h1>`);
+    output = output.replace(/<h1>[\s\S]*?<\/h1>/, `<h1>${esc(service.title)}</h1>`);
     output = output.replace(/<script type="application\/ld\+json">(.*?)<\/script>/gs,(match,json)=>{
       const schema=JSON.parse(json);
       if(schema['@type']!=='Service')return match;
-      schema.name=`${service.title} in Canberra`;
+      schema.name=service.title;
       return `<script type="application/ld+json">${JSON.stringify(schema).replaceAll('<','\\u003c')}</script>`;
     });
     output = output.replace(/<h2>Our (repair|installation) plan<\/h2>/, `<h2>${esc(service.title)}: ${['deck-building','custom-joinery','interior-carpentry','skirting-and-architraves'].includes(service.slug) ? 'installation' : 'repair'} method</h2>`);
@@ -84,23 +84,23 @@ export function enhanceSearchContent(route, html, { services, articles, areas })
     });
   }
   if (route === '/') {
-    output = output.replace('The work we’re here for','Carpentry services in Canberra');
+    output = output.replace('The work we’re here for','Carpentry services for your home');
     output = output.replace('Find the right starting point','Timber repair and installation services');
     output = output.replace('Deck details matter.','Deck repairs and board replacement');
     output = output.replace('Clear from first contact','Carpentry assessment and written quotes');
-    output = output.replace('Useful reads for Canberra homes','Canberra timber repair guides');
-    output = output.replace('<h2>Across Canberra</h2>','<h2>Local carpentry services across Canberra ACT</h2>');
+    output = output.replace('Useful timber repair guides','Timber repair guides');
+    output = output.replace('<h2>Across Canberra</h2>','<h2>Carpentry across the ACT districts</h2>');
     output = output.replace('Browse ACT districts and tell us your suburb when you get in touch.', 'Looking for a carpenter near me? Our Canberra office and carpentry team provide timber repairs, outdoor carpentry and interior installation across the ACT districts below. Tell us your suburb and the work you need to arrange an on-site assessment.');
   }
   if (route === '/service-areas/') {
-    output = output.replace(/<h1>[\s\S]*?<\/h1>/,'<h1>Carpentry Services Across Canberra ACT</h1>');
+    output = output.replace(/<h1>[\s\S]*?<\/h1>/,'<h1>Carpentry Across the ACT Districts</h1>');
     for (const [name] of areas) {
       output = output.replace(`<h2>${esc(name)}</h2>`, `<h2>Carpentry Services in ${esc(name)}</h2>`);
       output = output.replace(`<p>For a timber repair in ${esc(name)}, explore relevant work below and include your suburb in the enquiry. The same scope-first approach applies across Canberra.</p>`, `<p>${esc(districtCopy[name])}</p>`);
     }
     output = output.replace('<h2>Choose a district</h2>','<h2>Find local carpentry services near you</h2>');
-    output = output.replace('<h2>Tell us where the work is.</h2>', '<h2>Book a carpenter in your Canberra suburb</h2><p>Searching for carpentry services near me? Contact our team at 121 Marcus Clarke St, Canberra, ACT 2600 with your suburb and repair or installation details. We arrange site visits across the nine service areas listed above.</p>');
-    output = output.replace(/<meta name="description" content="[^"]*">/,'<meta name="description" content="Local carpentry services across Canberra ACT, including Belconnen, Gungahlin, Woden Valley and Tuggeranong. Contact Ellis for timber repairs and installation.">');
+    output = output.replace('<h2>Tell us where the work is.</h2>', '<h2>Book a carpenter in your suburb</h2><p>Searching for carpentry services near me? Contact our team at 121 Marcus Clarke St, Canberra, ACT 2600 with your suburb and repair or installation details. We arrange site visits across the nine service areas listed above.</p>');
+    output = output.replace(/<meta name="description" content="[^"]*">/,'<meta name="description" content="Carpentry across the ACT districts, including Belconnen, Gungahlin, Woden Valley and Tuggeranong. Contact Ellis for timber repairs and installation.">');
   }
   if (route === '/news/') {
     const groups = [
@@ -109,7 +109,7 @@ export function enhanceSearchContent(route, html, { services, articles, areas })
       ['Deck, Fence and Pergola Repair Guides','deck-repairs','deck-building','timber-fence-repairs','timber-gate-repairs','pergola-timber-repairs','timber-stair-and-handrail-repairs'],
       ['Interior Carpentry and Cabinet Repair Guides','skirting-and-architraves','cabinet-door-and-drawer-repairs','interior-carpentry']
     ];
-    const hub = `<section class="scenario-hub shell"><p class="eyebrow">CARPENTRY REPAIR GUIDES</p><h2>Canberra carpentry advice by service</h2><p>Explore timber repair methods, replacement options and installation preparation. Each guide explains the affected components and links to the Ellis service for your work.</p><div class="scenario-grid">${groups.map(([heading,...owners])=>`<details open><summary>${heading}</summary><ul>${articles.filter(a=>owners.includes(a.owner)).map(a=>`<li><a href="/news/${a.slug}/">${esc(a.title)} ↗</a></li>`).join('')}</ul></details>`).join('')}</div></section>`;
+    const hub = `<section class="scenario-hub shell"><p class="eyebrow">CARPENTRY REPAIR GUIDES</p><h2>Carpentry advice by service</h2><p>Explore timber repair methods, replacement options and installation preparation. Each guide explains the affected components and links to the Ellis service for your work.</p><div class="scenario-grid">${groups.map(([heading,...owners])=>`<details open><summary>${heading}</summary><ul>${articles.filter(a=>owners.includes(a.owner)).map(a=>`<li><a href="/news/${a.slug}/">${esc(a.title)} ↗</a></li>`).join('')}</ul></details>`).join('')}</div></section>`;
     output = output.replace(/<section class="scenario-hub shell">[\s\S]*?<\/section>/,hub);
   }
   return enrichPriorityService(route, output);

@@ -63,7 +63,7 @@ Object.assign(expandedGuideBodies,{
       'The actual new build, extension or repair also needs its applicable project checks confirmed with the relevant professionals. Material selection alone does not resolve approvals or structural suitability. The Mitchell project record above demonstrates one installation sequence and recorded scope, not a guarantee that another site will use the same preparation, supports or products.'
     ]),
     section('material-enquiry','Prepare a useful material discussion before ordering',[
-      'Send your Canberra suburb, intended use, approximate layout if known and whether an existing deck is involved. Include available plans and product preferences, plus the care commitment you want to discuss. Optional safe photographs can show the area and access. Do not enter an unsafe deck space to supply measurements or an underside view.',
+      'Send your suburb, intended use, approximate layout if known and whether an existing deck is involved. Include available plans and product preferences, plus the care commitment you want to discuss. Optional safe photographs can show the area and access. Do not enter an unsafe deck space to supply measurements or an underside view.',
       'Use [new deck construction and extensions](/services/deck-building/) for the overall brief, or [composite decking installation](/services/composite-decking/) for the confirmed service. Ask which products and scope are accepted before ordering. The useful choice is a specified deck that suits the assessed site and the way you will care for it, with the complete inclusions visible in the quote.'
     ])
   ],
@@ -131,7 +131,7 @@ Object.assign(expandedGuideBodies,{
     ],['approval']),
     section('deck-written-quote','From assessment to a written quote',[
       'Our written quote identifies the agreed retained and replaced components, materials, fixings, removal, access and finishing. Confirm which specialist checks and project requirements apply, how additional findings are recorded and which parts remain outside the scope. A written variation should state the added work, price basis and scheduling effect before that extra work proceeds.',
-      'Send your Canberra suburb, the observed symptoms, intended layout and available records. Optional safe photos can help start the discussion. Use [deck repairs](/services/deck-repairs/) for an existing defect or [new deck construction and extensions](/services/deck-building/) for the changed brief. The sensible decision follows the assessed retained structure and a comparable complete scope, then a care record for the work actually carried out.'
+      'Send your suburb, the observed symptoms, intended layout and available records. Optional safe photos can help start the discussion. Use [deck repairs](/services/deck-repairs/) for an existing defect or [new deck construction and extensions](/services/deck-building/) for the changed brief. The sensible decision follows the assessed retained structure and a comparable complete scope, then a care record for the work actually carried out.'
     ])
   ],
   'carpentry-jobs-before-selling':[
@@ -166,7 +166,7 @@ Object.assign(expandedGuideBodies,{
   ],
   'carpentry-quote-cost-factors':[
     section('price-comparison','Compare the completed job before comparing the price',[
-      'Carpentry cost depends on what must be assessed, supplied, repaired, accessed and finished. An hourly rate or a material price describes only part of that work. A small visible defect can involve careful matching or difficult access, while several simple tasks may have different supply needs. No general Canberra rate can establish your final repair price from the symptom alone.',
+      'Carpentry cost depends on what must be assessed, supplied, repaired, accessed and finished. An hourly rate or a material price describes only part of that work. A small visible defect can involve careful matching or difficult access, while several simple tasks may have different supply needs. No general hourly rate can establish your final repair price from the symptom alone.',
       'Start with the component and the outcome you want: restore a closing door, replace a defined board group, fit matching trim or build a new deck. Then compare proposals for that same outcome. If one quote includes removal and decoration and another only installs supplied timber, the total prices answer different questions even if the job title looks identical.'
     ]),
     section('hourly-fixed','Hourly work, fixed scope and allowances need clear terms',[
@@ -194,7 +194,7 @@ Object.assign(expandedGuideBodies,{
       'Request current documents relevant to the accepted scope and confirm which entity is contracting for it. This article does not assert a universal licence category or a verified insurance policy. Keep those checks attached to your actual proposal. If a specialist dependency is unresolved, ask how it affects the work sequence and final scope rather than overlooking it in the price comparison.'
     ]),
     section('quote-request','Send a task list that supports a clear quote',[
-      'Give Ellis your Canberra suburb, the component, symptoms, intended finish and access details. Optional safe photos and available product records help describe the task; do not dismantle or enter an unsafe area to obtain them. For new work, include the intended use and any plans. For repeat repairs, include the earlier scope and known cause if available.',
+      'Give Ellis your suburb, the component, symptoms, intended finish and access details. Optional safe photos and available product records help describe the task; do not dismantle or enter an unsafe area to obtain them. For new work, include the intended use and any plans. For repeat repairs, include the earlier scope and known cause if available.',
       'Start with [small carpentry jobs](/services/small-carpentry-jobs/) or choose the relevant service from the [service directory](/services/). Ask for the accepted inclusions, exclusions and variation process in writing. A comparable quote gives you a defined result and price basis, so the decision can be made on what will actually be delivered.'
     ])
   ],
@@ -436,7 +436,7 @@ Object.assign(expandedGuideBodies,{
       'Confirm whether the work includes preparation, priming, painting or staining of the adjusted area, and whether adjoining surfaces are included. A local finish can be visible beside older paint. Our guide to [timber rot returning after repair](/news/why-timber-rot-returns/) explains why the repair boundary and the moisture route belong in the same conversation.'
     ]),
     section('door-quote','Get a useful door repair scope',[
-      'Send your Canberra suburb, the door location, the closing symptom and its timing. Add safe overview and detail photos if convenient, plus any product label or previous repair record already available. Tell the team whether it is the main access door and whether pets, tenants or restricted entry affect the visit. Do not remove the door to obtain measurements.',
+      'Send your suburb, the door location, the closing symptom and its timing. Add safe overview and detail photos if convenient, plus any product label or previous repair record already available. Tell the team whether it is the main access door and whether pets, tenants or restricted entry affect the visit. Do not remove the door to obtain measurements.',
       'A quote should separate alignment work, timber replacement, hardware, finish and any specialist arrangements. Access and handling of a large or glazed leaf can change the scope as much as the visible scrape. Start with [door and frame repairs](/services/door-and-frame-repairs/) and ask which cause will be addressed before accepting a trimming-only proposal. A good next step is a defined repair, followed by an operation check against that agreed scope.'
     ])
   ],
@@ -514,7 +514,7 @@ Object.assign(expandedGuideBodies,{
       'Compare removal, disposal, material identification, roof or gutter coordination and painting alongside the board replacement. Ask whether concealed support damage is an allowance, an exclusion or a finding to quote separately. Two proposals for the same visible length can differ because one includes reinstating adjoining components and the other only supplies the timber.'
     ]),
     section('roof-edge-enquiry','Send a location, a water history and an overview',[
-      'Give your Canberra suburb, the side of the building and the component’s position. Optional ground-level photos of the full edge and visible defect can show the pattern. Include any existing material records, earlier leak report or repair scope already available. A clear description is enough to begin if photographs cannot be taken safely.',
+      'Give your suburb, the side of the building and the component’s position. Optional ground-level photos of the full edge and visible defect can show the pattern. Include any existing material records, earlier leak report or repair scope already available. A clear description is enough to begin if photographs cannot be taken safely.',
       'The next step is to agree the assessment, material checks and responsibilities before disturbance. Read [recurring timber rot](/news/why-timber-rot-returns/) where the same board has failed again, or [weatherboard damage](/news/timber-weatherboard-damage/) if the problem continues down the wall. A useful roof-edge repair addresses both the timber and the conditions that keep wetting it.'
     ])
   ],

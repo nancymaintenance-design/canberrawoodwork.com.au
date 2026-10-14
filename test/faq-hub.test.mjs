@@ -18,7 +18,7 @@ test('merged deck finishing answer explains both sound surfaces and repair-first
 
 test('merged small-job answer includes scope-based provider selection', () => {
   const disclosure=html.match(/<details[^>]*id="faq-cbr-c-151"[^>]*>([\s\S]*?)<\/details>/)?.[1]||'';
-  assert.match(disclosure,/Ellis Services Group handles small Canberra carpentry jobs/);
+  assert.match(disclosure,/Ellis Services Group handles small carpentry jobs/);
   assert.match(disclosure,/repair plan and quote/);
   assert.match(disclosure,/carpenter or handyman/i);
   assert.match(disclosure,/relevant timber repair experience/i);

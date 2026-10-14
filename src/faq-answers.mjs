@@ -1,6 +1,6 @@
 // Answers are keyed to the maintained keyword-map IDs. Each answers its own question.
 export const faqAnswers = {
-  'CBR-C-151': 'Ellis Services Group handles small Canberra carpentry jobs, including timber doors, trim, cupboard fittings and local timber repairs. Tell us the tasks and suburb to arrange an assessment and quote.',
+  'CBR-C-151': 'Ellis Services Group handles small carpentry jobs, including timber doors, trim, cupboard fittings and local timber repairs. Tell us the tasks and suburb to arrange an assessment and quote.',
   'CBR-C-152': 'Yes. We assess the listed repairs together and itemise the agreed work. The appointment plan accounts for access, materials and the time needed for each task.',
   'CBR-C-153': 'A small-job quote covers the tasks, labour, materials, access and finishing required. Contact Ellis with your repair list; we confirm the assessment arrangements and provide the price for the agreed scope.',
   'CBR-C-154': 'We confirm any call-out or minimum booking charge before you agree to an appointment. The written quote identifies the work and charges included, so you know the cost basis before proceeding.',
@@ -22,7 +22,7 @@ export const faqAnswers = {
   'CBR-C-170': 'We define the repair joint at sound timber and check the role of the affected component. The quote identifies the sections to retain and replace and the moisture detail to address.',
   'CBR-C-171': 'Ellis checks recurring wetting, joints, coatings and nearby water paths on site. We identify the cause and confirm the timber repair and associated moisture-source work in the repair plan and quote.',
   'CBR-C-172': 'Priming and painting inclusions are stated in your quote. We confirm the repaired area, coating preparation, finish and any adjoining painting before the work is agreed.',
-  'CBR-C-173': 'Ellis Services Group assesses and replaces damaged fascia timber in Canberra. We check the roof edge, gutter supports, moisture source and safe access before confirming the repair scope and price.',
+  'CBR-C-173': 'Ellis Services Group assesses and replaces damaged fascia timber. We check the roof edge, gutter supports, moisture source and safe access before confirming the repair scope and price.',
   'CBR-C-174': 'We check the retained gutters, brackets and roof-edge fixings before defining fascia replacement. The quote sets out gutter removal, refitting or replacement required for the timber work.',
   'CBR-C-175': 'Yes. We identify the existing lining and check its condition and safe assessment requirements before planning replacement. Suspected hazardous material is assessed through the qualified pathway before disturbance.',
   'CBR-C-176': 'We inspect the damaged boards and the joists, bearers, posts and fixings supporting them. The quote specifies board-only replacement where the retained support is suitable, or the support repairs needed first.',

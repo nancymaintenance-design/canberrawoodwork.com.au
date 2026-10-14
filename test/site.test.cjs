@@ -62,7 +62,7 @@ for(const file of files){
   pageSchemas.set(route,schemas);
 }
 const home=fs.readFileSync(path.join(dist,'index.html'),'utf8');assert.match(home,/<h1>Canberra Carpentry & Timber Repairs<\/h1>/,'home page H1 states the core Canberra service theme directly');assert.match(home,/Small Carpentry Jobs/);
-const faq=fs.readFileSync(path.join(dist,'faq','index.html'),'utf8');assert.match(faq,/<h1>Canberra Carpentry Questions & Answers<\/h1>/,'FAQ H1 states the Canberra carpentry question intent directly');assert.doesNotMatch(faq,/"@type":"FAQPage"/);
+const faq=fs.readFileSync(path.join(dist,'faq','index.html'),'utf8');assert.match(faq,/<h1>Carpentry Questions & Answers<\/h1>/,'FAQ H1 states the carpentry question intent directly');assert.doesNotMatch(faq,/"@type":"FAQPage"/);
 const news=fs.readFileSync(path.join(dist,'news','timber-door-sticks-after-rain','index.html'),'utf8');assert.match(news,/"@type":"Article"/);
 const newsIndex=fs.readFileSync(path.join(dist,'news','index.html'),'utf8');
 const servicesIndex=fs.readFileSync(path.join(dist,'services','index.html'),'utf8');
@@ -73,11 +73,11 @@ const privacyPage=fs.readFileSync(path.join(dist,'privacy','index.html'),'utf8')
 const rottenTimberPage=fs.readFileSync(path.join(dist,'services','rotten-timber-repairs','index.html'),'utf8');
 const serviceAndAdviceCopy=files.filter(file=>file.includes(`${path.sep}services${path.sep}`)||file.includes(`${path.sep}news${path.sep}`)).map(file=>fs.readFileSync(file,'utf8')).join('\n');
 const customerFacingCopy=files.filter(file=>!file.includes(`${path.sep}privacy${path.sep}`)).map(file=>fs.readFileSync(file,'utf8')).join('\n');
-assert.match(about,/<h1>About Our Canberra Carpentry Team<\/h1>/,'about H1 states the local team theme directly');
-assert.match(servicesIndex,/<h1>Canberra Carpentry & Timber Repair Services<\/h1>/,'services H1 states the service cluster directly');
-assert.match(areaPage,/<h1>Carpentry Services Across Canberra ACT<\/h1>/,'service-area H1 states the local service-area theme directly');
-assert.match(contactPage,/<h1>Request a Canberra Carpentry Quote<\/h1>/,'contact H1 states the quote intent directly');
-assert.match(newsIndex,/<h1>Canberra Carpentry Advice & Repair Guides<\/h1>/,'news H1 states the advice and repair-guide theme directly');
+assert.match(about,/<h1>About Our Carpentry Team<\/h1>/,'about H1 states the team theme directly');
+assert.match(servicesIndex,/<h1>Carpentry & Timber Repair Services<\/h1>/,'services H1 states the service cluster directly');
+assert.match(areaPage,/<h1>Carpentry Across the ACT Districts<\/h1>/,'service-area H1 states the local service-area theme directly');
+assert.match(contactPage,/<h1>Request a Carpentry Quote<\/h1>/,'contact H1 states the quote intent directly');
+assert.match(newsIndex,/<h1>Carpentry Advice & Repair Guides<\/h1>/,'news H1 states the advice and repair-guide theme directly');
 assert.match(rottenTimberPage,/<h2>[^<]*sound timber[^<]*<\/h2>/i,'rot repair explains the retained-timber decision');
 assert.match(rottenTimberPage,/on-site assessment[\s\S]*identify the cause[\s\S]*repair plan and quote/i,'rotten timber repairs explain the assessment, cause and quoted repair path');
 assert.doesNotMatch(serviceAndAdviceCopy,/Where this repair may stop|(?:contact|consult|speak with|seek) (?:an? |the )?(?:external specialist|another trade|locksmith|another company)/i,'repair pages do not send visitors to another company; qualified project checks remain accurate');
@@ -117,7 +117,7 @@ for(const entry of fs.readdirSync(path.join(dist,'news'),{withFileTypes:true}).f
 const areas=fs.readFileSync(path.join(dist,'service-areas','index.html'),'utf8');assert.match(areas,/Denman Prospect/);assert.match(areas,/class="enquiry-form"/);
 const contact=fs.readFileSync(path.join(dist,'contact','index.html'),'utf8');
 for(const [name,html] of [['contact',contact],['service areas',areas]]){
-  assert.match(html,/Canberra district or area/,`${name}: area selector`);
+  assert.match(html,/District or area/,`${name}: area selector`);
   assert.match(html,/Service of interest/,`${name}: service selector`);
   assert.doesNotMatch(html,/type="file"/,`${name}: no non-functional photo picker`);
   assert.match(html,/Photos are optional[\s\S]*mailto:brian@elliservices\.com\.au/,`${name}: optional photos use the existing email channel`);
@@ -179,10 +179,10 @@ import('../src/content.mjs').then(async ({services})=>{
     const file=path.join(dist,'services',service.slug,'index.html');
     const html=fs.readFileSync(file,'utf8');
     const route=`/services/${service.slug}/`;
-    assert.ok(html.includes(`<h1>${escapeHtml(service.title)} in Canberra</h1>`),`${service.slug}: service-specific H1`);
+    assert.ok(html.includes(`<h1>${escapeHtml(service.title)}</h1>`),`${service.slug}: service-specific H1`);
     const serviceSchemas=pageSchemas.get(route)?.filter(schema=>schema['@type']==='Service')||[];
     assert.equal(serviceSchemas.length,1,`${service.slug}: one Service JSON-LD object`);
-    assert.equal(serviceSchemas[0].name,`${service.title} in Canberra`,`${service.slug}: schema name matches visible heading`);
+    assert.equal(serviceSchemas[0].name,service.title,`${service.slug}: schema name matches visible heading`);
     assert.equal(serviceSchemas[0].description,serviceDeepContent[service.slug].intro,`${service.slug}: schema description matches edited intro`);
     assert.ok(html.includes(`<p>${escapeHtml(serviceSchemas[0].description)}</p>`),`${service.slug}: schema intro is visible`);
     assert.equal(new URL(serviceSchemas[0].url).pathname,route,`${service.slug}: schema URL matches route`);
@@ -191,7 +191,7 @@ import('../src/content.mjs').then(async ({services})=>{
     const localNotes=html.match(/<section class="service-local-notes shell">([\s\S]*?)<\/section>/)?.[1]||'';
     const section=narrative+localNotes;
     assert.ok(section,`${service.slug}: visible deep-content section`);
-    assert.ok(!section.includes(`<h2>${escapeHtml(service.title)} in Canberra</h2>`),`${service.slug}: H2 does not repeat the H1`);
+    assert.ok(!section.includes(`<h2>${escapeHtml(service.title)}</h2>`),`${service.slug}: H2 does not repeat the H1`);
     assert.equal((section.match(/<h2>/g)||[]).length,3,`${service.slug}: three coherent narrative headings, not fragmented micro-sections`);
     assert.match(section,/<div class="related-work-links">[\s\S]*?<\/div>/,`${service.slug}: grouped related links`);
     assert.match(section,/optional[\s\S]*brian@elliservices\.com\.au/i,`${service.slug}: optional photos use the functioning email channel`);

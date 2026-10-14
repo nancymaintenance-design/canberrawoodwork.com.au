@@ -10,7 +10,7 @@ const sections={
     heading:'Small-job costs and visit arrangements',
     paragraphs:['Describe small carpentry repairs as individual tasks: for example, a door adjustment, a loose cupboard fitting and a missing trim length. This helps separate the work you want from a general hourly-rate enquiry. Each task still needs its condition, materials and access assessed before the grouped scope is agreed.','Ask how labour will be priced for the proposed tasks, whether a call-out or minimum booking charge applies and which materials, disposal and finishing are included. An hourly figure alone does not establish the completed cost. Confirm the appointment and charging arrangements before accepting a visit; this page does not promise a standard hourly rate, a free assessment or a discount for a longer list.'],
     questions:[['Can I compare a small-job quote using an hourly rate alone?','Not reliably. Compare the task list, material supply, access, disposal and finishing as well as the labour pricing basis. Ask Ellis to confirm any visit or minimum booking charge for your enquiry.']],
-    links:[[quote,'What affects a Canberra carpentry quote'],['/contact/','Send your small-repair list to Ellis']]
+    links:[[quote,'What affects a carpentry quote'],['/contact/','Send your small-repair list to Ellis']]
   },
   '/services/door-and-frame-repairs/':{
     heading:'Internal door fitting and replacement enquiries',
@@ -55,7 +55,7 @@ const sections={
   },
   '/contact/':{
     heading:'Prepare a quote enquiry without guessing the repair',
-    paragraphs:['Include your Canberra suburb, the item, what has changed and any property-access arrangements. For several tasks, use one item per line. Existing plans or safe photos are optional; do not dismantle timber or enter an unsafe area to provide them.','Before accepting a visit, confirm any assessment, call-out or minimum booking charge. Before accepting the work, check the proposed materials, removal, finishing and price inclusions. The enquiry starts the scope discussion; it does not guarantee a free visit, a standard hourly rate or an immediate appointment.'],
+    paragraphs:['Include your suburb, the item, what has changed and any property-access arrangements. For several tasks, use one item per line. Existing plans or safe photos are optional; do not dismantle timber or enter an unsafe area to provide them.','Before accepting a visit, confirm any assessment, call-out or minimum booking charge. Before accepting the work, check the proposed materials, removal, finishing and price inclusions. The enquiry starts the scope discussion; it does not guarantee a free visit, a standard hourly rate or an immediate appointment.'],
     links:[[quote,'Read what affects a carpentry quote'],['/services/small-carpentry-jobs/','Describe several small tasks together']]
   },
   '/faq/':{
@@ -91,7 +91,7 @@ export function enhanceContentGaps(route,html){
   if(route===quote||route===materials){
     result=result.replace('Contact Ellis Services Group for an on-site assessment. We identify the cause and confirm your repair plan and quote.','Contact Ellis Services Group to discuss your requirements, materials and site access. Confirm the accepted scope, assessment arrangements and quote before booking.');
     result=result.replace('Arrange your timber repair assessment','Discuss your requirements and quote');
-    result=result.replace('Contact Ellis Services Group to arrange an on-site assessment in Canberra. We identify the cause, confirm the repair plan and provide a quote.','Tell Ellis Services Group what you want to repair or build in Canberra. Discuss the materials, on-site measure and accepted scope before agreeing the quote and booking arrangements.');
+    result=result.replace('Contact Ellis Services Group with your suburb and the repair details. We arrange an on-site assessment, identify the cause and confirm the repair plan and quote.','Tell Ellis Services Group what you want to repair or build. Discuss the materials, on-site measure and accepted scope before agreeing the quote and booking arrangements.');
   }
   // The shared guide renderer owns paragraph sections, anchors and citations.
   if(article.comparison){const t=article.comparison;const table=`<section><h2>Compare the material decisions</h2><div class="decision-table"><table><caption>${esc(t.caption)}</caption><thead><tr>${t.columns.map(c=>`<th scope="col">${esc(c)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(([label,...cells])=>`<tr><th scope="row">${esc(label)}</th>${cells.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></section>`;result=result.replace('<section><h2>Start your enquiry</h2>',table+'<section><h2>Start your enquiry</h2>');}
