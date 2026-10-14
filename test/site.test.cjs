@@ -48,7 +48,7 @@ for(const file of files){
   for(const raw of html.matchAll(/href="(\/[^"]*)"/g)){
     const href=raw[1].split('#')[0].split('?')[0];
     if(!href)continue;
-    const target=href.startsWith('/assets/')?path.join(dist,href.slice(1)):path.join(dist,href.slice(1),'index.html');
+    const target=href.startsWith('/assets/')||href.endsWith('.json')?path.join(dist,href.slice(1)):path.join(dist,href.slice(1),'index.html');
     assert.ok(fs.existsSync(target),`${route}: broken link ${href}`);
   }
   const schemas=[];

@@ -70,7 +70,11 @@ test('all rendered internal links resolve including fragment anchors',()=>{
   for(const [route,html] of pages)for(const m of html.matchAll(/href="([^"<>]+)"/g)){
     if(!m[1].startsWith('/') && !m[1].startsWith('#'))continue;
     const url=new URL(m[1],`https://www.canberrawoodwork.com.au${route}`);
-    if(url.pathname.startsWith('/assets/')){assert.ok(existsSync(`dist${url.pathname}`),m[1]);continue;}
+    if(url.pathname.startsWith('/assets/')||url.pathname.endsWith('.json')){
+      assert.ok(existsSync(`dist${url.pathname}`),m[1]);
+      if(url.pathname.endsWith('.json'))assert.doesNotThrow(()=>JSON.parse(readFileSync(`dist${url.pathname}`,'utf8')),`${route}: valid linked JSON ${m[1]}`);
+      continue;
+    }
     assert.ok(pages.has(url.pathname),`${route}: destination ${m[1]}`);
     if(url.hash){const id=decodeURIComponent(url.hash.slice(1));assert.ok(pages.get(url.pathname).includes(`id="${id}"`),`${route}: anchor ${m[1]}`);}
   }

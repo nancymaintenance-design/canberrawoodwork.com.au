@@ -12,9 +12,11 @@ import { verifiedPages } from './src/verified-projects.mjs';
 import { enhanceImageDelivery } from './src/image-delivery.mjs';
 import { normalizeSeoMetadata } from './src/seo-metadata.mjs';
 import { renderGuideSections } from './src/expanded-guides.mjs';
+import { buildKnowledgeFeeds } from './src/knowledge-feed.mjs';
 const keywordMap=JSON.parse(readFileSync(new URL('./src/keyword-map.json',import.meta.url),'utf8'));
 
 const out = join(process.cwd(), 'dist');
+const finalPages = new Map();
 const PRODUCTION_ORIGIN = 'https://www.canberrawoodwork.com.au';
 const BUSINESS_ID = `${PRODUCTION_ORIGIN}/#business`;
 const WEBSITE_ID = `${PRODUCTION_ORIGIN}/#website`;
@@ -117,7 +119,7 @@ const semanticH1={
   '/news/':'Canberra Carpentry Advice & Repair Guides'
 };
 function serviceLedCopy(html){return html;}
-function write(route,html){if(semanticH1[route])html=html.replace(/<h1>[\s\S]*?<\/h1>/,`<h1>${semanticH1[route]}</h1>`);const file=join(out,route.replace(/^\//,''),'index.html');mkdirSync(dirname(file),{recursive:true});writeFileSync(file,normalizeSeoMetadata(enhanceImageDelivery(enhanceSite(route,serviceLedCopy(enrich(route,html))),route),route));}
+function write(route,html){if(semanticH1[route])html=html.replace(/<h1>[\s\S]*?<\/h1>/,`<h1>${semanticH1[route]}</h1>`);const file=join(out,route.replace(/^\//,''),'index.html');mkdirSync(dirname(file),{recursive:true});const finalHtml=normalizeSeoMetadata(enhanceImageDelivery(enhanceSite(route,serviceLedCopy(enrich(route,html))),route),route);finalPages.set(route,finalHtml);writeFileSync(file,finalHtml);}
 function contactForm(){const districts=areas.map(([district])=>district);return `<form class="enquiry-form" action="/api/contact" method="post"><div class="form-topline"><span>CANBERRA CARPENTRY ENQUIRY</span><span>Fields marked <b>*</b> are required</span></div><div class="form-grid"><label>Your name <span>*</span><input name="name" autocomplete="name" required></label><label>Email address <span>*</span><input name="email" type="email" autocomplete="email" required></label><label>Phone number<input name="phone" type="tel" autocomplete="tel"></label><label>Property address <em>(optional)</em><input name="address" autocomplete="street-address"></label><label>Canberra district or area<select name="district"><option value="">Choose your district or area</option>${districts.map(d=>`<option value="${esc(d)}">${esc(d)}</option>`).join('')}<option value="Other Canberra area">Other Canberra area</option></select></label><label>Service of interest<select name="service"><option value="">Choose a service</option>${services.map(s=>`<option value="${esc(s.title)}">${esc(s.title)}</option>`).join('')}<option value="Not sure yet">Not sure yet</option></select></label></div><label>Tell us about the work <span>*</span><textarea name="message" rows="6" placeholder="Describe the timber item, the issue you can see and any access details." required></textarea></label><p class="photo-note">Contact us with a description of the work. Photos are optional: email safe photos separately to <a href="mailto:${business.email}">${business.email}</a> to help prepare your assessment.</p><label class="consent-field"><input name="consent" type="checkbox" required><span>I agree that Ellis Services Group may use the details in this enquiry to contact me about the requested carpentry work, as explained in the <a href="/privacy/">Privacy Policy</a>. <b>*</b></span></label><button class="btn btn-primary" type="submit">Send enquiry <span aria-hidden="true">↗</span></button><p class="form-note">Send your details to Ellis Services Group. Our team will contact you to arrange the assessment and confirm your repair plan and quote.</p></form>`;}
 function cta(title='Arrange your timber repair assessment'){return `<section class="cta-panel"><div class="shell cta-inner"><div><p class="eyebrow light">YOUR NEXT STEP</p><h2>${esc(title)}</h2><p>Contact Ellis Services Group to arrange an on-site assessment in Canberra. We identify the cause, confirm the repair plan and provide a quote.</p></div><div class="cta-actions">${quote('Request a quote','btn btn-white')}<a href="${business.phoneHref}">Or call ${business.phone} →</a></div></div></section>`;}
 function articleCard(a){return `<a class="article-card" href="/news/${a.slug}/"><span class="article-category">${esc(a.category)}</span><h3>${esc(a.title)}</h3><p>${esc(a.lead)}</p><span>Read article ↗</span></a>`;}
@@ -155,6 +157,11 @@ for(const item of projectPages){
   if(item.type==='CollectionPage')schema.unshift({'@context':'https://schema.org','@type':'CollectionPage',name:item.name,url:origin+item.route,isPartOf:{'@id':WEBSITE_ID}});
   write(item.route,page(item.route,item.title,item.meta,item.body,{schema,active:item.type==='Service'?'/services/':''}));
 }
+// Feed extraction runs only after every page has its final prose, evidence and metadata.
+const knowledge = buildKnowledgeFeeds(finalPages, {name:business.name});
+mkdirSync(join(out,'feeds'),{recursive:true});
+writeFileSync(join(out,'feeds','llm-knowledge.json'),JSON.stringify(knowledge.feed,null,2)+'\n');
+for(const item of knowledge.feed.items){const route=new URL(item.url).pathname;writeFileSync(join(out,route.slice(1),'index.html'),knowledge.pages.get(route));}
 const routes=['/','/services/',...services.map(serviceUrl),'/about/','/faq/','/news/',...articles.map(a=>`/news/${a.slug}/`),'/service-areas/','/contact/','/privacy/',...projectPages.map(p=>p.route)];
 writeFileSync(join(out,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${routes.map(r=>`<url><loc>${origin+r}</loc></url>`).join('')}</urlset>`);
 writeFileSync(join(out,'robots.txt'),`User-agent: *\n${origin.startsWith('http://127.0.0.1')?'Disallow: /':'Allow: /'}\nSitemap: ${origin}/sitemap.xml\n`);
