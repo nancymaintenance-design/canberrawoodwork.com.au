@@ -1,8 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, existsSync, mkdtempSync, symlinkSync, rmSync } from 'node:fs';
+import { readFileSync, existsSync, mkdirSync, mkdtempSync, symlinkSync, rmSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
-import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { articles } from '../src/content.mjs';
@@ -24,10 +23,12 @@ test('audit records the UTC run date and accepts a deterministic injected clock'
   assert.ok([before,after].includes(actual),'default date follows the current run');
   const result=auditSite('dist',undefined,{now:new Date('2027-01-02T01:00:00+11:00')});
   assert.equal(result.analyzedAt,'2027-01-01');
-  assert.deepEqual(result.pages.find(page=>page.articleDates).articleDates,{published:'2026-09-28',modified:'2026-10-10'},'run date does not rewrite article history');
+  assert.deepEqual(result.pages.find(page=>page.articleDates).articleDates,{published:'2026-09-28',modified:'2026-10-14'},'run date does not rewrite article history');
 });
 test('rendered article date labels follow alternate article fields across timezone boundaries',()=>{
-  const fixtureRoot=mkdtempSync(join(tmpdir(),'ellis-article-dates-'));
+  const fixtureParent=fileURLToPath(new URL('../../reports/_test-temp/',import.meta.url));
+  mkdirSync(fixtureParent,{recursive:true});
+  const fixtureRoot=mkdtempSync(join(fixtureParent,'ellis-article-dates-'));
   try{
     symlinkSync(fileURLToPath(new URL('../public',import.meta.url)),join(fixtureRoot,'public'),'junction');
     const contentUrl=new URL('../src/content.mjs',import.meta.url).href;

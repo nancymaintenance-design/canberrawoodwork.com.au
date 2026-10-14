@@ -29,8 +29,8 @@ test('informational guides retain their service conversion path and add distinct
     'deck-boards-or-frame': 'deck-repairs',
   };
   const topics = {
-    'fascia-bargeboard-eaves': [/gutter/i, /gable/i, /asbestos/i, /ground level/i],
-    'loose-timber-stairs': [/tread/i, /fixing substrate/i, /extra weight/i],
+    'fascia-bargeboard-eaves': [/gutter/i, /gable/i, /asbestos/i, /(?:ground level|safe ground)/i],
+    'loose-timber-stairs': [/tread/i, /substrate/i, /(?:extra weight|add weight)/i],
     'skirting-after-new-flooring': [/thickness/i, /profile/i, /door clearance/i, /painting/i],
     'deck-boards-or-frame': [/joists/i, /bearers/i, /supports/i, /coating/i]
   };

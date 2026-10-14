@@ -80,6 +80,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .decision-contents p{margin-top:0}.decision-contents ul{padding-left:22px}.decision-contents li{margin:8px 0}
 .article-prose{min-width:0}
 .article-prose section[id]{scroll-margin-top:32px}
+.article-prose section[id] p a{text-decoration:underline;text-underline-offset:.18em}
 .decision-table{max-width:100%;overflow-x:auto;margin-bottom:28px}
 .decision-table table{width:100%;min-width:520px;border-collapse:collapse;font-size:15px}
 .decision-table caption{text-align:left;font-weight:700;margin-bottom:12px}

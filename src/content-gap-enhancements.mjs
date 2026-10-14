@@ -93,15 +93,8 @@ export function enhanceContentGaps(route,html){
     result=result.replace('Arrange your timber repair assessment','Discuss your requirements and quote');
     result=result.replace('Contact Ellis Services Group to arrange an on-site assessment in Canberra. We identify the cause, confirm the repair plan and provide a quote.','Tell Ellis Services Group what you want to repair or build in Canberra. Discuss the materials, on-site measure and accepted scope before agreeing the quote and booking arrangements.');
   }
-  const ids=article.sections.map((_,i)=>`decision-${i+1}`);
-  article.sections.forEach(([heading],i)=>{
-    result=result.replace(`<section><h2>${esc(heading)}</h2>`,`<section id="${ids[i]}"><h2>${esc(heading)}</h2>`);
-    const citations=article.citations?.[heading];
-    if(citations){const start=result.indexOf(`<section id="${ids[i]}">`),end=result.indexOf('</section>',start);if(start!==-1&&end!==-1)result=result.slice(0,end)+`<p class="source-note">Guidance: ${citations.map(([url,label])=>a(url,label)).join(' · ')}.</p>`+result.slice(end);}
-  });
-  const toc=`<nav class="decision-contents" aria-label="On this page"><p><strong>On this page</strong></p><ul>${article.sections.map(([heading],i)=>`<li>${a('#'+ids[i],heading)}</li>`).join('')}</ul></nav>`;
-  result=result.replace('<div class="article-prose">','<div class="article-prose">'+toc);
-  if(article.comparison){const t=article.comparison;const table=`<section><h2>Compare the material decisions</h2><div class="decision-table"><table><caption>${esc(t.caption)}</caption><thead><tr>${t.columns.map(c=>`<th scope="col">${esc(c)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(([label,...cells])=>`<tr><th scope="row">${esc(label)}</th>${cells.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></section>`;result=result.replace('<section><h2>What to send with your enquiry</h2>',table+'<section><h2>What to send with your enquiry</h2>');}
+  // The shared guide renderer owns paragraph sections, anchors and citations.
+  if(article.comparison){const t=article.comparison;const table=`<section><h2>Compare the material decisions</h2><div class="decision-table"><table><caption>${esc(t.caption)}</caption><thead><tr>${t.columns.map(c=>`<th scope="col">${esc(c)}</th>`).join('')}</tr></thead><tbody>${t.rows.map(([label,...cells])=>`<tr><th scope="row">${esc(label)}</th>${cells.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div></section>`;result=result.replace('<section><h2>Start your enquiry</h2>',table+'<section><h2>Start your enquiry</h2>');}
   result=result.replace('<h2>Relevant official guidance</h2>','<h2>Sources and product guidance</h2>');
   // Only informational external links are changed; forms and contact channels stay intact.
   result=result.replace(/<a href="(https:\/\/[^"<>]+)">/g,'<a href="$1" target="_blank" rel="noopener noreferrer">');
