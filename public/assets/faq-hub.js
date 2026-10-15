@@ -64,7 +64,7 @@ if (hub) {
       const matches = [...group.querySelectorAll('.faq-item')].filter(item => !item.hidden).length;
       group.hidden = matches === 0;
       links[index].querySelector('.faq-topic-count').textContent = matches;
-      group.querySelector('[data-faq-group-count]').textContent = `${matches} QUESTIONS`;
+      group.querySelector('[data-faq-group-count]').textContent = `${matches} ${matches === 1 ? 'QUESTION' : 'QUESTIONS'}`;
     }
     status.textContent = `${count} of ${questions.length} questions`;
     filter.querySelector('.faq-no-results').hidden = count !== 0;

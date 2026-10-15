@@ -51,7 +51,7 @@ test('each item agrees with the final visible title, lead, enhanced prose, image
     assert.equal(item.content_text, plain(prose), item.url);
     assert.equal(item.image, origin + prose.match(/<img\b[^>]*\bsrc="([^"]+)"/)[1]);
     assert.deepEqual(item.authors, [{name: 'Ellis Services Group', url: origin + '/about/'}]);
-    assert.equal(item.date_modified, '2026-10-14T00:00:00Z');
+    assert.equal(item.date_modified, '2026-10-15T00:00:00Z');
     assert.equal(item.date_published.slice(0, 10), articles.find(a => item.url.endsWith(`/news/${a.slug}/`)).published);
     assert.doesNotMatch(item.content_text, /On this page|Arrange your on-site assessment\./);
   }

@@ -44,7 +44,7 @@ test('audit records the UTC run date and accepts a deterministic injected clock'
   assert.ok([before,after].includes(actual),'default date follows the current run');
   const result=auditSite('dist',undefined,{now:new Date('2027-01-02T01:00:00+11:00')});
   assert.equal(result.analyzedAt,'2027-01-01');
-  assert.deepEqual(result.pages.find(page=>page.articleDates).articleDates,{published:'2026-09-28',modified:'2026-10-14'},'run date does not rewrite article history');
+  assert.deepEqual(result.pages.find(page=>page.articleDates).articleDates,{published:'2026-09-28',modified:'2026-10-15'},'run date does not rewrite article history');
 });
 test('rendered article date labels follow alternate article fields across timezone boundaries',()=>{
   const fixtureParent=fileURLToPath(new URL('../../reports/_test-temp/',import.meta.url));

@@ -5,7 +5,7 @@ const path = require('node:path');
 const root = path.join(__dirname, '..');
 function pages(dir) { return fs.readdirSync(dir,{withFileTypes:true}).flatMap(e => e.isDirectory()?pages(path.join(dir,e.name)):e.name.endsWith('.html')?[path.join(dir,e.name)]:[]); }
 test('rendered repair pages provide a site-assessment route without deflection or internal editorial talk', () => {
-  const files=pages(path.join(root,'dist')).filter(f=>!f.includes(path.sep+'privacy'+path.sep)&&!f.includes(path.sep+'404'+path.sep));
+  const files=pages(path.join(root,'dist')).filter(f=>!f.includes(path.sep+'privacy'+path.sep)&&!f.includes(path.sep+'404'+path.sep)&&path.basename(f)!=='404.html');
   for (const f of files) {
     const html=fs.readFileSync(f,'utf8');
     const text=html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<[^>]+>/g,' ');

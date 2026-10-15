@@ -29,17 +29,6 @@ export const guideAnswers = {
   'CBR-C-387':'The proposed work, supporting structure and site conditions determine the relevant ACT checks. Our assessment and work plan identify those requirements before structural timber is disturbed; unsafe affected areas should not be used while awaiting assessment.'
 };
 
-export const districtCopy = {
-  "Belconnen": "Belconnen, Kaleen, Florey and Aranda are suburb examples in this district. Include your actual suburb and identify the door, window, deck or other timber item. For several repairs, list each location and any restrictions on access so the visit can be planned around the full request.",
-  "Gungahlin": "Use Gungahlin, Amaroo, Casey or Ngunnawal to help locate the property, then describe the task itself. For a gate or fence enquiry, note which boundary is accessible and whether the gate affects entry. Confirm the property contact and access before a visit is arranged.",
-  "Inner North & City": "For City, Braddon, Ainslie and Dickson enquiries, include parking and building-entry arrangements where relevant. If matching existing trim or an opening profile matters, mention the retained material and rooms involved. The suburb identifies the location; the assessment establishes the repair condition.",
-  "Inner South": "Kingston, Griffith, Red Hill and Narrabundah are examples for Inner South enquiries. State the timber component, whether the work is indoors or outside and any access restrictions. If the property has documents affecting proposed alterations, mention them when discussing the project scope.",
-  "Woden Valley": "For Woden, Curtin, Chifley or Phillip, describe the affected fitting or the installation you want. A cupboard hinge repair and new shelving involve different measurements and fixing checks. Include the room and any authorised occupant contact needed for access.",
-  "Weston Creek": "Weston, Duffy, Fisher and Holder are examples in Weston Creek. For outdoor timber work, note whether the affected area can be viewed safely from ground level and whether access crosses another property. Do not enter an unsafe space to obtain photos.",
-  "Tuggeranong": "Include your actual suburb, such as Kambah, Wanniassa or Gowrie, and the affected item. If a stair, handrail or deck is loose, avoid the unsafe area while assessment is arranged. Describe where movement was noticed without testing the component again.",
-  "Molonglo Valley": "Denman Prospect, Whitlam and Wright are suburb examples for Molonglo Valley. Distinguish a repair to an existing component from a new installation or extension. Mention available plans, intended use and access; material and project checks follow the actual proposal.",
-  "East Canberra": "For Fyshwick or Pialligo, identify the property contact, requested timber work and access arrangements. Include any relevant restrictions on entry or working areas. Confirm the proposed task and visit details with the team rather than assuming the suburb alone establishes the scope."
-};
 
 const esc = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const pageTitles = {
@@ -96,7 +85,7 @@ export function enhanceSearchContent(route, html, { services, articles, areas })
     output = output.replace(/<h1>[\s\S]*?<\/h1>/,'<h1>Carpentry Across the ACT Districts</h1>');
     for (const [name] of areas) {
       output = output.replace(`<h2>${esc(name)}</h2>`, `<h2>Carpentry Services in ${esc(name)}</h2>`);
-      output = output.replace(`<p>For a timber repair in ${esc(name)}, explore relevant work below and include your suburb in the enquiry. The same scope-first approach applies across Canberra.</p>`, `<p>${esc(districtCopy[name])}</p>`);
+      output = output.replace(`<p>For a timber repair in ${esc(name)}, explore relevant work below and include your suburb in the enquiry. The same scope-first approach applies across Canberra.</p>`, '');
     }
     output = output.replace('<h2>Choose a district</h2>','<h2>Find local carpentry services near you</h2>');
     output = output.replace('<h2>Tell us where the work is.</h2>', '<h2>Book a carpenter in your suburb</h2><p>Searching for carpentry services near me? Contact our team at 121 Marcus Clarke St, Canberra, ACT 2600 with your suburb and repair or installation details. We arrange site visits across the nine service areas listed above.</p>');

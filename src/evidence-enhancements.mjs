@@ -5,15 +5,15 @@ const esc=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').re
 const guideSizes='(max-width:700px) calc(100vw - 32px), (max-width:950px) calc(100vw - 345px), (max-width:1194px) calc(100vw - 434px), 760px';
 const projectContext={
   '/news/timber-vs-composite-decking-canberra/':{
-    heading:'What our Mitchell installation adds to the comparison',
-    answer:'Compare the complete construction scope as well as the boards. At Mitchell in August 2025, our carpentry team carried out site levelling, subframe construction and WPC board installation. That record makes the preparation and support work visible alongside the finished surface; it does not establish which material will perform better at another home.',
+    heading:'Mitchell: subframe construction and composite board fitting',
+    answer:'At Mitchell in August 2025, the Ellis carpentry team carried out site levelling, subframe construction and WPC board installation. The photographs show the frame, board fitting and completed edges. This example helps identify the construction items to compare alongside the chosen board product.',
     detail:'The first supplied photograph shows the frame already in place, followed by board fitting and completed details. Confirm the exact board system, supply responsibilities and site requirements for your own proposal.',
     label:'See the Mitchell composite deck stages and recorded scope',
   },
   '/news/timber-deck-maintenance-canberra/':{
-    heading:'What the Melba repair and care sequence shows',
+    heading:'Melba: board repairs before cleaning and oiling',
     answer:'Resolve board defects before treating the enquiry as surface care alone. At Melba in May 2025, our carpentry team repaired raised and distorted boards, then carried out cleaning and surface preparation before applying Cabot’s oil-based decking oil. The project connects the repair decision with the later coating work.',
-    detail:'The photographs show the weathered surface, cleaning, oil application and finished appearance. They do not establish concealed support condition or a universal coating method. Identify the existing finish and confirm the repair and care scope for your deck before choosing a product.',
+    detail:'The photographs show the weathered surface, cleaning, oil application and finished appearance. For another deck, the existing coating and timber condition determine the preparation and compatible product; the surface photographs cannot show concealed supports.',
     label:'See the Melba deck repairs, cleaning and oiling record',
   },
 };
@@ -38,35 +38,35 @@ const districtCases={
 // keep its scope and factual boundaries rather than repeating them in another block.
 const quoteDecisions={
   '/services/composite-decking/':{
-    heading:'Make the complete construction quote comparable',
-    lead:'Check these inclusions together before comparing a board-only price with a completed deck quote:',
+    heading:'Site measure and composite deck quote',
+    lead:'At the on-site measure, we check the footprint, levels, access and proposed board system. The quote brings these items together:',
     items:[
       'Supply: confirm who orders the selected boards, fixings and edge components, and which product instructions apply.',
       'Construction: identify site preparation, subframe work, board fitting, perimeter finish and any steps or railings.',
-      'Site arrangements: confirm access, removal, disposal and relevant project checks before scheduling. A photograph of another deck does not settle your site scope.',
+      'Site work: include access, removal, disposal and the relevant structural and ACT approval responsibilities.',
     ],
   },
   '/services/deck-cleaning-and-oiling/':{
-    heading:'Agree the area and preparation in the quote',
-    lead:'Separate the repair and surface-care allowances so the quote describes the work your deck needs:',
+    heading:'Deck assessment and surface-care quote',
+    lead:'The on-site assessment checks the existing surface and any reported defects. The quote separates timber repair from cleaning and oiling:',
     items:[
       'Board repairs: identify the defects to address before cleaning or oiling; surface work does not repair deteriorated supports.',
       'Surface care: confirm the treated area, preparation, selected product and who supplies it. Keep the product’s care information with the agreed scope.',
-      'Access and use: agree protection of nearby surfaces, furniture handling and debris removal. Confirm when the area can be used under the selected product instructions; no universal coating life or annual cycle is promised.',
+      'Access and use: agree protection of nearby surfaces, furniture handling and debris removal. Use the selected product’s weather and drying instructions to agree when the area can be used.',
     ],
   },
   '/services/built-in-wardrobes/':{
-    heading:'Separate product supply from carpentry installation',
-    lead:'The Pearce case uses IKEA products assembled and installed by Ellis. Confirm these responsibilities before buying components:',
+    heading:'Wardrobe measure, product supply and fitting quote',
+    lead:'An on-site measure establishes the fitted layout. The Pearce project uses IKEA products assembled and installed by Ellis; the quote needs to identify:',
     items:[
       'Product supply: record the selected units and hardware, who orders them and who supplies them after the measured fit is agreed.',
       'Installation: identify assembly, fitting and the specified edge and finishing details in the carpentry quote.',
-      'Manufacture: the Pearce installation is not evidence of Ellis manufacturing IKEA cabinets or operating an in-house cabinet factory. Any different manufacture arrangement needs its own confirmed proposal.',
+      'Manufacture: IKEA supplies the wardrobe products shown at Pearce. Any separately manufactured components for a different layout need an identified supplier and specification.',
     ],
   },
   '/services/under-stair-storage/':{
-    heading:'Compare a complete storage installation scope',
-    lead:'Review the proposed layout as an accessible storage space before purchasing cabinetry:',
+    heading:'Under-stair measure and installation quote',
+    lead:'The on-site measure checks the slope, fixing surfaces and door clearances. Agree these details before purchasing cabinetry:',
     items:[
       'Layout and access: confirm the measured slope, cupboard or drawer opening, door travel and the access that must remain available beside and below the stair.',
       'Components: agree materials, hardware, product suitability and who supplies the cabinetry; confirm any fabrication requirements before ordering.',
@@ -89,6 +89,7 @@ export function enhanceEvidence(route,html){
       output=output.replace(pattern,(_,block,end)=>block.includes(`href="${href}"`)?block+end:block.replace('<div class="district-context">',`<div class="district-context"><p class="district-project"><a href="${href}">${esc(label)}</a>. ${esc(copy)}</p>`)+end);
     }
   }
+  if(route==='/service-areas/')output=output.replaceAll('<div class="district-context"></div>','');
   const decision=quoteDecisions[route];
   if(decision){
     const existing=new RegExp(`<section><h2>${esc(decision.heading)}</h2><p>[\\s\\S]*?</p></section>`);

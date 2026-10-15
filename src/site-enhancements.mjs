@@ -4,7 +4,7 @@ import { enhanceSearchContent } from './search-content.mjs';
 import { serviceCaseMedia } from './service-case-media.mjs';
 import { footerSocial } from './footer-social.mjs';
 import { serviceDeepContent } from './service-deep-content.mjs';
-import { enhanceContentGaps } from './content-gap-enhancements.mjs';
+import { enhanceContentGaps, serviceContentExtras } from './content-gap-enhancements.mjs';
 import { enhanceVerifiedProjects } from './verified-projects.mjs';
 import { enhanceEvidence } from './evidence-enhancements.mjs';
 
@@ -60,6 +60,7 @@ export function enhanceSite(route, html) {
   if (service) {
     // Keep every distinct source paragraph once, grouped into readable narratives.
     const content = serviceDeepContent[service.slug];
+    const extras = serviceContentExtras(route);
     const seen = new Set();
     const paragraphs = values => values.filter(value=>{
       const key=value.trim().replace(/\s+/g,' ');
@@ -70,18 +71,20 @@ export function enhanceSite(route, html) {
     const scope = paragraphs([content.scope,content.observations]);
     const plan = paragraphs([content.assessment,content.boundary]);
     const local = paragraphs([content.canberraContext,content.enquiry]);
-    const main = `<div class="detail-main service-narrative"><div class="service-reading-block"><p class="eyebrow">SERVICE SCOPE</p><h2>${escape(content.headings[0])}</h2>${scope}<ul class="sign-list">${service.symptoms.map(value=>`<li>${escape(value)}</li>`).join('')}</ul></div><div class="service-reading-block"><h2>${escape(content.headings[1])}</h2>${plan}</div></div>`;
+    const main = `<div class="detail-main service-narrative"><div class="service-reading-block"><p class="eyebrow">REPAIR AND INSTALLATION DETAILS</p><h2>${escape(content.headings[0])}</h2>${scope}<ul class="sign-list">${service.symptoms.map(value=>`<li>${escape(value)}</li>`).join('')}</ul></div><div class="service-reading-block"><h2>${escape(content.headings[1])}</h2>${plan}</div></div>`;
     output = output.replace(/<div class="detail-main">[\s\S]*?<\/div><aside class="detail-aside">/,`${main}<aside class="detail-aside">`);
     // Consolidation still chooses the visible questions; service edits can refine
     // the resulting merged answer without changing the shared FAQ hub.
     const questions = faqs.filter(item=>item.owner===service.slug).map(item=>({...item,a:content.faqAnswers?.[item.q] || item.a}));
+    for (const [q,a] of extras.questions || []) if (!questions.some(item=>item.q===q)) questions.push({q,a});
     output = output.replace(/<div class="detail-block"><p class="eyebrow">COMMON QUESTIONS<\/p>[\s\S]*?<\/div>/,'');
     const installing = ['deck-building','custom-joinery','interior-carpentry','skirting-and-architraves'].includes(service.slug);
     const faqSection = `<section class="service-questions shell" id="service-questions"><p class="eyebrow">YOUR QUESTIONS ANSWERED</p><h2>${installing?'Installation':'Repair'} and quote questions</h2>${questions.map(questionMarkup).join('')}</section>`;
     const caseSection = output.match(/<section class="service-case-study shell"[\s\S]*?<\/section>/)?.[0] || '';
     const deepSection = output.match(/<section class="service-deep-content shell">[\s\S]*?<\/section>/)?.[0] || '';
     const relatedLinks = deepSection.match(/<div class="related-work-links">[\s\S]*?<\/div>/)?.[0] || '';
-    const guides = content.guides.map(([slug,label])=>`<a class="text-link" href="/news/${slug}/">${escape(label)} ↗</a>`).join(' · ');
+    const reading = [...content.guides.map(([slug,label])=>[`/news/${slug}/`,label]),...(extras.links || [])];
+    const guides = [...new Map(reading.map(item=>[item[0],item])).values()].map(([url,label])=>`<a class="text-link" href="${escape(url)}">${escape(label)} ↗</a>`).join(' · ');
     const sources = (content.sources || []).map(([url,label])=>`<a href="${escape(url)}">${escape(label)}</a>`).join(' · ');
     const consolidated = `<section class="service-local-notes shell"><div class="service-reading-block"><h2>${escape(content.headings[2])}</h2>${local}</div><p>${guides}</p>${sources?`<p>${sources}</p>`:''}<nav aria-label="Related carpentry services">${relatedLinks}</nav></section>`;
     if (caseSection && deepSection) output = output.replace(caseSection+deepSection,consolidated+caseSection+faqSection);

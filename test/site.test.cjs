@@ -79,7 +79,7 @@ assert.match(areaPage,/<h1>Carpentry Across the ACT Districts<\/h1>/,'service-ar
 assert.match(contactPage,/<h1>Request a Carpentry Quote<\/h1>/,'contact H1 states the quote intent directly');
 assert.match(newsIndex,/<h1>Carpentry Advice & Repair Guides<\/h1>/,'news H1 states the advice and repair-guide theme directly');
 assert.match(rottenTimberPage,/<h2>[^<]*sound timber[^<]*<\/h2>/i,'rot repair explains the retained-timber decision');
-assert.match(rottenTimberPage,/on-site assessment[\s\S]*identify the cause[\s\S]*repair plan and quote/i,'rotten timber repairs explain the assessment, cause and quoted repair path');
+for (const concept of [/on-site assessment/i,/moisture source/i,/quote/i]) assert.match(rottenTimberPage,concept,'rot repair retains assessment, cause and quoted work');
 assert.doesNotMatch(serviceAndAdviceCopy,/Where this repair may stop|(?:contact|consult|speak with|seek) (?:an? |the )?(?:external specialist|another trade|locksmith|another company)/i,'repair pages do not send visitors to another company; qualified project checks remain accurate');
 assert.doesNotMatch(customerFacingCopy,/may need a separate trade|needs a separate assessment|not an automatic quote|does not confirm a booking/i,'customer-facing repair copy avoids hand-off and booking-deflection language without banning material-matching facts');
 assert.match(home,/class="google-map"/);assert.match(home,/www\.google\.com\/maps\?q=/);assert.match(home,/maps\.app\.goo\.gl\/cvWgzfMPhPrDPZnE7/);
@@ -95,7 +95,8 @@ for(const [name,html] of [['about',about],['contact',contactPage],['areas',areaP
 assert.match(contactPage,/121 Marcus Clarke St, Canberra, ACT 2600/,'contact page displays the office address');
 assert.doesNotMatch(contactPage,/View on Google Maps/,'contact page does not use a Google Maps location link');
 assert.match(about,/121 Marcus Clarke St, Canberra, ACT 2600/,'footer address is present on supporting pages');
-assert.match(about,/Canberra office and carpentry team/,'about page establishes the local Canberra operation');
+assert.match(about,/Canberra carpentry team/,'about identifies the local carpentry team');
+assert.match(about,/Canberra office and team/,'about retains the office contact identity');
 assert.doesNotMatch(about,/VIC 3030|construction occupation licence/i,'about page does not undermine Canberra location or service trust');
 assert.match(about,/class="business-registration-section"/,'about page publishes the business and registration section');
 assert.match(about,/Ellis Services Group company details\./,'about page gives the registration panel a direct company-details heading');
@@ -200,7 +201,7 @@ import('../src/content.mjs').then(async ({services})=>{
     const relatedGroup=section.match(/<div class="related-work-links">([\s\S]*?)<\/div>/)?.[1]||'';
     const relatedServiceLinks=[...relatedGroup.matchAll(/<a\b[^>]*href="([^"]+)"/g)];
     assert.ok(relatedServiceLinks.length>=2&&relatedServiceLinks.length<=4,`${service.slug}: two to four related service links`);
-    assert.ok(deepLinks.length>=2&&deepLinks.length<=7,`${service.slug}: bounded service, guide and area links`);
+    assert.ok(deepLinks.length>=2&&deepLinks.length<=11,`${service.slug}: bounded related services, guides and integrated project references`);
     for(const href of deepLinks){
       if(href.startsWith('https://')) {
         assert.ok(['www.planning.act.gov.au','www.accesscanberra.act.gov.au'].includes(new URL(href).hostname),`${service.slug}: relevant official source`);
@@ -215,9 +216,9 @@ import('../src/content.mjs').then(async ({services})=>{
   const structural=fs.readFileSync(path.join(dist,'services','structural-timber-repairs','index.html'),'utf8');
   const deckBuilding=fs.readFileSync(path.join(dist,'services','deck-building','index.html'),'utf8');
   assert.doesNotMatch(structural,/does not define a repair design|does not claim a specific act construction licence|an ABN or general carpentry description does not establish/i,'structural page avoids discouraging licence disclaimers');
-  assert.match(structural,/on-site assessment[\s\S]*identify the cause[\s\S]*repair plan and quote/i,'structural page explains Ellis Services Group\'s repair process positively');
+  for (const concept of [/on-site assessment/i,/structural inspection/i,/engineering/i,/quote/i]) assert.match(structural,concept,'structural repair defines assessment responsibilities and quotation');
   assert.doesNotMatch(deckBuilding,/does not state that a particular deck is exempt from approval|does not claim those permissions or a specific licence/i,'deck-building page avoids discouraging licence disclaimers');
-  assert.match(deckBuilding,/New decks and extensions are planned around the site, intended use and any required ACT checks\./,'deck-building page states the service clearly');
+  for (const concept of [/new decks and extensions/i,/footings/i,/approval/i]) assert.match(deckBuilding,concept,'deck building retains the project, supports and approval checks');
   const {serviceCaseMedia,homeCaseMedia}=await import('../src/service-case-media.mjs');
   assert.equal(homeCaseMedia.hero.src,'/assets/carpenter-at-work-canberra.webp','homepage hero uses the supplied Canberra work image');
   assert.equal(homeCaseMedia.deck.src,'/assets/completed-timber-deck-canberra.webp','homepage deck feature uses the supplied completed-deck image');

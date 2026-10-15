@@ -22,8 +22,8 @@ test('all seventeen complete guides offer navigable sections with connected para
     assert.ok(body.includes('class="guide-editorial-figure"'),`${a.slug}: evidence retained`);
     assert.ok((body.match(/<details class="faq-item">/g)||[]).length>=2,`${a.slug}: relevant questions`);
     const schema=[...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map(m=>JSON.parse(m[1])).find(s=>s['@type']==='Article');
-    assert.equal(schema.dateModified,'2026-10-14',`${a.slug}: actual revision`);
-    assert.ok(html.includes('Updated <time datetime="2026-10-14">14 October 2026</time>'));
+    assert.equal(schema.dateModified,'2026-10-15',`${a.slug}: actual revision`);
+    assert.ok(html.includes('Updated <time datetime="2026-10-15">15 October 2026</time>'));
     assert.equal(schema.datePublished,a.published,`${a.slug}: original publication`);
   }
 });

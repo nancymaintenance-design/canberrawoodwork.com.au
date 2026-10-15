@@ -88,9 +88,9 @@ test('substantially enhanced guides show the actual revision date without changi
   for(const slug of ['timber-vs-composite-decking-canberra','timber-deck-maintenance-canberra']){
     const html=read(`/news/${slug}/`),article=schemas(html).find(s=>s['@type']==='Article');
     assert.equal(article.datePublished,'2026-10-12');
-    assert.equal(article.dateModified,'2026-10-14');
+    assert.equal(article.dateModified,'2026-10-15');
     assert.match(html,/Published <time datetime="2026-10-12">12 October 2026<\/time>/);
-    assert.match(html,/Updated <time datetime="2026-10-14">14 October 2026<\/time>/);
+    assert.match(html,/Updated <time datetime="2026-10-15">15 October 2026<\/time>/);
   }
 });
 
