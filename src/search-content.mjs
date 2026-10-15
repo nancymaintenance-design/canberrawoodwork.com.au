@@ -102,15 +102,5 @@ export function enhanceSearchContent(route, html, { services, articles, areas })
     output = output.replace('<h2>Tell us where the work is.</h2>', '<h2>Book a carpenter in your suburb</h2><p>Searching for carpentry services near me? Contact our team at 121 Marcus Clarke St, Canberra, ACT 2600 with your suburb and repair or installation details. We arrange site visits across the nine service areas listed above.</p>');
     output = output.replace(/<meta name="description" content="[^"]*">/,'<meta name="description" content="Carpentry across the ACT districts, including Belconnen, Gungahlin, Woden Valley and Tuggeranong. Contact Ellis for timber repairs and installation.">');
   }
-  if (route === '/news/') {
-    const groups = [
-      ['Quotes and Carpentry Planning','small-carpentry-jobs','custom-joinery'],
-      ['Timber Repair Advice','door-and-frame-repairs','timber-window-repairs','rotten-timber-repairs','fascia-and-eaves-repairs','timber-weatherboard-repairs'],
-      ['Deck, Fence and Pergola Repair Guides','deck-repairs','deck-building','timber-fence-repairs','timber-gate-repairs','pergola-timber-repairs','timber-stair-and-handrail-repairs'],
-      ['Interior Carpentry and Cabinet Repair Guides','skirting-and-architraves','cabinet-door-and-drawer-repairs','interior-carpentry']
-    ];
-    const hub = `<section class="scenario-hub shell"><p class="eyebrow">CARPENTRY REPAIR GUIDES</p><h2>Carpentry advice by service</h2><p>Explore timber repair methods, replacement options and installation preparation. Each guide explains the affected components and links to the Ellis service for your work.</p><div class="scenario-grid">${groups.map(([heading,...owners])=>`<details open><summary>${heading}</summary><ul>${articles.filter(a=>owners.includes(a.owner)).map(a=>`<li><a href="/news/${a.slug}/">${esc(a.title)} ↗</a></li>`).join('')}</ul></details>`).join('')}</div></section>`;
-    output = output.replace(/<section class="scenario-hub shell">[\s\S]*?<\/section>/,hub);
-  }
   return enrichPriorityService(route, output);
 }

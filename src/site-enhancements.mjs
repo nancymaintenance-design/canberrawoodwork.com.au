@@ -43,7 +43,7 @@ export function enhanceSite(route, html) {
 
   if (route === '/') {
     output = output.replace('Practical timber repairs, outdoor carpentry and interior finishing—with a clear scope from the start.', 'Your local Canberra team for timber repairs, outdoor carpentry and interior finishing. Work planned carefully. Details finished properly.');
-    const team = `<div class="team-signature"><span>Canberra office &amp; carpentry team</span><span>${escape(business.address)}</span><a href="${business.googleReviews}" target="_blank" rel="noopener noreferrer">Read our Google reviews ↗</a></div>`;
+    const team = `<div class="team-signature"><span>Canberra office &amp; carpentry team</span><a href="${business.googleReviews}" target="_blank" rel="noopener noreferrer">Read our Google reviews ↗</a></div>`;
     output = output.replace('<span class="hero-orbit orbit-one"',`${team}<span class="hero-orbit orbit-one"`);
     output = output.replace('Good repairs begin<br>with the right questions.','Timber repairs.<br>Outdoor builds.<br>Interior details.');
     output = output.replace(/<p class="intro-large">[\s\S]*?<\/p>/, '<p class="intro-large">From restoring a timber window to building a deck, Ellis brings a dedicated Canberra carpentry team to your home. We assess the work, select the materials and finish the details that make the result work for you.</p>');

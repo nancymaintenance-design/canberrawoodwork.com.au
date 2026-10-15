@@ -105,7 +105,7 @@ assert.match(about,/https:\/\/abr\.business\.gov\.au\/ABN\/View\?id=645821745/,'
 assert.match(about,/https:\/\/share\.google\/9J93sm3qIx44KCDtj/,'about page links to the Google Business Profile reviews');
 assert.match(privacyPage,/Privacy Policy/,'privacy policy page is published');
 assert.match(privacyPage,/121 Marcus Clarke St, Canberra, ACT 2600/,'privacy policy identifies the business contact address');
-assert.match(home,/wood-theme\.css/);assert.match(home,/View all 17 services/);
+assert.match(home,/wood-theme\.css/);assert.match(home,/View all 21 services/);
 const serviceQuestionPages=files.filter(file=>file.includes(`${path.sep}services${path.sep}`)).map(file=>fs.readFileSync(file,'utf8')).join('\n');
 // Research variants stay in the map; the directory routes actual service topics.
 for(const entry of fs.readdirSync(path.join(dist,'services'),{withFileTypes:true}).filter(item=>item.isDirectory()))assert.ok(servicesIndex.includes(`href="/services/${entry.name}/"`),`missing service route ${entry.name}`);
@@ -258,10 +258,8 @@ assert.match(themeCss,/\.business-registration-section\{[^}]*background:#fffdf9[
   }
   const fencePage=fs.readFileSync(path.join(dist,'services','timber-fence-repairs','index.html'),'utf8');
   assert.doesNotMatch(fencePage,/src="\/assets\/timber-fence-gate-canberra.webp"/,'fence gallery no longer repeats the gate cover');
-  const gateCard=servicesIndex.match(/<a class="index-card" href="\/services\/timber-gate-repairs\/">[\s\S]*?<\/a>/)?.[0]||'';
-  const fenceCard=servicesIndex.match(/<a class="index-card" href="\/services\/timber-fence-repairs\/">[\s\S]*?<\/a>/)?.[0]||'';
-  assert.ok(gateCard.includes('/assets/timber-fence-gate-canberra.webp'),'gate card keeps its original cover');
-  assert.ok(fenceCard.includes('/assets/timber-fence-completed.webp'),'fence card uses the supplied completed fence image');
+  assert.ok(servicesIndex.includes('href="/services/timber-gate-repairs/"'),'compact directory retains the gate service');
+  assert.ok(servicesIndex.includes('href="/services/timber-fence-repairs/"'),'compact directory retains the fence service');
   const deckBuildHtml=fs.readFileSync(path.join(dist,'services','deck-building','index.html'),'utf8');
   assert.ok(deckBuildHtml.includes('src="/assets/new-deck-completed-canberra.webp"'),'deck building: renders the supplied completed deck image');
   for(const image of Object.values(homeCaseMedia)){

@@ -86,7 +86,7 @@ export function enhanceEvidence(route,html){
   if(route==='/service-areas/'){
     for(const [district,[href,label,copy]] of Object.entries(districtCases)){
       const pattern=new RegExp(`(<section class="district" id="${district}">[\\s\\S]*?)(</section>)`);
-      output=output.replace(pattern,(_,block,end)=>block.includes(`href="${href}"`)?block+end:block.replace('<div class="district-services">',`<p class="district-project"><a href="${href}">${esc(label)}</a>. ${esc(copy)}</p><div class="district-services">`)+end);
+      output=output.replace(pattern,(_,block,end)=>block.includes(`href="${href}"`)?block+end:block.replace('<div class="district-context">',`<div class="district-context"><p class="district-project"><a href="${href}">${esc(label)}</a>. ${esc(copy)}</p>`)+end);
     }
   }
   const decision=quoteDecisions[route];

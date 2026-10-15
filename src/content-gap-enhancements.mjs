@@ -64,8 +64,8 @@ const sections={
     links:[[quote,'Understand labour, materials and quote inclusions'],['/contact/','Ask about the arrangements for your job']]
   },
   '/services/':{
-    heading:'Plan the decision before requesting the work',
-    paragraphs:['Use the service list for the component or installation you need. If you are still comparing the scope, the guides below explain quote inclusions, deck materials and the difference between surface care and timber repair. The assessment confirms which work applies to your property.'],
+    heading:'Compare repair and installation options',
+    paragraphs:['A mixed repair list can be assessed through small carpentry jobs; new fitted storage starts with a measured layout. For decks, distinguish repairs to existing boards and supports from a new build or extension. These guides explain quote inclusions, material choices and the difference between surface care and timber repair.'],
     links:[[quote,'What affects a carpentry quote'],[materials,'Compare timber and composite decking'],[care,'Deck maintenance or repair: decide what to ask']]
   }
 };
@@ -77,8 +77,12 @@ function block(item){
 
 export function enhanceContentGaps(route,html){
   let result=html;
-  if(sections[route]){
-    const marker=route==='/contact/'?'<section class="contact-layout shell">':route.startsWith('/services/')&&route!=='/services/'?'<section class="service-local-notes shell">':'<section class="cta-panel">';
+  if(route==='/contact/'){
+    const item=sections[route];
+    const preparation=`<details class="contact-preparation"><summary>What to include and confirm</summary>${item.paragraphs.map(p=>`<p>${esc(p)}</p>`).join('')}<p>${item.links.map(([url,label])=>a(url,label)).join(' · ')}</p></details>`;
+    result=result.replace('</p></div><form class="enquiry-form"',`</p>${preparation}</div><form class="enquiry-form"`);
+  }else if(sections[route]){
+    const marker=route.startsWith('/services/')&&route!=='/services/'?'<section class="service-local-notes shell">':'<section class="cta-panel">';
     result=result.replace(marker,block(sections[route])+marker);
   }
   const legacyLinks={
