@@ -46,7 +46,7 @@ test('all seventeen services connect component decisions, quote scope and a rele
     assert.match(narrative, /quote/i, `${slug}: scoped quote`);
     assert.ok(html.includes(`href="/news/${guide}/"`), `${slug}: relevant guide`);
     assert.ok(existsSync(`dist/news/${guide}/index.html`));
-    for (const link of ['/contact/', 'tel:+61405878406', 'mailto:brian@elliservices.com.au']) {
+    for (const link of ['/contact/', 'tel:+611300838722', 'mailto:brian@elliservices.com.au']) {
       assert.ok(html.includes(`href="${link}"`), `${slug}: ${link}`);
     }
     assert.match(html, /id="service-questions"/);
