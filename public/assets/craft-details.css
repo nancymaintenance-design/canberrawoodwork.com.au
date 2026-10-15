@@ -169,7 +169,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .advice-featured{gap:16px}.advice-featured>a{padding:12px;gap:12px}.advice-featured h2{font-size:19px}
   .process-section,.area-preview,.area-form,.home-map{padding-block:32px}
   .contact-layout{gap:24px}.contact-info{padding-bottom:0}.contact-layout>.enquiry-form{grid-row:1}
-  .enquiry-form{padding:22px 18px}.enquiry-form label,.enquiry-form input,.enquiry-form select,.enquiry-form textarea{font-size:16px}
+  .enquiry-form{padding:22px 18px}.enquiry-form label,.enquiry-form input,.enquiry-form select,.enquiry-form textarea,.enquiry-form .consent-field>span,.enquiry-form .consent-field a{font-size:16px}
   .enquiry-form select{max-width:100%;min-width:0}.enquiry-form label{min-width:0}
   .district{padding-block:20px;gap:12px}.district h2{font-size:25px}.district p{margin-bottom:12px}
   .work-carousel-controls{gap:8px}.work-carousel-dots{order:3;width:100%}

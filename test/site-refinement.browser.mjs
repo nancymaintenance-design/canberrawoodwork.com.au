@@ -44,7 +44,10 @@ try{
         await page.evaluate(()=>scrollTo({top:0,behavior:'instant'}));
         await page.screenshot({path:resolve(evidence,`task1-${route==='/'?'home':route.split('/')[1]}-${width}-viewport.png`)});
       }
-      if(route==='/contact/'&&width<600)assert.ok(await page.locator('.enquiry-form input:not([type="checkbox"]),.enquiry-form select,.enquiry-form textarea,.enquiry-form label').evaluateAll(nodes=>nodes.every(el=>parseFloat(getComputedStyle(el).fontSize)>=16)));
+      if(['/contact/','/service-areas/'].includes(route)&&width<600){
+        const typography=await page.locator('.enquiry-form input:not([type="checkbox"]),.enquiry-form select,.enquiry-form textarea,.enquiry-form label,.enquiry-form .consent-field>span,.enquiry-form .consent-field a').evaluateAll(nodes=>nodes.map(el=>({tag:el.tagName,className:el.className,fontSize:parseFloat(getComputedStyle(el).fontSize)})));
+        assert.deepEqual(typography.filter(node=>node.fontSize<16),[],'visible controls, labels, consent sentence and privacy link are at least 16px');
+      }
     });
     if(width<600)await check(`menu closes with retained focus, Escape and reopen at ${width}px`,async()=>{
       await page.goto(base+'/',{waitUntil:'domcontentloaded'});const button=page.locator('.menu-toggle'),nav=page.locator('#main-nav');
