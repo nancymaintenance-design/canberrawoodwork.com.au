@@ -417,7 +417,7 @@ Object.assign(expandedGuideBodies,{
   'timber-door-sticks-after-rain':[
     section('wet-weather-movement','Why a door changes after wet weather',[
       "Rain can change the moisture in a timber door or frame and reduce the gaps that let it close. The position of the scrape matters: a swollen edge, loose hinge or thick paint can look similar, while new flooring can reduce only the bottom clearance. Record when the fault appears and whether it eases in dry weather before deciding that the door needs trimming.",
-      'A swollen edge, loose hinge and thick paint can produce similar rubbing. Recent flooring can also reduce the bottom gap without changing the sides. Write down when the fault occurs, whether it improves later and what work happened before it started. Hume provides separate care and finishing support for its doors; identify your own manufacturer and construction before agreeing an adjustment.'
+      'Adjustment and finishing requirements depend on the door’s manufacturer and construction. Hume provides care and finishing support for its doors; use the guidance for your own product to establish whether an adjustment is permitted and how any exposed edges must be finished. Identify the door before agreeing the work, rather than applying one trimming allowance to every leaf.'
     ],['doors']),
     section('read-the-opening','Check hinges, frame and door clearance',[
       'The jamb is the side of the frame where the hinge or closing edge sits. The architrave is the trim covering the junction between frame and wall. A split in the jamb around a hinge affects the fixing point; a mark on the architrave may only affect the finish. Tell the assessor which part is damaged, or send a whole-opening photo if the names are unfamiliar.',

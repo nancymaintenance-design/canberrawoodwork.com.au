@@ -139,7 +139,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .contact-preparation p{font-size:16px;line-height:1.65}
 .area-index{padding-bottom:32px}
 .area-jump{margin-bottom:24px}
-.district{padding-block:24px;gap:32px}
+.district-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 32px}
+.district{grid-template-columns:minmax(0,1fr);align-content:start;min-width:0;padding-block:24px;gap:12px}
 .district h2{font-size:28px}
 .district-number{display:none}
 .district-services{gap:8px 18px}
@@ -171,6 +172,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   .contact-layout{gap:24px}.contact-info{padding-bottom:0}.contact-layout>.enquiry-form{grid-row:1}
   .enquiry-form{padding:22px 18px}.enquiry-form label,.enquiry-form input,.enquiry-form select,.enquiry-form textarea,.enquiry-form .consent-field>span,.enquiry-form .consent-field a{font-size:16px}
   .enquiry-form select{max-width:100%;min-width:0}.enquiry-form label{min-width:0}
+  .district-directory{grid-template-columns:minmax(0,1fr)}
   .district{padding-block:20px;gap:12px}.district h2{font-size:25px}.district p{margin-bottom:12px}
   .work-carousel-controls{gap:8px}.work-carousel-dots{order:3;width:100%}
   .work-carousel-caption{padding:22px 24px}.work-carousel-status{padding-top:8px}
