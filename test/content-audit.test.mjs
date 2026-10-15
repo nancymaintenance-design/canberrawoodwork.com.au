@@ -28,8 +28,8 @@ test('audit retains FAQ answers when disclosure attributes and class order vary'
 });
 test('audit sees all hub disclosures and their answer text',()=>{
   const result=auditHtml('/faq/',pages.get('/faq/'));
-  assert.equal(result.faqCount,104);
-  assert.equal(result.faqs.length,104);
+  assert.equal(result.faqCount,107);
+  assert.equal(result.faqs.length,107);
   assert.ok(result.faqs.every(faq=>faq.question&&faq.answer));
 });
 test('audit module can be imported from node eval without a script argument',()=>{
