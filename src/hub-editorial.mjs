@@ -50,7 +50,7 @@ export function enhanceHubEditorial(route,html){
     output=output.replace(/<h1>[\s\S]*?<\/h1>/,'<h1>Privacy Policy</h1>');
     output=output.replace('When you send an enquiry, we may collect your name, email address, phone number, property address, Canberra area, service request and the details you provide about the work.','The enquiry form asks for your name, email address and description of the work, together with your consent to be contacted about the request. You may also provide a phone number, property address, Canberra area and service of interest. We receive the details you choose to include in your message.');
     output=output.replace('The enquiry form collects text details. Photos are optional and can be emailed separately to our team; we use supplied photos and other material to assess and scope the requested work.','The form collects text details. Photos are optional and can be emailed separately; we use supplied photos and other material to discuss, assess and scope the requested work. Include only material relevant to your enquiry and avoid unnecessary personal information in photographs.');
-    output=output.replace('call 0405 878 406','call <a href="tel:+611300838722">0405 878 406</a>');
+    output=output.replace('call 0405 878 406','call <a href="tel:+61405878406">0405 878 406</a>');
   }
   // Keep page-schema descriptions aligned with the final rendered metadata.
   return output.replace(/<script type="application\/ld\+json">(.*?)<\/script>/gs,(match,json)=>{
