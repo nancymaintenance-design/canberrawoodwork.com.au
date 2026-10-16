@@ -14,6 +14,7 @@ import { enhanceImageDelivery } from './src/image-delivery.mjs';
 import { normalizeSeoMetadata } from './src/seo-metadata.mjs';
 import { renderGuideSections } from './src/expanded-guides.mjs';
 import { buildKnowledgeFeeds } from './src/knowledge-feed.mjs';
+import { bilingualPages,localePath,translationSources } from './src/localization.mjs';
 const keywordMap=JSON.parse(readFileSync(new URL('./src/keyword-map.json',import.meta.url),'utf8'));
 
 const out = join(process.cwd(), 'dist');
@@ -158,11 +159,20 @@ for(const item of projectPages){
   write(item.route,page(item.route,item.title,item.meta,item.body,{schema,active:item.type==='Service'?'/services/':'/projects/'}));
 }
 // Feed extraction runs only after every page has its final prose, evidence and metadata.
-const knowledge = buildKnowledgeFeeds(finalPages, {name:business.name});
+if(process.argv.includes('--translations-inventory')){process.stdout.write(JSON.stringify(translationSources(finalPages)));process.exit(0);}
+const translations=JSON.parse(readFileSync(new URL('./src/locales/zh-Hans.json',import.meta.url),'utf8'));
+const bilingual=bilingualPages(finalPages,translations,{origin});
+const knowledge = buildKnowledgeFeeds(bilingual, {name:business.name});
+const chineseKnowledge=buildKnowledgeFeeds(knowledge.pages,{name:business.name,prefix:'/zh',language:'zh-Hans'});
 mkdirSync(join(out,'feeds'),{recursive:true});
 writeFileSync(join(out,'feeds','llm-knowledge.json'),JSON.stringify(knowledge.feed,null,2)+'\n');
-for(const item of knowledge.feed.items){const route=new URL(item.url).pathname;writeFileSync(join(out,route.slice(1),'index.html'),knowledge.pages.get(route));}
-const routes=['/','/services/',...services.map(serviceUrl),'/about/','/faq/','/news/',...articles.map(a=>`/news/${a.slug}/`),'/service-areas/','/contact/','/privacy/',...projectPages.map(p=>p.route)];
+mkdirSync(join(out,'zh','feeds'),{recursive:true});
+writeFileSync(join(out,'zh','feeds','llm-knowledge.json'),JSON.stringify(chineseKnowledge.feed,null,2)+'\n');
+for(const [route,html]of chineseKnowledge.pages){const file=join(out,route.slice(1),'index.html');mkdirSync(dirname(file),{recursive:true});writeFileSync(file,html);}
+writeFileSync(join(out,'404.html'),chineseKnowledge.pages.get('/404/'));
+writeFileSync(join(out,'zh','404.html'),chineseKnowledge.pages.get('/zh/404/'));
+const englishRoutes=['/','/services/',...services.map(serviceUrl),'/about/','/faq/','/news/',...articles.map(a=>`/news/${a.slug}/`),'/service-areas/','/contact/','/privacy/',...projectPages.map(p=>p.route)];
+const routes=[...englishRoutes,...englishRoutes.map(localePath)];
 writeFileSync(join(out,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${routes.map(r=>`<url><loc>${origin+r}</loc></url>`).join('')}</urlset>`);
 writeFileSync(join(out,'robots.txt'),`User-agent: *\n${origin.startsWith('http://127.0.0.1')?'Disallow: /':'Allow: /'}\nSitemap: ${origin}/sitemap.xml\n`);
 const discoveryPages = [
@@ -178,4 +188,11 @@ const discoveryPages = [
 ];
 const discoveryLink = (label,route,description) => `- [${label}](${PRODUCTION_ORIGIN+route}): ${description}`;
 writeFileSync(join(out,'llms.txt'),`# ${business.name}\n\n> Canberra carpentry and timber repair services.\n\nPhone: ${business.phone}\nEmail: ${business.email}\n\nLast updated: ${new Date().toISOString().slice(0,10)}\n\n## Core pages\n${discoveryPages.map(item=>discoveryLink(...item)).join('\n')}\n\n## Services\n${services.map(s=>discoveryLink(s.title,serviceUrl(s),'Service information and enquiry guidance.')).join('\n')}\n\n## Articles\n${articles.map(a=>discoveryLink(a.title,`/news/${a.slug}/`,'Carpentry advice and related service information.')).join('\n')}\n`);
+const zhDiscovery=englishRoutes.map(route=>{
+  const html=chineseKnowledge.pages.get(localePath(route));
+  const label=(html.match(/<h1[^>]*>(.*?)<\/h1>/s)?.[1]||business.name).replace(/<[^>]*>/g,'');
+  const description=html.match(/<meta name="description" content="([^"]*)"/)?.[1]||'';
+  return `- [${label}](${origin+localePath(route)}): ${description}`;
+});
+writeFileSync(join(out,'zh','llms.txt'),`# ${business.name}\n\n> 木工与木结构维修、服务说明和施工案例。\n\n电话：${business.phone}\n邮箱：${business.email}\n\n## 中文页面\n${zhDiscovery.join('\n')}\n\n## 语言版本\n- [English](${origin}/)\n- [中文服务](${origin}/zh/)\n`);
 console.log(`Built ${routes.length} public routes at ${origin}`);

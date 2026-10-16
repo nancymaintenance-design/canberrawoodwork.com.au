@@ -13,7 +13,7 @@ for(const boundary of ['The appropriate licensed practitioner must assess the wo
   assert.doesNotMatch(boundary,prohibitedClaim,`scope boundary must remain allowed: ${boundary}`);
 }
 const files=[];
-function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,entry.name);if(entry.isDirectory())walk(p);else if(entry.name==='index.html')files.push(p)}}
+function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){if(dir===dist&&entry.name==='zh')continue;const p=path.join(dir,entry.name);if(entry.isDirectory())walk(p);else if(entry.name==='index.html')files.push(p)}}
 walk(dist);
 assert.equal(files.length,52,'51 public routes plus 404');
 const titles=new Set();

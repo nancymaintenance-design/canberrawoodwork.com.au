@@ -10,7 +10,7 @@ if (hub) {
   const filter = hub.querySelector('.faq-filter');
   const input = filter.querySelector('input');
   const status = filter.querySelector('[role="status"]');
-  const normalize = text => text.toLocaleLowerCase('en-AU').replace(/\s+/g,' ').trim();
+  const normalize = text => text.toLocaleLowerCase(document.documentElement.lang).replace(/\s+/g,' ').trim();
   const searchable = new Map(questions.map(item => [item,normalize(`${item.querySelector('summary').textContent} ${item.querySelector('p').textContent}`)]));
   const mobile = window.matchMedia('(max-width:700px)');
   let headerHeight = 0;
@@ -64,9 +64,9 @@ if (hub) {
       const matches = [...group.querySelectorAll('.faq-item')].filter(item => !item.hidden).length;
       group.hidden = matches === 0;
       links[index].querySelector('.faq-topic-count').textContent = matches;
-      group.querySelector('[data-faq-group-count]').textContent = `${matches} ${matches === 1 ? 'QUESTION' : 'QUESTIONS'}`;
+      group.querySelector('[data-faq-group-count]').textContent = window.EllisLocale.t(matches===1?'question':'questions',{count:matches});
     }
-    status.textContent = `${count} of ${questions.length} questions`;
+    status.textContent = window.EllisLocale.t('faqCount',{count,total:questions.length});
     filter.querySelector('.faq-no-results').hidden = count !== 0;
     // Keep navigation state in step with the result count, including no groups.
     if (frame) cancelAnimationFrame(frame);

@@ -18,5 +18,5 @@ test('local search content is rendered with district anchors and matching articl
   assert.match(article, /replacement post|post replacement/i);
   assert.match(read('news'), /Timber Repair Advice/);
   assert.ok(read('').includes('hero-orbit orbit-one'));
-  assert.equal((fs.readFileSync(path.join(root,'dist/sitemap.xml'),'utf8').match(/<loc>/g)||[]).length,51);
+  assert.equal((fs.readFileSync(path.join(root,'dist/sitemap.xml'),'utf8').match(/<loc>/g)||[]).length,102);
 });

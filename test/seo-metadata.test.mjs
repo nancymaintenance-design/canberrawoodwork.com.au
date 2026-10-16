@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
 
 const origin='https://www.canberrawoodwork.com.au';
-const routes=[...readFileSync('dist/sitemap.xml','utf8').matchAll(/<loc>https?:\/\/[^/]+([^<]+)<\/loc>/g)].map(m=>m[1]);
+// Existing English editorial contract; bilingual.test.mjs covers every Chinese equivalent.
+const routes=[...readFileSync('dist/sitemap.xml','utf8').matchAll(/<loc>https?:\/\/[^/]+([^<]+)<\/loc>/g)].map(m=>m[1]).filter(route=>!route.startsWith('/zh/'));
 const read=route=>readFileSync(`dist${route}index.html`,'utf8');
 const decode=value=>value.replace(/&(?:amp|quot|lt|gt|#39);/g,entity=>({'&amp;':'&','&quot;':'"','&lt;':'<','&gt;':'>','&#39;':"'"}[entity]));
 const schemas=html=>[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));

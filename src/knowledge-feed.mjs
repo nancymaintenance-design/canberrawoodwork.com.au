@@ -2,7 +2,7 @@
 const feedPath = '/feeds/llm-knowledge.json';
 const feedTitle = 'Canberra Woodwork knowledge feed';
 const blockPattern = /<script id="llm-knowledge-feed" type="application\/json">[\s\S]*?<\/script>/g;
-const discoveryPattern = /<link rel="alternate" type="application\/feed\+json" title="Canberra Woodwork knowledge feed" href="\/feeds\/llm-knowledge.json">/g;
+const discoveryPattern = /<link rel="alternate" type="application\/feed\+json" title="[^"]*" href="(?:\/zh)?\/feeds\/llm-knowledge.json">/g;
 const namedEntities = {amp:'&',quot:'"',apos:"'",lt:'<',gt:'>',nbsp:'\u00a0',ndash:'–',mdash:'—',lsquo:'‘',rsquo:'’',ldquo:'“',rdquo:'”',hellip:'…',copy:'©',reg:'®',trade:'™',bull:'•',middot:'·',euro:'€',pound:'£',times:'×',deg:'°'};
 const decode = value => value.replace(/&(#x[\da-f]+|#\d+|[a-z][a-z\d]+);/gi, (entity, code) => {
   if (!code.startsWith('#')) return namedEntities[code] ?? entity;
@@ -54,18 +54,20 @@ function text(node) {
 const canonical = document => find(document, node => node.tag === 'link' && node.attrs.rel === 'canonical')?.attrs.href;
 const absolute = (path, url) => new URL(path, url).href;
 
-export function buildKnowledgeFeeds(finalPages, {name}) {
+export function buildKnowledgeFeeds(finalPages, {name,prefix='',language='en-AU'}) {
+  const localizedFeedPath=prefix+feedPath;
+  const localizedFeedTitle=prefix?'Canberra Woodwork 中文知识内容':'Canberra Woodwork knowledge feed';
   const pages = new Map(finalPages);
-  const about = parse(pages.get('/about/') || '');
+  const about = parse(pages.get(prefix+'/about/') || '');
   const aboutUrl = canonical(about);
   if (!aboutUrl) throw new Error('Knowledge feed needs the final public about-page canonical URL');
-  const homeUrl = absolute('/', aboutUrl);
+  const homeUrl = absolute(prefix+'/', aboutUrl);
   const aboutMain = find(about, node => node.tag === 'main');
   const description = text(find(aboutMain, node => node.tag === 'p' && !hasClass(node,'eyebrow')));
   const context = {name, url:homeUrl, about_url:aboutUrl, description};
   const items = [];
   for (const [route, html] of pages) {
-    if (!/^\/news\/[^/]+\/$/.test(route)) continue;
+    if (!route.startsWith(prefix+'/news/')||!/^\/news\/[^/]+\/$/.test(route.slice(prefix.length))) continue;
     const document = parse(html);
     const prose = find(document, node => hasClass(node,'article-prose'));
     const hero = find(document, node => hasClass(node,'article-hero'));
@@ -79,11 +81,12 @@ export function buildKnowledgeFeeds(finalPages, {name}) {
     const article = find(document, node => node.tag === 'article');
     for (const anchor of findAll(article, node => node.tag === 'a' && node.attrs.href)) {
       const target = new URL(anchor.attrs.href, url);
-      const kind = /^\/services\/[^/]+\/$/.test(target.pathname) ? 'services' : /^\/projects\/[^/]+\/$/.test(target.pathname) ? 'projects' : null;
+      const localPath=target.pathname.slice(prefix.length);
+      const kind = target.pathname.startsWith(prefix+'/')&&/^\/services\/[^/]+\/$/.test(localPath) ? 'services' : target.pathname.startsWith(prefix+'/')&&/^\/projects\/[^/]+\/$/.test(localPath) ? 'projects' : null;
       if (!kind || target.origin !== new URL(url).origin || !pages.has(target.pathname) || related[kind].some(link => link.url === target.href)) continue;
       related[kind].push({title:text(anchor),url:target.href});
     }
-    const item = {id:url,url,title:text(find(hero, node => node.tag === 'h1')),summary:text(find(hero, node => node.tag === 'p' && !hasClass(node,'eyebrow'))),content_text:text(prose),language:'en-AU'};
+    const item = {id:url,url,title:text(find(hero, node => node.tag === 'h1')),summary:text(find(hero, node => node.tag === 'p' && !hasClass(node,'eyebrow'))),content_text:text(prose),language};
     if (image) item.image = absolute(image,url);
     if (author) item.authors = [{name:text(author),url:absolute(author.attrs.href,url)}];
     if (dates[0]) item.date_published = `${dates[0]}T00:00:00Z`;
@@ -91,11 +94,11 @@ export function buildKnowledgeFeeds(finalPages, {name}) {
     item._related = related;
     items.push(item);
   }
-  const feed = {version:'https://jsonfeed.org/version/1.1',title:feedTitle,home_page_url:absolute('/news/',aboutUrl),feed_url:absolute(feedPath,aboutUrl),language:'en-AU',_business:context,items};
+  const feed = {version:'https://jsonfeed.org/version/1.1',title:localizedFeedTitle,home_page_url:absolute(prefix+'/news/',aboutUrl),feed_url:absolute(localizedFeedPath,aboutUrl),language,_business:context,items};
   for (const item of items) {
     const route = new URL(item.url).pathname;
     const html = pages.get(route).replace(blockPattern,'').replace(discoveryPattern,'');
-    const discovery = `<link rel="alternate" type="application/feed+json" title="${escapeAttribute(feedTitle)}" href="${escapeAttribute(feedPath)}">`;
+    const discovery = `<link rel="alternate" type="application/feed+json" title="${escapeAttribute(localizedFeedTitle)}" href="${escapeAttribute(localizedFeedPath)}">`;
     const embedded = {...feed,items:[item]};
     pages.set(route,html.replace('</head>',`${discovery}</head>`).replace('</body>',`<script id="llm-knowledge-feed" type="application/json">${serialize(embedded)}</script></body>`));
   }

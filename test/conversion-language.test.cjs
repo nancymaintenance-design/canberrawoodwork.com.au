@@ -9,6 +9,12 @@ test('rendered repair pages provide a site-assessment route without deflection o
   for (const f of files) {
     const html=fs.readFileSync(f,'utf8');
     const text=html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,'').replace(/<[^>]+>/g,' ');
+    if(html.includes('<html lang="zh-Hans"')){
+      assert.match(text,/现场(?:查看|评估|测量)/,path.relative(root,f)+': localized site visit');
+      assert.match(text,/报价/,path.relative(root,f)+': localized quote');
+      assert.match(html,/href="\/zh\/contact\/"/,path.relative(root,f)+': localized contact route');
+      continue;
+    }
     assert.doesNotMatch(text,/That depends on the extent|can only be considered|cannot establish the cause|This page is a starting point|may require a broader assessment|another specialist|search engines|AI systems|JSON-LD|examples of repair questions, not descriptions/i,path.relative(root,f));
     assert.match(text,/on-site (?:assessment|measure)/i,path.relative(root,f)+': site visit');
     if (f.includes('skirting-after-new-flooring')) {
