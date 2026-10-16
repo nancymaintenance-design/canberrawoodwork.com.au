@@ -13,6 +13,7 @@ import { enhanceImageDelivery } from './src/image-delivery.mjs';
 import { normalizeSeoMetadata } from './src/seo-metadata.mjs';
 import { renderGuideSections } from './src/expanded-guides.mjs';
 import { buildKnowledgeFeeds } from './src/knowledge-feed.mjs';
+import { addChineseInterface } from './src/chinese-interface.mjs';
 const keywordMap=JSON.parse(readFileSync(new URL('./src/keyword-map.json',import.meta.url),'utf8'));
 
 const out = join(process.cwd(), 'dist');
@@ -179,3 +180,4 @@ const discoveryPages = [
 const discoveryLink = (label,route,description) => `- [${label}](${PRODUCTION_ORIGIN+route}): ${description}`;
 writeFileSync(join(out,'llms.txt'),`# ${business.name}\n\n> Canberra carpentry and timber repair services.\n\nPhone: ${business.phone}\nEmail: ${business.email}\n\nLast updated: ${new Date().toISOString().slice(0,10)}\n\n## Core pages\n${discoveryPages.map(item=>discoveryLink(...item)).join('\n')}\n\n## Services\n${services.map(s=>discoveryLink(s.title,serviceUrl(s),'Service information and enquiry guidance.')).join('\n')}\n\n## Articles\n${articles.map(a=>discoveryLink(a.title,`/news/${a.slug}/`,'Carpentry advice and related service information.')).join('\n')}\n`);
 console.log(`Built ${routes.length} public routes at ${origin}`);
+if(!process.argv.includes('--english-only')&&process.env.SITE_ENGLISH_ONLY!=='1')addChineseInterface({out,origin,routes});

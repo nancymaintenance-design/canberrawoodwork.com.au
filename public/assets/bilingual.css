@@ -1,0 +1,5 @@
+/* The existing English layout is the baseline. Only the new language link is styled. */
+.main-nav .language-switch{white-space:nowrap}
+html[lang="zh-Hans"] body{font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",system-ui,sans-serif}
+.locale-zh h1,.locale-zh h2,.locale-zh h3{font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;letter-spacing:0}
+.locale-zh p,.locale-zh li,.locale-zh summary,.locale-zh label{overflow-wrap:anywhere}
