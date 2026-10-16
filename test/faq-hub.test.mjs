@@ -5,21 +5,6 @@ import test from 'node:test';
 const html = readFileSync('dist/faq/index.html', 'utf8');
 const map = JSON.parse(readFileSync('src/keyword-map.json', 'utf8'));
 
-test('retained FAQ addresses and all research aliases resolve without duplicate answers',()=>{
-  const baseline=JSON.parse(readFileSync('test/faq-retained-anchors.json','utf8'));
-  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
-  assert.equal(new Set(ids).size,ids.length,'all DOM IDs are unique');
-  for(const id of baseline)assert.ok(ids.includes(id),`retained ${id}`);
-  for(const row of [...map.categories.intent,...map.categories.scenario])assert.ok(ids.includes(`faq-${row.id.toLowerCase()}`),`native alias ${row.id}`);
-  const questions=[...html.matchAll(/<details class="faq-item"[^>]*><summary>(.*?)<\/summary>/g)].map(m=>m[1]);
-  assert.equal(questions.length,107);assert.equal(new Set(questions).size,107);
-  for(const [q,owner] of [['Does Ellis install composite decking?','composite-decking'],['Can Ellis assemble and fit IKEA wardrobes?','built-in-wardrobes'],['Can I book deck cleaning and oiling without replacing the deck?','deck-cleaning-and-oiling']]){
-    const disclosure=[...html.matchAll(/<details class="faq-item"[^>]*>([\s\S]*?)<\/details>/g)].find(m=>m[1].includes(q))?.[1]||'';
-    assert.ok(disclosure.includes(`href="/services/${owner}/#service-questions"`),q);
-  }
-  assert.ok(!html.includes('Related service questions ↗'),'links use the actual service name');
-});
-
 test('merged deck finishing answer explains both sound surfaces and repair-first movement', () => {
   const disclosure=html.match(/<details[^>]*id="faq-cbr-c-179"[^>]*>([\s\S]*?)<\/details>/)?.[1]||'';
   assert.match(disclosure,/<summary>Do I need deck repairs or just sanding and oiling\?<\/summary>/);

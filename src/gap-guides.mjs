@@ -12,7 +12,7 @@ export const gapGuides={
     title:'Carpentry Quotes: What Affects the Cost?',category:'Booking & quotes',owner:'small-carpentry-jobs',
     published:'2026-10-12',updated:'2026-10-12',
     metaDescription:'Compare carpentry quotes by labour, materials, access, finishing and visit charges. Understand hourly-rate questions without assuming a standard price.',
-    lead:'A carpentry quote depends on the work, the condition of the timber and what is included. An hourly rate alone does not describe the cost of a completed repair. Compare materials, removal, access and the finished result on the same basis before accepting a price.',
+    lead:'A carpentry quote depends on the work, the condition of the timber and what is included. An hourly rate alone does not describe the cost of a completed repair. Ellis assesses the requested work and confirms the scope and written quote before you agree to proceed.',
     faqs:[
       {q:'Can I get the final repair price from a photograph?',a:'A safe photo can help explain the request, but it does not establish concealed timber condition, fixing access or the complete repair extent. Ellis confirms the proposed work and quote after assessment.'},
       {q:'Does an enquiry include a free visit?',a:'Do not assume that it does. Ask the team to confirm any assessment, call-out or minimum booking charge before accepting the appointment.'},
@@ -26,7 +26,7 @@ export const gapGuides={
     published:'2026-10-12',updated:'2026-10-13',
     metaDescription:'Compare timber and composite decking for a Canberra project: care, surface heat, product instructions and quote inclusions, without assuming one material suits every site.',
     lead:'Timber and composite decking should be compared as specified products, not just two labels. For your project, consider the proposed finish, care requirements, sun exposure, installation system and complete construction scope. Material choice does not establish whether an existing deck frame can be retained.',
-    comparison:{caption:'Timber and composite product specifications',columns:['Decision','Timber proposal','Composite proposal'],rows:[
+    comparison:{caption:'Compare the proposed product and scope, not a universal winner',columns:['Decision','Timber proposal','Composite proposal'],rows:[
       ['Identity','Record the timber species, dimensions and finish.','Record the manufacturer, range and board system.'],
       ['Care','Check the selected coating and timber-care instructions.','Check product-specific cleaning and care instructions; do not assume no maintenance.'],
       ['Sun exposure','Discuss the exposed location and intended use.','Check the exact range and heat qualifications; composite can still become hot.'],
@@ -34,7 +34,7 @@ export const gapGuides={
       ['Price comparison','Include supply, framing work, finishing and access.','Include the complete specified system and installation arrangements.']
     ]},
     sources:[timberGuide,compositeGuide,heatGuide],
-    faqs:[{q:'Is composite decking maintenance-free?',a:'Do not assume that it is. Use the care instructions for the exact product, and keep cleaning requirements separate from assessment of supports and connections.'},{q:'Can composite boards be fitted to my existing timber frame?',a:'That cannot be decided from the board type alone. The existing frame needs assessment and the proposed system’s support and fixing requirements need confirmation before retention is agreed.'},{q:'Does Ellis offer every decking material described here?',a:'Ellis installs timber and composite decks. Ask about the exact board product you are considering and agree supply, compatible fixings and installation details before ordering.'}],
+    faqs:[{q:'Is composite decking maintenance-free?',a:'Do not assume that it is. Use the care instructions for the exact product, and keep cleaning requirements separate from assessment of supports and connections.'},{q:'Can composite boards be fitted to my existing timber frame?',a:'That cannot be decided from the board type alone. The existing frame needs assessment and the proposed system’s support and fixing requirements need confirmation before retention is agreed.'},{q:'Does Ellis offer every decking material described here?',a:'No such scope should be assumed from this comparison. Tell Ellis which material you are considering; supply, installation and any specialist arrangements must be confirmed in the proposal.'}],
     reading:['repair-or-rebuild-a-deck','timber-deck-maintenance-canberra'],
     relatedLinks:[{url:'/services/deck-building/',label:'Plan a new timber deck or extension'},{url:'/services/deck-repairs/',label:'Assess an existing deck before changing boards'},{url:quoteRoute,label:'Compare the inclusions in a carpentry quote'},{url:'/services/',label:'Explore the carpentry service directory'}]
   },

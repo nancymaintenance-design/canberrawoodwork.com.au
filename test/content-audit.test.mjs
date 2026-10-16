@@ -28,8 +28,8 @@ test('audit retains FAQ answers when disclosure attributes and class order vary'
 });
 test('audit sees all hub disclosures and their answer text',()=>{
   const result=auditHtml('/faq/',pages.get('/faq/'));
-  assert.equal(result.faqCount,107);
-  assert.equal(result.faqs.length,107);
+  assert.equal(result.faqCount,104);
+  assert.equal(result.faqs.length,104);
   assert.ok(result.faqs.every(faq=>faq.question&&faq.answer));
 });
 test('audit module can be imported from node eval without a script argument',()=>{
@@ -44,7 +44,7 @@ test('audit records the UTC run date and accepts a deterministic injected clock'
   assert.ok([before,after].includes(actual),'default date follows the current run');
   const result=auditSite('dist',undefined,{now:new Date('2027-01-02T01:00:00+11:00')});
   assert.equal(result.analyzedAt,'2027-01-01');
-  assert.deepEqual(result.pages.find(page=>page.articleDates).articleDates,{published:'2026-09-28',modified:'2026-10-15'},'run date does not rewrite article history');
+  assert.deepEqual(result.pages.find(page=>page.articleDates).articleDates,{published:'2026-09-28',modified:'2026-10-14'},'run date does not rewrite article history');
 });
 test('rendered article date labels follow alternate article fields across timezone boundaries',()=>{
   const fixtureParent=fileURLToPath(new URL('../../reports/_test-temp/',import.meta.url));
@@ -68,11 +68,11 @@ test('repeatable audit retains baseline entity and closed-details word-count sem
   assert.equal(auditHtml('/',fixture).words,7);
   const result=auditSite('dist');
   assert.equal(result.baseline,null,'audit does not depend on a local scratch baseline');
-  assert.equal(result.metrics.routes,102);
+  assert.equal(result.metrics.routes,51);
   assert.equal(result.metrics.invalidMainLinks,0);
 });
-test('all 102 bilingual canonical routes have unique metadata and accessible heading order',()=>{
-  assert.equal(routes.length,102);
+test('all 51 canonical routes have unique metadata and accessible heading order',()=>{
+  assert.equal(routes.length,51);
   const titles=new Set(), descriptions=new Set();
   for(const [route,html] of pages){
     const title=html.match(/<title>(.*?)<\/title>/s)?.[1];

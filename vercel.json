@@ -2,7 +2,6 @@
   "buildCommand": "node build.mjs",
   "outputDirectory": "dist",
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true },
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "canberrawoodwork.com.au" }],

@@ -13,7 +13,7 @@ for(const boundary of ['The appropriate licensed practitioner must assess the wo
   assert.doesNotMatch(boundary,prohibitedClaim,`scope boundary must remain allowed: ${boundary}`);
 }
 const files=[];
-function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){if(dir===dist&&entry.name==='zh')continue;const p=path.join(dir,entry.name);if(entry.isDirectory())walk(p);else if(entry.name==='index.html')files.push(p)}}
+function walk(dir){for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,entry.name);if(entry.isDirectory())walk(p);else if(entry.name==='index.html')files.push(p)}}
 walk(dist);
 assert.equal(files.length,52,'51 public routes plus 404');
 const titles=new Set();
@@ -79,7 +79,7 @@ assert.match(areaPage,/<h1>Carpentry Across the ACT Districts<\/h1>/,'service-ar
 assert.match(contactPage,/<h1>Request a Carpentry Quote<\/h1>/,'contact H1 states the quote intent directly');
 assert.match(newsIndex,/<h1>Carpentry Advice & Repair Guides<\/h1>/,'news H1 states the advice and repair-guide theme directly');
 assert.match(rottenTimberPage,/<h2>[^<]*sound timber[^<]*<\/h2>/i,'rot repair explains the retained-timber decision');
-for (const concept of [/on-site assessment/i,/moisture source/i,/quote/i]) assert.match(rottenTimberPage,concept,'rot repair retains assessment, cause and quoted work');
+assert.match(rottenTimberPage,/on-site assessment[\s\S]*identify the cause[\s\S]*repair plan and quote/i,'rotten timber repairs explain the assessment, cause and quoted repair path');
 assert.doesNotMatch(serviceAndAdviceCopy,/Where this repair may stop|(?:contact|consult|speak with|seek) (?:an? |the )?(?:external specialist|another trade|locksmith|another company)/i,'repair pages do not send visitors to another company; qualified project checks remain accurate');
 assert.doesNotMatch(customerFacingCopy,/may need a separate trade|needs a separate assessment|not an automatic quote|does not confirm a booking/i,'customer-facing repair copy avoids hand-off and booking-deflection language without banning material-matching facts');
 assert.match(home,/class="google-map"/);assert.match(home,/www\.google\.com\/maps\?q=/);assert.match(home,/maps\.app\.goo\.gl\/cvWgzfMPhPrDPZnE7/);
@@ -95,8 +95,7 @@ for(const [name,html] of [['about',about],['contact',contactPage],['areas',areaP
 assert.match(contactPage,/121 Marcus Clarke St, Canberra, ACT 2600/,'contact page displays the office address');
 assert.doesNotMatch(contactPage,/View on Google Maps/,'contact page does not use a Google Maps location link');
 assert.match(about,/121 Marcus Clarke St, Canberra, ACT 2600/,'footer address is present on supporting pages');
-assert.match(about,/Canberra carpentry team/,'about identifies the local carpentry team');
-assert.match(about,/Canberra office and team/,'about retains the office contact identity');
+assert.match(about,/Canberra office and carpentry team/,'about page establishes the local Canberra operation');
 assert.doesNotMatch(about,/VIC 3030|construction occupation licence/i,'about page does not undermine Canberra location or service trust');
 assert.match(about,/class="business-registration-section"/,'about page publishes the business and registration section');
 assert.match(about,/Ellis Services Group company details\./,'about page gives the registration panel a direct company-details heading');
@@ -106,7 +105,7 @@ assert.match(about,/https:\/\/abr\.business\.gov\.au\/ABN\/View\?id=645821745/,'
 assert.match(about,/https:\/\/share\.google\/9J93sm3qIx44KCDtj/,'about page links to the Google Business Profile reviews');
 assert.match(privacyPage,/Privacy Policy/,'privacy policy page is published');
 assert.match(privacyPage,/121 Marcus Clarke St, Canberra, ACT 2600/,'privacy policy identifies the business contact address');
-assert.match(home,/wood-theme\.css/);assert.match(home,/View all 21 services/);
+assert.match(home,/wood-theme\.css/);assert.match(home,/View all 17 services/);
 const serviceQuestionPages=files.filter(file=>file.includes(`${path.sep}services${path.sep}`)).map(file=>fs.readFileSync(file,'utf8')).join('\n');
 // Research variants stay in the map; the directory routes actual service topics.
 for(const entry of fs.readdirSync(path.join(dist,'services'),{withFileTypes:true}).filter(item=>item.isDirectory()))assert.ok(servicesIndex.includes(`href="/services/${entry.name}/"`),`missing service route ${entry.name}`);
@@ -201,7 +200,7 @@ import('../src/content.mjs').then(async ({services})=>{
     const relatedGroup=section.match(/<div class="related-work-links">([\s\S]*?)<\/div>/)?.[1]||'';
     const relatedServiceLinks=[...relatedGroup.matchAll(/<a\b[^>]*href="([^"]+)"/g)];
     assert.ok(relatedServiceLinks.length>=2&&relatedServiceLinks.length<=4,`${service.slug}: two to four related service links`);
-    assert.ok(deepLinks.length>=2&&deepLinks.length<=11,`${service.slug}: bounded related services, guides and integrated project references`);
+    assert.ok(deepLinks.length>=2&&deepLinks.length<=7,`${service.slug}: bounded service, guide and area links`);
     for(const href of deepLinks){
       if(href.startsWith('https://')) {
         assert.ok(['www.planning.act.gov.au','www.accesscanberra.act.gov.au'].includes(new URL(href).hostname),`${service.slug}: relevant official source`);
@@ -216,9 +215,9 @@ import('../src/content.mjs').then(async ({services})=>{
   const structural=fs.readFileSync(path.join(dist,'services','structural-timber-repairs','index.html'),'utf8');
   const deckBuilding=fs.readFileSync(path.join(dist,'services','deck-building','index.html'),'utf8');
   assert.doesNotMatch(structural,/does not define a repair design|does not claim a specific act construction licence|an ABN or general carpentry description does not establish/i,'structural page avoids discouraging licence disclaimers');
-  for (const concept of [/on-site assessment/i,/structural inspection/i,/engineering/i,/quote/i]) assert.match(structural,concept,'structural repair defines assessment responsibilities and quotation');
+  assert.match(structural,/on-site assessment[\s\S]*identify the cause[\s\S]*repair plan and quote/i,'structural page explains Ellis Services Group\'s repair process positively');
   assert.doesNotMatch(deckBuilding,/does not state that a particular deck is exempt from approval|does not claim those permissions or a specific licence/i,'deck-building page avoids discouraging licence disclaimers');
-  for (const concept of [/new decks and extensions/i,/footings/i,/approval/i]) assert.match(deckBuilding,concept,'deck building retains the project, supports and approval checks');
+  assert.match(deckBuilding,/New decks and extensions are planned around the site, intended use and any required ACT checks\./,'deck-building page states the service clearly');
   const {serviceCaseMedia,homeCaseMedia}=await import('../src/service-case-media.mjs');
   assert.equal(homeCaseMedia.hero.src,'/assets/carpenter-at-work-canberra.webp','homepage hero uses the supplied Canberra work image');
   assert.equal(homeCaseMedia.deck.src,'/assets/completed-timber-deck-canberra.webp','homepage deck feature uses the supplied completed-deck image');
@@ -259,8 +258,10 @@ assert.match(themeCss,/\.business-registration-section\{[^}]*background:#fffdf9[
   }
   const fencePage=fs.readFileSync(path.join(dist,'services','timber-fence-repairs','index.html'),'utf8');
   assert.doesNotMatch(fencePage,/src="\/assets\/timber-fence-gate-canberra.webp"/,'fence gallery no longer repeats the gate cover');
-  assert.ok(servicesIndex.includes('href="/services/timber-gate-repairs/"'),'compact directory retains the gate service');
-  assert.ok(servicesIndex.includes('href="/services/timber-fence-repairs/"'),'compact directory retains the fence service');
+  const gateCard=servicesIndex.match(/<a class="index-card" href="\/services\/timber-gate-repairs\/">[\s\S]*?<\/a>/)?.[0]||'';
+  const fenceCard=servicesIndex.match(/<a class="index-card" href="\/services\/timber-fence-repairs\/">[\s\S]*?<\/a>/)?.[0]||'';
+  assert.ok(gateCard.includes('/assets/timber-fence-gate-canberra.webp'),'gate card keeps its original cover');
+  assert.ok(fenceCard.includes('/assets/timber-fence-completed.webp'),'fence card uses the supplied completed fence image');
   const deckBuildHtml=fs.readFileSync(path.join(dist,'services','deck-building','index.html'),'utf8');
   assert.ok(deckBuildHtml.includes('src="/assets/new-deck-completed-canberra.webp"'),'deck building: renders the supplied completed deck image');
   for(const image of Object.values(homeCaseMedia)){

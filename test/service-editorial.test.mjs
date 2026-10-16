@@ -6,12 +6,12 @@ const read = slug => readFileSync(`dist/services/${slug}/index.html`, 'utf8');
 // Removing a component distinction or replacing the service with generic copy must fail.
 const topics = {
   'small-carpentry-jobs': [/one task per line/i, /minimum.*charge|charge.*minimum/i, 'carpentry-jobs-before-selling'],
-  'door-and-frame-repairs': [/hinge.*jamb|jamb.*hinge/i, /trimming.*(?:allowance|construction)|construction.*(?:trimming|removed)/i, 'timber-door-sticks-after-rain'],
+  'door-and-frame-repairs': [/hinge.*jamb|jamb.*hinge/i, /trimming allowance/i, 'timber-door-sticks-after-rain'],
   'timber-window-repairs': [/sill.*drip|drip.*sill/i, /glazier/i, 'rotten-window-sill'],
   'rotten-timber-repairs': [/sound timber/i, /moisture source/i, 'why-timber-rot-returns'],
-  'fascia-and-eaves-repairs': [/bargeboard.*gable|gable.*bargeboard/i, /lining.*(?:material|identified)/i, 'fascia-bargeboard-eaves'],
+  'fascia-and-eaves-repairs': [/bargeboard.*gable|gable.*bargeboard/i, /lining material/i, 'fascia-bargeboard-eaves'],
   'deck-repairs': [/joists.*bearers|bearers.*joists/i, /sanding and oiling/i, 'deck-boards-or-frame'],
-  'timber-fence-repairs': [/posts.*rails.*palings/i, /cost.sharing|owner.s contribution/i, 'leaning-paling-fence'],
+  'timber-fence-repairs': [/posts.*rails.*palings/i, /cost.sharing/i, 'leaning-paling-fence'],
   'timber-gate-repairs': [/post.*hinge|hinge.*post/i, /motorised/i, 'why-timber-gates-sag'],
   'skirting-and-architraves': [/height.*thickness|thickness.*height/i, /floor.*junction|junction.*floor/i, 'skirting-after-new-flooring'],
   'cabinet-door-and-drawer-repairs': [/part number/i, /particleboard|MDF/i, 'cabinet-hinges-and-drawer-runners'],

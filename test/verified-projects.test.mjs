@@ -28,7 +28,7 @@ test('project evidence distinguishes assembly, staged deck work and multiple fin
   assert.match(stairs,/different projects/i);
   assert.doesNotMatch(stairs,/>Before work</);
   const about=read('/about/').match(/<section[^>]+id="our-team-at-work"[\s\S]*?<\/section>/)?.[0];
-  assert.ok(about);assert.match(about,/outdoor (?:carpentry|timber)/i);assert.doesNotMatch(about,/wardrobe/i);
+  assert.ok(about);assert.match(about,/outdoor carpentry/i);assert.doesNotMatch(about,/wardrobe/i);
 });
 test('earlier advice acknowledges confirmed composite installation and stand-alone deck care',()=>{
   const materials=read('/news/timber-vs-composite-decking-canberra/'),care=read('/news/timber-deck-maintenance-canberra/');

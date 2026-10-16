@@ -9,14 +9,14 @@ assert.ok((faq.match(/<details class="faq-item" id=/g)||[]).length > 60, 'comple
 assert.ok(!faq.includes('<summary>Who takes on small carpentry jobs in Canberra?</summary>'));
 assert.ok(faq.includes('waste disposal') && faq.includes('Additional findings') && faq.includes('before-and-after'));
 for (const [slug,count] of Object.entries({
-  'door-and-frame-repairs':10, 'deck-repairs':7, 'timber-fence-repairs':6,
-  'timber-window-repairs':7, 'timber-weatherboard-repairs':2,
+  'door-and-frame-repairs':9, 'deck-repairs':6, 'timber-fence-repairs':6,
+  'timber-window-repairs':6, 'timber-weatherboard-repairs':2,
   'structural-timber-repairs':4, 'fascia-and-eaves-repairs':4,
   'pergola-timber-repairs':2, 'timber-gate-repairs':5, 'rotten-timber-repairs':4
 })) {
   const consolidated=read(`services/${slug}`).match(/<section class="service-questions shell"[\s\S]*?<\/section>/)?.[0];
   assert.ok(consolidated,`${slug}: original consolidated question section remains`);
-  assert.equal(questions(consolidated).length,count,`${slug}: merged questions and distinct fitting/restoration additions share one section`);
+  assert.equal(questions(consolidated).length,count,`${slug}: near-synonyms merged`);
   const all=questions(read(`services/${slug}`)).map(m=>m[1].toLowerCase());
   assert.equal(new Set(all).size,all.length,`${slug}: supplemental questions must remain distinct`);
 }

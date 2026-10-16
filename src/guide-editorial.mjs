@@ -31,7 +31,7 @@ export const guideEditorial = {
   'fascia-bargeboard-eaves': {
     title:'Fascia, bargeboard and eaves: what is the difference?',category:'Exterior timber',owner:'fascia-and-eaves-repairs',
     metaDescription:'Identify fascia at the gutter edge, bargeboard at a gable and eaves lining underneath. Learn why material, moisture and safe access change the repair.',
-    lead:'Fascia follows the lower roof edge, often beside the gutter. Bargeboard follows the sloping edge of a gable. Eaves lining closes the underside of an overhang and may be a different material. The material and its position determine which connections and water paths need checking.',
+    lead:'Fascia follows the lower roof edge, often beside the gutter. Bargeboard follows the sloping edge of a gable. Eaves lining closes the underside of an overhang and may be a different material. Naming the affected part helps define the repair.',
     faqs:[{q:'Is every damaged eaves panel timber?',a:'No. Eaves linings can use different materials. Identify unknown lining before disturbance and use the qualified assessment pathway if asbestos is suspected.'},{q:'Should the gutter be checked when fascia rots?',a:'Yes. The water path near the gutter is relevant to the cause. The quote should distinguish timber repair from any required gutter or roof work.'}],
     reading:['why-timber-rot-returns','timber-weatherboard-damage'],sources:[asbestos]
   },
@@ -66,7 +66,7 @@ export const guideEditorial = {
   'cabinet-hinges-and-drawer-runners': {
     title:'Can one cupboard hinge or drawer runner be repaired?',category:'Cabinet repairs',owner:'cabinet-door-and-drawer-repairs',
     metaDescription:'One faulty cabinet door or drawer can have a local repair. Check hardware compatibility, panel condition and fixing points before replacing the fitting.',
-    lead:'One faulty cupboard door or drawer does not automatically require new cabinetry. A local repair depends on compatible hardware and sound fixing points. Damaged panels may need replacement, and older fittings may need a compatible alternative.',
+    lead:'One faulty cupboard door or drawer does not automatically require new cabinetry. A local repair depends on compatible hardware and sound fixing points. Damaged panels or unavailable fittings can change the scope.',
     faqs:[{q:'Should I order a runner with the same visible length?',a:'Length is only one compatibility check. Mounting arrangement, clearances, load and fixing locations also need to suit the existing drawer and cabinet.'},{q:'Does a pulled-out hinge mean the whole cabinet is finished?',a:'Not necessarily. The panel condition and available repair method determine whether a sound fixing can be restored locally or a panel needs replacement.'}],
     reading:['carpentry-jobs-before-selling','skirting-after-new-flooring']
   },
@@ -104,7 +104,7 @@ export const guideEditorial = {
   'carpentry-jobs-before-selling': {
     title:'How should you prioritise carpentry repairs before selling?',category:'Interior carpentry',owner:'interior-carpentry',
     metaDescription:'Plan pre-sale carpentry repairs by separating safety, operation and finish. Group the task list, confirm access and compare itemised repair inclusions.',
-    lead:'Start a pre-sale carpentry list with safety and operation, then consider visible finishing. List doors, trim and cupboard faults by room so necessary repairs can be separated from optional upgrades. The effect on sale price is uncertain.',
+    lead:'Start a pre-sale carpentry list with safety and operation, then consider visible finishing. Grouping doors, trim and cupboard repairs can clarify the assessment, but it does not prove that every item needs replacement or will increase the sale price.',
     faqs:[{q:'Can several repairs be assessed together?',a:'Provide one list with each item and location. The team can assess the requested tasks together and confirm the grouped scope, access and quote.'},{q:'Should every cupboard be replaced before a sale?',a:'A local hinge, runner or panel fault should be assessed before assuming full replacement. New cabinetry is a separate measured scope and decision.'}],
     reading:['cabinet-hinges-and-drawer-runners','skirting-after-new-flooring'],
     relatedLinks:[{url:'/services/small-carpentry-jobs/',label:'Group several small carpentry jobs'},{url:'/services/custom-joinery/',label:'Understand custom joinery and built-in storage'}]
@@ -115,5 +115,5 @@ export const guideEditorial = {
 export const editorialArticles = Object.entries(guideEditorial).map(([slug,item])=>{
   const completeBody=expandedGuideBodies[slug];
   const sources=[...new Map([...(item.sources||[]),...(completeBody||[]).flatMap(s=>s.sources.map(key=>guideSources[key]))].map(source=>[source[0],source])).values()];
-  return {slug,...item,sections:completeBody?.map(s=>[s.heading,s.paragraphs.join(' ')])||item.sections,completeBody,sources,published:item.published||'2026-09-28',updated:completeBody?'2026-10-15':item.updated||'2026-10-10'};
+  return {slug,...item,sections:completeBody?.map(s=>[s.heading,s.paragraphs.join(' ')])||item.sections,completeBody,sources,published:item.published||'2026-09-28',updated:completeBody?'2026-10-14':item.updated||'2026-10-10'};
 });

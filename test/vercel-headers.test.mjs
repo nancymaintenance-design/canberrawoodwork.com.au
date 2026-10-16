@@ -5,7 +5,7 @@ import test from 'node:test';
 const config = JSON.parse(readFileSync(new URL('../vercel.json', import.meta.url), 'utf8'));
 
 test('security policy preserves the canonical redirect and contact function settings', () => {
-  assert.deepEqual(config.redirects.filter(rule => rule.has), [{
+  assert.deepEqual(config.redirects, [{
     source: '/:path*',
     has: [{ type: 'host', value: 'canberrawoodwork.com.au' }],
     destination: 'https://www.canberrawoodwork.com.au/:path*',

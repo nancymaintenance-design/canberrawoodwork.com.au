@@ -3,8 +3,7 @@ import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
 
 const origin='https://www.canberrawoodwork.com.au';
-// Existing English editorial contract; bilingual.test.mjs covers every Chinese equivalent.
-const routes=[...readFileSync('dist/sitemap.xml','utf8').matchAll(/<loc>https?:\/\/[^/]+([^<]+)<\/loc>/g)].map(m=>m[1]).filter(route=>!route.startsWith('/zh/'));
+const routes=[...readFileSync('dist/sitemap.xml','utf8').matchAll(/<loc>https?:\/\/[^/]+([^<]+)<\/loc>/g)].map(m=>m[1]);
 const read=route=>readFileSync(`dist${route}index.html`,'utf8');
 const decode=value=>value.replace(/&(?:amp|quot|lt|gt|#39);/g,entity=>({'&amp;':'&','&quot;':'"','&lt;':'<','&gt;':'>','&#39;':"'"}[entity]));
 const schemas=html=>[...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(m=>JSON.parse(m[1]));
@@ -109,7 +108,7 @@ test('all 17 articles use the shared editorial image while preserving headline, 
     assert.deepEqual(article.author,{'@type':'Organization',name:'Ellis Services Group',url:origin+'/about/'});
     const fresh=['carpentry-quote-cost-factors','timber-vs-composite-decking-canberra','timber-deck-maintenance-canberra'].some(slug=>route===`/news/${slug}/`);
     assert.equal(article.datePublished,fresh?'2026-10-12':'2026-09-28');
-    assert.equal(article.dateModified,'2026-10-15');
+    assert.equal(article.dateModified,'2026-10-14');
     if(media.projectHref)assert.ok(existsSync(`dist${media.projectHref}index.html`));
     else assert.match(media.caption,/illustrat/i,'legacy media is labelled illustration');
   }

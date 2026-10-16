@@ -15,7 +15,7 @@ test('three decision guides are discoverable canonical pages with independent ar
     assert.ok(news.includes(`href="${route}"`),`${route}: article directory`);
     assert.ok(discovery.includes(`https://www.canberrawoodwork.com.au${route}`),`${route}: AI discovery document`);
     const html=read(route),article=schemas(html).find(s=>s['@type']==='Article');
-    assert.equal(article.datePublished,'2026-10-12');assert.equal(article.dateModified,'2026-10-15');
+    assert.equal(article.datePublished,'2026-10-12');assert.equal(article.dateModified,'2026-10-14');
     assert.ok(html.includes('datetime="2026-10-12">12 October 2026</time>'));
     assert.ok(html.includes('class="article-byline">By <a href="/about/">Ellis Services Group</a>'));
     assert.ok(html.includes(`<link rel="canonical" href="https://www.canberrawoodwork.com.au${route}">`));
@@ -45,8 +45,7 @@ test('quote and material guides offer scope-appropriate enquiry next steps',()=>
     const html=read(route);
     assert.ok(!html.includes('Arrange your timber repair assessment'),route);
     assert.ok(!html.includes('We identify the cause and confirm your repair plan and quote.'),route);
-    assert.match(html, /<h2>(?:Request an itemised carpentry quote|Discuss deck materials and construction)<\/h2>/,route);
-    assert.match(html, /href="\/contact\/"/);
+    assert.ok(html.includes('Discuss your requirements and quote'),route);
   }
 });
 
