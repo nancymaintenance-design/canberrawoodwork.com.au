@@ -18,7 +18,7 @@ export async function createPackage(root:string,version=readState(root).version)
  writeManaged(join(root,'dist'),catalog,state,'release');
  approve(root,version);
  const stamp=new Date().toISOString().replace(/[:.]/g,'-');const folder=join(root,'..','reports','local-admin-2026-10-17','releases',stamp);mkdirSync(folder,{recursive:true});
- const names=new Set(['admin','api','src','browser','scripts','public','content','test','docs','build.mjs','build.mts','package.json','package-lock.json','tsconfig.json','vercel.json','start-admin.cmd','.gitignore','AGENTS.md','DESIGN.md','UX-CONTRACT.md','premium-ui.json']);
+ const names=new Set(['admin','api','src','browser','scripts','public','content','test','docs','.github','build.mjs','build.mts','package.json','package-lock.json','tsconfig.json','vercel.json','start-admin.cmd','.gitignore','AGENTS.md','DESIGN.md','UX-CONTRACT.md','premium-ui.json']);
  const source=collect(root,path=>!names.has(path.split('/')[0]!)||path.includes('/node_modules/')||/^src\/.*\.mjs$/.test(path)||/^public\/assets\/(?:site|faq-hub|language-switch)\.js$/.test(path)||/(?:^|\/)(?:\.env[^/]*|\.local-admin|\.compiled|\.git|write\.lock|[^/]+\.dpapi)(?:\/|$)/.test(path)||/\.(?:tmp|log)$/.test(path));
  const site=collect(join(root,'dist'));
  const manifest={created:new Date().toISOString(),version,files:Object.fromEntries(Object.entries(site).map(([p,b])=>[p,hash(b)])),source:Object.fromEntries(Object.entries(source).map(([p,b])=>[p,hash(b)]))};

@@ -22,9 +22,9 @@ const withoutLanguageAdditions=value=>value
  .replace('<link rel="stylesheet" href="/assets/bilingual.css">','')
  .replace('<script defer src="/assets/language-switch.js"></script>','');
 
-test('TypeScript migration preserves every production HTML and stylesheet byte',()=>{
+test('TypeScript migration preserves production HTML bytes and stylesheet text across checkout platforms',()=>{
  const expected=JSON.parse(readFileSync(new URL('./production-baseline.json',import.meta.url),'utf8'));
- for(const[path,digest]of Object.entries(expected))assert.equal(hash(after.get(path)),digest,path);
+ for(const[path,digest]of Object.entries(expected))assert.equal(hash(path.endsWith('.css')?after.get(path).toString().replaceAll('\r\n','\n'):after.get(path)),digest,path);
 });
 test('every English page preserves every original byte except the explicit language additions',()=>{
  assert.equal(html(before).length,52);
