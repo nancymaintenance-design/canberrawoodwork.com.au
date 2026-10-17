@@ -11,7 +11,7 @@ test('security policy preserves the canonical redirect and contact function sett
     destination: 'https://www.canberrawoodwork.com.au/:path*',
     permanent: true,
   }]);
-  assert.deepEqual(config.functions, { 'api/contact.js': { maxDuration: 10 } });
+  assert.deepEqual(config.functions, { 'api/contact.ts': { maxDuration: 10 } });
 });
 
 test('all static paths receive MIME, referrer, permissions and frame protection', () => {

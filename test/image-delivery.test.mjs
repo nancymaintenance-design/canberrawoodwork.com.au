@@ -101,11 +101,11 @@ const snapshot = (directory, prefix='') => readdirSync(directory,{withFileTypes:
 });
 test('dependency-free build reruns deterministically without changing contact code', () => {
   const before = snapshot(dist);
-  const api = readFileSync(new URL('../api/contact.js',import.meta.url));
+  const api = readFileSync(new URL('../api/contact.ts',import.meta.url));
   const formCode = readFileSync(new URL('../public/assets/site.js',import.meta.url),'utf8').split("document.querySelectorAll('[data-carousel]')")[0];
   const result = spawnSync(process.execPath,['build.mjs'],{cwd:root,encoding:'utf8'});
   assert.equal(result.status,0,result.stderr);
   assert.deepEqual(snapshot(dist),before);
-  assert.deepEqual(readFileSync(new URL('../api/contact.js',import.meta.url)),api);
+  assert.deepEqual(readFileSync(new URL('../api/contact.ts',import.meta.url)),api);
   assert.equal(readFileSync(new URL('../public/assets/site.js',import.meta.url),'utf8').split("document.querySelectorAll('[data-carousel]')")[0],formCode);
 });

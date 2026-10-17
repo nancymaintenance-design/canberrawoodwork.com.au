@@ -1,2 +1,11 @@
 dist/
 .seo-cache/
+node_modules/
+.compiled/
+.local-admin/
+.superpowers/
+*.tsbuildinfo
+src/*.mjs
+public/assets/site.js
+public/assets/faq-hub.js
+public/assets/language-switch.js

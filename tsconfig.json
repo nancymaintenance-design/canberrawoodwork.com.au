@@ -1,0 +1,5 @@
+{
+ "compilerOptions":{"target":"ES2022","module":"NodeNext","moduleResolution":"NodeNext","strict":true,"allowImportingTsExtensions":true,"noEmit":true,"skipLibCheck":true,"allowJs":true,"checkJs":false,"types":["node"],"lib":["ES2022","DOM","DOM.Iterable"],"moduleDetection":"legacy"},
+ "include":["admin/**/*.mts","admin/ui/*.ts","src/**/*.mts","browser/*.ts","api/*.ts","build.mts"],
+ "exclude":["node_modules","dist",".local-admin",".compiled"]
+}

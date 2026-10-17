@@ -1,0 +1,16 @@
+{
+  "name":"canberra-woodwork",
+  "version":"1.0.0",
+  "private":true,
+  "engines":{"node":">=24"},
+  "scripts":{
+    "build":"node build.mjs",
+    "typecheck":"tsc --noEmit",
+    "test":"node scripts/test.mjs && node --test test/local-admin.check.mjs",
+    "admin":"node admin/server.mts",
+    "sync":"node admin/sync.mts",
+    "package":"node admin/package.mts"
+  },
+  "dependencies":{"parse5":"8.0.1","fflate":"0.8.3"},
+  "devDependencies":{"typescript":"6.0.3","@types/node":"26.6.5"}
+}

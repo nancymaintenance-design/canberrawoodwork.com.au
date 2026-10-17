@@ -1,0 +1,10 @@
+{
+ "profile":"product-admin",
+ "sourceRoots":["admin/ui"],
+ "locale":"zh-CN",
+ "canonicalMap":"UX-CONTRACT.md",
+ "requiredCapabilities":["Form","Scrollbar","Toast","CRUD"],
+ "requiredCommands":["unit"],
+ "commands":{"unit":"npm test"},
+ "evidence":{"crudFullFlow":"test/local-admin.check.mjs","failurePaths":"test/local-admin.check.mjs"}
+}

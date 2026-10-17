@@ -27,7 +27,7 @@
     }
   ],
   "functions": {
-    "api/contact.js": {
+    "api/contact.ts": {
       "maxDuration": 10
     }
   }

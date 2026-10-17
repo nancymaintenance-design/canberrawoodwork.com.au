@@ -52,8 +52,8 @@ test('rendered article date labels follow alternate article fields across timezo
   const fixtureRoot=mkdtempSync(join(fixtureParent,'ellis-article-dates-'));
   try{
     symlinkSync(fileURLToPath(new URL('../public',import.meta.url)),join(fixtureRoot,'public'),'junction');
-    const contentUrl=new URL('../src/content.mjs',import.meta.url).href;
-    const buildUrl=new URL('../build.mjs',import.meta.url).href;
+    const contentUrl=new URL('../.compiled/src/content.mjs',import.meta.url).href;
+    const buildUrl=new URL('../.compiled/build.mjs',import.meta.url).href;
     const source=`const {articles}=await import(${JSON.stringify(contentUrl)}); articles[0].published='2024-02-29'; articles[0].updated='2027-01-01'; await import(${JSON.stringify(buildUrl)});`;
     const result=spawnSync(process.execPath,['--input-type=module','-e',source],{cwd:fixtureRoot,encoding:'utf8',env:{...process.env,TZ:'America/Los_Angeles'}});
     assert.equal(result.status,0,result.stderr);

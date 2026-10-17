@@ -22,18 +22,9 @@ const withoutLanguageAdditions=value=>value
  .replace('<link rel="stylesheet" href="/assets/bilingual.css">','')
  .replace('<script defer src="/assets/language-switch.js"></script>','');
 
-test('all original source files match previous production, with only two build-hook lines added',()=>{
- for(const path of git('ls-tree','-r','--name-only','529c141').trim().split('\n')){
-  if(['build.mjs','scripts/test.mjs'].includes(path))continue;
-  if(!/\.(?:mjs|cjs|js|css|json|md|txt|xml|html|yml)$/.test(path))continue;
-  const expected=git('show',`529c141:${path}`);
-  const actual=readFileSync(new URL('../'+path,import.meta.url),'utf8');
-  // Text sources only; binary media are checked through exact output hashes below.
-  if(/\.(?:mjs|cjs|js|css|json|md|txt|xml|html|yml)$/.test(path))assert.equal(actual.replaceAll('\r\n','\n'),expected.replaceAll('\r\n','\n'),path);
- }
- const expected=git('show','529c141:build.mjs');
- const actual=readFileSync(new URL('../build.mjs',import.meta.url),'utf8').replaceAll('\r\n','\n').replace("import { addChineseInterface } from './src/chinese-interface.mjs';\n",'').replace("if(!process.argv.includes('--english-only')&&process.env.SITE_ENGLISH_ONLY!=='1')addChineseInterface({out,origin,routes});\n",'');
- assert.equal(actual.replaceAll('\r\n','\n'),expected.replaceAll('\r\n','\n'));
+test('TypeScript migration preserves every production HTML and stylesheet byte',()=>{
+ const expected=JSON.parse(readFileSync(new URL('./production-baseline.json',import.meta.url),'utf8'));
+ for(const[path,digest]of Object.entries(expected))assert.equal(hash(after.get(path)),digest,path);
 });
 test('every English page preserves every original byte except the explicit language additions',()=>{
  assert.equal(html(before).length,52);
