@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {mkdtempSync,rmSync,readFileSync} from 'node:fs';
+import {mkdtempSync,rmSync,readFileSync,cpSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {createRequire} from 'node:module';
@@ -67,5 +67,16 @@ test('rendering changes only the selected occurrence and blocks release with sta
   assert.ok(renderer.renderPages(catalog,state,'release').get(route).includes('Test heading'));
   assert.throws(()=>renderer.validateValue({...field,kind:'link'},'javascript:alert(1)'),/link/);
   assert.throws(()=>renderer.validateValue({...field,kind:'image'},'/../../secret'),/image/);
+ }finally{rmSync(root,{recursive:true,force:true});}
+});
+
+test('approved six-page content release matches reviewed bilingual output without rewriting other pages',async()=>{
+ const {getCatalog}=await import('../admin/catalog.mts');const {createHash}=await import('node:crypto');
+ const expected=JSON.parse(readFileSync(new URL('./seo-release-baseline.json',import.meta.url),'utf8'));
+ const approved=JSON.parse(readFileSync(new URL('../content/approved.json',import.meta.url),'utf8'));
+ assert.equal(Object.keys(approved.edits).length,34);
+ const catalog=getCatalog('dist'),root=mkdtempSync(join(tmpdir(),'ellis-seo-release-'));
+ try{cpSync('dist/404',join(root,'404'),{recursive:true});cpSync('dist/zh/404',join(root,'zh/404'),{recursive:true});renderer.writeManaged(root,catalog,{schemaVersion:1,version:1,edits:approved.edits,history:[]},'release');
+  for(const[path,digest]of Object.entries(expected))assert.equal(createHash('sha256').update(readFileSync(join(root,path))).digest('hex'),digest,path);
  }finally{rmSync(root,{recursive:true,force:true});}
 });

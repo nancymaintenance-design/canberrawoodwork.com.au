@@ -47,7 +47,13 @@ export function renderPages(catalog:Catalog,state:State,mode:'preview'|'release'
 export function writeManaged(dist:string,catalog:Catalog,state:State,mode:'preview'|'release'):void{
  let pages=renderPages(catalog,state,mode);
  if(Object.keys(state.edits).length){
+  const originalLayout=pages;
+  const changedRoutes=new Set(Object.keys(state.edits).flatMap(id=>(catalog.fields[id]?.occurrences||[]).flatMap(o=>[o.route,'/zh'+o.route])));
   const english=buildKnowledgeFeeds(pages,{name:'Ellis Services Group'});const chinese=buildKnowledgeFeeds(english.pages,{name:'Ellis Services Group',prefix:'/zh',language:'zh-Hans'});pages=chinese.pages;
+  // Keep unrelated pages byte-identical and retain every original head position.
+  // Updated article prose only needs its own regenerated embedded feed payload.
+  const block=/<script id="llm-knowledge-feed" type="application\/json">[\s\S]*?<\/script>/;
+  for(const[route,html]of originalLayout){const updated=changedRoutes.has(route)?pages.get(route)?.match(block)?.[0]:undefined;pages.set(route,updated?html.replace(block,()=>updated):html);}
   for(const[prefix,feed]of [['',english.feed],['zh/',chinese.feed]] as const){mkdirSync(join(dist,prefix,'feeds'),{recursive:true});writeFileSync(join(dist,prefix,'feeds','llm-knowledge.json'),JSON.stringify(feed,null,2)+'\n');}
  }
  for(const[route,html]of pages){const path=join(dist,route.slice(1),'index.html');mkdirSync(dirname(path),{recursive:true});writeFileSync(path,html);}

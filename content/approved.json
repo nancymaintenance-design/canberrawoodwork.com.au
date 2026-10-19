@@ -1,4 +1,277 @@
 {
   "schemaVersion": 1,
-  "edits": {}
+  "edits": {
+  "/:15c6169ac0c6ea60": {
+    "zh": "Ellis Services Group 为本地住宅提供木工与木结构维修，涵盖门窗、露台、凉棚和室内木作配件。告诉我们需要处理的问题和所在区域，木工团队会在预约施工前确认工作范围、材料与报价。",
+    "en": "Ellis Services Group provides carpentry and timber repairs for local homes, from doors and windows to decks, pergolas and interior fittings. Tell us what needs attention and your suburb. Our carpentry team confirms the work, materials and quote before booking.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "堪培拉住宅木工与木结构维修：门窗、户外木作和室内收尾。告诉我们需要处理的事项，让施工从明确的范围开始。",
+    "originalEn": "Carpentry and timber repairs for Canberra homes: doors and windows, outdoor timber and interior finishing. Tell us what needs attention so the work starts with a clear scope."
+  },
+  "/:bebf28aace373780": {
+    "zh": "按实际需求选择服务：维修现有木构件、新建户外露台，或安装室内储物与收边木作。维修时，我们查看损坏部位及问题成因；安装时，先测量空间，再确认材料和安装细节。报价对应约定的施工范围，不默认套用统一套餐。",
+    "en": "Choose a service by the work you need: repair an existing timber component, build an outdoor deck or install interior storage and trim. For repairs, we consider the damaged part and what caused the problem. For installations, we measure the space and agree the material and fitted details. You receive a quote for that scope, not an assumed package.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "按木构件或所需工作选择服务。维修现有构件时，先评估状况和原因；新安装则先确认尺寸、用途和材料。Ellis 会在上门后确认拟施工内容和报价。",
+    "originalEn": "Choose a service by the timber item or the work you want done. Repairing an existing component starts with its condition and cause; a new installation starts with measurements, intended use and materials. Ellis confirms the proposed work and quote after the site visit."
+  },
+  "/:94dbab84de44255e": {
+    "zh": "损坏甲板、松动固定件和老化涂层需要不同处理。露台维修服务会区分木材及支承维修与清洗上油，让报价明确哪些部位需要修复、哪些只是更新表面涂层。",
+    "en": "Damaged boards, loose fixings and worn coatings need different treatment. Our deck repair service distinguishes timber and support repairs from cleaning and oiling, so the quote makes clear what is being repaired and what is being refinished.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "我们会一并检查露台板、边缘、固定件和支撑，再确认维修范围及表面处理。",
+    "originalEn": "We check deck boards, edges, fixings and supports together before confirming the repair scope and finish."
+  },
+  "/:208528990c4d9d75": {
+    "zh": "查看 Mitchell 的复合材料露台安装、Melba 的露台维修与上油，以及 Pearce 的 IKEA 衣柜安装。楼梯下储物图库展示的是多个不同项目的完工作品。",
+    "en": "See a composite deck installation in Mitchell, deck repairs and oiling in Melba, and IKEA wardrobe fitting in Pearce. The under-stair storage collection shows completed work from several different projects.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "查看完工项目、安装过程，以及明确标注的储物柜案例合集。",
+    "originalEn": "Explore completed work, installation stages and a clearly labelled storage collection."
+  },
+  "/:21ad2436c8a69096": {
+    "zh": "2025 年 5 月，团队在 Melba 先维修翘起及边缘变形的甲板，再进行清洗、表面处理和 Cabot’s 油性露台油施工。案例展示了维修与表面养护的不同阶段。",
+    "en": "In May 2025, the team repaired raised and distorted deck-board edges in Melba before cleaning, surface preparation and application of Cabot’s oil-based decking oil. View the repair and finishing stages together.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "这座旧木露台在更新涂层前，需要处理翘起及变形的板材边缘。Ellis 木工团队完成了维修和表面保养。",
+    "originalEn": "An older timber deck needed attention to raised and distorted board edges before its surface finish was renewed. Ellis carpentry carried out the repair and care work."
+  },
+  "/services/pergola-timber-repairs/:15c6169ac0c6ea60": {
+    "zh": "维修现有凉棚和游廊木结构，包括损坏的立柱、横梁及连接部位。施工可能只涉及一个构件，也可能延伸到相邻木材；需结合构件的支承作用和连接结构的状况确定范围。",
+    "en": "Repairs to existing pergola and verandah timber, including damaged posts, beams and connections. The repair may concern one component or adjoining timber; its supporting role and the condition of the connected structure determine the scope.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "维修现有凉棚与廊檐的木结构。综合检查立柱、横梁、连接件及附属材料后，再确定局部维修或更换范围。",
+    "originalEn": "Repairs to existing pergola and verandah timber. Posts, beams, connections and attached materials are considered together before defining replacement or local repair."
+  },
+  "/services/pergola-timber-repairs/:4bc1e1145ea444fe": {
+    "zh": "遮挡木条损坏与支承立柱发软属于不同的维修问题。请说明受损部位、凉棚是否有顶，以及是否与房屋相连，便于区分装饰木件维修与涉及横梁、立柱或屋顶支承的工作。",
+    "en": "A damaged screen batten and a soft support post are different repair enquiries. Tell us which part is affected, whether the pergola has a roof and whether it connects to the house. This helps distinguish a decorative timber repair from work involving beams, posts or roof supports.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "修复现有凉棚可能涉及风化的屏板条、软柱底座或损坏的横梁连接。这些部分具有不同的作用。确定该结构是开放式的还是有屋顶的并与房屋相连；屋顶支撑不同于装饰屏板。",
+    "originalEn": "Repairing an existing pergola can concern a weathered screen batten, soft post base or damaged beam connection. These parts have different roles. Identify whether the structure is open or roofed and attached to the house; a roof support differs from a decorative screen board."
+  },
+  "/services/pergola-timber-repairs/:cbe1130878dcb830": {
+    "zh": "立柱腐朽不一定意味着整座凉棚都要重建。如果相邻木材、连接和基础适合保留，可能考虑局部维修或更换。我们会结合这些部位的状况确定施工范围；在扰动立柱之前，必须落实所需的临时支撑及结构专业意见。",
+    "en": "A rotten post does not always mean rebuilding the whole pergola. A local repair or replacement may be possible where suitable adjoining timber, connections and footings can be retained. We assess these parts together before defining the work. Any necessary temporary support and structural input must be resolved before the post is disturbed.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "拆动立柱前，应评估立柱、梁、连接件、基础和屋顶附属构件。柱脚维修需要适用的保留木材和经过评估的连接；腐烂更广时，可能需更换立柱或相邻构件。须明确整套结构的安全临时支撑和工程要求。",
+    "originalEn": "The post, beam, connections, footing detail and roof attachments need assessment before a post is disturbed. A base repair requires suitable retained timber and an assessed connection; wider decay can require replacing the post or adjoining members. Safe temporary support and engineering requirements must be resolved for the assembly."
+  },
+  "/services/pergola-timber-repairs/:428d61aa8ed3d7c8": {
+    "zh": "报价应说明保留哪些木材、更换哪些部位，以及拟采用的连接、施工通道、清运和表面处理。受损位置反复受潮或接触地面的情况也应一并考虑；只换一段新木材，不能解决原先导致腐朽的环境问题。",
+    "en": "Your quote should identify which timber stays, which parts are replaced, the proposed connections, access, disposal and finish. It should also address recurring wetting or ground contact at the damaged area. A new timber section alone does not resolve the conditions that caused the original decay.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "维修范围应列明保留构件、更换木材、支撑顺序、现场条件、清运和表面处理。除损坏外，也需考虑柱脚接地及反复受潮，避免新部位继续处于原有不利环境中。",
+    "originalEn": "The repair scope states retained members, replacement timber, support sequence, access, disposal and finish. Ground contact and recurring wetting at the base need consideration alongside damage so the new detail does not repeat the old exposure."
+  },
+  "/services/pergola-timber-repairs/:03478d5b1b386d20": {
+    "zh": "有时可以，但不能只看立柱本身。我们会先查看相邻横梁、连接和基础，再判断适合局部维修、更换整根立柱，还是扩大木作维修范围。拆除前，施工方案必须明确安全支撑，以及所需的结构或审批检查。",
+    "en": "Sometimes, but the post cannot be considered in isolation. We assess the adjoining beams, connections and footing before deciding whether a local repair, a replacement post or wider timber work is appropriate. The work plan must establish safe support and any required structural or approval checks before removal.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "我们在拆动前评估凉棚柱及其横梁、连接件、支撑件和传力路径。您的维修计划定义了安全的临时支撑、要保留的完好部件、更换木材以及拆除柱子之前所需的结构或批准检查。",
+    "originalEn": "We assess the pergola post together with its beams, connections, supports and load path before disturbance. Your repair plan defines safe temporary support, sound components to retain, replacement timber and the required structural or approval checks before the post is removed."
+  },
+  "/services/pergola-timber-repairs/:15a22e190b2a3dbf": {
+    "zh": "请告知所在区域、受损部位，以及已经发现的晃动、渗漏或以往维修情况。如有现成图纸或从安全地面拍摄的照片，也可以提供。我们会与你沟通现场检查安排，并确认木作维修范围与报价。",
+    "en": "Tell us your suburb, the affected part and any movement, leaks or earlier repairs you already know about. Existing drawings and safe ground-level photos are useful if available. We discuss the site assessment and confirm the timber repair scope and quote with you.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "联系 Ellis Services Group，告知所在城区和维修需求。我们会安排现场评估、查明原因，并确认维修方案和报价。",
+    "originalEn": "Contact Ellis Services Group with your suburb and the repair details. We arrange an on-site assessment, identify the cause and confirm the repair plan and quote."
+  },
+  "/services/deck-repairs/:15c6169ac0c6ea60": {
+    "zh": "为现有木露台提供维修与甲板更换。我们会区分行走面甲板损坏、固定件松动、支承问题和表面涂层老化，再确认露台需要的维修及表面处理。",
+    "en": "Deck repairs and board replacement for existing timber decks. We distinguish damaged walking boards, loose fixings and support problems from worn surface coatings, then agree the repair and finishing work your deck needs.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "为现有木露台提供维修与板材更换。先分别检查行走板面、紧固件及支撑框架，再确定需要处理的范围。",
+    "originalEn": "Deck repairs and board replacement for existing timber decks. Walking boards, fixings and supporting framing are assessed separately before choosing the repair extent."
+  },
+  "/services/deck-repairs/:986bb06d5f2f67dd": {
+    "zh": "露台翻新可能涉及不同工作：清洗上油更新表面涂层，更换甲板处理受损行走面，而框架及连接维修针对支承结构。涂层褪色本身不代表需要重建；新的表面涂层也不能解决腐朽或晃动。报价应根据露台的实际状况确定。",
+    "en": "Deck restoration can mean different work. Cleaning and oiling renew the surface finish; board replacement addresses damaged walking boards; frame and connection repairs concern the supporting structure. A faded coating does not by itself call for rebuilding, and a fresh finish does not resolve decay or movement. The condition of the deck determines which work belongs in your quote.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "如果您要求修复露台，请描述问题是否是涂层磨损、木板损坏或露台移动。这些请求不可互换。表面处理和涂油涉及光洁度；木材和连接缺陷需要评估修复范围。在了解支撑区域之前，请勿使用新板或新饰面来覆盖缺陷。",
+    "originalEn": "If you ask for deck restoration, describe whether the problem is worn coating, damaged boards or movement in the deck. Those requests are not interchangeable. Surface preparation and oiling concern the finish; timber and connection defects need an assessed repair scope. Do not cover a defect with new boards or a new finish before the supporting area is understood."
+  },
+  "/services/deck-repairs/:c19cdf3b0a532510": {
+    "zh": "2025 年 5 月，Ellis 在 Melba 先维修翘起及边缘变形的甲板，再进行清洗、表面处理和 Cabot’s 油性露台油施工。这个项目说明维修与表面养护是不同阶段，并不代表该项目更换了框架，也不是每个露台都适用的施工方案。我们也承接按约定范围进行的单独清洗上油。",
+    "en": "In Melba in May 2025, Ellis repaired raised and distorted board edges before cleaning, surface preparation and application of Cabot’s oil-based decking oil. The project shows why repair and surface care are separate stages. It is not evidence of frame replacement or a specification for every deck. We also quote stand-alone cleaning and oiling where that is the agreed work.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "Ellis 木工提供露台维修及单独清洗上油。报价应区分换板、支撑作业、进出条件、拆除和表面保养，不能默认它们属于同一套餐。如果占地或整个支撑系统需要改变，应比较维修方案与新建范围。",
+    "originalEn": "Ellis carpentry provides deck repairs and stand-alone cleaning and oiling. The quote distinguishes board replacement, support work, access, removal and surface-care inclusions so these are not assumed to be interchangeable packages. If the footprint or whole support system needs changing, compare the repair proposal with a new construction scope."
+  },
+  "/services/deck-repairs/:e6bb160a260b232f": {
+    "zh": "不一定。翻新报价可能只包含表面处理与涂油，而维修报价可能涉及甲板、固定件或支承。比较时应核对处理面积、材料、拆除与表面处理项目。如果维修和上油都需要，应在报价中分别写清，不能默认一项包含另一项。",
+    "en": "No. A restoration quote may cover only preparation and coating, while a repair quote may include boards, fixings or supports. Compare the treated area, materials, removal and finishing inclusions. If you need both repair and oiling, ask for both stages to be stated rather than assuming one includes the other.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "不一定。询问评估或更换哪些板和支撑，以及建议是否只是表面处理和涂层。 Ellis 在评估后确认接受的修复和表面与收边处理内含物。",
+    "originalEn": "Not necessarily. Ask which boards and supports are assessed or replaced, and whether the proposal is only surface preparation and coating. Ellis confirms the accepted repair and finishing inclusions after assessment."
+  },
+  "/services/deck-repairs/:9205c52d31513eaa": {
+    "zh": "如果保留的框架状况适合，少量损坏甲板可能采用局部更换。龙骨、承梁或连接损坏需要明确支承维修范围；改变露台占地或更广泛的结构问题，可能需要另行提出重建方案。低离地空间会限制检查和施工通道，请说明露台下方是铺装、土壤还是封闭区域。",
+    "en": "A few damaged boards may suit local replacement when the retained framing is suitable. Damaged joists, bearers or connections require a support repair scope; a changed footprint or wider structural problem may need a rebuilding proposal. Low ground clearance can restrict inspection and access, so tell us whether the deck is over paving, soil or an enclosed area.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "局部换板、框架及连接维修、重建，是不同方案。离地空间低可能限制检查和材料搬运。请说明露台下方是铺装地面、土壤还是封闭区域。",
+    "originalEn": "Compare local board repair, frame and connection repairs, and rebuilding as different options. Low ground clearance can limit inspection and material access. Tell us whether the deck sits over paving, soil or an enclosed area."
+  },
+  "/services/deck-repairs/:41e93d70d6978d39": {
+    "zh": "/zh/projects/melba-deck-care/",
+    "en": "/projects/melba-deck-care/",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "/zh/projects/",
+    "originalEn": "/projects/"
+  },
+  "/services/deck-repairs/:a79e14aa82572fce": {
+    "zh": "Melba 露台维修、清洗与上油案例",
+    "en": "Melba deck repair, cleaning and oiling project",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "查看提供的 Ellis 项目照片",
+    "originalEn": "View supplied Ellis project photographs"
+  },
+  "/news/pergola-post-rot/:ae35595f722a5825": {
+    "zh": "腐朽的凉棚立柱可能需要局部维修、更换整根立柱，或扩大木作维修范围。应结合可保留的完好木材、连接和基础，以及它支承的横梁或屋顶作出判断；仅更换看得见的发软部位，不能完成这项判断。",
+    "en": "A rotten pergola post may need a local repair, a replacement post or wider timber work. The choice depends on the sound timber that can remain, the connections and footing, and the beams or roof it supports. Replacing the visible soft section is not enough to settle that decision.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "腐朽的凉棚或廊檐立柱，应与其承托的横梁、连接和支撑一并评估。柱脚可能只是可见的损坏位置，实际承重作用决定局部维修、更换立柱或扩大工作的选择。",
+    "originalEn": "A rotten pergola or verandah post must be assessed with the beams, connections and supports it carries. The post base may be the visible defect, but its supporting role determines whether a local repair, post replacement or wider work is appropriate."
+  },
+  "/news/pergola-post-rot/:1859c3e10c45d7f3": {
+    "zh": "先弄清两个问题：这根立柱支承什么，损伤延伸到哪里？遮挡构件、开放式凉棚立柱和支承屋顶的游廊立柱，作用并不相同。检查需要沿相连木材、固定件和基础进行，不能停留在第一个发软位置。不要为查看剩余状况而自行拆除柱脚。",
+    "en": "Start with two questions: what does this post support, and how far does the damage extend? A screen component, an open pergola post and a roof-supporting verandah post have different roles. The assessment needs to follow the connected timber, fixings and footing rather than stop at the first soft patch. Do not remove the base to find out what is left.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "凉棚或廊架的柱脚变软，可能只是可见问题；维修选择取决于它所支撑的结构。梁、连接件、基础，以及屋顶或其他附属构件，需要一并考虑。更换立柱是评估后的可能方案，不能先拆旧柱脚，再看剩下什么。",
+    "originalEn": "A soft pergola or verandah post base may be the visible defect, but the repair decision depends on the structure it supports. Beams, connections, footings and any roof or attachments need consideration together. A replacement post is one possible outcome after assessment; it is not a safe first step to remove the old base and see what remains."
+  },
+  "/news/pergola-post-rot/:0d9dd0a858028cd8": {
+    "zh": "只有保留木材和拟采用的连接适合该立柱的支承作用时，才可考虑局部柱脚维修。更换整根立柱仍需要合适的基础和连接。如果腐朽已延伸到横梁或附近立柱，只换一个构件可能留下其他受损部位。报价应说明保留与更换的内容，以及施工期间如何支承相连结构。",
+    "en": "A local base repair is an option only where the retained timber and proposed connection suit the post’s supporting role. A replacement post still needs a suitable footing and connections. If decay extends into beams or nearby posts, replacing one member may leave other damaged parts unresolved. Ask the quote to state what will remain, what will be replaced and how the connected structure will be supported during the work.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "局部基础修复需要合适的保留木材和满足其支撑作用的连接。更换完整的柱子仍然需要适当的连接和基础。如果横梁或相邻的柱子受到影响，范围可能会超出第一个软区域。询问保留哪些组成部分以及如何支持该决定。",
+    "originalEn": "A local base repair requires suitable retained timber and a connection that meets its supporting role. Replacing a full post still needs an appropriate connection and footing. If beams or adjoining posts are affected, the scope may extend beyond the first soft area. Ask which components remain and how that decision is supported."
+  },
+  "/news/pergola-post-rot/:f9517d911ecd96e1": {
+    "zh": "比较维修方案时，应看完整范围：受影响的立柱和横梁、保留木材、更换材料、连接、施工通道与表面处理，并确认隐蔽损伤会如何影响施工和价格。屋顶、排水槽或电气问题需要对应的合资格专业人员，应单独明确，不能默认包含在木材更换价格中。",
+    "en": "Compare repair proposals by their complete scope: affected posts and beams, retained timber, replacement material, connections, access and finish. Check how concealed damage would change the work and price. Roof, gutter or electrical issues need their relevant qualified trades and must be identified separately, rather than assumed to be included in a timber replacement price.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "对于维修报价，请确定受影响的柱子和横梁、保留的组件、建议的材料和连接。询问如何处理隐藏的调查结果以及包括哪些专家角色。架空电气配件和屋顶或天沟缺陷需要相关的合格路径。它们不应该在一般木材替代预留项目与费用中消失。",
+    "originalEn": "For a repair quote, identify the affected posts and beams, retained components, proposed material and connections. Ask how concealed findings will be handled and which specialist roles are included. Overhead electrical fittings and roof or gutter defects need their relevant qualified pathways. They should not disappear inside a general timber replacement allowance."
+  },
+  "/news/pergola-post-rot/:8dd3d0c12b29cba2": {
+    "zh": "请告诉木工团队立柱位于何处、支承什么，以及出现了哪些变化。我们会安排检查、沟通维修选项，再确认施工范围和报价。",
+    "en": "Tell our carpentry team where the post is, what it supports and what has changed. We arrange the assessment and discuss the repair options before confirming the work and quote.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "联系 Ellis Services Group 进行现场评估。我们查明原因并确认您的维修计划和报价。",
+    "originalEn": "Contact Ellis Services Group for an on-site assessment. We identify the cause and confirm your repair plan and quote."
+  },
+  "/news/deck-boards-or-frame/:ae35595f722a5825": {
+    "zh": "只有保留的支承和连接状况适合时，才可在不重建框架的情况下更换甲板。甲板是行走面，龙骨、承梁和立柱负责支承。应先确定哪些部位需要维修，再确认打磨或上油，因为更新表面涂层不能修复受损木材，也不能证明下方结构的状况。",
+    "en": "Deck boards can be replaced without rebuilding the frame only when the retained supports and connections are suitable. Boards form the walking surface; joists, bearers and posts support it. Decide what needs repair before agreeing sanding or oiling, because a renewed finish does not repair damaged timber or establish the condition underneath.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "露台板构成行走表面，托梁、承梁、立柱与连接件在下方提供支撑。只有保留的支撑合适时，损坏板材才适合局部更换；换新板面并不能证明框架完好。",
+    "originalEn": "Deck boards form the walking surface; joists, bearers, posts and connections support it. A damaged board can be a local repair only when the retained supports are suitable. A fresh surface does not establish that the frame is sound."
+  },
+  "/news/deck-boards-or-frame/:1859c3e10c45d7f3": {
+    "zh": "首先要区分行走面与承托它的结构。甲板可能开裂或磨损，而部分支承仍可使用；损伤也可能已经延伸到下方龙骨。通过检查可接近的甲板、龙骨、承梁、立柱和连接，才能判断是局部换板、明确范围的支承维修，还是需要更广泛的重建。不能只数外观不佳的甲板来作决定。",
+    "en": "The first distinction is between the walking surface and the structure carrying it. A board may split or wear while some supports remain usable, but damage can also continue into the joist below. Inspecting the accessible boards, joists, bearers, posts and connections establishes whether the job is local board replacement, defined support repairs or a wider rebuild. The number of unattractive boards alone cannot answer that question.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "露台板是行走表面，下方的搁栅由承重梁支撑，再由立柱和连接件继续传递荷载。这说明几块外观不佳的板和整座露台晃动，属于不同的需求。只有评估过拟保留的支撑后，才能确定是否仅换板；不能只凭多数板看起来整齐作决定。",
+    "originalEn": "A deck board is the walking surface. Joists sit beneath the boards; bearers carry the joists, and posts and connections carry the load onwards. These names help explain why a few unattractive boards and a moving deck are different enquiries. A board-only repair is an option after the supports to be retained have been assessed, not simply because most boards look tidy."
+  },
+  "/news/deck-boards-or-frame/:f9517d911ecd96e1": {
+    "zh": "清洗、表面处理和上油针对涂层，并不能修复劣化支承。2025 年 5 月完成的 Melba 项目中，Ellis 先维修翘起及变形甲板，再清洗、处理表面并使用 Cabot’s 油性露台油。这是先维修再做表面处理的实际记录，不代表每个老旧露台都需要相同施工。养护间隔和涂层兼容性应依据选定产品及现场暴露条件确认。",
+    "en": "Cleaning, preparation and oiling treat the surface finish, not a deteriorated support. In the Melba project completed in May 2025, Ellis repaired raised and distorted deck boards before cleaning, surface preparation and Cabot’s oil-based decking oil. That is a recorded example of repairs preceding finishing, not proof that every worn deck needs the same work. Care intervals and coating compatibility must follow the selected product and site exposure.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "表面护理涉及清洁、准备和保护性表面处理。它不能恢复受损的支撑或证明露台是安全的。在同意仅进行外观处理之前，先解决移动和损坏的木材问题。 WoodSolutions 将完成维护与所选涂层和曝光联系起来，因此通用重涂间隔不能替代识别您的实际产品。",
+    "originalEn": "Surface care concerns cleaning, preparation and the protective finish. It does not restore a deteriorated support or prove the deck is safe. Resolve movement and damaged timber before agreeing an appearance-only treatment. WoodSolutions links finish maintenance to the selected coating and exposure, so a universal recoating interval is not a substitute for identifying your actual product."
+  },
+  "/news/deck-boards-or-frame/:32322e39d69f269f": {
+    "zh": "固定件需要可靠的材料来承托。因此检查应同时考虑甲板和支承木材，并按约定检查隐蔽连接。维修方案应写清保留构件、更换部件和需要进一步进行的结构检查。不了解螺钉拧入材料的状况就再加一颗螺钉，不能构成完整维修方案。",
+    "en": "A fixing needs sound material to hold it. The inspection therefore considers both the board and the supporting timber, including access to concealed connections where agreed. Ask the repair proposal to identify retained members, replacement parts and any further structural checks. Adding another screw without understanding the material it enters is not a complete repair plan.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "评估人员需要区分固定位置是否适用，以及支撑材料是否已经劣化。这可能需要商定检查通道；从上方拍摄的照片无法确认底下所有连接。请询问如何记录隐蔽问题，以及支撑构件受影响时需要哪些进一步检查。维修方案既应说明新板面，也应说明拟保留的结构。",
+    "originalEn": "The assessor needs to distinguish a usable fixing location from deteriorated support material. That may require agreed inspection access; a photo from above cannot establish every connection below. Ask how concealed findings will be recorded and which further checks apply if supporting members are affected. The repair plan should explain the retained structure as well as the new walking surface."
+  },
+  "/news/deck-boards-or-frame/:8dd3d0c12b29cba2": {
+    "zh": "请说明露台哪个部位有问题，以及需要维修、清洗上油，还是希望先比较这些选项。木工团队会在预约施工前确认检查安排、工作范围与报价。",
+    "en": "Tell us which part of the deck is affected and whether you need repairs, cleaning and oiling, or help comparing them. Our carpentry team confirms the assessment, work boundary and quote before the work is booked.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "联系 Ellis Services Group 进行现场评估。我们查明原因并确认您的维修计划和报价。",
+    "originalEn": "Contact Ellis Services Group for an on-site assessment. We identify the cause and confirm your repair plan and quote."
+  },
+  "/projects/melba-deck-care/:e0886247f717bcc9": {
+    "zh": "2025 年 5 月，Ellis 木工团队维修了 Belconnen 区 Melba 的一处老旧木露台，并更新表面涂层。施工先处理翘起甲板和变形边缘，再进行清洗、表面处理与上油。",
+    "en": "In May 2025, the Ellis carpentry team repaired an older timber deck in Melba, Belconnen, then renewed its surface finish. Raised boards and distorted edges were addressed before cleaning, preparation and oiling.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "这座旧木露台在更新涂层前，需要处理翘起及变形的板材边缘。Ellis 木工团队完成了维修和表面保养。",
+    "originalEn": "An older timber deck needed attention to raised and distorted board edges before its surface finish was renewed. Ellis carpentry carried out the repair and care work."
+  },
+  "/projects/melba-deck-care/:c502c131c60cbf5d": {
+    "zh": "本次施工结合了甲板维修与表面养护。团队先修复翘起及变形甲板，再进行清洗和表面处理，包括项目记录中的抛光，最后涂刷 Cabot’s 油性露台油。下方照片分别展示施工前、清洗后、上油过程与完工状态。",
+    "en": "The job combined board repairs and surface care. The team first repaired the raised and distorted deck boards, then carried out cleaning and surface preparation, including the polishing recorded for the project, before applying Cabot’s oil-based decking oil. The photographs below show the surface before work, after cleaning, during oil application and on completion.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "提供的项目记录描述了对凸起和扭曲板的修复、表面处理、清洁和抛光，然后是上油。这些照片区分了风化表面、清洁区域、应用和完成的外观。",
+    "originalEn": "The supplied project record describes repairs to raised and distorted boards, surface preparation, cleaning and polishing, followed by oiling. The photos distinguish the weathered surface, the cleaned area, application and completed appearance."
+  },
+  "/projects/melba-deck-care/:85570bee8718b1bb": {
+    "zh": "完工照片展示了维修和上油后更新的木材表面。这是甲板维修及表面养护项目，不是框架更换记录。对于类似需求，关键在于分清：单独上油不能修复翘起或变形的甲板，维修与表面处理应分别确认。",
+    "en": "The completed photographs show the renewed timber surface after repair and oiling. This is a board-repair and surface-care project, not a record of frame replacement. The important distinction for a similar enquiry is that oiling alone does not correct lifted or distorted boards; the repair and finishing stages need to be agreed separately.",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "本项目使用了 Cabot’s 油性露台木油。完工照片展示了处理后的表面外观；涂油效果不能用于判断隐蔽支撑结构的状况，也不代表对未来使用表现的保证。",
+    "originalEn": "Cabot’s oil-based decking oil was used on this project. The finished images show the renewed surface appearance; coating work is not presented as proof of the condition of concealed supports or as a guarantee of future performance."
+  },
+  "/projects/melba-deck-care/:8dfc1c30135ddc7c": {
+    "zh": "露台清洗与上油服务",
+    "en": "Deck cleaning and oiling service",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "探索相关服务",
+    "originalEn": "Explore the related service"
+  },
+  "/projects/melba-deck-care/:ff98cc25716cb075": {
+    "zh": "/zh/services/deck-repairs/",
+    "en": "/services/deck-repairs/",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "/zh/projects/",
+    "originalEn": "/projects/"
+  },
+  "/projects/melba-deck-care/:993be9e0de617644": {
+    "zh": "露台甲板维修与更换",
+    "en": "Deck board repairs and replacement",
+    "zhRevision": 1,
+    "enRevision": 1,
+    "originalZh": "查看其他项目",
+    "originalEn": "See other projects"
+  }
+}
 }
