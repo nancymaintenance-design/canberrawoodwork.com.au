@@ -13,6 +13,11 @@ test('production output matches all approved bilingual pages and feeds',()=>{
  validateSite('dist',pages);
  for(const prefix of['','zh/']){
   const about=readFileSync(join('dist',prefix,'about/index.html'),'utf8');
+  assert.doesNotMatch(about,/Confirm the qualifications, applicable licence requirements|确认执行约定工作的人员的资格/);
+  const services=readFileSync(join('dist',prefix,'services/index.html'),'utf8');
+  assert.equal((services.match(/class="index-card"/g)||[]).length,18);
+  assert.doesNotMatch(services,/class="pathways shell"|class="service-local-notes shell content-gap-notes"/);
+  assert.equal((services.match(/<article>/g)||[]).length,3);
   assert.doesNotMatch(about,/<img[^>]*src="\/assets\/projects\/oxley-timber-screen-work/);
   const contact=readFileSync(join('dist',prefix,'contact/index.html'),'utf8');assert.match(contact,/class="contact-team-photo"/);assert.match(contact,/action="\/api\/contact"/);
  }
