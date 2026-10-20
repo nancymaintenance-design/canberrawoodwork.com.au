@@ -4,4 +4,5 @@ compileProduction();
 await import('./.compiled/build.mjs?run='+Date.now());
 if(!process.argv.includes('--english-only')&&process.env.CMS_SKIP_APPROVED!=='1'){
  const {applyApproved}=await import('./admin/render.mts');applyApproved(process.cwd()+'/dist',process.cwd());
+ const {applyReviewedRelease}=await import('./src/reviewed-release.mts');applyReviewedRelease(process.cwd()+'/dist',process.cwd());
 }

@@ -1,0 +1,85 @@
+/* Shared bilingual service detail layout. Existing typography and colours remain owned by wood-theme.css. */
+.service-content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 350px);
+  align-items: start;
+  gap: clamp(32px, 4vw, 60px);
+  padding-block: 40px 64px;
+}
+.service-content-body {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.service-content-body > .shell {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-inline: 0;
+}
+.service-content-body .service-reading-block,
+.service-content-body .case-study-heading,
+.service-content-body > .detail-main,
+.service-content-body > .verified-copy {
+  width: 100%;
+  max-width: none;
+}
+.service-content-body h2 {
+  font-size: clamp(28px, 2.7vw, 38px);
+}
+.service-content-body .related-work-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+.service-content-body > section {
+  padding-block: 28px 0;
+  border-top: 1px solid var(--line);
+}
+.service-content-body .service-local-notes,
+.service-content-body .service-questions,
+.service-content-body .service-case-study {
+  max-width: none;
+  margin-inline: 0;
+}
+.service-content-body .verified-copy > section:last-child,
+.service-content-body > section > :last-child {
+  margin-bottom: 0;
+}
+.service-content-sidebar {
+  min-width: 0;
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  max-block-size: calc(100vh - 48px);
+  max-block-size: calc(100dvh - 48px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) var(--pale);
+}
+.service-content-sidebar > aside {
+  position: static;
+  width: 100%;
+  margin: 0;
+}
+.service-content-sidebar .aside-links {
+  padding-bottom: 0;
+}
+@media (max-width: 900px) {
+  .service-content-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding-block: 32px 48px;
+  }
+  .service-content-sidebar {
+    position: static;
+    max-block-size: none;
+    overflow: visible;
+  }
+}
+@media print {
+  .service-content-grid { display: block; }
+  .service-content-sidebar { position: static; max-block-size: none; overflow: visible; }
+}

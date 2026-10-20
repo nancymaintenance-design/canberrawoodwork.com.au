@@ -1,0 +1,1412 @@
+{
+  "schemaVersion": 1,
+  "approvedAt": "2026-10-20",
+  "stages": [
+    {
+      "schemaVersion": 1,
+      "version": 1,
+      "edits": {
+        "/services/small-carpentry-jobs/:15c6169ac0c6ea60": {
+          "originalEn": "Small timber repairs, from sticking doors and damaged trim to loose cupboard fittings. Describe the items together for an on-site assessment and scoped quote.",
+          "originalZh": "处理小型木结构维修，包括卡门、破损装饰线条和松动柜体五金。可将各项需求一并描述，安排现场评估和明确范围后的报价。",
+          "en": "Small carpentry jobs for one sticking timber door, a loose cupboard hinge, damaged skirting or a short list of repairs. Tell Ellis which item needs attention and your suburb; we arrange an on-site assessment and confirm the work and quote.",
+          "zh": "承接单扇木门卡顿、橱柜铰链松动、踢脚线损坏等小型木工需求，也可一并咨询多项维修。请告诉 Ellis 需要处理的部位和所在区域，我们会安排现场评估并确认施工范围与报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/small-carpentry-jobs/:ec6c82cb55235f33": {
+          "originalEn": "Turn the repair list into separate tasks",
+          "originalZh": "将维修清单变成单独的任务",
+          "en": "One repair or a short job list",
+          "zh": "单项维修或多项小活",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/small-carpentry-jobs/:4bc1e1145ea444fe": {
+          "originalEn": "A short repair list can include a sticking timber door, loose shelf, damaged skirting and a cupboard hinge. These items may suit one enquiry, but each needs its own material and fixing check. Write one task per line, grouped by room or outdoor area, and say whether the priority is operation, appearance or replacing a damaged part.",
+          "originalZh": "一份简短的维修清单可以包括卡住的木门、松动的架子、损坏的踢脚线和橱柜铰链。这些项目可能适合一项咨询，但每一项都需要自己的材料和固定检查。每行写一个任务，按房间或室外区域分组，并说明优先级是操作、外观还是更换损坏部件。",
+          "en": "You can enquire about one carpentry repair without planning a full renovation. A door that drags, a loose shelf bracket, a missing length of skirting or a cupboard hinge can each be described as a separate task. For several items, number the list by room and explain whether you need adjustment, repair or replacement. Each item is assessed before the combined work is agreed.",
+          "zh": "不需要整屋翻新，也可以单独咨询一项木工维修。门扇拖地、层板支架松动、缺一段踢脚线或橱柜铰链故障，都可以作为独立任务描述。若有多项需求，请按房间编号，说明希望调整、维修还是更换；合并确认施工范围前，每项仍需评估。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/small-carpentry-jobs/:9ea0df7f19f13afc": {
+          "originalEn": "Contact Ellis with the work you need and your suburb. We arrange an assessment and quote; you can email optional safe photos to help us prepare.",
+          "originalZh": "联系 Ellis 并告知您需要的工作和您所在的城区。我们安排评估和报价；您可以通过电子邮件发送可选的从安全位置拍摄的照片来帮助我们做好准备。",
+          "en": "Send your suburb and one line per repair: the item, the problem and the result you want. Mention access restrictions and any materials you already have. Optional photos taken safely can be emailed to brian@elliservices.com.au; we confirm the assessment and quoting arrangements with you.",
+          "zh": "请提供所在区域，并逐项写明要修什么、出了什么问题、希望达到什么结果，同时说明进场限制和已有材料。可将从安全位置拍摄的照片发送至 brian@elliservices.com.au；我们会与你确认评估及报价安排。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/small-carpentry-jobs/:c19cdf3b0a532510": {
+          "originalEn": "Ask how labour will be priced for the proposed tasks, whether a call-out or minimum booking charge applies and which materials, disposal and finishing are included. An hourly figure alone does not establish the completed cost. Confirm the appointment and charging arrangements before accepting a visit; this page does not promise a standard hourly rate, a free assessment or a discount for a longer list.",
+          "originalZh": "询问拟议任务的劳动力如何定价，是否适用上门服务费或最低预订费，以及包括哪些材料、处置和整理。仅每小时的数字并不能确定完成的成本。接受拜访前确认预约及收费安排；本页面不承诺标准小时费率、免费评估或较长列表的折扣。",
+          "en": "Compare quotes against the same numbered repair list. Check labour, replacement hardware, supplied timber, removal and disposal, and any agreed painting or finishing. Confirm whether a call-out or minimum booking charge applies before arranging the visit. Grouping several jobs helps define the work, but does not by itself establish a lower price or a fixed hourly rate.",
+          "zh": "比较报价时，应使用同一份编号维修清单，并核对人工、更换五金、木材供应、拆除清运及约定的刷漆或收尾。安排上门前，请确认是否有上门费或最低预约费用。把多项工作一起说明有助于明确范围，但不代表一定更便宜，也不代表采用固定小时费率。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/cabinet-door-and-drawer-repairs/:b8d5bdffdcd0d828": {
+          "originalEn": "Cupboard & Drawer Repairs Canberra | Ellis Services Group",
+          "originalZh": "柜门与抽屉维修 | Ellis Services Group",
+          "en": "Kitchen Cabinet & Drawer Repairs | Ellis Services Group",
+          "zh": "厨房橱柜与抽屉维修 | Ellis Services Group",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/cabinet-door-and-drawer-repairs/:d3d8f35c5e7ab838": {
+          "originalEn": "Cupboard & Drawer Repairs Canberra | Ellis Services Group",
+          "originalZh": "柜门与抽屉维修 | Ellis Services Group",
+          "en": "Kitchen Cabinet & Drawer Repairs | Ellis Services Group",
+          "zh": "厨房橱柜与抽屉维修 | Ellis Services Group",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/cabinet-door-and-drawer-repairs/:990b259e7bfc01f3": {
+          "originalEn": "Cupboard & Drawer Repairs Canberra | Ellis Services Group",
+          "originalZh": "柜门与抽屉维修 | Ellis Services Group",
+          "en": "Kitchen Cabinet & Drawer Repairs | Ellis Services Group",
+          "zh": "厨房橱柜与抽屉维修 | Ellis Services Group",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/cabinet-door-and-drawer-repairs/:073d9dee5e5f8f23": {
+          "originalEn": "Cabinet Door & Drawer Repairs",
+          "originalZh": "柜门与抽屉维修",
+          "en": "Kitchen Cabinet & Drawer Repairs",
+          "zh": "厨房橱柜与抽屉维修",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/cabinet-door-and-drawer-repairs/:bc4102745938c898": {
+          "originalEn": "Cabinet Door & Drawer Repairs",
+          "originalZh": "柜门与抽屉维修",
+          "en": "Kitchen Cabinet & Drawer Repairs",
+          "zh": "厨房橱柜与抽屉维修",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/cabinet-door-and-drawer-repairs/:9fc78a2c31b11908": {
+          "originalEn": "Cabinet door and drawer repairs in Canberra. Identify hinges, runners and damaged fixing material, then confirm compatible parts, panel repairs and finish.",
+          "originalZh": "堪培拉的橱柜门和抽屉维修。识别铰链、滑轨和损坏的固定材料，然后确认兼容零件、面板维修和表面处理。",
+          "en": "Kitchen cabinet and drawer repairs for loose hinges, dropped doors and sticking runners. Ellis checks compatible hardware and fixing points before quoting.",
+          "zh": "处理厨房橱柜铰链松动、柜门下垂及抽屉滑轨卡顿。Ellis 会先检查五金适配及固定点状况，再确认维修范围与报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/cabinet-door-and-drawer-repairs/:b7b38ad8ef498a8d": {
+          "originalEn": "Cabinet door and drawer repairs in Canberra. Identify hinges, runners and damaged fixing material, then confirm compatible parts, panel repairs and finish.",
+          "originalZh": "堪培拉的橱柜门和抽屉维修。识别铰链、滑轨和损坏的固定材料，然后确认兼容零件、面板维修和表面处理。",
+          "en": "Kitchen cabinet and drawer repairs for loose hinges, dropped doors and sticking runners. Ellis checks compatible hardware and fixing points before quoting.",
+          "zh": "处理厨房橱柜铰链松动、柜门下垂及抽屉滑轨卡顿。Ellis 会先检查五金适配及固定点状况，再确认维修范围与报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/cabinet-door-and-drawer-repairs/:ee8332edf6541e9c": {
+          "originalEn": "Cabinet door and drawer repairs in Canberra. Identify hinges, runners and damaged fixing material, then confirm compatible parts, panel repairs and finish.",
+          "originalZh": "堪培拉的橱柜门和抽屉维修。识别铰链、滑轨和损坏的固定材料，然后确认兼容零件、面板维修和表面处理。",
+          "en": "Kitchen cabinet and drawer repairs for loose hinges, dropped doors and sticking runners. Ellis checks compatible hardware and fixing points before quoting.",
+          "zh": "处理厨房橱柜铰链松动、柜门下垂及抽屉滑轨卡顿。Ellis 会先检查五金适配及固定点状况，再确认维修范围与报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/cabinet-door-and-drawer-repairs/:15c6169ac0c6ea60": {
+          "originalEn": "Cabinet door and drawer repairs for loose hinges, failed runners, damaged fixing points and kickboards. Compatible parts and sound panel material determine the repair.",
+          "originalZh": "维修柜门铰链松动、抽屉滑轨故障、固定点及橱柜底部踢脚板损坏等问题。维修方案取决于五金是否匹配，以及面板是否仍能牢固固定。",
+          "en": "Kitchen cabinet repairs for dropped cupboard doors, loose hinges, sticking drawers and damaged kickboards. We assess the hardware and the material holding it, then confirm whether adjustment, a compatible replacement part or panel repair is suitable. Laundry, bathroom and wardrobe fittings can also be included in your enquiry.",
+          "zh": "处理厨房柜门下垂、铰链松动、抽屉卡顿及柜脚挡板损坏。我们会检查五金及其固定材料，再确认适合调整、更换适配部件还是维修板材。洗衣房、浴室柜及衣柜配件问题也可以一并咨询。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/cabinet-door-and-drawer-repairs/:ec6c82cb55235f33": {
+          "originalEn": "Distinguish hardware faults from panel damage",
+          "originalZh": "区分硬件故障和面板损坏",
+          "en": "Kitchen cabinet doors, hinges and drawers",
+          "zh": "厨房柜门、铰链与抽屉",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/cabinet-door-and-drawer-repairs/:4bc1e1145ea444fe": {
+          "originalEn": "A dropped cupboard door can have a loose hinge or damaged screw holes in the panel. A sticking drawer may involve its runner, box or alignment. Repairing these items differs from replacing a kitchen or manufacturing new cabinetry. Name the affected door, drawer, wardrobe fitting or kickboard.",
+          "originalZh": "掉落的橱柜门可能会导致铰链松动或面板上的螺丝孔损坏。抽屉卡阻可能涉及其滑轨、盒子或对齐方式。修理这些物品与更换厨房或制造新橱柜不同。列出受影响的门、抽屉、衣柜配件或踢脚线。",
+          "en": "A cupboard door that drops or will not close may need hinge adjustment, compatible hardware or attention to damaged fixing holes. A drawer that sticks or tilts needs its runners, drawer box and alignment checked together. A local cabinet repair does not automatically require replacing the whole kitchen. The condition of the retained board and available parts determines what can be repaired.",
+          "zh": "柜门下垂或关不拢，可能需要调整铰链、更换适配五金，或处理损坏的螺钉固定孔。抽屉卡顿或倾斜，则应一并检查滑轨、抽屉箱体和对齐状况。局部橱柜故障不一定需要更换整套厨房；能否维修，要结合保留板材和可用配件判断。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/cabinet-door-and-drawer-repairs/:4d5b86e03a4017a6": {
+          "originalEn": "Contact Ellis with the fitting and your suburb for an on-site assessment and repair quote. Optional safe photos can be emailed to brian@elliservices.com.au. The scope identifies compatible parts and panel work before ordering.",
+          "originalZh": "联系 Ellis 与配件和您所在的城区以获得现场评估和维修报价。可选的从安全位置拍摄的照片可以通过电子邮件发送至 brian@elliservices.com.au。订购前范围会确定兼容的零件和面板工作。",
+          "en": "List the number of affected doors, hinges, drawers or kickboards and describe one problem per item. Include the room, suburb and any safely visible part number. Optional overall and close-up photos can be emailed to brian@elliservices.com.au. We assess the fitting and panel condition before confirming replacement parts, repair work and the quote.",
+          "zh": "请列出受影响柜门、铰链、抽屉或柜脚挡板的数量，逐项描述故障，并提供房间、所在区域及无需拆卸即可看到的配件型号。可将整体和细节照片发送至 brian@elliservices.com.au。我们会先评估五金和板材状况，再确认更换件、维修工作与报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/interior-carpentry/:b8d5bdffdcd0d828": {
+          "originalEn": "Interior Carpentry Canberra | Ellis Services Group",
+          "originalZh": "室内木作与装修收尾 | Ellis Services Group",
+          "en": "Interior & Finish Carpentry | Ellis Services Group",
+          "zh": "室内木作与收口安装 | Ellis Services Group",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/interior-carpentry/:d3d8f35c5e7ab838": {
+          "originalEn": "Interior Carpentry Canberra | Ellis Services Group",
+          "originalZh": "室内木作与装修收尾 | Ellis Services Group",
+          "en": "Interior & Finish Carpentry | Ellis Services Group",
+          "zh": "室内木作与收口安装 | Ellis Services Group",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/interior-carpentry/:990b259e7bfc01f3": {
+          "originalEn": "Interior Carpentry Canberra | Ellis Services Group",
+          "originalZh": "室内木作与装修收尾 | Ellis Services Group",
+          "en": "Interior & Finish Carpentry | Ellis Services Group",
+          "zh": "室内木作与收口安装 | Ellis Services Group",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/interior-carpentry/:073d9dee5e5f8f23": {
+          "originalEn": "Interior & Renovation Carpentry",
+          "originalZh": "室内木作与装修收尾",
+          "en": "Interior & Finish Carpentry",
+          "zh": "室内木作与收口安装",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/interior-carpentry/:bc4102745938c898": {
+          "originalEn": "Interior & Renovation Carpentry",
+          "originalZh": "室内木作与装修收尾",
+          "en": "Interior & Finish Carpentry",
+          "zh": "室内木作与收口安装",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/interior-carpentry/:15c6169ac0c6ea60": {
+          "originalEn": "Interior and renovation carpentry for shelving, timber panelling and unfinished room details. Layout, fixing surfaces and adjoining finishes guide the installation scope.",
+          "originalZh": "提供层板、木质墙面镶板及室内装修木作收尾。根据布局、固定基面和相邻饰面确认安装范围。",
+          "en": "Interior and finish carpentry for shelving, timber panelling and the fitted details left after renovation. This includes trim and fix-out work around completed rooms, with dimensions, fixing surfaces and adjoining finishes checked before installation.",
+          "zh": "提供层板、木护墙板及装修后遗留细节的室内木作与收口安装。施工包括与房间完成面衔接的装饰线条及木作收尾，安装前会检查尺寸、固定基层和相邻饰面。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/interior-carpentry/:ec6c82cb55235f33": {
+          "originalEn": "List the room details still to be fitted",
+          "originalZh": "列出房间内仍需安装的细节",
+          "en": "Finish carpentry and renovation fix-out",
+          "zh": "装修后的木作收口与安装",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/interior-carpentry/:4bc1e1145ea444fe": {
+          "originalEn": "Interior fix-out can include shelves, timber panelling, fillers and junctions left unfinished after renovation. Identify the room and each fitted detail. Skirting and architraves have their own service page; a complete built-in storage layout belongs with custom joinery.",
+          "originalZh": "内部装修可包括翻新后未完成的架子、木镶板、填充物和连接处。确定房间和每个安装细节。踢脚线和楣板有自己的服务页面；完整的内置收纳布局属于定制木作。",
+          "en": "Finish carpentry, also called trim or fix-out carpentry, concerns visible fitted timber details rather than structural framing. Examples include skirting, architraves, shelving, timber panelling, fillers and junctions left after other renovation work. List the unfinished details by room. Use the dedicated skirting service for trim installation, and custom joinery for a new complete storage layout.",
+          "zh": "Finish carpentry 也常称为 trim 或 fix-out carpentry，主要指可见木构件的安装与收口，而不是结构框架施工，例如踢脚线、门窗套线、层板、木护墙板、填充板，以及其他装修工作完成后留下的衔接部位。请按房间列出未完成细节；单独安装装饰线条可查看踢脚线服务，新做整套储物布局则归入定制木作。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/interior-carpentry/:9205c52d31513eaa": {
+          "originalEn": "Tell us which renovation work is finished and which floor, wall or cabinetry levels remain to be set. Agree the fitting sequence before materials are cut so new details meet final surfaces.",
+          "originalZh": "请说明哪些翻新工作已完成，以及地面、墙面或柜体还有哪些标高未确定。裁切材料前，应确认安装顺序，让新构件与最终完成面衔接。",
+          "en": "Number each unfinished detail and identify the wall, floor, doorway or cabinet it meets. Tell us which trades have finished and what still needs access. Confirm the profile, material supply, scribing, filling and any painting in the quote before cutting or fitting, so new trim is measured against the final surfaces rather than an unfinished room.",
+          "zh": "请逐项编号，说明每个未完成部位与哪面墙、地板、门洞或柜体相接，以及哪些工种已经完成、哪些仍需进场。裁切或安装前，应在报价中确认线型、材料供应、贴合修切、填缝及刷漆包含项，确保新构件以最终完成面为测量依据。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/interior-carpentry/:afa79de83b3c801f": {
+          "originalEn": "Fix-out carpentry includes the fitted interior details, such as skirting, architraves, doors, trims, panels and selected fittings. Ellis measures the remaining work and confirms installation and finishing inclusions for your rooms.",
+          "originalZh": "木作收尾包括安装的内部细节，例如踢脚线、门窗套线、门、装饰、面板和选定的配件。 Ellis 测量剩余工作并确认房间的安装和安装内容。",
+          "en": "Fix-out or finish carpentry covers fitted interior timber details such as skirting, architraves, trims, panels, shelving and selected door fittings. It is distinct from structural framing, electrical changes or plumbing. Ellis measures the remaining work and confirms which installation, preparation and finishing tasks are included.",
+          "zh": "Fix-out 或 finish carpentry 指踢脚线、门窗套线、装饰线条、面板、层板及部分门配件等室内木作安装与收尾，不等同于结构框架施工、电气改动或管道工作。Ellis 会测量剩余工作，并确认安装、准备及表面处理的具体范围。",
+          "enRevision": 1,
+          "zhRevision": 1
+        }
+      },
+      "history": []
+    },
+    {
+      "schemaVersion": 1,
+      "version": 1,
+      "edits": {
+        "/:cddf6b1fa9caad21": {
+          "originalEn": "Deck boards form the walking surface; joists, bearers, posts and connections support it. A damaged board can be a local repair only when the retained supports are suitable. A fresh surface does not establish that the frame is sound.",
+          "originalZh": "露台板构成行走表面，托梁、承梁、立柱与连接件在下方提供支撑。只有保留的支撑合适时，损坏板材才适合局部更换；换新板面并不能证明框架完好。",
+          "en": "Deck boards form the walking surface; joists, bearers, posts and connections support it. Ellis checks the boards and supporting frame together to plan the repair.",
+          "zh": "露台板构成行走表面，托梁、承梁、立柱及连接件提供支撑。Ellis 会一并检查板材和框架，确定适合的维修方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/:ef42b7c8f2ba41ca": {
+          "originalEn": "A rotten timber sill may suit a local repair when the remaining timber and adjoining frame can support a suitable replacement section. Decay across the sill, at joints or into the frame can require a wider repair. The visible soft spot alone does not define the boundary.",
+          "originalZh": "如果剩余木材和相邻窗框能够连接合适的新部件，腐朽窗台可能适合局部维修。腐朽若贯穿窗台、接头或延伸到窗框，则可能需要扩大范围；不能只按可见的松软位置判断。",
+          "en": "Ellis checks the sill and adjoining frame to identify timber that can be retained, the extent of replacement and the source of moisture. We then explain the repair options and quote.",
+          "zh": "Ellis 会检查窗台及相邻窗框，明确可保留木材、更换范围及受潮来源，再为您说明维修方案和报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/:0542e48a86029590": {
+          "originalEn": "A new outdoor deck installed by the Ellis Services Group carpentry team. The owner-supplied project record identifies site levelling, subframe construction and composite board installation.",
+          "originalZh": "Ellis Services Group 木工团队安装的新户外露台。用户提供的项目记录包括场地找平、支撑龙骨搭建和复合材料露台板安装。",
+          "en": "Ellis installed this new outdoor deck in Mitchell, including site levelling, subframe construction and composite board fitting.",
+          "zh": "Ellis 在 Mitchell 安装的新户外露台，施工包括场地找平、龙骨搭建及复合材料板铺装。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/:87f58b630179490e": {
+          "originalEn": "Completed under-stair storage from different projects. These supplied photographs are a gallery of finished work, not stages of one installation.",
+          "originalZh": "展示多个不同项目的楼梯下收纳完工效果。这些照片并非同一次安装的不同施工阶段。",
+          "en": "Explore completed under-stair storage installations from different projects, with cupboard layouts and fitted details for sloping spaces.",
+          "zh": "查看不同项目的楼梯下收纳完工效果，参考斜坡空间的柜门布局及安装细节。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/small-carpentry-jobs/:c19cdf3b0a532510": {
+          "originalEn": "Compare quotes against the same numbered repair list. Check labour, replacement hardware, supplied timber, removal and disposal, and any agreed painting or finishing. Confirm whether a call-out or minimum booking charge applies before arranging the visit. Grouping several jobs helps define the work, but does not by itself establish a lower price or a fixed hourly rate.",
+          "originalZh": "比较报价时，应使用同一份编号维修清单，并核对人工、更换五金、木材供应、拆除清运及约定的刷漆或收尾。安排上门前，请确认是否有上门费或最低预约费用。把多项工作一起说明有助于明确范围，但不代表一定更便宜，也不代表采用固定小时费率。",
+          "en": "Ellis can assess several small repairs from one numbered list. Your written quote identifies labour, hardware, timber, removal and finishing, with visit and booking arrangements confirmed in advance.",
+          "zh": "Ellis 可按同一份编号清单评估多项小维修。书面报价会明确人工、五金、木材、清运及收尾内容，并提前确认上门和预约安排。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/door-and-frame-repairs/:cbe1130878dcb830": {
+          "originalEn": "We inspect hinge support, jamb fixings, closing gaps, the strike area and floor-to-door clearance. For trimming, the door construction and permitted trimming allowance must be checked first. A supplied replacement door also needs measured dimensions, compatible hinges and latch preparation; it is not automatically a direct fit.",
+          "originalZh": "我们检查铰链支撑、侧框固定、关闭间隙、锁舌承接位置和门底间隙。修边前，须检查门的结构及允许修整量。客户提供的新门也须确认尺寸、铰链兼容性和锁舌加工，不能默认直接适配。",
+          "en": "We inspect hinge support, jamb fixings, closing gaps, the strike area and floor clearance. For trimming or a customer-supplied replacement door, we check the construction, dimensions, trimming allowance and hardware positions before fitting.",
+          "zh": "我们检查铰链支撑、门框固定、闭合间隙、锁舌位置及门底间隙。修边或安装客户自购门扇时，会先核对结构、尺寸、允许修整量及五金位置，再安排施工。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/door-and-frame-repairs/:c19cdf3b0a532510": {
+          "originalEn": "Repairing a sound leaf with a defined alignment fault differs from replacing a damaged leaf or restoring a softened hinge fixing. The written proposal should identify retained parts, any door or jamb replacement, hardware supply, removal and finishing. A replacement door does not itself correct movement or damage in the frame. Garage doors, automatic access, glazing, lock mechanisms and fire-rated assemblies are not established by an internal timber-door enquiry.",
+          "originalZh": "门扇完好但位置不正，与更换受损门扇或修复变软的铰链固定点，是不同工作。书面方案应说明保留部分、门扇或门框更换、五金供应、拆除和表面处理。新门本身不能解决门框位移或损坏。内木门需求不代表包含车库门、电动出入口、玻璃、锁机构或防火组件作业。",
+          "en": "Ellis assesses the door leaf, frame and hinge fixing points, then specifies adjustment, timber repairs or replacement in the quote. Hardware, removal and finishing are clearly listed. Glazing, lock mechanisms and fire-rated or powered systems require the relevant specialist.",
+          "zh": "Ellis 会检查门扇、门框和铰链固定点，在报价中明确调整、木构件维修或更换方案，并列明五金、拆除和收尾内容。玻璃、锁芯机构、防火门及电动系统由相应专业人员处理。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/timber-window-repairs/:4bc1e1145ea444fe": {
+          "originalEn": "A rotten sill does not automatically mean the complete window must be replaced. Local replacement may suit damage with sound adjoining timber and suitable joints; decay extending into the lower rail or frame needs a wider scope. A sticking sash can involve its hardware or balance, rather than the sill alone.",
+          "originalZh": "腐烂的窗台并不意味着必须更换整个窗户。局部更换可能会因完好的相邻木材和合适的接缝而受到损坏；衰减延伸到较低的导轨或框架需要更广泛的范围。粘贴窗扇可以涉及其硬件或平衡，而不仅仅是窗台。",
+          "en": "Ellis checks the sill, frame and adjoining timber to identify what can be retained and which sections need replacement. For a sticking sash, we also check its operating hardware and balance.",
+          "zh": "Ellis 会检查窗台、窗框及相邻木材，确定可保留部分和需要更换的部位。窗扇卡阻时，也会检查开关五金及平衡装置。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/timber-window-repairs/:cbe1130878dcb830": {
+          "originalEn": "We inspect sill ends, frame junctions, lower rails and accessible fixing points. The sill fall and drip edge influence drainage, while matching the existing profile affects replacement fit. Inspection access is agreed before concealed joints are opened; photographs cannot confirm their condition.",
+          "originalZh": "我们检查窗台两端、窗框接缝、下横框及可接近的固定点。窗台坡度和滴水边影响排水，原有型材则影响替换件适配。打开隐蔽接头前，须商定检查安排；照片无法确认其状况。",
+          "en": "We inspect sill ends, frame junctions, lower rails and accessible fixings. Drainage falls, drip edges and matching profiles guide the repair design, with access to concealed joints agreed before work.",
+          "zh": "我们检查窗台两端、窗框接缝、下横框及可接近的固定点，结合排水坡度、滴水边和匹配型材设计维修方案，并在施工前确认隐蔽接头的检查安排。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/timber-window-repairs/:c19cdf3b0a532510": {
+          "originalEn": "A local sill or frame repair may retain suitable adjoining timber. Connected decay, unsuitable fixing points or a wider operating fault can change that scope. Ask what can remain, which timber or hardware needs replacement and whether glazing access is required. Complete window manufacture, double-glazing conversion and a full heritage-restoration package are not implied by a timber repair request; confirm the applicable supplier, specialist and property requirements before changes.",
+          "originalZh": "局部窗台或窗框维修，可能保留适用的相邻木材。腐烂延伸、固定点不适用或更大范围的开关故障，都可能改变施工范围。请确认哪些可保留、哪些木材或五金需换，以及是否需要玻璃作业。木结构维修需求不代表包含整窗制造、双层玻璃改造或完整文保修复，改动前须确认适用供应商、专业人员和房屋要求。",
+          "en": "We check adjoining timber, fixing points and window operation, then explain the local sill or frame repair options. Where the work involves glazing or heritage requirements, we confirm the relevant specialist arrangements before proceeding.",
+          "zh": "我们检查相邻木材、固定点及窗户开关情况，为您说明窗台或窗框的局部维修方案。涉及玻璃或文保要求时，会在施工前明确相关专业安排。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/timber-window-repairs/:afa79de83b3c801f": {
+          "originalEn": "Glass may be retained where its condition and the timber repair access allow it. Removal, reglazing or replacement needs a glazier. Confirm that scope before the frame is disturbed; retaining a frame does not guarantee that every pane can stay in place.",
+          "originalZh": "在玻璃状况与木框维修操作条件允许时，可以保留原玻璃。拆卸、重新安装或更换玻璃须由玻璃专业人员处理，应在拆动木框前确认相关范围；保留木框不代表每块玻璃都能原位保留。",
+          "en": "We check the glass condition and repair access when planning timber-frame work. Any glass removal, reglazing or replacement is coordinated with a glazier.",
+          "zh": "安排木窗框维修时，我们会检查玻璃状况及施工操作空间。需要拆卸、重新安装或更换玻璃时，由玻璃专业人员配合处理。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/rotten-timber-repairs/:428d61aa8ed3d7c8": {
+          "originalEn": "Use the component pages for a known window, door or roof-edge repair. A dry surface after a dry spell does not establish that adjoining timber is sound or that the earlier water path has stopped.",
+          "originalZh": "使用组件页进行已知的窗户、门或屋顶边缘维修。干燥期后的干燥表面并不能证明相邻的木材是完好的或早期的水路已经停止。",
+          "en": "Explore our window, door and roof-edge repair pages for the affected component. Ellis checks adjoining timber and moisture entry to plan a lasting repair approach.",
+          "zh": "您可以按受损部位查看木窗、木门或屋檐木构件维修服务。Ellis 会检查相邻木材及受潮来源，制定维修方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/deck-repairs/:c19cdf3b0a532510": {
+          "originalEn": "In Melba in May 2025, Ellis repaired raised and distorted board edges before cleaning, surface preparation and application of Cabot’s oil-based decking oil. The project shows why repair and surface care are separate stages. It is not evidence of frame replacement or a specification for every deck. We also quote stand-alone cleaning and oiling where that is the agreed work.",
+          "originalZh": "2025 年 5 月，Ellis 在 Melba 先维修翘起及边缘变形的甲板，再进行清洗、表面处理和 Cabot’s 油性露台油施工。这个项目说明维修与表面养护是不同阶段，并不代表该项目更换了框架，也不是每个露台都适用的施工方案。我们也承接按约定范围进行的单独清洗上油。",
+          "en": "In Melba in May 2025, Ellis repaired raised and distorted deck boards, then cleaned and prepared the surface before applying Cabot’s oil-based decking oil. We also offer stand-alone deck cleaning and oiling.",
+          "zh": "2025 年 5 月，Ellis 在 Melba 维修翘起及边缘变形的露台板，再清洗、处理表面并涂刷 Cabot’s 油性露台油。我们也提供单独的露台清洗和上油服务。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/deck-repairs/:ac9c163b839e6ab8": {
+          "originalEn": "The overall deck and close board view illustrate the walking surface, perimeter and fixing positions. Those surface details do not establish the condition of the framing beneath.",
+          "originalZh": "整体露台和近板视图说明了行走表面、周边和固定位置。这些表面细节并不能确定下面框架的状况。",
+          "en": "Deck surface and fixing details, including board edges and the finished perimeter.",
+          "zh": "露台板面与固定细节，包括板材边缘及周边收口。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/timber-fence-repairs/:b5ad18bab80419fc": {
+          "originalEn": "Record loose boards, broken rails, a lean and softness near ground level. Show both sides only where access is permitted and safe. Note irrigation, soil build-up and drainage near posts. Do not push an unstable fence to demonstrate movement; photos cannot establish its below-ground condition.",
+          "originalZh": "记录松动的木板、破损的横档、接近地面的倾斜和柔软度。仅在允许且安全的情况下显示两侧。注意柱子附近的灌溉、土壤堆积和排水。请勿推动不稳定的栅栏来演示移动；照片无法确定其地下状况。",
+          "en": "Tell us about loose boards, broken rails, leaning sections and soft timber near ground level, along with drainage or irrigation near posts. We inspect the supports on site. Please keep clear of unstable sections and use only safe, permitted access for photos.",
+          "zh": "请说明松动围板、断裂横档、倾斜或近地面木材变软的情况，以及立柱附近的排水和灌溉。我们会现场检查支撑。拍照时请避开不稳段，只使用安全且获准的通道。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/timber-fence-repairs/:a27dd211278b9596": {
+          "originalEn": "The quote identifies the length, posts, rails, boards, footings, disposal and finish included. Boundary position and owner agreement must be settled before shared-boundary work. Cost-sharing and neighbour agreement remain separate from the physical repair quote; a quote does not determine either owner’s contribution.",
+          "originalZh": "报价应列明长度、立柱、横档、围板、基础、清运和饰面。共用边界施工前，须确定边界位置及业主同意事项。费用分摊与邻里协议，独立于实体维修报价；报价不决定任何一方的分担额。",
+          "en": "Your quote lists the affected length, posts, rails, boards, footings, removal and finish. For shared boundaries, please arrange owner agreement on access, boundary position and cost-sharing before work starts.",
+          "zh": "报价列明维修长度、立柱、横档、围板、基础、清运及饰面。共用边界施工前，请与相关业主确认进出安排、边界位置及费用分担。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/skirting-and-architraves/:b5ad18bab80419fc": {
+          "originalEn": "Identify missing lengths after flooring, open mitres, swollen boards and trim pulled from the wall. Timber and manufactured boards such as MDF respond differently to moisture and edge damage. Swollen material needs its water source checked before replacement; an open joint alone does not mean the whole run has failed.",
+          "originalZh": "识别地板、开放斜角、膨胀的板和从墙上拉下的装饰后缺失的长度。木材和人造板（如中密度纤维板）对潮湿和边缘损坏的反应不同。膨胀材料更换前需检查水源；单独的开放接头并不意味着整个运行失败。",
+          "en": "Tell us about missing trim after flooring, open mitres, swollen boards or loose lengths. We check the profile, material and moisture source, then identify the lengths and joints that need attention.",
+          "zh": "请告诉我们铺地板后缺失的线条、开缝的拼角、膨胀板材或松动部位。我们会检查截面造型、材料及受潮来源，确定需要处理的长度和接缝。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/interior-carpentry/:a27dd211278b9596": {
+          "originalEn": "The installation plan and quote identify on-site fitting and finishing, materials, preparation, fixings and coating inclusions. Structural or wet-area work and electrical or plumbing changes require their relevant specialist checks before fitting. Finish carpentry does not establish a scope to alter a load-bearing wall.",
+          "originalZh": "安装方案和报价应说明现场安装及收尾、材料、准备工作、固定件和涂装包含项。结构、湿区以及电气或管道改动，须在安装前完成相应专业检查。室内收尾木工并不代表可以改动承重墙。",
+          "en": "The installation plan and quote cover materials, preparation, fitting, fixings and finishing. Structural, wet-area, electrical and plumbing changes are coordinated with the relevant specialists before fitting.",
+          "zh": "安装方案及报价会列明材料、准备工作、安装、固定件及饰面。涉及结构、湿区、电气或管道改动时，会在安装前与相关专业人员协调。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/interior-carpentry/:986bb06d5f2f67dd": {
+          "originalEn": "For timber wall panelling, identify the room, walls to be covered, preferred layout and existing corners, doors, skirting and sockets. Confirm panel supply, wall preparation, fixings, edge details and painting or coating in the quote. Installing decorative timber does not establish waterproofing, an exterior cladding system or a scope to move electrical fittings.",
+          "originalZh": "安装木护墙板时，请说明房间、覆盖墙面、偏好布局，以及现有墙角、门洞、踢脚线和插座。报价中应确认板材供应、墙面处理、固定件、收口和刷漆或涂装。装饰木材安装不代表包含防水、外墙挂板系统或电气设施迁移。",
+          "en": "For timber wall panelling, tell us the room, walls and preferred layout. We check corners, doors, skirting and sockets, then confirm panel supply, wall preparation, fixings and finishing. Electrical and wet-area work require the relevant specialist arrangements.",
+          "zh": "木护墙板安装请说明房间、墙面和偏好布局。我们检查墙角、门洞、踢脚线和插座，在方案中明确板材供应、墙面处理、固定和收口。电气及湿区作业需安排相关专业人员。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/timber-weatherboard-repairs/:4bc1e1145ea444fe": {
+          "originalEn": "A cracked weatherboard can be a local repair; repeated dampness across several boards needs the water path investigated. The board profile and lap, ends, corners and window junctions influence replacement. Timber boards do not establish a repair method for metal, fibre-cement or composite cladding systems.",
+          "originalZh": "外墙木挂板破裂可以进行局部修复；几块木板反复受潮，需要检查水路。板的轮廓以及搭接、端部、拐角和窗口连接处会影响更换。木板没有建立金属、纤维水泥或复合材料覆层系统的修复方法。",
+          "en": "For cracked or damp timber weatherboards, we check the board profile, laps, corners and window junctions, then specify replacement and moisture-related repairs for the timber cladding.",
+          "zh": "外墙木挂板开裂或受潮时，我们检查截面、搭接、墙角及窗边接缝，明确木挂板更换及受潮部位的处理方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/timber-stair-and-handrail-repairs/:ce70c5b061caafbc": {
+          "originalEn": "The stair view and handrail close-up illustrate different support points: tread edges, rail joints and wall connections. A surface view does not establish the condition of concealed anchorage.",
+          "originalZh": "楼梯视图和扶手特写说明了不同的支撑点：踏板边缘、导轨接头和墙壁连接。表面视图并不能确定隐蔽锚地的条件。",
+          "en": "Timber stair and handrail details: tread edges, rail joints and wall fixings.",
+          "zh": "木楼梯与扶手细节：踏板边缘、扶手接头及墙面固定位置。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/pergola-timber-repairs/:a27dd211278b9596": {
+          "originalEn": "The quote distinguishes existing repair from a changed footprint, new roof or altered support arrangement. Alterations need their applicable ACT approval checks. Roofing, drainage and electrical work require their relevant specialist scope; a timber enquiry does not establish those inclusions.",
+          "originalZh": "报价应区分现有维修与改变占地、新建屋顶或调整支撑。改建须核对适用的 ACT 审批要求。屋顶、排水和电气工作应分别明确专业范围，不能从木工咨询中默认包含。",
+          "en": "The quote distinguishes repairs from changes to the footprint, roof or support arrangement. We confirm applicable approval checks and any roofing, drainage or electrical specialist work before scheduling.",
+          "zh": "报价会区分维修与占地、屋顶或支撑布局的改动，并在安排施工前确认适用审批及屋面、排水、电气等专业配合事项。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/custom-joinery/:b5ad18bab80419fc": {
+          "originalEn": "Show the opening, skirting, nearby doors, vents and power points. Clearance for doors and drawers matters as much as storage depth. Note uneven walls or a sloping ceiling; rough dimensions do not establish final fit or a wall’s suitability for heavy cabinets.",
+          "originalZh": "显示开口、踢脚线、附近的门、通风口和电源点。门和抽屉的间隙与收纳深度一样重要。注意不平坦的墙壁或倾斜的天花板；粗略尺寸并不能确定最终的安装尺寸或墙壁是否适合重型橱柜。",
+          "en": "Show the opening, skirting, nearby doors, vents and power points. Tell us about uneven walls or sloping ceilings. We measure the space, opening clearances and fixing locations to plan the fitted storage.",
+          "zh": "请说明开口、踢脚线、附近门洞、通风口和电源位置，以及墙面不平或天花倾斜情况。我们会测量空间、开关间隙及固定位置，规划收纳柜安装。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/custom-joinery/:c19cdf3b0a532510": {
+          "originalEn": "Agree which layout or drawing you will approve, what products or components need manufacture and who is responsible for supply and fitting. This page does not establish an in-house factory or a complete kitchen-renovation service. A wardrobe hinge or runner repair may belong with existing cabinet repairs; fitting a standard shelf differs from designing a complete built-in unit. Confirm these boundaries in the proposal before ordering.",
+          "originalZh": "请确认待批准的布局或图纸、需要制作的部件，以及供货和安装责任。本页不代表设有自有工厂或提供完整厨房翻新。衣柜铰链、滑轨维修可归入现有柜体维修；安装标准层板与设计整套内置柜也不同。订购前应在方案中明确这些范围。",
+          "en": "We discuss the layout or drawings with you and confirm fabrication, product supply and fitting arrangements in the proposal. Existing hinge and runner repairs can be handled through our cabinet repair service; new built-in storage starts with a measured layout.",
+          "zh": "我们与您讨论布局或图纸，在方案中明确制作、产品供应及安装安排。现有铰链及滑轨问题可通过柜体维修服务处理；新建嵌入式收纳则从现场测量和布局开始。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/custom-joinery/:9205c52d31513eaa": {
+          "originalEn": "Ask which drawing, layout or sample you will approve and what any design revision includes. Confirm supply and manufacture arrangements in the proposal; a made-to-fit enquiry alone does not establish those arrangements.",
+          "originalZh": "请确认需要您批准的图纸、布局或样品，以及设计修改包含什么。供货和制作安排须在方案中确认，提出适配尺寸的需求，本身并不能确定这些责任。",
+          "en": "We confirm the layout, drawings or samples for your approval and explain the supply, fabrication, fitting and design-revision arrangements in the proposal.",
+          "zh": "我们会确认供您审批的布局、图纸或样品，并在方案中说明供货、制作、安装及设计修改安排。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/structural-timber-repairs/:03478d5b1b386d20": {
+          "originalEn": "Yes. Existing termite-treatment and pest reports help define the enquiry. Timber replacement still needs assessment of the members and connections, with qualified structural and engineering requirements confirmed before a scope is priced. Treatment records do not establish the remaining strength of timber.",
+          "originalZh": "是的。现有的白蚁处理和害虫报告有助于确定调查范围。木材更换仍需要对构件和连接进行评估，并在范围定价之前确认合格的结构和工程要求。处理记录并不能确定木材的剩余强度。",
+          "en": "Yes. Share existing termite-treatment and pest reports with Ellis. We assess the affected members and connections, confirm any required structural input and approval checks, then quote the timber repairs.",
+          "zh": "可以。欢迎向 Ellis 提供已有白蚁处理及虫害报告。我们会检查受损构件和连接，确认需要的结构专业意见及审批事项，再提供木材维修报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/deck-building/:b5ad18bab80419fc": {
+          "originalEn": "Describe doors opening onto the deck, ground slope, drainage, boundaries and material access. Existing plans and safe photos help explain the layout. They cannot establish soil conditions, boundary position or existing framing capacity.",
+          "originalZh": "描述通向露台、地面坡度、排水、边界和材料通道的门。现有的平面图和在安全条件下拍摄的照片有助于解释布局。他们无法确定土壤条件、边界位置或现有框架能力。",
+          "en": "Tell us about doors opening onto the deck, the ground slope, drainage, boundaries and material access. Plans and optional photos help us prepare for the site assessment and deck layout.",
+          "zh": "请说明通向露台的门、地面坡度、排水、边界及材料进出通道。现有图纸及可选照片有助于我们准备现场查看和露台布局。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/about/:e75bc6e00f5fda80": {
+          "originalEn": "Use these details to identify the company handling your enquiry. The official ABN record is linked below; registration information alone does not establish qualifications for every type of building work.",
+          "originalZh": "您可以通过这些信息确认处理咨询的公司。下方提供官方 ABN 登记链接；公司登记本身不代表具备所有建筑工程的施工资质。",
+          "en": "Use the company details below and the official ABN link to check the business handling your enquiry.",
+          "zh": "下方列有公司资料及官方 ABN 登记链接，方便您查询和了解承接咨询的 Ellis 团队。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/about/:c886968d11e1d390": {
+          "originalEn": "Ellis Services Group’s carpentry team at work on outdoor timber in Oxley, Canberra, in May 2026. The supplied photographs show deck-board fitting, timber screening and overhead timber work. Staff names and personal profiles are not published.",
+          "originalZh": "Ellis Services Group 的木工团队在堪培拉 Oxley 进行户外木材加工。所提供的照片显示了露台安装、木质围挡和上方木结构施工。员工姓名和个人资料不会公开。",
+          "en": "Ellis Services Group’s carpentry team carrying out outdoor timber work in Oxley in May 2026, including deck-board fitting, timber screening and overhead timber work.",
+          "zh": "2026 年 5 月，Ellis 木工团队在 Oxley 进行户外木作施工，包括露台板安装、木格栅和上方木结构作业。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/faq/:d78f6a61198c97ef": {
+          "originalEn": "Start with the accessible rollers, track, guides and access points; the fault may be in hardware rather than the concealed cavity. Do not force or pull the door from the wall. Where hidden fittings cannot be reached, the quote should define the smallest suitable access opening and who reinstates the lining and finish. Access without wall work cannot be promised before inspection.",
+          "originalZh": "从可触及的滚轮、轨道、导轨和接入点开始；故障可能出在硬件上，而不是隐藏的空腔。请勿强行将门从墙上拉开。如果无法到达隐藏的配件，报价应定义最小的合适检修口以及由谁恢复衬里和饰面。检查前不能承诺不进行围墙施工的通道。",
+          "en": "Ellis checks the accessible rollers, track, guides and access points to locate the sliding-door fault. Where concealed fittings need access, the quote sets out the opening and reinstatement work. Please avoid forcing or pulling the door from the wall.",
+          "zh": "Ellis 会检查可触及的滚轮、轨道、导向件和检修位置，查找推拉门故障。需要检修隐藏配件时，报价会说明开口及恢复内容。请勿强行拉扯或拆出门扇。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/faq/:01bea97090ecd5bf": {
+          "originalEn": "Glass may be retained where its condition and the timber repair access allow it. Removal, reglazing or replacement needs a glazier. Confirm that scope before the frame is disturbed; retaining a frame does not guarantee that every pane can stay in place.",
+          "originalZh": "在玻璃状况与木框维修操作条件允许时，可以保留原玻璃。拆卸、重新安装或更换玻璃须由玻璃专业人员处理，应在拆动木框前确认相关范围；保留木框不代表每块玻璃都能原位保留。",
+          "en": "We check the glass condition and repair access when planning timber-frame work. Any glass removal, reglazing or replacement is coordinated with a glazier.",
+          "zh": "安排木窗框维修时，我们会检查玻璃状况及施工操作空间。需要拆卸、重新安装或更换玻璃时，由玻璃专业人员配合处理。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/faq/:ea9a9e9dd9bebfcd": {
+          "originalEn": "The repair depends on whether sound timber remains around the hinge and whether the frame still supports the door. A local timber repair may be possible; a wider split, decay or movement can require replacement of the affected frame member. Longer screws alone do not establish that damaged timber is sound. The quote should identify the fixing repair, retained frame and finishing.",
+          "originalZh": "修复取决于铰链周围是否仍有完好的木材以及框架是否仍支撑门。可以进行局部木材修复；更广泛的裂缝、腐烂或移动可能需要更换受影响的框架构件。仅较长的螺钉并不能证明受损的木材是完好的。报价应注明固定维修、保留框架和表面与收边处理。",
+          "en": "We assess the hinge fixing, surrounding timber and door-frame support, then specify a local repair or replacement of the affected frame section. The quote includes fixings, retained parts and finishing.",
+          "zh": "我们检查铰链固定、周边木材及门框支撑，确定局部维修或受损框料更换方案。报价列明固定件、保留部分和饰面收尾。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/faq/:4a50fc1eb78a5184": {
+          "originalEn": "With sound boards and supports, sanding and oiling may be suitable for surface weathering or an aged finish. Softness, splitting or other damage needs repair assessment before finishing. Movement underfoot can involve supports or connections and needs qualified assessment before surface finishing. Avoid using the moving area; photographs cannot confirm its structural safety. The repair scope should establish the cause, any engineering or approval requirements and the support work needed before sanding or oiling is considered.",
+          "originalZh": "对于音板和支架，打磨和涂油可能适合表面风化或老化表面处理。柔软、开裂或其他损坏需要在收尾处理前进行修复评估。脚下的运动可能涉及支撑或连接，并且需要在表面处理之前进行合格的评估。避免使用移动区域；照片无法确认其结构安全性。维修范围应确定原因、任何工程或批准要求以及考虑打磨或涂油之前所需的支持工作。",
+          "en": "Ellis checks the boards, supports and connections before planning sanding or oiling. We identify repairs, any required engineering or approval checks, and surface preparation in the quote. Avoid using an area that moves or feels unstable until assessed.",
+          "zh": "安排打磨上油前，Ellis 会检查板材、支撑和连接，在报价中列明维修、所需工程或审批检查及表面处理。发现晃动或不稳的区域，请在检查前暂停使用。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/faq/:b253ebab3e00bf76": {
+          "originalEn": "Check development approval and building approval separately for the proposed deck; exemption from one does not establish exemption from the other. The design, location, height, supports and site constraints determine the project checks. Ask the relevant design professional, builder and building certifier to establish the applicable requirements before construction. An existing repair assessment does not approve a new deck or extension.",
+          "originalZh": "应分别核对拟建露台的规划审批与建筑审批；一项获豁免，不代表另一项也获豁免。设计、位置、高度、支撑方式和场地限制会影响所需检查。施工前，应请相关设计人员、建筑商和建筑认证人员确认适用要求。对现有露台的维修评估不等于批准新建或扩建。",
+          "en": "For a new deck or extension, check development and building approval requirements separately. The design, height, location and site conditions guide the checks; the relevant designer, builder or certifier confirms what is required before construction.",
+          "zh": "新建或扩建露台时，应分别核对规划和建筑审批要求。设计、高度、位置及场地条件会影响所需事项，由相关设计人员、建筑商或认证人员在施工前确认。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/faq/:9a2046a504f62703": {
+          "originalEn": "Raised nails or screws can accompany board movement, splitting, decay or a fixing that no longer holds in its support. The inspection should check the surrounding board and joist before choosing refixing or replacement. Keep the trip hazard out of use while awaiting assessment; simply hammering a fixing down does not establish that the connection will hold.",
+          "originalZh": "钉子或螺丝翘起，可能与木板位移、开裂、腐朽或紧固件失去固定力有关。应检查周边木板及托梁后，再确定重新固定还是更换。在等待检查期间应避开有绊倒风险的区域；简单把钉子敲回去，并不能确认连接仍然牢固。",
+          "en": "Raised fixings can be linked to board movement, splitting, decay or loose connections. Ellis checks the board and joist before refixing or replacement. Keep clear of the trip hazard until it is assessed.",
+          "zh": "紧固件翘起可能与板材位移、开裂、腐朽或连接松动有关。Ellis 会检查木板和托梁，再安排重新固定或更换。检查前请避开有绊倒风险的区域。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/faq/:1143d17776162f79": {
+          "originalEn": "Partial repair may be possible if the rails, palings and adjoining supports remain suitable. The post base, footing and connections need inspection, and the work must account for safe support of retained sections during replacement. Ask for the post and footing work, retained components, removal and waste to be itemised; sound-looking palings alone do not prove the fence support is sound.",
+          "originalZh": "如果横档、栅栏和相邻支撑保持合适，则可以进行部分修复。柱基、基础和连接需要检查，并且工作必须考虑到更换期间保留部分的安全支撑。要求逐项列出柱子和基础工作、保留的部件、拆除和废物；仅仅看起来完好的栅栏并不能证明栅栏支撑是牢固的。",
+          "en": "We check the post base, footing, rails and connections to plan a partial fence repair. The quote identifies retained sections, temporary support, post replacement and removal.",
+          "zh": "我们检查柱脚、基础、横档及连接，制定围栏局部维修方案。报价会明确保留段、临时支撑、立柱更换及清运内容。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/faq/:c3d803b76ed6b6c0": {
+          "originalEn": "Replacement cabinet doors need accurate measurements, a compatible hinge layout and a material and finish that suit the retained cabinets. New doors do not automatically require a whole new kitchen, but an exact match to an older finish may be unavailable. Confirm the manufacture and fitting arrangements, samples and price before ordering; a hinge-only repair quote does not cover new door manufacture.",
+          "originalZh": "替换柜门需要精确的测量、兼容的铰链布局以及适合保留的柜子的材料和表面处理。新门并不自动需要一个全新的厨房，但可能无法与旧的饰面完全匹配。订购前确认制造和安装安排、样品和价格；仅铰链的维修报价不包括新门的制造。",
+          "en": "New cabinet doors start with accurate measurements, a compatible hinge layout and a selected material and finish. We confirm available matching options, samples, supply and fitting before ordering.",
+          "zh": "新柜门需要准确测量、匹配的铰链布局及选定的材料和饰面。订购前，我们会确认可选的匹配方案、样品、供货及安装安排。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/faq/:29acd09fdfa25585": {
+          "originalEn": "A shallow cosmetic mark and a deeply damaged board need different scopes. A local repair may suit limited damage; replacing the affected length can produce a stronger, neater result where the profile is badly lost. Compare the existing profile and paint finish, and include joints and preparation in the quote. The entire room does not automatically need replacement.",
+          "originalZh": "浅的装饰标记和深度损坏的板需要不同的范围。局部修复可能会造成有限的损坏；替换受影响的长度可以在轮廓严重丢失的情况下产生更强、更整洁的结果。比较现有的型材和油漆表面，并在报价中包括接缝和准备工作。整个房间不会自动需要更换。",
+          "en": "We assess the damaged length and existing trim profile to compare local repair with replacement. The quote includes joints, preparation and the selected paint finish.",
+          "zh": "我们检查受损长度及现有线条造型，比较局部修补与更换方案。报价包含接缝、基层准备及选定的油漆饰面。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/:34c161daef7c6ef2": {
+          "originalEn": "Deck boards form the walking surface; joists, bearers, posts and connections support it. A damaged board can be a local repair only when the retained supports are suitable. A fresh surface does not establish that the frame is sound.",
+          "originalZh": "露台板构成行走表面，托梁、承梁、立柱与连接件在下方提供支撑。只有保留的支撑合适时，损坏板材才适合局部更换；换新板面并不能证明框架完好。",
+          "en": "Deck boards form the walking surface; joists, bearers, posts and connections support it. Ellis checks the boards and supporting frame together to plan the repair.",
+          "zh": "露台板构成行走表面，托梁、承梁、立柱及连接件提供支撑。Ellis 会一并检查板材和框架，确定适合的维修方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/:12f0cd0013179c35": {
+          "originalEn": "A rotten timber sill may suit a local repair when the remaining timber and adjoining frame can support a suitable replacement section. Decay across the sill, at joints or into the frame can require a wider repair. The visible soft spot alone does not define the boundary.",
+          "originalZh": "如果剩余木材和相邻窗框能够连接合适的新部件，腐朽窗台可能适合局部维修。腐朽若贯穿窗台、接头或延伸到窗框，则可能需要扩大范围；不能只按可见的松软位置判断。",
+          "en": "Ellis checks the sill and adjoining frame to identify timber that can be retained, the extent of replacement and the source of moisture. We then explain the repair options and quote.",
+          "zh": "Ellis 会检查窗台及相邻窗框，明确可保留木材、更换范围及受潮来源，再为您说明维修方案和报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/:3f85e21651164130": {
+          "originalEn": "One faulty cupboard door or drawer does not automatically require new cabinetry. A local repair depends on compatible hardware and sound fixing points. Damaged panels or unavailable fittings can change the scope.",
+          "originalZh": "单个柜门或抽屉故障，并不一定需要更换整套柜体。局部维修取决于五金兼容性和固定点是否牢固。面板损坏或配件缺货，可能改变施工范围。",
+          "en": "Cupboard doors and drawers can often be repaired locally. Ellis checks the hinges, runners, panels and fixing points, then confirms compatible parts and the repair plan.",
+          "zh": "柜门或抽屉故障通常可以从局部维修入手。Ellis 检查铰链、滑轨、板材及固定点，确认匹配配件和维修方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/:d58c30afd0da7739": {
+          "originalEn": "Stop relying on a loose timber tread or handrail and arrange an assessment of its supports and connections. Movement can come from the component, its fixing or the material holding it. A cosmetic repair does not establish that it is safe to use.",
+          "originalZh": "不要继续依靠已经松动的木踏板或扶手，应安排检查支撑与连接。松动可能来自部件、紧固件或承托它们的材料；外观修补不能证明仍可安全使用。",
+          "en": "A loose tread or handrail needs inspection of the component, fixings and supporting timber. Ellis identifies the repair needed to restore secure use. Avoid relying on the affected component while awaiting assessment.",
+          "zh": "踏板或扶手松动时，需要检查部件、固定件及支撑木材。Ellis 会查明需要的维修，恢复牢靠使用；检查前请勿依靠受影响的部件。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/:6a820a057cce3fb9": {
+          "originalEn": "Start a pre-sale carpentry list with safety and operation, then consider visible finishing. Grouping doors, trim and cupboard repairs can clarify the assessment, but it does not prove that every item needs replacement or will increase the sale price.",
+          "originalZh": "出售房屋前的木工清单，可先考虑安全和正常使用，再考虑外观收尾。将门、装饰线条和柜体维修归类，有助于评估，但并不意味着每项都需要更换，也不能证明会提高售价。",
+          "en": "Prepare your home for sale by prioritising doors that close properly, secure fittings and tidy timber finishes. A grouped list of door, trim and cupboard repairs helps Ellis assess and quote the work.",
+          "zh": "售房前可优先处理关门不顺、配件松动及木作外观收尾。将门、装饰线条和柜体问题列成清单，方便 Ellis 统一评估和报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/:311062ebda04735d": {
+          "originalEn": "Timber and composite decking should be compared as specified products, not just two labels. For your project, consider the proposed finish, care requirements, sun exposure, installation system and complete construction scope. Material choice does not establish whether an existing deck frame can be retained.",
+          "originalZh": "比较木材与复合材料露台板时，应落实到具体产品，而不是只看材料类别。结合饰面、保养、日晒、安装系统和完整施工范围判断；选定材料并不代表现有支撑框架一定能保留。",
+          "en": "Compare timber and composite decking by the specific product, finish, maintenance needs, sun exposure and installation system. Ellis assesses the existing frame and explains the complete construction scope for your project.",
+          "zh": "比较实木与复合材料露台时，可结合具体产品、饰面、保养、日晒及安装系统选择。Ellis 会检查现有框架，为您说明完整施工方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-door-sticks-after-rain/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: the hinge and frame are among the areas checked when a timber door sticks. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：当木门卡住时，铰链和框架是要检查的区域。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: door hinge and frame fixing details.",
+          "zh": "木门维修示意：铰链及门框固定细节。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-door-sticks-after-rain/:1859c3e10c45d7f3": {
+          "originalEn": "If your back door works in dry weather and catches after rain, start with the change in conditions. Timber and its finish respond to moisture, but the moving part may be the leaf, the frame or both. The useful question is where clearance has changed and whether water is reaching exposed timber. A wet-weather pattern is a clue; it does not prove that the door simply needs shaving.",
+          "originalZh": "后门干燥时正常、雨后卡住，应先关注环境变化。木材及饰面会受湿气影响，但变化可能来自门扇、门框或两者。需要了解哪处间隙变小，以及水是否接触到外露木材。雨天卡门只是线索，不能据此认定只需刨门。",
+          "en": "If a door catches after rain, Ellis checks where clearance has changed and how moisture reaches the door or frame. This helps us choose between hinge adjustment, edge work and timber repairs.",
+          "zh": "木门雨后卡住时，Ellis 会检查变小的间隙及门扇、门框的受潮位置，据此确定铰链调整、门边修整或木构件维修方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-door-sticks-after-rain/:f9517d911ecd96e1": {
+          "originalEn": "If moisture reaches the lower jamb or leaf, replacing a damaged piece alone leaves a separate question about the source. Discuss weather exposure, surrounding junctions and any known leak with the assessor. A coating helps protect suitable timber, but paint is not evidence that the material beneath it is sound. Repeated damage after a patch warrants another look at the cause.",
+          "originalZh": "如果门框下部或门扇持续受潮，只更换受损木材并没有解决进水原因。应与查看人员说明日晒雨淋、周边接缝和已知漏水情况。涂层有助于保护合适的木材，但油漆完好不能证明内部木材完好；补修后再次损坏，应重新检查原因。",
+          "en": "For moisture damage at the lower door or jamb, we check weather exposure, joints and known leaks alongside the timber. The repair plan addresses the affected material and protective finish, with the moisture source considered at the same time.",
+          "zh": "门扇或门框下部受潮时，我们会一并检查雨淋情况、接缝及已知漏点。维修方案会处理受损木材及保护涂层，同时查找受潮来源。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/deck-boards-or-frame/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: the supports beneath the boards require a separate assessment from the walking surface. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：板下方的支撑需要与行走表面分开评估。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: timber deck supports beneath the boards.",
+          "zh": "露台维修示意：板面下方的木结构支撑。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/deck-boards-or-frame/:f9517d911ecd96e1": {
+          "originalEn": "Cleaning, preparation and oiling treat the surface finish, not a deteriorated support. In the Melba project completed in May 2025, Ellis repaired raised and distorted deck boards before cleaning, surface preparation and Cabot’s oil-based decking oil. That is a recorded example of repairs preceding finishing, not proof that every worn deck needs the same work. Care intervals and coating compatibility must follow the selected product and site exposure.",
+          "originalZh": "清洗、表面处理和上油针对涂层，并不能修复劣化支承。2025 年 5 月完成的 Melba 项目中，Ellis 先维修翘起及变形甲板，再清洗、处理表面并使用 Cabot’s 油性露台油。这是先维修再做表面处理的实际记录，不代表每个老旧露台都需要相同施工。养护间隔和涂层兼容性应依据选定产品及现场暴露条件确认。",
+          "en": "In the Melba project completed in May 2025, Ellis repaired raised and distorted deck boards before cleaning, preparing the surface and applying Cabot’s oil-based decking oil. Your care plan follows the selected product and the deck’s exposure and condition.",
+          "zh": "2025 年 5 月完成的 Melba 项目中，Ellis 先维修翘起和变形的露台板，再清洗、处理表面并涂刷 Cabot’s 油性露台油。您的养护方案会结合选用产品、日晒雨淋及板材状况制定。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/deck-boards-or-frame/:0cb370a44ccfdba5": {
+          "originalEn": "Yes. The condition of the exposed surface does not establish the condition of concealed supports or connections. Board and frame assessment are separate parts of the decision.",
+          "originalZh": "是的。暴露表面的状况并不构成隐藏支撑或连接的状况。露台板和框架评估是决策的独立部分。",
+          "en": "Yes. Ellis checks the deck boards, concealed supports where accessible, and connections together to identify the repair needed.",
+          "zh": "是的。Ellis 会结合板面、可检查到的下方支撑及连接状况，确定需要的维修。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/rotten-window-sill/:ae35595f722a5825": {
+          "originalEn": "A rotten timber sill may suit a local repair when the remaining timber and adjoining frame can support a suitable replacement section. Decay across the sill, at joints or into the frame can require a wider repair. The visible soft spot alone does not define the boundary.",
+          "originalZh": "如果剩余木材和相邻窗框能够连接合适的新部件，腐朽窗台可能适合局部维修。腐朽若贯穿窗台、接头或延伸到窗框，则可能需要扩大范围；不能只按可见的松软位置判断。",
+          "en": "Ellis checks the sill and adjoining frame to identify timber that can be retained, the extent of replacement and the source of moisture. We then explain the repair options and quote.",
+          "zh": "Ellis 会检查窗台及相邻窗框，明确可保留木材、更换范围及受潮来源，再为您说明维修方案和报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/rotten-window-sill/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: damage at the sill-to-frame junction helps explain why the extent and moisture source need checking. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：窗台与框架连接处的损坏有助于解释为什么需要检查程度和水分来源。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: timber decay at the sill and frame junction.",
+          "zh": "木窗维修示意：窗台与窗框接缝处的木材腐朽。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/rotten-window-sill/:d28046900a4e6a96": {
+          "originalEn": "A soft corner does not define the whole repair",
+          "originalZh": "局部松软不能代表全部维修范围",
+          "en": "Check the sill and adjoining frame",
+          "zh": "检查窗台与相邻窗框",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/rotten-window-sill/:2147f23b88f1f1bc": {
+          "originalEn": "A soft corner does not define the whole repair",
+          "originalZh": "局部松软不能代表全部维修范围",
+          "en": "Check the sill and adjoining frame",
+          "zh": "检查窗台与相邻窗框",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/rotten-window-sill/:32322e39d69f269f": {
+          "originalEn": "WoodSolutions describes timber-window durability as a combination of exposure, materials and maintenance, with resistance to water entry also relevant. If dampness follows rain, the leak needs attention alongside timber work. Repainting alone cannot establish that the wetting route has been corrected. Tell the team about previous sealing or leak work and which side becomes wet.",
+          "originalZh": "WoodSolutions 将木窗的耐久性描述为暴露、材料和维护的组合，与防水性也相关。如果雨后潮湿，则需要在木材加工的同时注意渗漏。仅重涂并不能确定进水路径已得到纠正。告诉团队之前的密封或泄漏工作以及哪一侧变湿。",
+          "en": "WoodSolutions describes timber-window durability in terms of exposure, materials, maintenance and resistance to water entry. Ellis checks rain-related dampness alongside the timber repair. Tell us about previous sealing work and which side becomes wet.",
+          "zh": "WoodSolutions 从日晒雨淋、材料、维护及防水细节介绍木窗耐久性。Ellis 会结合木材维修检查雨后受潮情况。请告诉我们之前的密封处理及哪一侧出现潮湿。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/rotten-window-sill/:e4051be1a548425e": {
+          "originalEn": "Keeping the outer frame does not automatically mean glass can remain untouched. Access, the glass condition and retention details may require a glazier. Ask which specialist arrangements are needed and who coordinates them. Replacing glass, improving glazing performance and repairing timber are different scopes;",
+          "originalZh": "保留外框并不意味着玻璃可以保持不变。通道、玻璃状况和保留细节可能需要玻璃工。询问需要哪些专家安排以及由谁来协调。更换玻璃、改善玻璃性能和修复木材是不同的范围；",
+          "en": "We check the glazing condition and access when planning frame repairs, and coordinate any glass removal or replacement with a glazier. The quote distinguishes timber repairs and glazing work;",
+          "zh": "规划窗框维修时，我们检查玻璃状况及操作空间，需要拆卸或更换玻璃时由玻璃专业人员配合。报价会区分木构件维修与玻璃作业；",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/rotten-window-sill/:1ba66e24516fc418": {
+          "originalEn": "Confirm whether preparation, priming and final painting include the entire sill, the repaired area or surrounding frame. Local paint can stand out beside an aged coating. On a property with heritage controls or specific consent conditions, flag those records before alterations are planned and confirm the relevant professional advice. This guide does not decide what changes a particular property permits.",
+          "originalZh": "确认准备、底漆和最终喷漆是否包括整个窗台、修复区域或周围框架。本地油漆可以在老化涂层旁边脱颖而出。对于具有遗产控制或特定同意条件的财产，在计划改建之前标记这些记录并确认相关的专业建议。本指南不决定特定属性允许进行哪些更改。",
+          "en": "We confirm preparation, priming and painting for the repaired area, full sill or surrounding frame. For heritage-listed properties or specific consent conditions, we review the relevant requirements before planning alterations.",
+          "zh": "我们会明确修补区域、整段窗台或周边窗框的基层处理、底漆及面漆范围。涉及文保或特定许可条件的房屋，会在规划改动前核对相关要求。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/rotten-window-sill/:4e716fcb4a1bb843": {
+          "originalEn": "A suitable coating helps protect sound timber, but recurring water entry or trapped moisture also needs attention. Painting over deterioration does not establish a sound repair.",
+          "originalZh": "合适的涂层有助于保护完好的木材，但反复进水或滞留的水分也需要注意。在损坏处涂漆并不能实现良好的修复。",
+          "en": "A suitable coating protects sound timber. Ellis checks recurring water entry and trapped moisture alongside the affected timber to plan the repair and finish.",
+          "zh": "合适的涂层可以保护完好的木材。Ellis 会结合受损木材检查反复进水及积水问题，制定维修和饰面方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/fascia-bargeboard-eaves/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: roof-edge timber and the adjacent eaves form different parts of the repair scope. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：屋顶边缘木材和相邻屋檐构成修复范围的不同部分。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: roof-edge timber and adjoining eaves.",
+          "zh": "屋檐维修示意：屋顶边缘木构件及相邻檐底。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/fascia-bargeboard-eaves/:3e02ad1c91d16fdb": {
+          "originalEn": "A defined damaged length may suit local replacement when adjoining timber and fixings are suitable. Longer deterioration, connected damage or an unavailable profile can change the practical extent. For fascia, the gutter relationship matters; for bargeboard, the gable junction and finish matter. The visible length alone does not establish how much access is needed.",
+          "originalZh": "当相邻木材和紧固件合适时，规定的损坏长度可能适合当地更换。较长时间的恶化、相关损坏或不可用的截面造型可能会改变实际范围。对于檐口封板来说，排水沟关系很重要；对于山墙封边板来说，山墙连接处和饰面很重要。仅可见长度并不能确定需要多少现场进入条件。",
+          "en": "We assess damaged lengths, adjoining timber, fixings and the available matching profile. The plan includes gutter interfaces for fascia, gable junctions for bargeboards, access and finishing.",
+          "zh": "我们检查受损长度、相邻木材、固定件及可匹配的截面，并在方案中明确檐口与天沟、山墙封边处的接缝，以及施工通道和收尾内容。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/leaning-paling-fence/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: posts, rails and palings are assessed together when a fence leans. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：当栅栏倾斜时，柱子、栏杆和栅栏会一起评估。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: posts, rails and boards in a timber fence.",
+          "zh": "围栏维修示意：木围栏的立柱、横档和围板。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/skirting-after-new-flooring/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: the trim profile and floor junction need to be considered together. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：装饰轮廓和地板连接处需要一起考虑。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: skirting profile and floor junction.",
+          "zh": "线条安装示意：踢脚线截面及地板接缝。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/skirting-after-new-flooring/:ffbd8aa91cab351f": {
+          "originalEn": "The finished floor level and required perimeter detail need to be known before final fitting. If you are keeping skirting, ask whether it can be removed intact and whether enough material will remain for the new arrangement. Brittle boards, heavy old paint or previous fixings can affect reuse. Retention is a decision to assess rather than a promise based on room size.",
+          "originalZh": "最终安装前，需要明确成品地面标高及周边收口要求。如希望保留踢脚线，请确认能否完整拆下，以及剩余材料能否用于新布局。板材脆化、厚旧漆和原固定件，都可能影响重复使用。能否保留需要评估，不能只凭房间大小承诺。",
+          "en": "We measure against the finished floor level and required edge detail. If you want to retain skirting, we check its condition, removal access and available lengths, then explain reuse or matching replacement options.",
+          "zh": "我们会按完成地面标高和收口要求测量。希望保留踢脚线时，会检查板材状况、拆卸条件及可用长度，为您说明重复使用或匹配更换方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/skirting-after-new-flooring/:e9c383bd2d8d94f9": {
+          "originalEn": "Include the rooms, your suburb, whether flooring is installed or planned and which trim is staying. Give the flooring product or installer’s edge requirements if available. Optional photos of the wall junction, a corner and a doorway help show the relationship between components. A room perimeter can start the conversation, but it does not replace a measured fitting list.",
+          "originalZh": "包括房间、您的郊区、地板是否已安装或计划以及保留哪种装饰。如果有的话，请提供地板产品或安装人员的边缘要求。墙壁连接处、角落和门口的可选照片有助于显示组件之间的关系。房间周长可以引发对话，但它不能取代测量的配件清单。",
+          "en": "Tell us your suburb, the rooms involved, the flooring stage and which trim is staying. Existing product details and optional photos help us prepare for the site measure and fitting plan.",
+          "zh": "请告诉我们所在城区、涉及房间、地板施工进度及要保留的线条。现有产品资料和可选照片有助于我们准备现场测量和安装方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/why-timber-gates-sag/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: hinges, latch alignment and the support post are checked as one gate assembly. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：铰链、闩锁对齐和支撑柱作为一个门组件进行检查。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: timber gate hinges, latch and support post.",
+          "zh": "院门维修示意：木门铰链、门闩及支撑柱。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/why-timber-gates-sag/:ffbd8aa91cab351f": {
+          "originalEn": "A hinge can be loose because its hardware is damaged or because the timber supporting the screws has split or deteriorated. Replacing screws does not establish that the remaining material can hold them. A post with a sound upper face can still have a problem at its base. Ask the assessment to distinguish hardware work from timber and support repair.",
+          "originalZh": "铰链可能会松动，因为其硬件损坏或支撑螺钉的木材已裂开或损坏。更换螺钉并不表明剩余材料可以固定它们。具有良好上表面的柱子在其底部仍然可能存在问题。要求评估人员区分硬件工作和木材工作并支持维修。",
+          "en": "Ellis checks hinge hardware, the timber around the screws and the support-post base. The assessment distinguishes hardware adjustment from timber and post repairs so the gate has suitable fixing points.",
+          "zh": "Ellis 会检查铰链五金、螺丝周围木材及支撑柱底部，区分五金调整与木材、立柱维修，明确合适的固定方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/why-timber-rot-returns/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: visible decay illustrates the need to investigate the water path as well as the affected timber. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：可见的腐烂表明需要调查水路以及受影响的木材。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: moisture-related timber decay.",
+          "zh": "木材维修示意：受潮引起的腐朽。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/why-timber-rot-returns/:1859c3e10c45d7f3": {
+          "originalEn": "When timber deteriorates again after repair, there may still be a wetting source, a water-trapping detail or damage beyond the earlier patch. It does not automatically prove that all timber needs replacement, but it does mean another surface patch is a poor starting assumption. Ask what was retained last time, which moisture route was addressed and what the new assessment can establish.",
+          "originalZh": "当木材修复后再次恶化时，可能仍然存在润湿源、积水细节或早期补丁之外的损坏。它并不能自动证明所有木材都需要更换，但它确实意味着另一个表面补丁是一个糟糕的起始假设。询问上次保留了什么、解决了哪条潮湿途径以及新的评估可以确定什么。",
+          "en": "When timber deteriorates again after repair, Ellis checks recurring wetting, water-trapping details and damage around the earlier repair. We review what was retained and plan the timber and moisture-related work together.",
+          "zh": "木材维修后再次腐朽时，Ellis 会检查反复受潮、积水细节及原修补周边损坏，核对保留构件，并一并规划木材与受潮问题的处理。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/why-timber-rot-returns/:ffbd8aa91cab351f": {
+          "originalEn": "A grey or worn surface describes appearance; it does not establish the condition of the timber below. Decay can affect material and connections, while insect damage has a separate cause and can occur alongside dampness. A photo is not a reliable way to identify all three. Report the existing symptom without scraping, probing or opening the structure yourself.",
+          "originalZh": "灰色或磨损的表面描述外观；它没有确定下面木材的状况。腐烂会影响材料和连接，而虫害则有单独的原因，并且可能与潮湿一起发生。照片并不是识别这三者的可靠方法。报告现有的症状，而无需自行刮擦、探测或打开结构。",
+          "en": "Weathering, decay and insect damage need different treatment. Ellis checks the affected timber and connections; pest concerns are referred to a pest professional. Describe the visible symptoms and avoid probing or opening the structure yourself.",
+          "zh": "风化、腐朽与虫害需要不同处理。Ellis 会检查受损木材及连接；虫害问题由害虫防治专业人员处理。咨询时描述可见情况即可，请勿自行探挖或拆开结构。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/why-timber-rot-returns/:32322e39d69f269f": {
+          "originalEn": "If pest activity is suspected, arrange the qualified pest assessment and retain its findings. Treatment of active pests and reinstatement of damaged timber are separate work scopes. A treatment record does not certify that a bearer, jamb or other component remains structurally suitable. Supporting members need the appropriate structural assessment before a replacement plan is agreed.",
+          "originalZh": "如果怀疑有虫害活动，请安排合格的虫害评估并保留其结果。处理活跃害虫和恢复受损木材是不同的工作范围。处理记录并不能证明支架、门框或其他部件在结构上仍然合适。在同意更换计划之前，支持成员需要进行适当的结构评估。",
+          "en": "If pest activity is suspected, arrange a qualified pest assessment and keep the report. Ellis plans the timber repairs after treatment, with structural assessment of supporting members where required.",
+          "zh": "怀疑存在虫害时，请安排专业虫害检查并保留报告。处理完成后，Ellis 会规划木材维修，涉及支撑构件时安排所需结构评估。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/why-timber-rot-returns/:4508812ead6e9712": {
+          "originalEn": "Surface weathering affects the exposed finish or timber surface; decay can compromise the material and connections beneath it. Appearance alone does not establish soundness, so we inspect the affected section before quoting.",
+          "originalZh": "表面风化影响裸露的饰面或木材表面；腐烂会损害其下面的材料和连接。仅凭外观并不能确定可靠性，因此我们在引用之前检查受影响的部分。",
+          "en": "Weathering affects the exposed finish and timber surface; decay can affect the material and connections beneath. Ellis inspects the affected section and explains the repair options in your quote.",
+          "zh": "风化主要影响外露饰面和木材表面，腐朽则会影响内部材料及连接。Ellis 会检查受损部位，在报价中说明维修方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/cabinet-hinges-and-drawer-runners/:ae35595f722a5825": {
+          "originalEn": "One faulty cupboard door or drawer does not automatically require new cabinetry. A local repair depends on compatible hardware and sound fixing points. Damaged panels or unavailable fittings can change the scope.",
+          "originalZh": "单个柜门或抽屉故障，并不一定需要更换整套柜体。局部维修取决于五金兼容性和固定点是否牢固。面板损坏或配件缺货，可能改变施工范围。",
+          "en": "Cupboard doors and drawers can often be repaired locally. Ellis checks the hinges, runners, panels and fixing points, then confirms compatible parts and the repair plan.",
+          "zh": "柜门或抽屉故障通常可以从局部维修入手。Ellis 检查铰链、滑轨、板材及固定点，确认匹配配件和维修方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/cabinet-hinges-and-drawer-runners/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: hinge compatibility and sound fixing material matter when planning a local hardware repair. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：在计划本地硬件维修时，铰链兼容性和完好固定材料很重要。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: cabinet hinge and fixing points.",
+          "zh": "柜体维修示意：柜门铰链及固定位置。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/cabinet-hinges-and-drawer-runners/:c09242c1ea29cafc": {
+          "originalEn": "shows IKEA product assembly and fitting, not in-house cabinet manufacture or an IKEA partnership. A cabinet repair enquiry should therefore identify whether you want to restore an existing fitting or discuss a new storage installation.",
+          "originalZh": "显示 IKEA 产品组装和装配，而不是内部橱柜制造或 IKEA 合作伙伴关系。因此，橱柜维修咨询应确定您是要修复现有配件还是讨论新的收纳安装。",
+          "en": "shows IKEA product assembly and fitting by Ellis. Tell us whether you need an existing cabinet repaired or a new storage installation.",
+          "zh": "展示了 Ellis 进行 IKEA 产品组装和安装的工作。欢迎告诉我们，您需要现有柜体维修，还是新建收纳安装。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-weatherboard-damage/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: board laps and adjoining openings affect how a local replacement is scoped. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：板圈和相邻开口会影响本地更换的范围。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: weatherboard laps and window junctions.",
+          "zh": "外墙木挂板维修示意：板材搭接及窗边接缝。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-weatherboard-damage/:3e02ad1c91d16fdb": {
+          "originalEn": "This guide concerns timber weatherboards. Fibre-cement, metal and composite systems can have different details and are not automatically covered by a timber-repair proposal. Older or unknown sheet materials behind or beside the affected section need identification before disturbance. A painted surface cannot establish that an unknown product is safe to cut or discard.",
+          "originalZh": "本指南涉及外墙木挂板。纤维水泥、金属和复合材料系统可能有不同的细节，并且不会自动包含在木材修复建议中。受影响部分后面或旁边的较旧或未知的片状材料需要在拆动之前进行识别。涂漆表面无法证明未知产品可以安全切割或丢弃。",
+          "en": "This guide covers timber weatherboard repairs. We identify adjoining or concealed materials before work; unknown older sheets require appropriate assessment before cutting or removal.",
+          "zh": "本指南介绍外墙木挂板维修。施工前会识别相邻及隐蔽材料；年代较久、材质不明的板材须先完成相应检查，再切割或拆除。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/loose-timber-stairs/:ae35595f722a5825": {
+          "originalEn": "Stop relying on a loose timber tread or handrail and arrange an assessment of its supports and connections. Movement can come from the component, its fixing or the material holding it. A cosmetic repair does not establish that it is safe to use.",
+          "originalZh": "不要继续依靠已经松动的木踏板或扶手，应安排检查支撑与连接。松动可能来自部件、紧固件或承托它们的材料；外观修补不能证明仍可安全使用。",
+          "en": "A loose tread or handrail needs inspection of the component, fixings and supporting timber. Ellis identifies the repair needed to restore secure use. Avoid relying on the affected component while awaiting assessment.",
+          "zh": "踏板或扶手松动时，需要检查部件、固定件及支撑木材。Ellis 会查明需要的维修，恢复牢靠使用；检查前请勿依靠受影响的部件。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/loose-timber-stairs/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: stair supports and handrail anchorage need assessment when movement is reported. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：报告运动时楼梯支撑和扶手锚固需要评估。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: stair supports and handrail fixings.",
+          "zh": "楼梯维修示意：楼梯支撑及扶手固定。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/loose-timber-stairs/:1859c3e10c45d7f3": {
+          "originalEn": "A loose timber tread or handrail needs its supporting arrangement assessed. Stop relying on the affected component and avoid the unsafe route while professional assessment is arranged. A bracket might be the visible fault, but the material holding it can also be affected. A cosmetic repair or another screw cannot establish that the stair or rail is suitable to use.",
+          "originalZh": "松散的木质踏板或扶手需要评估其支撑布置。在安排专业评估的同时，停止依赖受影响的组件并避开不安全的路线。支架可能是可见的缺陷，但固定支架的材料也会受到影响。外观修复或其他螺钉不能确定楼梯或栏杆适合使用。",
+          "en": "Ellis checks the tread or handrail, its brackets and supporting timber to plan a secure repair. Avoid the affected component and unsafe route while professional assessment is arranged.",
+          "zh": "Ellis 会检查踏板或扶手、支架及支撑木材，制定牢靠的维修方案。安排专业检查期间，请避开受损部件和不安全通道。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/pergola-post-rot/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: the lower post and surrounding junctions are considered when planning a post repair. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：在规划后期修复时要考虑较低的柱子和周围的连接处。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: outdoor timber post base and joints.",
+          "zh": "凉棚维修示意：户外木立柱柱脚及接头。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/pergola-post-rot/:32322e39d69f269f": {
+          "originalEn": "A photo can show the location but cannot establish timber condition below paint or inside a connection. The assessment may need agreed access and qualified structural input to define the boundary. Do not probe the base or expose a footing to obtain more detail. The repair plan should explain the moisture-source work as well as the replacement material.",
+          "originalZh": "照片可以显示位置，但无法确定油漆下方或连接内部的木材状况。评估可能需要商定的现场进入条件和合格的结构输入来定义边界。请勿探测底座或暴露基础以获取更多细节。维修计划应解释湿气源工作以及更换材料。",
+          "en": "Ellis assesses the post base, surrounding connections and moisture source before planning replacement timber and support. Structural input is arranged where needed. Please describe the visible damage without probing the base or exposing the footing yourself.",
+          "zh": "Ellis 会检查柱脚、周边连接及受潮来源，再规划更换木材和支撑，需要时安排结构专业意见。咨询时描述可见损坏即可，请勿自行探挖柱脚或露出基础。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/pergola-post-rot/:2c46b528990b2fd0": {
+          "originalEn": "Compare the complete work rather than the cost of a length of timber. Access, support planning, removal, fabrication, connections and finishing can differ between options. A patch that restores the outline is not automatically a structural repair. The",
+          "originalZh": "比较完整的工作而不是一段木材的成本。不同选项的进出条件、支撑规划、移除、制造、连接和收尾处理可能有所不同。恢复轮廓的修补程序并不自动进行结构修复。的",
+          "en": "Compare access, support planning, removal, fabrication, connections and finishing when reviewing post-repair options. Structural repairs require assessment of the supporting assembly. The",
+          "zh": "比较立柱维修方案时，可一起核对进出安排、支撑、拆除、制作、连接及收尾。结构维修需检查整个支撑组合。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/pergola-post-rot/:e4051be1a548425e": {
+          "originalEn": "Building approval and development approval are separate checks, and other property constraints may apply. Ask the relevant design professional, builder or building certifier who confirms the requirements and which documents are needed. No approval outcome or timeframe is promised here. Existing drawings and approvals are useful records, but they should be compared with the structure and proposed work now.",
+          "originalZh": "建筑审批和开发审批是单独检查的，并且可能适用其他财产限制。询问相关的设计专业人士、建筑商或建筑认证机构，他们会确认这些要求以及需要哪些文件。这里没有承诺批准结果或时间表。现有的图纸和批准是有用的记录，但应将它们与现在的结构和拟议工作进行比较。",
+          "en": "Building and development approvals are separate checks. The relevant designer, builder or certifier confirms required documents for the proposed work, using existing drawings and approvals alongside the current structure.",
+          "zh": "建筑审批和规划审批需分别核对。相关设计人员、建筑商或认证人员会结合现有结构、图纸及审批记录，确认本次施工所需文件。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/repair-or-rebuild-a-deck/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: the condition of supports and connections informs a repair-or-rebuild decision. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：支撑和连接的状况决定修复或重建。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: deck supports and timber connections.",
+          "zh": "露台维修示意：支撑及木结构连接。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/repair-or-rebuild-a-deck/:1859c3e10c45d7f3": {
+          "originalEn": "Repair is worth considering when damaged components can be defined and suitable boards, supports and connections retained. Rebuilding becomes a comparison when damage is widespread or connected, or when you want a different footprint, height or use. The percentage of worn boards cannot settle the decision. An old deck is not automatically beyond repair, and a recent surface is not proof of sound framing.",
+          "originalZh": "当损坏部件可明确界定，且合适的板材、支撑和连接可保留时，可以考虑维修。损坏广泛或彼此相连，或希望改变占地、高度和用途时，则应比较重建。磨损板的比例不能决定方案。旧露台未必不能修，新的板面也不能证明下方框架完好。",
+          "en": "Ellis compares repair and rebuild options by checking the boards, supports and connections. Local repairs retain suitable existing components; wider damage or a planned change in layout may favour rebuilding.",
+          "zh": "Ellis 会检查板材、支撑和连接，比较维修与重建方案。局部维修可保留适用构件；损坏范围较广或计划改变布局时，可进一步比较重建方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/repair-or-rebuild-a-deck/:49e32e934f861e30": {
+          "originalEn": "Keep existing plans and approvals available and identify who confirms any new documentation before work is agreed. The quoted construction scope and approval responsibilities should fit together. This guide is a decision aid; it does not assess your property’s eligibility, certify an existing deck or promise an approval outcome or schedule.",
+          "originalZh": "请备好现有图纸和审批记录，并在确认施工前明确由谁核实所需新文件。施工报价与审批责任应相互对应。本指南用于辅助决策，不评估您房屋的审批资格、不认证现有露台，也不承诺审批结果或时间。",
+          "en": "Keep existing plans and approvals available. Before work is agreed, confirm the proposed construction scope, required documents and who coordinates the approval checks.",
+          "zh": "请备好现有图纸和审批记录。在确认施工前，明确拟施工范围、所需文件及审批核对的协调人员。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/repair-or-rebuild-a-deck/:9597298a217f0220": {
+          "originalEn": "No. Board count does not establish the condition of the supports, connections or retained timber. Compare the assessed repair options.",
+          "originalZh": "否。木板计数不能确定支撑、连接或保留木材的状况。比较评估的修复方案。",
+          "en": "The decision follows inspection of the supports, connections and retained timber, alongside the damaged boards. Ellis explains the repair options for the complete deck.",
+          "zh": "方案需结合受损板材、支撑、连接及保留木材的检查结果确定。Ellis 会为您说明整个露台的维修选择。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/carpentry-jobs-before-selling/:ae35595f722a5825": {
+          "originalEn": "Start a pre-sale carpentry list with safety and operation, then consider visible finishing. Grouping doors, trim and cupboard repairs can clarify the assessment, but it does not prove that every item needs replacement or will increase the sale price.",
+          "originalZh": "出售房屋前的木工清单，可先考虑安全和正常使用，再考虑外观收尾。将门、装饰线条和柜体维修归类，有助于评估，但并不意味着每项都需要更换，也不能证明会提高售价。",
+          "en": "Prepare your home for sale by prioritising doors that close properly, secure fittings and tidy timber finishes. A grouped list of door, trim and cupboard repairs helps Ellis assess and quote the work.",
+          "zh": "售房前可优先处理关门不顺、配件松动及木作外观收尾。将门、装饰线条和柜体问题列成清单，方便 Ellis 统一评估和报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/carpentry-jobs-before-selling/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: measuring and defining each task helps prioritise a list of carpentry repairs. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：测量和定义每项任务有助于确定木工维修列表的优先顺序。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: measuring timber before repair.",
+          "zh": "木作维修示意：施工前测量木构件。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/carpentry-jobs-before-selling/:1859c3e10c45d7f3": {
+          "originalEn": "For pre-sale carpentry, start with components that need to work: doors that close, fittings that hold and stairs or rails that are safe to use. Then consider damaged trim and visible finishing. A long list of cosmetic marks does not mean every item needs replacement. Repairs can address defined defects, but the quote does not establish a sale-price increase or promise a faster sale.",
+          "originalZh": "售房前的木工检查，可先关注需要正常使用的构件：能顺利关闭的门、固定牢靠的配件，以及安全可用的楼梯和扶手。再考虑破损线条和外观收尾。表面瑕疵多，并不意味着每件都要更换。维修可以处理已确认的缺陷，但报价不代表售价会提高，也不承诺更快售出。",
+          "en": "For pre-sale work, prioritise doors that close properly, secure fittings and safe stairs or rails, followed by damaged trim and visible finishing. Ellis helps turn your repair list into a clear scope and quote.",
+          "zh": "售房前可优先处理关门不顺、配件松动及楼梯扶手问题，再整理破损线条和外观收尾。Ellis 会将维修清单整理成清楚的施工范围和报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/carpentry-jobs-before-selling/:f9517d911ecd96e1": {
+          "originalEn": "Freestanding furniture is movable; built-in storage is fitted to the property and needs a measured relationship with the room. Custom joinery may be appropriate when standard units do not achieve the required layout, but design, fabrication, supply and fitting are separate responsibilities to confirm. A small repair service does not establish in-house manufacturing facilities.",
+          "originalZh": "独立家具可以移动；内置储物柜固定在房屋内，需要按房间尺寸设计。当标准柜体无法满足布局时，可以考虑定制木作，但设计、制作、供货和安装须分别确认。小型维修服务并不能证明施工方设有自有加工厂。",
+          "en": "Freestanding furniture is movable, while built-in storage is fitted to the room. For a fitted installation, Ellis confirms the measured layout, selected products, fabrication and supply arrangements, and installation details.",
+          "zh": "独立家具可以移动，嵌入式收纳则按房间空间安装。安排收纳安装时，Ellis 会明确测量布局、选用产品、制作与供货安排及安装细节。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/carpentry-jobs-before-selling/:c09242c1ea29cafc": {
+          "originalEn": "records that particular assembly and fitting scope; it does not establish a universal custom-manufacture service or a product partnership.",
+          "originalZh": "记录特定的装配和装配范围；它不建立通用的定制制造服务或产品合作伙伴关系。",
+          "en": "shows the assembly, fitting and edge finishing completed by Ellis.",
+          "zh": "展示了 Ellis 完成的组装、安装及封边收口工作。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/carpentry-jobs-before-selling/:e9c383bd2d8d94f9": {
+          "originalEn": "An occupied or tenanted property needs an authorised contact, agreed entry and a workable area. Mention keys, parking, furniture, pets and agent coordination when relevant. A proposed sale or inspection date helps explain your timing needs but does not guarantee availability. Confirm material lead times and accepted appointments with the team before relying on a completion date.",
+          "originalZh": "占用或出租的财产需要授权联系人、同意进入和可用区域。相关时提及钥匙、停车位、家具、宠物和代理协调。拟议的销售或检查日期有助于解释您的时间需求，但不能保证可用性。在确定完成日期之前，先确认材料交付时间并与团队接受预约。",
+          "en": "For an occupied or tenanted home, tell us about access, parking, furniture, pets and agent coordination. Share your preferred inspection or sale date so we can discuss appointments, materials and the work schedule.",
+          "zh": "房屋有人居住或出租时，请说明进出、停车、家具、宠物及中介协调安排。告知计划看房或出售日期，方便我们沟通预约、材料及施工时间。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/carpentry-jobs-before-selling/:4b94d6b141fe17fe": {
+          "originalEn": "Ask for labour, materials, supply responsibility, removal, finish and access to be clear for the accepted tasks. Confirm any minimum booking or assessment charge and whether GST is included. Grouping several items may make coordination easier, but it does not establish a discount or mean every task can be completed at one visit.",
+          "originalZh": "要求明确接受的任务的劳动力、材料、供应责任、拆除、完成和进出条件。确认最低预约或评估费用以及是否包含 GST。将多个项目分组可能会使协调更容易，但这并不意味着折扣或意味着每项任务都可以一次完成。",
+          "en": "For a list of small repairs, Ellis confirms the tasks, labour, materials, removal and finishing in the quote. We also explain visit arrangements, any booking charges and GST so you can plan the work.",
+          "zh": "多项小维修可以列在同一清单中。Ellis 会在报价中明确各项工作、人工、材料、清运和收尾，并说明上门安排、预约费用及 GST，方便您安排施工。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/carpentry-quote-cost-factors/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Illustrative detail: dimensions, access and the extent of work contribute to a measured quote. This existing service image is not a documented project record.",
+          "originalZh": "说明性细节：尺寸、现场进入条件和工作范围有助于衡量报价。此现有服务映像不是文档化的项目记录。",
+          "en": "Service illustration: measuring the timber work for a quote.",
+          "zh": "木工报价示意：测量待施工木构件。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/carpentry-quote-cost-factors/:32322e39d69f269f": {
+          "originalEn": "An allowance for uncertain material or concealed work needs an explanation of what it covers and how it is reconciled. A safe photograph can help prepare an assessment, but it cannot establish every fixing point or hidden support. Ask what remains to be checked on site before treating an early estimate as a complete agreed price.",
+          "originalZh": "对不确定材料或隐蔽工作的预留项目与费用需要解释其涵盖的内容以及如何协调。一张安全的照片可以帮助准备评估，但它不能确定每个固定点或隐藏的支撑。在将早期估算视为完全商定的价格之前，询问现场还需要检查哪些内容。",
+          "en": "Your quote explains any allowances for materials or concealed work and how changes are agreed. Optional photos help us prepare; the site assessment confirms fixing points, supports and the repair extent.",
+          "zh": "报价会说明材料或隐蔽工程的预留项目，以及变更确认方式。可选照片有助于我们准备，现场检查则用于确认固定点、支撑及维修范围。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/carpentry-quote-cost-factors/:49e32e934f861e30": {
+          "originalEn": "For several small jobs, send one list with locations and symptoms. Ask whether they can be assessed together and how the quote treats each task. Grouping work does not establish a discount or a guaranteed single visit. Confirm whether the price includes GST, agreed products, delivery and disposal, and ask about payment terms and quote validity before acceptance.",
+          "originalZh": "对于几项小型工作，请发送一份包含位置和症状的清单。询问是否可以一起评估它们以及报价如何对待每项任务。分组工作不提供折扣或保证单次访问。确认价格是否包含GST、约定产品、交货和处置，并在验收前询问付款条件和报价有效性。",
+          "en": "Send one list of small jobs with their locations and symptoms. Ellis can discuss assessing them together and explain each task in the quote, including materials, delivery, removal, GST, payment terms and quote validity.",
+          "zh": "将各项小工作的位置和问题整理成一份清单。Ellis 可与您沟通统一查看，在报价中说明各项工作及材料、配送、清运、GST、付款方式和报价有效期。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/carpentry-quote-cost-factors/:b785855f48402aba": {
+          "originalEn": "A safe photo can help explain the request, but it does not establish concealed timber condition, fixing access or the complete repair extent. Ellis confirms the proposed work and quote after assessment.",
+          "originalZh": "在安全条件下拍摄的照片可以帮助解释请求，但它不能确定隐藏的木材条件、固定通道或完整的修复范围。 Ellis 评估后确认拟议的工作和报价。",
+          "en": "Optional photos help us understand your request before the visit. Ellis checks the affected timber, access and repair extent on site, then confirms the work and quote.",
+          "zh": "可选照片有助于我们在上门前了解需求。Ellis 会现场检查受损木材、施工通道及维修范围，再确认施工方案和报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-vs-composite-decking-canberra/:ae35595f722a5825": {
+          "originalEn": "Timber and composite decking should be compared as specified products, not just two labels. For your project, consider the proposed finish, care requirements, sun exposure, installation system and complete construction scope. Material choice does not establish whether an existing deck frame can be retained.",
+          "originalZh": "比较木材与复合材料露台板时，应落实到具体产品，而不是只看材料类别。结合饰面、保养、日晒、安装系统和完整施工范围判断；选定材料并不代表现有支撑框架一定能保留。",
+          "en": "Compare timber and composite decking by the specific product, finish, maintenance needs, sun exposure and installation system. Ellis assesses the existing frame and explains the complete construction scope for your project.",
+          "zh": "比较实木与复合材料露台时，可结合具体产品、饰面、保养、日晒及安装系统选择。Ellis 会检查现有框架，为您说明完整施工方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-vs-composite-decking-canberra/:1859c3e10c45d7f3": {
+          "originalEn": "Compare the complete construction scope as well as the boards. At Mitchell in August 2025, our carpentry team carried out site levelling, subframe construction and WPC board installation. That record makes the preparation and support work visible alongside the finished surface; it does not establish which material will perform better at another home.",
+          "originalZh": "请比较完整施工范围及板材。2025 年 8 月，Ellis 木工团队在 Mitchell 完成地面找平、露台龙骨搭建和 WPC 板安装。记录同时展示了准备工作、支撑和成品板面，并不能据此判断哪种材料在其他住宅表现更好。",
+          "en": "At Mitchell in August 2025, Ellis carried out site levelling, subframe construction and WPC board installation. The project photos show preparation, framing, board fitting and the finished deck for a practical view of the installation process.",
+          "zh": "2025 年 8 月，Ellis 在 Mitchell 完成地面找平、龙骨搭建及 WPC 露台板安装。项目照片展示了准备、框架、铺板及完工细节，方便您了解实际安装过程。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-vs-composite-decking-canberra/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Confirmed Ellis project: the completed composite deck in Mitchell, August 2025. This photograph shows the installed surface; it is not a performance comparison between materials.",
+          "originalZh": "已确认 Ellis 项目：2025 年 8 月 Mitchell 完成的复合材料露台。这张照片显示了安装的表面；这不是材料之间的性能比较。",
+          "en": "Ellis composite deck installation in Mitchell, completed August 2025.",
+          "zh": "Ellis 在 Mitchell 安装的复合材料露台，2025 年 8 月完工。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-vs-composite-decking-canberra/:e4051be1a548425e": {
+          "originalEn": "A sample can show texture and colour but cannot reproduce every season or outdoor condition. Discuss shade, intended furniture, pets and how the space will be used. If the proposal includes slip or fire-performance claims, ask for the current product-specific evidence and its relevant installation conditions. A board category alone should not be treated as proof of suitability for every location.",
+          "originalZh": "样品可以显示纹理和颜色，但无法再现每个季节或室外条件。讨论遮阳、预期的家具、宠物以及空间的使用方式。如果提案包含滑移或防火性能声明，请索取当前产品特定的证据及其相关安装条件。单独的露台板类别不应被视为适合每个位置的证明。",
+          "en": "Compare samples for colour and texture, then review the selected product’s specifications for sun exposure, care and relevant slip or fire performance. Tell Ellis about shade, furniture, pets and intended use so these details can inform your proposal.",
+          "zh": "可通过样板比较颜色和质感，再查看选定产品的日晒、养护及相关防滑、防火性能资料。请向 Ellis 说明遮阴、家具、宠物及使用方式，方便规划方案。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-vs-composite-decking-canberra/:f9517d911ecd96e1": {
+          "originalEn": "Changing boards does not establish that old supports can be reused. The joists, bearers, posts and connections need assessment, and the proposed system’s support and fixing requirements need checking. Old fixing positions or a familiar board width are not enough to confirm compatibility. Ask how retained framing will suit the selected board system and what work is allowed for if it does not.",
+          "originalZh": "更换板并不意味着旧支架可以重复使用。托梁、承载件、柱子和连接件需要评估，拟议系统的支撑和固定要求需要检查。旧的固定位置或熟悉的板宽度不足以确认兼容性。询问保留框架如何适合所选的露台板系统，如果不适合，可以进行哪些工作。",
+          "en": "Ellis assesses the joists, bearers, posts and connections before reusing a frame. We check support spacing and fixings against the selected board system and include any required frame work in the quote.",
+          "zh": "保留框架前，Ellis 会检查托梁、承梁、立柱及连接，并按选用露台板系统核对支撑间距和固定方式，将需要的框架处理列入报价。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-vs-composite-decking-canberra/:1ba66e24516fc418": {
+          "originalEn": "ModWood’s technical directory illustrates why installation documents belong with the product specification. It is not evidence that your deck uses ModWood or that an old frame meets a particular range’s requirements. Where support damage is present, resolve it before treating the job as a surface conversion. The",
+          "originalZh": "ModWood 的技术资料说明，安装文件应与具体产品规格一并考虑。这不代表您的露台使用 ModWood，也不能证明旧框架符合某产品系列的要求。如果支撑已有损坏，应先处理，不能直接把工程当作换板面。",
+          "en": "ModWood’s technical directory explains installation requirements for its products. We check the selected board specification and supporting frame together when planning the installation. The",
+          "zh": "ModWood 的技术资料介绍了旗下产品的安装要求。规划施工时，我们会结合选用板材规格检查支撑框架。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-vs-composite-decking-canberra/:1690014ae3b1d6cc": {
+          "originalEn": "Ask for the current installation, care and warranty documents for the selected product. Read the warranty conditions and who provides it; a manufacturer’s document is not a blanket promise about every part of the installed deck. Confirm the agreed construction and supply responsibilities separately. Keep the quote, product identity and any variations together for future maintenance or repair enquiries.",
+          "originalZh": "索取所选产品的当前安装、维护和保修文件。阅读保修条件以及提供者；制造商的文件并不是对已安装露台的每个部分的一揽子承诺。分别确认约定的施工和供应责任。将报价、产品标识和任何变体保存在一起，以便将来进行维护或维修咨询。",
+          "en": "Keep the selected product’s installation, care and warranty documents with your quote. Confirm the warranty provider, covered items, construction and supply responsibilities for convenient future maintenance enquiries.",
+          "zh": "请将所选产品的安装、保养、保修文件与报价一并保存，确认保修提供方、覆盖项目及施工、供货责任，方便日后维护和咨询。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-vs-composite-decking-canberra/:248104b505377367": {
+          "originalEn": "The actual new build, extension or repair also needs its applicable project checks confirmed with the relevant professionals. Material selection alone does not resolve approvals or structural suitability. The Mitchell project record above demonstrates one installation sequence and recorded scope, not a guarantee that another site will use the same preparation, supports or products.",
+          "originalZh": "实际的新建、扩建或维修还需要与相关专业人员确认其适用的项目检查。仅材料选择并不能解决批准或结构适用性的问题。上面的 Mitchell 项目记录展示了一个安装顺序和记录的范围，并不保证另一个站点将使用相同的准备、支持或产品。",
+          "en": "For a new deck, extension or repair, we confirm the site requirements and any applicable professional or approval checks. Your proposal sets out the preparation, supports, selected boards and installation details.",
+          "zh": "新建、扩建或维修露台时，我们会确认现场条件及适用的专业检查、审批事项，并在方案中列明场地准备、支撑、选用板材和安装细节。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-vs-composite-decking-canberra/:64a01fb0bf2d5f88": {
+          "originalEn": "Do not assume that it is. Use the care instructions for the exact product, and keep cleaning requirements separate from assessment of supports and connections.",
+          "originalZh": "不要假设它是。使用具体产品的保养说明，并将清洁要求与支撑和连接的评估分开。",
+          "en": "Composite decking needs care appropriate to the selected product. Follow its cleaning and maintenance instructions, and arrange separate checks for any movement or support damage.",
+          "zh": "复合材料露台应按所选产品要求养护。请遵循清洗保养说明，出现晃动或支撑损坏时另行安排检查。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-deck-maintenance-canberra/:665cac0c37d833f2": {
+          "originalEn": "The photographs show the weathered surface, cleaning, oil application and finished appearance. They do not establish concealed support condition or a universal coating method. Identify the existing finish and confirm the repair and care scope for your deck before choosing a product.",
+          "originalZh": "照片展示了老化板面、清洗、上油和完工外观，并不能确认隐蔽支撑状况，也不代表通用涂装方法。选择产品前，请确认现有涂层及您露台的维修、保养范围。",
+          "en": "The Melba photos show the weathered deck, cleaning, oil application and finished appearance. Ellis checks the existing finish and deck condition to plan repairs and select the surface-care product.",
+          "zh": "Melba 项目照片展示了老化板面、清洗、上油及完工效果。Ellis 会检查旧涂层和露台状况，规划维修并选择表面养护产品。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-deck-maintenance-canberra/:f42a9a7d3ecbd4b4": {
+          "originalEn": "Confirmed Ellis project: the Melba timber deck following repairs, cleaning and oiling in May 2025. The surface photograph does not establish the condition of concealed supports.",
+          "originalZh": "已确认 Ellis 项目：Melba 木露台于 2025 年 5 月进行维修、清洁和涂油。表面照片未确定隐藏支撑的情况。",
+          "en": "Ellis timber deck repairs, cleaning and oiling in Melba, completed May 2025.",
+          "zh": "Ellis 在 Melba 完成的露台维修、清洗和上油，2025 年 5 月完工。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-deck-maintenance-canberra/:ffbd8aa91cab351f": {
+          "originalEn": "A weathered-looking deck may need surface care, timber repairs or both. Ellis provides stand-alone deck cleaning and oiling as well as deck repairs. Cleaning and a renewed coating concern the exposed surface. Loose boards, movement, deteriorated supports or an unreliable barrier need assessment before appearance work is agreed. A new finish cannot establish that a deck is structurally suitable, and a photograph of grey boards cannot determine the concealed condition.",
+          "originalZh": "表面老化的露台可能需要保养、木结构维修，或两者都需要。Ellis 提供单独清洗上油及露台维修。清洗和更新涂层处理的是外露表面；若有板材松动、晃动、支撑劣化或防护栏不可靠，应在确认外观工作前先评估。新涂层不能证明结构适用，灰色板面的照片也无法确认隐蔽状况。",
+          "en": "Ellis offers stand-alone deck cleaning and oiling as well as timber repairs. We check weathering, loose boards, movement and support condition, then recommend repairs and surface care for your deck. Unstable areas should remain out of use until assessed.",
+          "zh": "Ellis 提供单独露台清洗上油及木材维修。我们检查风化、松板、晃动和支撑状况，为您的露台规划维修及养护。不稳区域请在检查前暂停使用。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-deck-maintenance-canberra/:e4051be1a548425e": {
+          "originalEn": "WoodSolutions advises following the coating manufacturer’s recommendations when recoating. Ask whether retained boards and new repair timber require different preparation and how the proposed product suits the existing surface. Keep the agreed product identity with the scope. A universal annual oiling instruction cannot replace the guidance for the actual finish and its condition.",
+          "originalZh": "WoodSolutions 建议重涂时遵循涂料制造商的建议。询问保留的板材和新的修复木材是否需要不同的准备以及拟议的产品如何适合现有的表面。保留商定的产品标识和范围。通用年度涂油说明不能取代实际表面处理及其状况的指导。",
+          "en": "Follow the coating manufacturer’s recoating guidance. Ellis checks how the selected product suits the existing surface and confirms preparation for both retained and replacement boards.",
+          "zh": "重新上油应遵循所选涂料的产品说明。Ellis 会检查产品与旧表面的适配情况，明确保留板材和新换板材的表面处理。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-deck-maintenance-canberra/:f9517d911ecd96e1": {
+          "originalEn": "A care quote should describe the treated area, preparation and selected coating. “Restoration” can mean different things, from cleaning to board replacement, so ask what will actually happen. Furniture handling, protection of adjoining walls or plants and debris removal can also affect the job. Sanding is not automatically appropriate for every board condition or previous coating.",
+          "originalZh": "护理报价应描述治疗区域、准备工作和所选涂层。 “恢复”可能意味着不同的事情，从清洁到更换木板，所以要询问实际会发生什么。家具搬运、相邻墙壁或植物的保护以及碎片清除也会影响工作。打磨并不自动适合每种板材状况或先前的涂层。",
+          "en": "A deck-care quote sets out the treated area, cleaning, preparation and selected coating, alongside any board repairs. We also confirm furniture handling, protection of nearby walls and plants, and debris removal.",
+          "zh": "露台养护报价会列明处理面积、清洗、表面准备、选用涂层及所需板材维修，并确认家具搬移、周边墙面和植物保护及清运安排。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-deck-maintenance-canberra/:de77871a3a32222a": {
+          "originalEn": "before committing to surface work. A clean deck can still have a support problem. The Melba sequence above shows board repair followed by preparation and oiling; it does not establish that every deck has the same condition or needs the same sequence.",
+          "originalZh": "在进行表面工作之前。干净的露台仍然可能存在支撑问题。上面的 Melba 顺序显示了木板维修，然后是准备和上油；它并没有规定每副牌都具有相同的条件或需要相同的顺序。",
+          "en": "before planning surface care. We inspect any movement or support damage first. The Melba project shows board repairs followed by preparation and oiling.",
+          "zh": "，再规划表面养护。发现晃动或支撑损坏时，先安排检查。Melba 案例展示了板材维修后再做表面处理和上油的过程。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-deck-maintenance-canberra/:1690014ae3b1d6cc": {
+          "originalEn": "Confirm the area, product supply, preparation, repairs, access and disposal in the quote. Ask whether the finish includes only repaired boards or the retained surface as well. Different preparation allowances can explain different prices for decks of a similar area. No universal coating life, drying time or maintenance cost is promised by the phrase “cleaning and oiling”.",
+          "originalZh": "确认报价中的区域、产品供应、准备、维修、进出条件和处置。询问饰面是否仅包括修复的木板或保留的表面。不同的准备预留项目与费用可以解释相似区域的露台的不同价格。 “清洁和上油”一词并未承诺通用的涂层寿命、干燥时间或维护成本。",
+          "en": "Your quote confirms the area, product supply, preparation, repairs, access and removal. We explain which boards will be coated and the selected product’s drying and care instructions.",
+          "zh": "报价会确认面积、产品供应、准备工作、维修、施工通道及清运，并说明涂装范围和所选产品的干燥、保养要求。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/news/timber-deck-maintenance-canberra/:7a7e86d5bc70a28c": {
+          "originalEn": "No. Coating work does not establish the condition of supporting timber or connections. Avoid the unsafe area and arrange assessment of the movement or damage.",
+          "originalZh": "否。涂层工作不构成支撑木材或连接的条件。避开不安全区域并安排对移动或损坏的评估。",
+          "en": "Movement needs assessment of the supports and connections before coating work. Avoid the affected area and contact Ellis to arrange an inspection.",
+          "zh": "露台晃动时，应先检查支撑和连接，再安排涂装。请避开受影响区域，联系 Ellis 安排查看。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/composite-decking/:85570bee8718b1bb": {
+          "originalEn": "Our carpentry team undertakes composite deck installation, including site preparation, framing and board fitting within the agreed scope. The proposed board range, fixings, support layout and edge details need to be considered together. Existing supports are assessed before any retention is agreed; changing boards alone does not establish that the old frame is suitable.",
+          "originalZh": "我们的木工团队承接复合材料露台安装，在约定范围内完成场地准备、框架和板材安装。具体产品系列、固定件、支撑布局和边缘收口应一并考虑。保留现有支撑前须评估；只换板材不能证明旧框架适用。",
+          "en": "Ellis installs composite decks, including site preparation, framing and board fitting. We plan the selected boards, fixings, support layout and edge details together, checking existing supports before reuse.",
+          "zh": "Ellis 提供复合材料露台安装，包括场地准备、龙骨搭建及铺板。我们统一规划所选板材、固定件、支撑布局及边缘收口，保留旧支撑前先检查其状况。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/composite-decking/:2bb1daf94fe2ea24": {
+          "originalEn": "Composite and WPC describe a material category, not one installation system. Agree the exact supplier, range, dimensions, colour and applicable product instructions in the proposal. We do not describe composite as maintenance-free or guarantee that it stays cool in direct sun. Cleaning and care follow the chosen product information.",
+          "originalZh": "Composite 和 WPC 指的是材料类别，并非单一安装系统。方案应明确供应商、系列、尺寸、颜色及适用产品说明。我们不将复合材料描述为免维护，也不保证日照下保持凉爽。清洗保养应遵循所选产品资料。",
+          "en": "We confirm the composite or WPC supplier, product range, dimensions, colour and installation details in your proposal. Compare the selected product’s sun-exposure, cleaning and care information when choosing the finish.",
+          "zh": "方案中会确认复合材料或 WPC 的供应商、产品系列、尺寸、颜色及安装细节。选择板材时，可结合产品的日晒、清洗和养护资料比较。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/composite-decking/:a4245b9c1a5da819": {
+          "originalEn": "Site arrangements: confirm access, removal, disposal and relevant project checks before scheduling. A photograph of another deck does not settle your site scope.",
+          "originalZh": "场地安排：排期前确认进出条件、拆除、清运和相关项目检查。其他露台的照片不能确定您家的施工范围。",
+          "en": "Site arrangements: we confirm access, removal, disposal and the relevant project checks for your property before scheduling.",
+          "zh": "现场安排：安排施工前，我们会结合您的房屋确认进出通道、拆除、清运及相关项目检查。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/composite-decking/:0ec310e8b9a1e461": {
+          "originalEn": "Ellis project photography supplied for this service.",
+          "originalZh": "Ellis 为此服务提供项目摄影。",
+          "en": "Ellis carpentry project photograph.",
+          "zh": "Ellis 木工项目施工照片。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/composite-decking/:cce60452c2302214": {
+          "originalEn": "Browse all supplied projects",
+          "originalZh": "浏览所有提供的项目",
+          "en": "Browse our carpentry projects",
+          "zh": "查看我们的木作案例",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/deck-cleaning-and-oiling/:85570bee8718b1bb": {
+          "originalEn": "Ellis provides stand-alone deck cleaning and oiling as well as carpentry repairs. Where boards need attention, the quote distinguishes that work from cleaning, surface preparation and coating. Renewing the finish does not repair deteriorated supports or prove that concealed connections are sound. Larger defects may need a separate repair plan before surface work.",
+          "originalZh": "Ellis 提供单独露台清洗上油及木工维修。如果板材需要处理，报价应将维修与清洗、表面准备和涂装分别列明。更新饰面不能修复劣化支撑，也不能证明隐蔽连接完好。较大缺陷可能需要先制定独立维修方案。",
+          "en": "Ellis provides stand-alone deck cleaning and oiling, alongside carpentry repairs. We check boards and supports, then specify any repairs, cleaning, preparation and coating as clear stages in your quote.",
+          "zh": "Ellis 提供单独露台清洗上油，也承接木作维修。我们检查板材及支撑，在报价中分阶段列明维修、清洗、表面准备及涂装内容。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/deck-cleaning-and-oiling/:16b8c178a5927787": {
+          "originalEn": "Board repairs: identify the defects to address before cleaning or oiling; surface work does not repair deteriorated supports.",
+          "originalZh": "木板维修：在清洁或上油之前确定需要解决的缺陷；表面工作不能修复损坏的支撑。",
+          "en": "Board repairs: we identify damaged boards and supports and plan the repairs before cleaning or oiling.",
+          "zh": "板材维修：先检查受损露台板及支撑，安排需要的维修，再进行清洗上油。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/deck-cleaning-and-oiling/:a4245b9c1a5da819": {
+          "originalEn": "Access and use: agree protection of nearby surfaces, furniture handling and debris removal. Confirm when the area can be used under the selected product instructions; no universal coating life or annual cycle is promised.",
+          "originalZh": "现场与使用安排：确认周边表面保护、家具搬移和废料清理。根据所选产品说明确认何时恢复使用；不承诺所有涂层都具有相同寿命或固定年度保养周期。",
+          "en": "Access and use: agree protection of nearby surfaces, furniture handling and debris removal. Follow the selected product’s drying and care instructions before using the deck.",
+          "zh": "现场与使用安排：明确周边保护、家具搬移及废料清理，并按所选产品的干燥和养护说明恢复使用。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/deck-cleaning-and-oiling/:8c0a0ada4f717757": {
+          "originalEn": "Include your suburb, the area involved, the problems you have noticed and any previous coating details. Safe photos are optional. Our team confirms an on-site assessment, visit arrangements and quote; the Melba project below illustrates one repair-and-care sequence, not a preset package for every deck.",
+          "originalZh": "请说明所在城区、涉及面积、观察到的问题及旧涂层信息，可选择提供安全拍摄的照片。团队会确认现场评估、上门安排和报价。下方 Melba 案例展示一种维修保养顺序，并非适用于所有露台的固定套餐。",
+          "en": "Tell us your suburb, deck area, the problems you have noticed and any previous coating details. Our team will arrange an assessment and discuss repairs, cleaning and oiling in your quote.",
+          "zh": "请告诉我们所在城区、露台面积、观察到的问题及旧涂层信息。团队会安排现场查看，在报价中明确维修、清洗和上油内容。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/deck-cleaning-and-oiling/:0ec310e8b9a1e461": {
+          "originalEn": "Ellis project photography supplied for this service.",
+          "originalZh": "Ellis 为此服务提供项目摄影。",
+          "en": "Ellis carpentry project photograph.",
+          "zh": "Ellis 木工项目施工照片。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/deck-cleaning-and-oiling/:cce60452c2302214": {
+          "originalEn": "Browse all supplied projects",
+          "originalZh": "浏览所有提供的项目",
+          "en": "Browse our carpentry projects",
+          "zh": "查看我们的木作案例",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/built-in-wardrobes/:5782d382946ea59e": {
+          "originalEn": "Manufacture: the Pearce installation is not evidence of Ellis manufacturing IKEA cabinets or operating an in-house cabinet factory. Any different manufacture arrangement needs its own confirmed proposal.",
+          "originalZh": "制作：Pearce 案例不能证明 Ellis 制造 IKEA 柜体或经营自有柜体工厂。其他制作安排需要单独确认方案。",
+          "en": "Product selection: the Pearce installation uses IKEA cabinetry. We confirm your selected components, measured fit, supply and finishing details before installation.",
+          "zh": "产品选择：Pearce 项目使用 IKEA 柜体。安装前，我们会确认选用部件、实测尺寸、供货及收口细节。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/built-in-wardrobes/:0ec310e8b9a1e461": {
+          "originalEn": "Ellis project photography supplied for this service.",
+          "originalZh": "Ellis 为此服务提供项目摄影。",
+          "en": "Ellis carpentry project photograph.",
+          "zh": "Ellis 木工项目施工照片。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/built-in-wardrobes/:cce60452c2302214": {
+          "originalEn": "Browse all supplied projects",
+          "originalZh": "浏览所有提供的项目",
+          "en": "Browse our carpentry projects",
+          "zh": "查看我们的木作案例",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/under-stair-storage/:2bb1daf94fe2ea24": {
+          "originalEn": "Ellis carpentry undertakes storage installation with the selected cabinetry, hardware and edge details confirmed in the proposal. Identify who supplies the components and whether any special fabrication is required. Our finished-project gallery shows several different installations; it is not one construction sequence or a promise that a standard product will fit every staircase.",
+          "originalZh": "Ellis 木工承接储物柜安装，所选柜体、五金及封边细节须在方案中确认。请明确部件供应方，以及是否需要特别制作。完工图库展示多个不同安装项目，并非同一项目的施工过程，也不承诺标准产品适合每座楼梯。",
+          "en": "Ellis installs under-stair storage with the selected cabinetry, hardware and edge details confirmed in the proposal. Our gallery shows completed installations from different projects to help you explore storage layouts.",
+          "zh": "Ellis 承接楼梯下收纳安装，在方案中明确柜体、五金及封边收口。图库展示多个项目的完工效果，方便您参考不同收纳布局。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/under-stair-storage/:0ec310e8b9a1e461": {
+          "originalEn": "Ellis project photography supplied for this service.",
+          "originalZh": "Ellis 为此服务提供项目摄影。",
+          "en": "Ellis carpentry project photograph.",
+          "zh": "Ellis 木工项目施工照片。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/services/under-stair-storage/:cce60452c2302214": {
+          "originalEn": "Browse all supplied projects",
+          "originalZh": "浏览所有提供的项目",
+          "en": "Browse our carpentry projects",
+          "zh": "查看我们的木作案例",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/mitchell-composite-deck/:e0886247f717bcc9": {
+          "originalEn": "A new outdoor deck installed by the Ellis Services Group carpentry team. The owner-supplied project record identifies site levelling, subframe construction and composite board installation.",
+          "originalZh": "Ellis Services Group 木工团队安装的新户外露台。用户提供的项目记录包括场地找平、支撑龙骨搭建和复合材料露台板安装。",
+          "en": "Ellis installed this new outdoor deck in Mitchell, including site levelling, subframe construction and composite board fitting.",
+          "zh": "Ellis 在 Mitchell 安装的新户外露台，施工包括场地找平、龙骨搭建及复合材料板铺装。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/mitchell-composite-deck/:f2150ca589640e4e": {
+          "originalEn": "The recorded result",
+          "originalZh": "记录结果",
+          "en": "The finished work",
+          "zh": "完工效果",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/mitchell-composite-deck/:85570bee8718b1bb": {
+          "originalEn": "The completed photographs show a grey composite deck beside the home. This record documents the agreed installation; it does not claim a measured lifespan, compliance certification or a particular manufacturer that has not been identified.",
+          "originalZh": "完成的照片显示了房屋旁边的灰色复合材料露台。该记录记录了商定的安装；它没有声称测量的使用寿命、合规性认证或尚未确定的特定制造商。",
+          "en": "The completed Mitchell deck features grey WPC boards with finished perimeter and fascia details beside the home.",
+          "zh": "Mitchell 完工露台采用灰色 WPC 板材，沿住宅铺设，并完成周边和侧板收口。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/melba-deck-care/:f2150ca589640e4e": {
+          "originalEn": "The recorded result",
+          "originalZh": "记录结果",
+          "en": "The finished work",
+          "zh": "完工效果",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/melba-deck-care/:85570bee8718b1bb": {
+          "originalEn": "The completed photographs show the renewed timber surface after repair and oiling. This is a board-repair and surface-care project, not a record of frame replacement. The important distinction for a similar enquiry is that oiling alone does not correct lifted or distorted boards; the repair and finishing stages need to be agreed separately.",
+          "originalZh": "完工照片展示了维修和上油后更新的木材表面。这是甲板维修及表面养护项目，不是框架更换记录。对于类似需求，关键在于分清：单独上油不能修复翘起或变形的甲板，维修与表面处理应分别确认。",
+          "en": "The Melba project combined repairs to lifted and distorted deck boards with cleaning, preparation and oiling. The finished photos show the renewed timber surface after both repair and care work.",
+          "zh": "Melba 项目结合了翘起、变形露台板维修及清洗、表面处理和上油。完工照片展示了维修与养护后的木质板面效果。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/pearce-wardrobe-installation/:c502c131c60cbf5d": {
+          "originalEn": "The photographs show the opening before installation, assembly and fitting in progress, the closed wardrobe and its internal storage. The job record identifies measurement, assembly and edge finishing rather than manufacture of the wardrobe products.",
+          "originalZh": "照片展示了安装前的开口、组装和安装过程中的开口、封闭的衣柜及其内部收纳空间。工作记录标识测量、组装和边缘加工，而不是衣柜产品的制造。",
+          "en": "The photos show the space before installation, assembly and fitting in progress, the finished doors and internal storage. Ellis measured the opening, assembled the IKEA components and completed the fitted edge details.",
+          "zh": "照片展示了安装前空间、组装安装过程、完工柜门及内部收纳。Ellis 测量门洞、组装 IKEA 部件，并完成安装及边缘收口。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/pearce-wardrobe-installation/:f2150ca589640e4e": {
+          "originalEn": "The recorded result",
+          "originalZh": "记录结果",
+          "en": "The finished work",
+          "zh": "完工效果",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/pearce-wardrobe-installation/:85570bee8718b1bb": {
+          "originalEn": "The fitted wardrobe includes doors, hanging space, drawers and shelving visible in the supplied images. IKEA is identified as the product source only; no authorised-installer, partnership or endorsement status is claimed.",
+          "originalZh": "合适的衣柜包括门、悬挂空间、抽屉和架子，如所提供的图片所示。 IKEA 仅被标识为产品来源；未声明任何授权安装商、合作伙伴或认可状态。",
+          "en": "The fitted IKEA wardrobe includes doors, hanging space, drawers and shelving. Ellis completed the measurement, assembly, installation and edge finishing.",
+          "zh": "这组 IKEA 衣柜包括柜门、挂衣区、抽屉及层板。Ellis 完成了尺寸测量、组装、安装及封边收口。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/under-stair-storage-gallery/:9fc78a2c31b11908": {
+          "originalEn": "See different completed under-stair storage installations supplied by Ellis, with cupboards, shelving and varied door details. Not a before-and-after sequence.",
+          "originalZh": "查看 Ellis 提供的不同的已完成的楼梯下收纳装置，包括橱柜、架子和各种门细节。不是前后顺序。",
+          "en": "Explore completed under-stair storage projects by Ellis, including cupboards, shelves and different door and handle layouts.",
+          "zh": "查看 Ellis 不同项目的楼梯下收纳完工效果，包括柜体、层板及不同柜门和把手布局。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/under-stair-storage-gallery/:b7b38ad8ef498a8d": {
+          "originalEn": "See different completed under-stair storage installations supplied by Ellis, with cupboards, shelving and varied door details. Not a before-and-after sequence.",
+          "originalZh": "查看 Ellis 提供的不同的已完成的楼梯下收纳装置，包括橱柜、架子和各种门细节。不是前后顺序。",
+          "en": "Explore completed under-stair storage projects by Ellis, including cupboards, shelves and different door and handle layouts.",
+          "zh": "查看 Ellis 不同项目的楼梯下收纳完工效果，包括柜体、层板及不同柜门和把手布局。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/under-stair-storage-gallery/:ee8332edf6541e9c": {
+          "originalEn": "See different completed under-stair storage installations supplied by Ellis, with cupboards, shelving and varied door details. Not a before-and-after sequence.",
+          "originalZh": "查看 Ellis 提供的不同的已完成的楼梯下收纳装置，包括橱柜、架子和各种门细节。不是前后顺序。",
+          "en": "Explore completed under-stair storage projects by Ellis, including cupboards, shelves and different door and handle layouts.",
+          "zh": "查看 Ellis 不同项目的楼梯下收纳完工效果，包括柜体、层板及不同柜门和把手布局。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/under-stair-storage-gallery/:e0886247f717bcc9": {
+          "originalEn": "Completed under-stair storage from different projects. These supplied photographs are a gallery of finished work, not stages of one installation.",
+          "originalZh": "展示多个不同项目的楼梯下收纳完工效果。这些照片并非同一次安装的不同施工阶段。",
+          "en": "Explore completed under-stair storage installations from different projects, with cupboard layouts and fitted details for sloping spaces.",
+          "zh": "查看不同项目的楼梯下收纳完工效果，参考斜坡空间的柜门布局及安装细节。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/under-stair-storage-gallery/:c502c131c60cbf5d": {
+          "originalEn": "Each example uses the space below a staircase differently. The photographs show a tall cupboard with shelving, a handleless door layout, recessed handles and pull handles. No shared completion date, product specification or individual suburb is assigned across the collection.",
+          "originalZh": "每个示例都以不同的方式使用楼梯下方的空间。照片显示了一个带架子的高柜子、无把手的门布局、凹进的把手和拉手。整个系列中没有指定共享的完成日期、产品规格或单个郊区。",
+          "en": "The gallery features different ways to use the space below a staircase: tall cupboards with shelves, handleless fronts, recessed handles and pull handles.",
+          "zh": "图库展示了不同楼梯下空间的利用方式，包括带层板的高柜、无把手柜门、嵌入式把手和长拉手设计。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/:a195df4ce3301653": {
+          "originalEn": "A new outdoor deck installed by the Ellis Services Group carpentry team. The owner-supplied project record identifies site levelling, subframe construction and composite board installation.",
+          "originalZh": "Ellis Services Group 木工团队安装的新户外露台。用户提供的项目记录包括场地找平、支撑龙骨搭建和复合材料露台板安装。",
+          "en": "Ellis installed this new outdoor deck in Mitchell, including site levelling, subframe construction and composite board fitting.",
+          "zh": "Ellis 在 Mitchell 安装的新户外露台，施工包括场地找平、龙骨搭建及复合材料板铺装。",
+          "enRevision": 1,
+          "zhRevision": 1
+        },
+        "/projects/:a356bb49a7871502": {
+          "originalEn": "Completed under-stair storage from different projects. These supplied photographs are a gallery of finished work, not stages of one installation.",
+          "originalZh": "展示多个不同项目的楼梯下收纳完工效果。这些照片并非同一次安装的不同施工阶段。",
+          "en": "Explore completed under-stair storage installations from different projects, with cupboard layouts and fitted details for sloping spaces.",
+          "zh": "查看不同项目的楼梯下收纳完工效果，参考斜坡空间的柜门布局及安装细节。",
+          "enRevision": 1,
+          "zhRevision": 1
+        }
+      },
+      "history": []
+    }
+  ]
+}
