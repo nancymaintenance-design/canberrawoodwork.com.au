@@ -6,4 +6,7 @@ if(!process.argv.includes('--english-only')&&process.env.CMS_SKIP_APPROVED!=='1'
  const {applyApproved}=await import('./admin/render.mts');applyApproved(process.cwd()+'/dist',process.cwd());
  const {applyReviewedRelease}=await import('./src/reviewed-release.mts');applyReviewedRelease(process.cwd()+'/dist',process.cwd());
  const {applyCustomerVoiceRelease}=await import('./src/customer-voice-release.mts');applyCustomerVoiceRelease(process.cwd()+'/dist',process.cwd());
+ if(process.env.SERVICE_NAVIGATION_SKIP_RELEASE!=='1'){
+  const {applyNavigationRelease}=await import('./src/navigation-release.mts');applyNavigationRelease(process.cwd()+'/dist');
+ }
 }
