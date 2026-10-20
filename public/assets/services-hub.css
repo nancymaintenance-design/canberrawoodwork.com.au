@@ -1,0 +1,2 @@
+.services-hub-extra .verified-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:900px){.services-hub-extra .verified-cards{grid-template-columns:1fr}}
