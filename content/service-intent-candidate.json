@@ -1,0 +1,17 @@
+{
+ "timber-window-repairs":{
+  "en":{"heading":"Timber window frame and sill repairs","lead":"We repair damaged timber frames and sills and check sticking or dropping sashes. Tell us which part of the window needs attention.","items":[["Frames and joints","We repair weathered frame sections and damaged joints, matching the surrounding timber profile."],["Window sills","We check the sill ends and adjoining frame, replace affected timber and check how water reaches the sill."],["Sticking or dropping sashes","We check the sash movement, fixings and surrounding timber to plan the repair."]],"related":"Timber door and frame repairs","cta":"Discuss your window repair"},
+  "zh":{"heading":"木窗框与窗台维修","lead":"我们维修受损木窗框和窗台，并检查窗扇卡阻、下滑等问题。告诉我们窗户哪个部位需要处理。","items":[["窗框与接缝","我们维修风化的窗框区段和受损接缝，匹配周边木材的截面造型。"],["木窗台","我们检查窗台两端及相邻窗框，更换受损木材，并检查进水和排水位置。"],["窗扇卡住或下滑","我们检查窗扇开关、固定点及周边木材，为您说明维修方案。"]],"related":"木门与门框维修","cta":"咨询木窗维修"},
+  "relatedSlug":"door-and-frame-repairs"
+ },
+ "door-and-frame-repairs":{
+  "en":{"heading":"Timber door adjustments and frame repairs","lead":"We repair doors that rub, fail to latch or have damaged timber around the hinges and frame. We check the door and frame together before adjusting or replacing parts.","items":[["Door rubbing or sticking","We check hinge support, frame alignment and floor clearance, then adjust the affected parts."],["Door will not latch","We check how the door closes and where the latch meets the strike plate."],["Damaged jambs or frames","We repair damaged timber and fixing points and explain which sections need replacement."]],"related":"Timber window repairs","cta":"Discuss your door repair"},
+  "zh":{"heading":"木门调整与门框维修","lead":"我们处理木门摩擦、锁舌对位不良，以及铰链和门框周边木材损坏等问题。调整或更换部件前，会把门扇和门框一起检查。","items":[["木门摩擦或卡住","我们检查铰链支撑、门框对位和门底间隙，再调整受影响的部位。"],["门关上后锁不住","我们检查关门状态，以及锁舌与锁扣板的对应位置。"],["门框或固定点损坏","我们维修受损木材和固定点，并说明需要更换的区段。"]],"related":"木窗维修","cta":"咨询木门维修"},
+  "relatedSlug":"timber-window-repairs"
+ },
+ "skirting-and-architraves":{
+  "en":{"heading":"Skirting board repairs and installation","lead":"We repair and replace damaged skirting boards and fit skirting and architraves around floors, doors and windows. We match the profile, lengths and finish to the room.","items":[["Damaged or missing skirting","We replace affected lengths and match the existing profile and adjoining corners."],["Skirting after new flooring","We measure the finished floor level and fit the skirting to the new floor and wall junction."],["Door and window trims","We fit architraves and complete the joints and edges around the opening."]],"related":"Interior and renovation carpentry","cta":"Discuss your skirting or trim"},
+  "zh":{"heading":"踢脚线维修与安装","lead":"我们维修、更换受损踢脚线，并安装地板、门窗周边的踢脚线和套线。根据房间情况匹配造型、长度和收尾要求。","items":[["踢脚线损坏或缺失","我们更换受损区段，匹配现有造型及相邻转角。"],["铺新地板后的收边","我们按完成后的地板高度测量，处理地板与墙面之间的踢脚线收口。"],["门窗套线","我们安装门窗周边套线，完成接缝与边缘收尾。"]],"related":"室内木作与装修收尾","cta":"咨询踢脚线与套线"},
+  "relatedSlug":"interior-carpentry"
+ }
+}

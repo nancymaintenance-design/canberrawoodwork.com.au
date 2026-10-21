@@ -1,0 +1,17 @@
+/* Public marketing pages: reuse the existing wood-theme tokens and typography. */
+.service-page-jump{display:flex;flex-wrap:wrap;gap:4px 20px;padding:0 0 16px;border-bottom:1px solid var(--line)}
+.service-page-jump a{display:inline-flex;align-items:center;min-height:44px;padding:6px 0;color:var(--ink);font-size:15px;font-weight:700;text-decoration:underline;text-underline-offset:5px;cursor:pointer}
+.service-page-jump a:hover,.service-intent-actions a:hover{color:var(--blue)}
+.service-page-jump a:active,.service-intent-actions a:active{background:var(--pale)}
+.service-page-jump a:focus-visible,.service-intent-actions a:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.service-content-body>.service-intent-overview{border-top:0;padding-top:0}
+.service-intent-overview h2{margin-top:0;margin-bottom:16px}
+.service-intent-overview>p{margin:0 0 16px}
+.service-intent-overview dl{margin:0}
+.service-intent-overview dl>div{display:grid;grid-template-columns:minmax(140px,.7fr) minmax(0,1.6fr);gap:10px 24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.service-intent-overview dt{font-weight:700;color:var(--ink)}
+.service-intent-overview dd{margin:0;color:var(--muted);line-height:1.8}
+.service-intent-actions{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:20px;align-items:center}
+.service-intent-actions a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+#repair-needs,#repair-details,#repair-photos,#service-questions,#repair-enquiry{scroll-margin-top:24px}
+@media(max-width:600px){.service-page-jump{gap:2px 18px}.service-intent-overview dl>div{grid-template-columns:minmax(0,1fr);gap:6px}.service-intent-actions{gap:6px 20px}}

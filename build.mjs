@@ -9,4 +9,7 @@ if(!process.argv.includes('--english-only')&&process.env.CMS_SKIP_APPROVED!=='1'
  if(process.env.SERVICE_NAVIGATION_SKIP_RELEASE!=='1'){
   const {applyNavigationRelease}=await import('./src/navigation-release.mts');applyNavigationRelease(process.cwd()+'/dist');
  }
+ if(process.env.SERVICE_INTENT_SKIP_RELEASE!=='1'){
+  const {applyServiceIntentRelease}=await import('./src/service-intent-release.mts');applyServiceIntentRelease(process.cwd()+'/dist');
+ }
 }
