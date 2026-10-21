@@ -18,4 +18,7 @@ if(!process.argv.includes('--english-only')&&process.env.CMS_SKIP_APPROVED!=='1'
  if(process.env.PRIVACY_DESIGN_SKIP_RELEASE!=='1'){
   const {applyPrivacyDesignRelease}=await import('./src/privacy-design-release.mts');applyPrivacyDesignRelease(process.cwd()+'/dist');
  }
+ if(process.env.FAQ_DESIGN_SKIP_RELEASE!=='1'){
+  const {applyFaqDesignRelease}=await import('./src/faq-design-release.mts');applyFaqDesignRelease(process.cwd()+'/dist');
+ }
 }
