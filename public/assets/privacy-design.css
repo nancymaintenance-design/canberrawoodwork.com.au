@@ -1,0 +1,45 @@
+:root{--craft-ink:#30251d;--craft-copper:#9b6236;--craft-muted:#6b625a;--craft-paper:#fffdf9;--craft-line:#dfcdbb;--craft-focus:#75451f}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body.craft-page{margin:0;background:var(--craft-paper);color:var(--craft-ink)}
+.craft-page *{box-sizing:border-box}
+.craft-page a:focus-visible,.craft-page button:focus-visible{outline:3px solid var(--craft-focus);outline-offset:5px}
+.craft-skip{position:absolute;top:8px;left:12px;z-index:100;transform:translateY(-180%);background:var(--craft-paper);color:var(--craft-ink);padding:12px 18px}
+.craft-skip:focus{transform:none}
+.craft-page .site-header{background:#fffdf9}
+.craft-policy{background:var(--craft-paper)}
+.craft-hero{min-height:360px;display:flex;align-items:center;background-color:#f6efe5;background-image:url('/assets/privacy-design/privacy-hero.webp');background-position:center;background-size:cover}
+.craft-hero-inner{width:100%;max-width:1240px;margin:auto;padding:40px 24px}.craft-hero-inner>*{width:46%;max-width:500px}
+.craft-eyebrow{display:flex;align-items:center;gap:20px;color:var(--craft-copper);font-size:15px;font-weight:700;letter-spacing:.15em;margin:0 0 20px;line-height:1.5}
+.craft-eyebrow::after{content:'';width:72px;border-top:1px solid var(--craft-copper)}
+.craft-hero h1{font-size:clamp(44px,4.5vw,64px);font-weight:900;line-height:1.12;letter-spacing:-.045em;margin:0 0 20px;color:var(--craft-ink);max-width:100%}
+.craft-intro{max-width:470px;margin:0;color:#665d54;font-size:18px;line-height:1.8}
+.craft-breadcrumb{padding-top:18px;padding-bottom:18px}
+.craft-breadcrumb .breadcrumbs{margin:0;padding:0}
+.craft-document{display:grid;grid-template-columns:300px minmax(0,1fr);width:100%;max-width:1240px;margin:0 auto}
+.craft-sidebar{background-color:#f6eee4;background-image:url('/assets/privacy-design/workbench-sidebar.webp');background-position:center top;background-size:cover;min-width:0;padding:32px 24px 56px}
+.craft-index{position:sticky;top:24px;background:#f8f2e9}
+.craft-index a{position:relative;display:grid;grid-template-columns:36px minmax(0,1fr);align-items:center;gap:14px;min-height:80px;padding:15px 0 15px 14px;color:#5e5248;border-bottom:1px solid #d9c8b7;font-size:16px;font-weight:500;line-height:1.65;text-decoration:none}
+.craft-index a:first-child{padding-top:12px}
+.craft-index a::before{content:'';position:absolute;left:0;top:18px;bottom:18px;border-left:4px solid transparent}
+.craft-index a:hover,.craft-index a.is-active{color:var(--craft-ink)}
+.craft-index a.is-active{font-weight:750}
+.craft-index a.is-active::before{border-left-color:var(--craft-copper)}
+.craft-index-number{color:var(--craft-copper);font-size:23px;font-weight:400;letter-spacing:-.04em}
+.craft-copy{padding:24px 40px 32px 48px;min-width:0;background:var(--craft-paper)}
+.craft-section{scroll-margin-top:24px;padding:18px 0 40px;margin:0;border:0}
+.craft-section+.craft-section{border-top:1px solid var(--craft-line);padding-top:35px}
+.craft-section-heading{display:grid;grid-template-columns:46px minmax(0,1fr);grid-template-rows:32px auto;gap:0 20px;align-items:start;margin-bottom:18px}
+.craft-section-heading::after{content:'';grid-column:2;grid-row:1;display:block;width:100px;border-top:1px solid var(--craft-copper);margin-top:18px}
+.craft-section-number{color:var(--craft-copper);font-size:25px;line-height:1.5;font-weight:500;letter-spacing:-.035em}
+.craft-section h2{grid-column:2;grid-row:2;margin:0;color:var(--craft-ink);font-size:clamp(24px,2.3vw,30px);font-weight:850;line-height:1.4;letter-spacing:-.025em}
+.craft-paragraphs{padding-left:66px}
+.craft-paragraphs p{font-size:17px;line-height:1.9;color:#665f57;margin:0 0 14px;max-width:70ch;overflow-wrap:anywhere}
+.craft-paragraphs p:last-child{margin-bottom:0}
+.craft-paragraphs a{color:#80502d;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.craft-copy:focus{outline:none}
+.craft-page .site-footer{margin:0}
+
+@media(max-width:1100px) and (min-width:761px){.craft-hero{min-height:340px}.craft-hero-inner{padding:36px 5vw}.craft-hero-inner>*{width:48%}.craft-intro{font-size:18px}.craft-document{grid-template-columns:33% minmax(0,1fr)}.craft-sidebar{padding-left:4vw;padding-right:20px}.craft-index a{font-size:14px;gap:8px;grid-template-columns:28px 1fr}.craft-copy{padding-left:4vw;padding-right:5vw}.craft-section-heading{gap:12px;grid-template-columns:36px 1fr}.craft-paragraphs{padding-left:48px}.craft-paragraphs p{font-size:17px}}
+@media(max-width:760px){html{scroll-padding-top:18px}.craft-hero{display:block;min-height:0;background-position:66% top;background-size:auto 230px;background-repeat:no-repeat;padding-top:230px;background-color:#f5eee4}.craft-hero-inner{padding:28px 24px 30px;background:var(--craft-paper)}.craft-hero-inner>*{width:100%;max-width:none}.craft-eyebrow{font-size:12px;margin-bottom:12px}.craft-hero h1{font-size:44px;line-height:1.2;margin-bottom:15px;letter-spacing:-.04em}.craft-intro{font-size:16px;line-height:1.8;max-width:none}.craft-breadcrumb{padding-top:15px;padding-bottom:15px}.craft-document{display:block}.craft-sidebar{background-image:none;padding:8px 20px 18px;min-height:0}.craft-index{position:static;display:grid;grid-template-columns:1fr 1fr;column-gap:20px;background:transparent}.craft-index a,.craft-index a:first-child{font-size:13px;line-height:1.65;min-height:72px;padding:12px 5px 12px 10px;grid-template-columns:25px 1fr;gap:6px;align-items:center}.craft-index-number{font-size:18px}.craft-index a::before{border-left-width:3px;top:16px;bottom:16px}.craft-copy{padding:23px 24px 26px}.craft-section{padding:12px 0 28px;scroll-margin-top:18px}.craft-section+.craft-section{padding-top:25px}.craft-section-heading{grid-template-columns:27px 1fr;grid-template-rows:auto;gap:10px;margin-bottom:13px}.craft-section-heading::after{display:none}.craft-section-number{font-size:18px;line-height:1.7}.craft-section h2{grid-column:2;grid-row:1;font-size:23px;line-height:1.45;letter-spacing:-.02em}.craft-paragraphs{padding-left:37px}.craft-paragraphs p{font-size:16px;line-height:1.9}.craft-page .site-footer .footer-main{padding-top:40px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.craft-page *{animation:none!important;transition:none!important}}
+@media print{.site-header,.site-footer,.craft-sidebar,.craft-breadcrumb{display:none}.craft-hero{background:none;min-height:0}.craft-hero-inner{padding:0}.craft-document{display:block}.craft-copy{padding:0}.craft-section{break-inside:avoid}.craft-hero h1{font-size:30px}}
