@@ -40,7 +40,7 @@ for(const file of files){
     `${route}: footer links to the Ellis Services Group Instagram profile`);
   assert.match(html,/src="\/assets\/instagram-small\.png" alt=""/,
     `${route}: footer displays the supplied Instagram icon`);
-  for(const destination of ['https://share.google/tU1c5vEAlELqXCifu','https://share.google/Z4tImXHToPi9H4LmH','https://share.google/y50AZRJwjOdVOlj5o']){
+  for(const destination of ['https://www.facebook.com/p/Ellis-Services-Group-100082926022259/','https://share.google/Z4tImXHToPi9H4LmH','https://share.google/y50AZRJwjOdVOlj5o']){
     assert.ok(html.includes(`<a class="footer-social-link" href="${destination}" target="_blank" rel="noopener noreferrer">`),`${route}: shared footer social destination ${destination}`);
   }
   assert.equal((html.match(/class="footer-social-link"/g)||[]).length,4,`${route}: exactly four footer social links`);

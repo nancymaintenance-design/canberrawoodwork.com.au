@@ -4,7 +4,7 @@ export const footerSocialLinks = [
   { label: 'Google Reviews', href: 'https://share.google/y50AZRJwjOdVOlj5o', icon: 'google-g.png', brand: 'google' },
   { label: 'Instagram', href: 'https://www.instagram.com/elliservices_group/', icon: 'instagram-small.png', brand: 'instagram' },
   { label: 'LinkedIn', href: 'https://share.google/Z4tImXHToPi9H4LmH', icon: 'linkedin.svg', brand: 'linkedin' },
-  { label: 'Facebook', href: 'https://share.google/tU1c5vEAlELqXCifu', icon: 'facebook.svg', brand: 'facebook' }
+  { label: 'Facebook', href: 'https://www.facebook.com/p/Ellis-Services-Group-100082926022259/', icon: 'facebook.svg', brand: 'facebook' }
 ];
 
 export function footerSocial() {
