@@ -25,3 +25,6 @@ if(!process.argv.includes('--english-only')&&process.env.CMS_SKIP_APPROVED!=='1'
 // Derive RSS only after all bilingual/content/design release overlays have finished.
 const {applyRssFeeds}=await import('./src/rss-feed.mts');
 applyRssFeeds(process.cwd()+'/dist');
+// Read Chinese metadata after every published content overlay has finished.
+const {applyBilingualDiscovery}=await import('./src/bilingual-discovery.mts');
+applyBilingualDiscovery(process.cwd()+'/dist');
