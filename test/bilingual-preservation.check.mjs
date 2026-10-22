@@ -24,7 +24,11 @@ const withoutLanguageAdditions=value=>value
 
 test('TypeScript migration preserves production HTML bytes and stylesheet text across checkout platforms',()=>{
  const expected=JSON.parse(readFileSync(new URL('./production-baseline.json',import.meta.url),'utf8'));
- for(const[path,digest]of Object.entries(expected))assert.equal(hash(path.endsWith('.css')?after.get(path).toString().replaceAll('\r\n','\n'):after.get(path)),digest,path);
+ for(const[path,digest]of Object.entries(expected)){
+  let value=after.get(path);
+  if(path.endsWith('.html'))value=Buffer.from(value.toString().replace(/<link rel="alternate" type="application\/rss\+xml" title="(?:Canberra Woodwork knowledge feed|Canberra Woodwork 中文知识内容)" href="https:\/\/www.canberrawoodwork.com.au\/(?:zh\/)?rss.xml">/g,''));
+  assert.equal(hash(path.endsWith('.css')?value.toString().replaceAll('\r\n','\n'):value),digest,path);
+ }
 });
 test('every English page preserves every original byte except the explicit language additions',()=>{
  assert.equal(html(before).length,52);

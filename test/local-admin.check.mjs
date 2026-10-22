@@ -77,6 +77,10 @@ test('approved six-page content release matches reviewed bilingual output withou
  assert.equal(Object.keys(approved.edits).length,34);
  const catalog=getCatalog('dist'),root=mkdtempSync(join(tmpdir(),'ellis-seo-release-'));
  try{cpSync('dist/404',join(root,'404'),{recursive:true});cpSync('dist/zh/404',join(root,'zh/404'),{recursive:true});renderer.writeManaged(root,catalog,{schemaVersion:1,version:1,edits:approved.edits,history:[]},'release');
-  for(const[path,digest]of Object.entries(expected))assert.equal(createHash('sha256').update(readFileSync(join(root,path))).digest('hex'),digest,path);
+  for(const[path,digest]of Object.entries(expected)){
+   let value=readFileSync(join(root,path));
+   if(path.endsWith('.html'))value=Buffer.from(value.toString().replace(/<link rel="alternate" type="application\/rss\+xml" title="(?:Canberra Woodwork knowledge feed|Canberra Woodwork 中文知识内容)" href="https:\/\/www.canberrawoodwork.com.au\/(?:zh\/)?rss.xml">/g,''));
+   assert.equal(createHash('sha256').update(value).digest('hex'),digest,path);
+  }
  }finally{rmSync(root,{recursive:true,force:true});}
 });

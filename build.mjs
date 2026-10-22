@@ -22,3 +22,6 @@ if(!process.argv.includes('--english-only')&&process.env.CMS_SKIP_APPROVED!=='1'
   const {applyFaqDesignRelease}=await import('./src/faq-design-release.mts');applyFaqDesignRelease(process.cwd()+'/dist');
  }
 }
+// Derive RSS only after all bilingual/content/design release overlays have finished.
+const {applyRssFeeds}=await import('./src/rss-feed.mts');
+applyRssFeeds(process.cwd()+'/dist');
