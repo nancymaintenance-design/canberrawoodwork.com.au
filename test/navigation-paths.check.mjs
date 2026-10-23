@@ -4,9 +4,14 @@ import {readFileSync} from 'node:fs';
 const feature=await import('../src/navigation-paths.mts').catch(()=>null);
 test('a window repair guide returns to the actual service in both languages',()=>{
  assert.equal(typeof feature?.getTrail,'function','explicit service navigation is not implemented');
- assert.deepEqual(feature.getTrail('/news/rotten-window-sill/').map(x=>x.url),['/','/services/timber-window-repairs/','/news/rotten-window-sill/']);
- assert.deepEqual(feature.getTrail('/zh/news/rotten-window-sill/').map(x=>x.url),['/zh/','/zh/services/timber-window-repairs/','/zh/news/rotten-window-sill/']);
+ assert.deepEqual(feature.getTrail('/news/rotten-window-sill/').map(x=>x.url),['/','/services/','/services/timber-window-repairs/','/news/rotten-window-sill/']);
+ assert.deepEqual(feature.getTrail('/zh/news/rotten-window-sill/').map(x=>x.url),['/zh/','/zh/services/','/zh/services/timber-window-repairs/','/zh/news/rotten-window-sill/']);
 });
+test('all service trails include the same-language directory without moving commercial ownership',()=>{
+ const services=feature.navigationMap.filter(r=>r.page_type==='service-owner');assert.equal(services.length,42);
+ for(const row of services){const prefix=row.locale==='zh-Hans'?'/zh':'';assert.deepEqual(feature.getTrail(row.url).map(r=>r.url),[prefix+'/',prefix+'/services/',row.url]);assert.equal(row.commercial_owner_url,row.url);}
+});
+
 test('cross-service guides keep an honest News hierarchy; city business intent stays on Home',()=>{
  assert.ok(feature,'explicit map required');
  assert.deepEqual(feature.getTrail('/news/carpentry-quote-cost-factors/').map(x=>x.url),['/','/news/','/news/carpentry-quote-cost-factors/']);

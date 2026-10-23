@@ -82,7 +82,9 @@ export function applyNavigation(url:string,html:string):string{
  }
  if(row.page_type==='homepage'||row.page_type==='location'){
   const main=nodes.find(n=>n.tagName==='main')!,existing=new Set(nodes.filter(n=>n.tagName==='a'&&n.sourceCodeLocation!.startOffset>=main.sourceCodeLocation!.startOffset&&n.sourceCodeLocation!.endOffset<=main.sourceCodeLocation!.endOffset).map(n=>{const href=n.attrs.find(a=>a.name==='href')?.value||'';try{return new URL(href,canonicalOrigin).pathname;}catch{return'';}}));
-  const targets=navigationMap.filter(r=>r.locale===row.locale&&(r.priority||(row.page_type==='homepage'&&r.page_type==='service-owner'&&r.primary_parent_url===row.url))&&!existing.has(r.url));
+  // Home remains the commercial entry for all services when the directory is
+  // their navigational parent. Do not remove existing service discovery links.
+  const targets=navigationMap.filter(r=>r.locale===row.locale&&(r.priority||(row.page_type==='homepage'&&r.page_type==='service-owner'))&&!existing.has(r.url));
   if(targets.length){
    const zh=row.locale==='zh-Hans';
    const actions=row.page_type==='location'?`<div class="journey-actions"><a href="${zh?'/zh':''}/contact/">${zh?'与我们沟通施工需求':'Discuss your job with us'} ↗</a><a href="tel:+61405878406">0405 878 406</a></div>`:'';
