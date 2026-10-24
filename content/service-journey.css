@@ -1,0 +1,11 @@
+/* Scoped directory navigation. Existing brand, cards and site layout are retained. */
+.page-hero .service-journey-actions{justify-content:flex-start}
+.service-route-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 32px;margin:0 0 40px;padding:24px 0;border-block:1px solid var(--line)}
+.service-route-groups>div{min-width:0;scroll-margin-top:24px}
+.service-route-groups h3{font-size:20px;line-height:1.4;margin:0 0 12px}
+.service-route-groups ul{list-style:none;margin:0;padding:0}
+.service-route-groups a{display:flex;align-items:center;min-height:44px;padding:6px 0;font-size:15px;line-height:1.5;text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}
+.service-route-groups a:hover{color:var(--blue)}
+.service-route-groups a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.service-route-mixed{grid-column:1/-1;margin:0;border-top:1px solid var(--line);padding-top:12px}
+@media(max-width:700px){.service-route-groups{grid-template-columns:minmax(0,1fr);gap:24px;padding-block:20px;margin-bottom:28px}.service-route-groups ul{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}.service-route-groups h3{font-size:19px;margin-bottom:8px}.service-route-groups a{font-size:14px}}

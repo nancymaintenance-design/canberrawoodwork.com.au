@@ -30,3 +30,10 @@ applyRssFeeds(process.cwd()+'/dist');
 // Read Chinese metadata after every published content overlay has finished.
 const {applyBilingualDiscovery}=await import('./src/bilingual-discovery.mts');
 applyBilingualDiscovery(process.cwd()+'/dist');
+// Apply the approved visual layer after feed/discovery generation, matching the reviewed preview.
+if(!process.argv.includes('--english-only')&&process.env.CMS_SKIP_APPROVED!=='1'){
+ const {writeServiceJourneyRelease}=await import('./src/service-journey-release.mts');
+ writeServiceJourneyRelease(process.cwd()+'/dist');
+ const {writeInnerPageDesignRelease}=await import('./src/inner-page-design-release.mts');
+ writeInnerPageDesignRelease(process.cwd()+'/dist');
+}
